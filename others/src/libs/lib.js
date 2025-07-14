@@ -1,3 +1,4 @@
+import fs from "fs";
 import "dotenv/config";
 import xml2js from "xml2js";
 import crypto from "crypto";

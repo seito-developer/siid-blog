@@ -169,7 +169,7 @@ const migrateWordPress = async () => {
 			if (config.apiSchema.contents) {
 				const contentsBody = replaceContent(item["content:encoded"][0], migrateMedia);
 
-				contentsItem["content"] = contentsBody;
+				contentsItem["contents"] = contentsBody;
 			}
 
 			// 著者の設定
@@ -202,17 +202,17 @@ const migrateWordPress = async () => {
 			}
 
 			// カテゴリー／タグの設定
-			if (item["category"] !== undefined) {
+			if (item["categories"] !== undefined) {
 				const categories = [];
 				const tags = [];
-				item["category"].forEach((taxonomyItem) => {
+				item["categories"].forEach((taxonomyItem) => {
 					if (taxonomyItem["$"]["domain"] === config.category.taxonomy) {
 						categories.push(hashKeyword(taxonomyItem["$"]["nicename"]));
 					} else if (taxonomyItem["$"]["domain"] === config.tag.taxonomy) {
 						tags.push(hashKeyword(taxonomyItem["$"]["nicename"]));
 					}
 				});
-				if (config.apiSchema.categories && categories.length !== 0) contentsItem["category"] = categories;
+				if (config.apiSchema.categories && categories.length !== 0) contentsItem["categories"] = categories;
 				if (config.apiSchema.tags && tags.length !== 0) contentsItem["tags"] = tags;
 			}
 

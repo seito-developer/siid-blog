@@ -13,7 +13,7 @@ export const config = {
     tags: true // 複数コンテンツ参照：タグを移行するかどうか
   }, // microCMSのAPIのスキーマ設定
   category: {
-    execute: true, // カテゴリ移行を実行するかどうか
+    execute: false, // カテゴリ移行を実行するかどうか
     taxonomy: "category", // WordPressのカテゴリタクソノミー名（/wp-admin/edit-tags.php?taxonomy=XXXX）
     apiName: "category", // microCMSのカテゴリ用APIのエンドポイント名
     apiSchema: {
@@ -22,7 +22,7 @@ export const config = {
     } // microCMSのカテゴリ用APIのスキーマ設定
   },
   tag: {
-    execute: true, // タグ移行を実行するかどうか
+    execute: false, // タグ移行を実行するかどうか
     taxonomy: "post_tag", // WordPressのタグタクソノミー名（/wp-admin/edit-tags.php?taxonomy=XXXX）
     apiName: "tags", // microCMSのタグ用APIのエンドポイント名
     apiSchema: {
