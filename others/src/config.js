@@ -1,4 +1,5 @@
 export const config = {
+  api: true,
   xmlPath: "origin.xml", // 読み取るXMLファイル名（dataフォルダ直下に配置）
   postType: "post", // WordPressの移行対象の投稿タイプ
   draft: true, // 下書き投稿を移行するかどうか
