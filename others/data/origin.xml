@@ -35,7 +35,7 @@
 	<wp:base_site_url>https://2jigenha.com</wp:base_site_url>
 	<wp:base_blog_url>https://2jigenha.com</wp:base_blog_url>
 
-		<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[m2rnrt]]></wp:author_login><wp:author_email><![CDATA[seito@bug-fix.org]]></wp:author_email><wp:author_display_name><![CDATA[SiiD編集部]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
+		<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[SiiD編集部]]></wp:author_login><wp:author_email><![CDATA[seito@bug-fix.org]]></wp:author_email><wp:author_display_name><![CDATA[SiiD編集部]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
 
 				
 	<generator>https://wordpress.org/?v=6.7.2</generator>
@@ -52,7 +52,7 @@
 		<title><![CDATA[eslintで任意のディレクトリ、ファイルをチェック対象から除外する方法]]></title>
 		<link>https://2jigenha.com/?p=531</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=531</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -178,7 +178,7 @@ foo.js
 		<title><![CDATA[SVG奮闘記　ー　SVG要素をぐにょぐにょ動かす実装を完了させるまでに右往左往した話]]></title>
 		<link>https://2jigenha.com/?p=533</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=533</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -497,7 +497,7 @@ playAnimation();
 		<title><![CDATA[BEMとSMACSSを融合させる最も簡単な方法]]></title>
 		<link>https://2jigenha.com/?p=545</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=545</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -776,7 +776,7 @@ playAnimation();
 		<title><![CDATA[Docker + Fly.ioで爆速デプロイ]]></title>
 		<link>https://2jigenha.com/?p=553</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=553</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -1133,7 +1133,7 @@ Tigris:       &lt;none&gt;                     (not requested)
 		<title><![CDATA[[Laravel Sail v11.x, Docker] DBエラーにぶち当たったときに試すこと9選]]></title>
 		<link>https://2jigenha.com/?p=555</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=555</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
@@ -1623,7 +1623,7 @@ docker volume prune -a
 		<title><![CDATA[静的WebページをGitHubでホスティングするまでの手順]]></title>
 		<link>https://2jigenha.com/?p=557</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=557</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -2111,7 +2111,7 @@ jobs:
 		<title><![CDATA[Docker実行時に"Permission denied"といわれたらチェックすべき項目5つ]]></title>
 		<link>https://2jigenha.com/?p=559</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=559</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -2330,7 +2330,7 @@ USER myuser
 		<title><![CDATA[Docker環境でNext.jsのSSR実装するとき気をつけること]]></title>
 		<link>https://2jigenha.com/?p=561</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=561</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -2634,7 +2634,7 @@ networks:
 		<title><![CDATA[GraphQLのモックAPIがほしい (ApolloServer)]]></title>
 		<link>https://2jigenha.com/?p=563</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=563</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
@@ -2996,7 +2996,7 @@ app.use(
 		<title><![CDATA[Docker のエラー「[Errno 1] Operation not permitted」の対処法]]></title>
 		<link>https://2jigenha.com/?p=565</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=565</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:heading -->
@@ -3146,7 +3146,7 @@ app.use(
 		<title><![CDATA[Elastic Beanstalk 環境にDjangoアプリの管理者ユーザーを作成する]]></title>
 		<link>https://2jigenha.com/?p=568</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=568</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:heading -->
@@ -3383,7 +3383,7 @@ DATABASES = {
 		<title><![CDATA[AWS Elastic Beanstalkで301レスポンスを許可する]]></title>
 		<link>https://2jigenha.com/?p=570</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=570</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
@@ -3552,7 +3552,7 @@ HTTP/1.1 301 Moved Permanently
 		<title><![CDATA[]]></title>
 		<link>https://2jigenha.com/?p=572</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=572</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
@@ -3587,7 +3587,7 @@ HTTP/1.1 301 Moved Permanently
 		<title><![CDATA[[Flutter]iOSのビルドで失敗したらまず試すこと10選]]></title>
 		<link>https://2jigenha.com/?p=573</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=573</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -3800,7 +3800,7 @@ HTTP/1.1 301 Moved Permanently
 		<title><![CDATA[「プログラミング未経験者がWeb/ITエンジニアに転職するためには何をしたらいいのか？」を統計的に分析してみた]]></title>
 		<link>https://2jigenha.com/?p=575</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=575</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
@@ -4213,7 +4213,7 @@ exp(confint(result, level = 0.95))</code></pre>
 		<title><![CDATA[スプレッドシートやエクセルのデータをSQLite形式でdbファイルにインポートする手順]]></title>
 		<link>https://2jigenha.com/?p=577</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=577</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -4446,7 +4446,7 @@ description text);
 		<title><![CDATA[[Flutter] テキストを揃えたいときの方法3選]]></title>
 		<link>https://2jigenha.com/?p=580</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=580</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -4601,7 +4601,7 @@ description text);
 		<title><![CDATA[[Storybook] Error "Cannot read property 'displayName' of undefine"]]></title>
 		<link>https://2jigenha.com/?p=582</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=582</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -4787,7 +4787,7 @@ const ParentComponent: React.FC = () =&gt; {
 		<title><![CDATA[AWS AmplifyでReactアプリをデプロイする際に起きたエラー]]></title>
 		<link>https://2jigenha.com/?p=584</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=584</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -4947,7 +4947,7 @@ const ParentComponent: React.FC = () =&gt; {
 		<title><![CDATA[[Flutter] iPhone実機へのビルドに失敗した際の解決方法]]></title>
 		<link>https://2jigenha.com/?p=587</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=587</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -5095,7 +5095,7 @@ const ParentComponent: React.FC = () =&gt; {
 		<title><![CDATA[PythonでExcelを自在に操るための４つの方法]]></title>
 		<link>https://2jigenha.com/python-excel/</link>
 		<pubDate>Wed, 17 Jan 2024 10:08:30 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=15</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -5311,7 +5311,7 @@ workbook.close()</code></pre>
 		<title><![CDATA[Pythonにおける配列の扱い方]]></title>
 		<link>https://2jigenha.com/python-list/</link>
 		<pubDate>Sat, 20 Jan 2024 07:27:40 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=34</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -5503,7 +5503,7 @@ my_numpy_array = np.append(my_numpy_array, 5)  # 5を追加</code></pre>
 		<title><![CDATA[Google Apps ScriptでGoogle スプレッドシートを操る方法【業務自動化】]]></title>
 		<link>https://2jigenha.com/google-apps-script-spreadsheet/</link>
 		<pubDate>Sat, 23 Mar 2024 05:25:37 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=47</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -5681,7 +5681,7 @@ my_numpy_array = np.append(my_numpy_array, 5)  # 5を追加</code></pre>
 		<title><![CDATA[Google Apps Script【GAS】によるGoogleフォームの扱い方入門]]></title>
 		<link>https://2jigenha.com/gas_google_form/</link>
 		<pubDate>Sun, 24 Mar 2024 23:21:38 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=61</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -5929,7 +5929,7 @@ function sendNotification(responses) {
 		<title><![CDATA[Google Apps Scriptでスプレッドシートのシートとセルを取得する関数一覧]]></title>
 		<link>https://2jigenha.com/gas_spreadsheet_get/</link>
 		<pubDate>Mon, 25 Mar 2024 08:01:10 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=73</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -6139,7 +6139,7 @@ function sendNotification(responses) {
 		<title><![CDATA[【Google】スプレッドシートからカレンダーにGASで自動的にイベントを組み込む方法]]></title>
 		<link>https://2jigenha.com/google-spreadsheet-googlecalendar/</link>
 		<pubDate>Mon, 25 Mar 2024 13:31:49 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=80</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -6332,7 +6332,7 @@ function addEventsToCalendar() {
 		<title><![CDATA[GASを使ってGoogleスプレッドシートを検索する方法]]></title>
 		<link>https://2jigenha.com/gas-spreadsheet-search/</link>
 		<pubDate>Tue, 26 Mar 2024 03:45:58 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=88</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -6475,7 +6475,7 @@ for (var i = 0; i &lt; values.length; i++) {
 		<title><![CDATA[Googleスプレッド シートで「スクリプトエディタ」が出 てこない時の対処法]]></title>
 		<link>https://2jigenha.com/google-spreadsheet-scripteditor-open/</link>
 		<pubDate>Tue, 26 Mar 2024 06:31:49 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=97</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -6536,7 +6536,7 @@ for (var i = 0; i &lt; values.length; i++) {
 		<title><![CDATA[初心者でも書ける面白いPythonコード]]></title>
 		<link>https://2jigenha.com/python-interesting-code/</link>
 		<pubDate>Tue, 26 Mar 2024 07:52:53 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=100</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -6745,7 +6745,7 @@ for article in articles:
 		<title><![CDATA[pipを使ってPythonライブラリをインストールする方法]]></title>
 		<link>https://2jigenha.com/pip-install/</link>
 		<pubDate>Tue, 26 Mar 2024 07:44:32 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=102</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -6949,7 +6949,7 @@ for article in articles:
 		<title><![CDATA[【Python】顔認識ライブラリ face_recognition の使い方]]></title>
 		<link>https://2jigenha.com/python-face-recognition/</link>
 		<pubDate>Thu, 28 Mar 2024 00:42:34 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=112</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -7081,7 +7081,7 @@ pil_image.save('result_image.jpg')</code></pre>
 		<title><![CDATA[PythonのPDF生成ライブラリ「reportlab」の使い方]]></title>
 		<link>https://2jigenha.com/python-reportlab/</link>
 		<pubDate>Thu, 28 Mar 2024 01:16:48 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=117</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -7272,7 +7272,7 @@ c.circle(150, 700, 50)</code></pre>
 		<title><![CDATA[Pythonにおけるelseの使い方3選]]></title>
 		<link>https://2jigenha.com/python-else/</link>
 		<pubDate>Thu, 28 Mar 2024 01:29:11 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=122</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -7397,7 +7397,7 @@ else:
 		<title><![CDATA[【形態素解析】mecabをpythonで使用する方法]]></title>
 		<link>https://2jigenha.com/python-mecab/</link>
 		<pubDate>Thu, 28 Mar 2024 08:36:19 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=125</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -7554,7 +7554,7 @@ print("見つかった名詞:", nouns)
 		<title><![CDATA[【Python】三項演算子とは何か？]]></title>
 		<link>https://2jigenha.com/python-ternary-operator/</link>
 		<pubDate>Thu, 28 Mar 2024 08:50:02 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=132</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -7633,7 +7633,7 @@ else:
 		<title><![CDATA[グラフ描画ライブラリSeabornを使ってみよう【Python】]]></title>
 		<link>https://2jigenha.com/seaborn-python/</link>
 		<pubDate>Thu, 28 Mar 2024 10:07:39 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=137</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -7806,7 +7806,7 @@ sns.relplot(
 		<title><![CDATA[Seabornによるヒートマップ(heatmap)の作り方]]></title>
 		<link>https://2jigenha.com/seaborn-heatmap/</link>
 		<pubDate>Fri, 29 Mar 2024 08:33:07 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=141</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -8076,7 +8076,7 @@ ax.xaxis.tick_top()</code></pre>
 		<title><![CDATA[Seabornを用いた箱ひげ図（boxplot）の作り方]]></title>
 		<link>https://2jigenha.com/seaborn-boxplot/</link>
 		<pubDate>Fri, 29 Mar 2024 13:14:11 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=153</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -8365,7 +8365,7 @@ sns.boxplot(x=titanic["age"])
 		<title><![CDATA[Seabornを用いた散布図（scatterplot）の作り方]]></title>
 		<link>https://2jigenha.com/seaborn-scatterplot/</link>
 		<pubDate>Sat, 30 Mar 2024 11:03:01 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=169</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -8667,7 +8667,7 @@ sns.scatterplot(data=wide_df)</code></pre>
 		<title><![CDATA[Googlemapをシンプルかつマーカーがちゃんと表示されるURLで指定するやり方]]></title>
 		<link>https://2jigenha.com/?p=538</link>
 		<pubDate></pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=538</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -8752,7 +8752,7 @@ sns.scatterplot(data=wide_df)</code></pre>
 		<title><![CDATA[Seabornを用いた棒グラフ（barplot）の作り方]]></title>
 		<link>https://2jigenha.com/seaborn-barplot/</link>
 		<pubDate>Sat, 30 Mar 2024 11:31:07 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=183</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -9079,7 +9079,7 @@ ax.plot(1955, 3600, "*", markersize=10, color="r")</code></pre>
 		<title><![CDATA[Pythonのif文における複数条件の攻略]]></title>
 		<link>https://2jigenha.com/python-if/</link>
 		<pubDate>Sat, 30 Mar 2024 11:59:03 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=200</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -9217,7 +9217,7 @@ if (age &gt; 18 and income &gt; 30000) or status == "student":
 		<title><![CDATA[Seabornを用いた線グラフ（lineplot）の作り方]]></title>
 		<link>https://2jigenha.com/seaborn-lineplot/</link>
 		<pubDate>Sat, 30 Mar 2024 12:30:43 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=203</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -9422,7 +9422,7 @@ if (age &gt; 18 and income &gt; 30000) or status == "student":
 		<title><![CDATA[Seabornを用いたヒストグラム（histplot）の作り方]]></title>
 		<link>https://2jigenha.com/seaborn-histplot/</link>
 		<pubDate>Tue, 02 Apr 2024 06:46:02 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=213</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -9690,7 +9690,7 @@ sns.histplot(data=planets, x="distance", log_scale=True)</code></pre>
 		<title><![CDATA[Seabornを用いたペアプロット（paiaplot）の作り方]]></title>
 		<link>https://2jigenha.com/seaborn-paiaplot/</link>
 		<pubDate>Fri, 05 Apr 2024 12:59:37 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=227</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -10000,7 +10000,7 @@ g.map_lower(sns.kdeplot, levels=4, color=".2")</code></pre>
 		<title><![CDATA[【GAS】さまざまなトリガーを設定するScriptApp.newTrigger()について]]></title>
 		<link>https://2jigenha.com/gas-scriptapp-newtrigger/</link>
 		<pubDate>Fri, 05 Apr 2024 13:45:02 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=241</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -10217,7 +10217,7 @@ g.map_lower(sns.kdeplot, levels=4, color=".2")</code></pre>
 		<title><![CDATA[【2024年】プログラミング言語ランキング｜TIOBE indexとGoogle検索数]]></title>
 		<link>https://2jigenha.com/programming-ranking/</link>
 		<pubDate>Mon, 08 Apr 2024 10:33:38 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=245</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -10309,7 +10309,7 @@ g.map_lower(sns.kdeplot, levels=4, color=".2")</code></pre>
 		<title><![CDATA[なぜHTMLはプログラミング言語ではないのか]]></title>
 		<link>https://2jigenha.com/why-html-is-not-programming-language/</link>
 		<pubDate>Mon, 08 Apr 2024 11:11:38 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=254</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -10425,7 +10425,7 @@ g.map_lower(sns.kdeplot, levels=4, color=".2")</code></pre>
 		<title><![CDATA[Pythonのバージョンを確認をする方法]]></title>
 		<link>https://2jigenha.com/python-version/</link>
 		<pubDate>Mon, 08 Apr 2024 12:32:28 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=259</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -10551,7 +10551,7 @@ g.map_lower(sns.kdeplot, levels=4, color=".2")</code></pre>
 		<title><![CDATA[Python コードのスタイルガイド【PEP8】とは？]]></title>
 		<link>https://2jigenha.com/python-pep8/</link>
 		<pubDate>Tue, 09 Apr 2024 12:34:43 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=262</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -10779,7 +10779,7 @@ def print_message():
 		<title><![CDATA[Pythonで四捨五入する4つの方法]]></title>
 		<link>https://2jigenha.com/python-round/</link>
 		<pubDate>Tue, 09 Apr 2024 12:43:43 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=265</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -10895,7 +10895,7 @@ print(num)  # 出力: 2</code></pre>
 		<title><![CDATA[Pythonのrequests | HTTPリクエストのライブラリ]]></title>
 		<link>https://2jigenha.com/python-requests/</link>
 		<pubDate>Tue, 09 Apr 2024 14:56:41 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=267</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -11031,7 +11031,7 @@ else:
 		<title><![CDATA[【JavaScrip】forEach()メソッドの使い方]]></title>
 		<link>https://2jigenha.com/javascrip-foreach/</link>
 		<pubDate>Wed, 10 Apr 2024 15:51:01 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=269</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -11211,7 +11211,7 @@ console.log(obj.count); // 3</code></pre>
 		<title><![CDATA[TypeScriptとは？〜JavaScriptと異なる静的型付け言語〜]]></title>
 		<link>https://2jigenha.com/typescript/</link>
 		<pubDate>Thu, 11 Apr 2024 05:44:23 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=271</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -11492,7 +11492,7 @@ console.log(obj.count); // 3</code></pre>
 		<title><![CDATA[【完全保存版】JavaScriptのalert完全ガイド：使い方と応用テクニック]]></title>
 		<link>https://2jigenha.com/javascript-alert/</link>
 		<pubDate>Sat, 13 Apr 2024 14:18:37 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=275</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -11902,7 +11902,7 @@ alert(`あなたの年齢は${age}歳です。`);</code></pre>
 		<title><![CDATA[JavaScriptのmap()関数の使い方]]></title>
 		<link>https://2jigenha.com/javascript-map/</link>
 		<pubDate>Sat, 13 Apr 2024 15:43:03 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=280</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -12041,7 +12041,7 @@ console.log(doubles); // 出力: [2, 4, 6, 8]</code></pre>
 		<title><![CDATA[JavaScriptにおける連想配列の実装]]></title>
 		<link>https://2jigenha.com/javascript-map-object/</link>
 		<pubDate>Sat, 13 Apr 2024 15:59:33 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=284</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -12196,7 +12196,7 @@ console.log(map.get(keyObject)); // 出力: Associated value</code></pre>
 		<title><![CDATA[JavaScriptで配列に追加する３つの方法]]></title>
 		<link>https://2jigenha.com/javascript-push/</link>
 		<pubDate>Sun, 14 Apr 2024 00:51:13 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=287</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -12292,7 +12292,7 @@ console.log(newArray);  // 出力: ['a', 'b', 'c', 'd']</code></pre>
 		<title><![CDATA[【 JavaScript】アロー関数で簡単に関数を記述する]]></title>
 		<link>https://2jigenha.com/javascript-arrow/</link>
 		<pubDate>Sun, 14 Apr 2024 01:23:04 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=290</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -12462,7 +12462,7 @@ person.greet();</code></pre>
 		<title><![CDATA[JavaScriptのfind関数について]]></title>
 		<link>https://2jigenha.com/javascript-find/</link>
 		<pubDate>Mon, 15 Apr 2024 15:15:08 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=292</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -12584,7 +12584,7 @@ console.log(cheapProduct);  // 出力: { id: 3, name: "ペン", price: 100 }</co
 		<title><![CDATA[【JSON.stringify】JavaScriptオブジェクトをJSON文字列へ変換する強力なメソッド]]></title>
 		<link>https://2jigenha.com/javascript-jsonstringfy/</link>
 		<pubDate>Mon, 15 Apr 2024 16:01:15 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=295</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -12752,7 +12752,7 @@ JSON.stringify(object); // TypeError: Converting circular structure to JSON</cod
 		<title><![CDATA[機械学習ライブラリ【scikit-learn】のインストール方法]]></title>
 		<link>https://2jigenha.com/scikit-learn-install/</link>
 		<pubDate>Wed, 17 Apr 2024 08:09:05 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=300</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -12859,7 +12859,7 @@ JSON.stringify(object); // TypeError: Converting circular structure to JSON</cod
 		<title><![CDATA[【JavaScript】値のない変数「undefined」について]]></title>
 		<link>https://2jigenha.com/javascript-undefined/</link>
 		<pubDate>Fri, 19 Apr 2024 06:50:30 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=304</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -13001,7 +13001,7 @@ JSON.stringify(object); // TypeError: Converting circular structure to JSON</cod
 		<title><![CDATA[【JavaScript】toLocaleString()で地域に適したデータに変換する]]></title>
 		<link>https://2jigenha.com/javascript-tolocalestring/</link>
 		<pubDate>Fri, 19 Apr 2024 07:08:02 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=306</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -13121,7 +13121,7 @@ console.log(numbers.toLocaleString('de-DE'));
 		<title><![CDATA[【JavaScript】for文の構文]]></title>
 		<link>https://2jigenha.com/javascript-for/</link>
 		<pubDate>Mon, 22 Apr 2024 15:05:16 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=308</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -13267,7 +13267,7 @@ console.log(numbers.toLocaleString('de-DE'));
 		<title><![CDATA[JavaScriptでコメントアウトをする２つの方法]]></title>
 		<link>https://2jigenha.com/javascript-comment/</link>
 		<pubDate>Mon, 22 Apr 2024 15:21:00 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=310</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -13348,7 +13348,7 @@ console.log(numbers.toLocaleString('de-DE'));
 		<title><![CDATA[アロー関数におけるThisの使い方]]></title>
 		<link>https://2jigenha.com/javascript-arrow-this/</link>
 		<pubDate>Sat, 27 Apr 2024 15:02:19 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=313</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -13449,7 +13449,7 @@ myObject.showValue();</code></pre>
 		<title><![CDATA[TynyDBでサクッとデータベースを使ってみた]]></title>
 		<link>https://2jigenha.com/python-tynydb/</link>
 		<pubDate>Tue, 30 Apr 2024 15:53:57 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=321</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -13572,7 +13572,7 @@ print(all_items)</code></pre>
 		<title><![CDATA[matplotlibで日本語が文字化け！解決策を解説します]]></title>
 		<link>https://2jigenha.com/matplotlib-japanease/</link>
 		<pubDate>Thu, 09 May 2024 11:51:47 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=326</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -13764,7 +13764,7 @@ plt.show()</code></pre>
 		<title><![CDATA[【savefig】matplotlibでグラフを保存する方法のバリエーション]]></title>
 		<link>https://2jigenha.com/matplotlib-saveefig/</link>
 		<pubDate>Sat, 11 May 2024 15:38:53 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=331</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -14153,7 +14153,7 @@ plt.show()
 		<title><![CDATA[Matplotlibで目盛間隔を自在に設定【簡潔＆多彩な実用例】]]></title>
 		<link>https://2jigenha.com/matplotlib-ticks/</link>
 		<pubDate>Sun, 12 May 2024 15:28:22 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=335</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -14437,7 +14437,7 @@ plt.show()
 		<title><![CDATA[【完全解説】pandasで行・列を削除する様々な方法]]></title>
 		<link>https://2jigenha.com/pandas_dataframe_delete/</link>
 		<pubDate>Sun, 18 Aug 2024 14:34:27 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=342</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -14912,7 +14912,7 @@ print(df_dropped)
 		<title><![CDATA[Pandas ilocで特定の行や列を抽出する方法を解説]]></title>
 		<link>https://2jigenha.com/pandas-iloc/</link>
 		<pubDate>Thu, 22 Aug 2024 15:25:21 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=347</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -15168,7 +15168,7 @@ print(df.iloc[:, 1][df['B'] &gt;= 30])</code></pre>
 		<title><![CDATA[無料でできる！Google Apps Scriptで業務を自動化する]]></title>
 		<link>https://2jigenha.com/gas-free/</link>
 		<pubDate>Thu, 22 Aug 2024 15:36:09 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=350</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:separator -->
@@ -15402,7 +15402,7 @@ print(df.iloc[:, 1][df['B'] &gt;= 30])</code></pre>
 		<title><![CDATA[Pandasのgroupbyを使いこなすためのガイド]]></title>
 		<link>https://2jigenha.com/pandas-groupby/</link>
 		<pubDate>Thu, 29 Aug 2024 01:56:25 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=356</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:heading {"level":3} -->
@@ -15616,7 +15616,7 @@ print(grouped.mean())</code></pre>
 		<title><![CDATA[PyScriptの一般的な概念と使い方のチュートリアル]]></title>
 		<link>https://2jigenha.com/python-pyscript/</link>
 		<pubDate>Sat, 28 Sep 2024 15:03:53 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=366</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -15867,7 +15867,7 @@ print(grouped.mean())</code></pre>
 		<title><![CDATA[Openpyxlのインストール方法：開発環境別ガイド]]></title>
 		<link>https://2jigenha.com/python-openpyxl-install/</link>
 		<pubDate>Sun, 29 Sep 2024 08:47:00 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=371</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:separator -->
@@ -16184,7 +16184,7 @@ print(grouped.mean())</code></pre>
 		<title><![CDATA[OpenPyXLによるExcelファイルの読み込みと書き込みの基本操作]]></title>
 		<link>https://2jigenha.com/openpyxl-excel-load/</link>
 		<pubDate>Mon, 25 Nov 2024 09:33:22 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=375</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -16508,7 +16508,7 @@ print("ファイルが更新されました")
 		<title><![CDATA[OpenPyXLコマンド集：Excelファイルの読み込み・保存・書き換え・新規作成など]]></title>
 		<link>https://2jigenha.com/openpyxl-command-compilation/</link>
 		<pubDate>Mon, 25 Nov 2024 09:39:17 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=384</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -16915,7 +16915,7 @@ workbook.save('file_with_copied_sheet.xlsx')
 		<title><![CDATA[OpenPyXL応用編：条件付き書式とグラフ作成]]></title>
 		<link>https://2jigenha.com/openpyxl-application/</link>
 		<pubDate>Mon, 25 Nov 2024 09:50:06 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=387</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -17251,7 +17251,7 @@ print("条件付き書式とグラフを組み合わせたExcelファイルを�
 		<title><![CDATA[OpenPyXLを使った実用的なスクリプト例＆効率的なデータ操作方法]]></title>
 		<link>https://2jigenha.com/openpyxl-application-examples/</link>
 		<pubDate>Mon, 25 Nov 2024 09:54:36 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=393</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -17606,7 +17606,7 @@ print("月ごとのデータを保存したファイルを作成しました")
 		<title><![CDATA[JavaScriptのconfirm関数の使い方を初心者向けに解説]]></title>
 		<link>https://2jigenha.com/javascript-confirm/</link>
 		<pubDate>Mon, 25 Nov 2024 11:37:45 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=400</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -17948,7 +17948,7 @@ print("月ごとのデータを保存したファイルを作成しました")
 		<title><![CDATA[JavaScriptのprompt関数でユーザー入力を取得する方法]]></title>
 		<link>https://2jigenha.com/javascript-prompt/</link>
 		<pubDate>Mon, 25 Nov 2024 12:15:04 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=407</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -18271,7 +18271,7 @@ alert(`合計は${sum}です。`);</code></pre>
 		<title><![CDATA[JavaScriptでカスタムダイアログを作成する方法（モーダルウィンドウ）を初心者向けに解説]]></title>
 		<link>https://2jigenha.com/javascript-modal/</link>
 		<pubDate>Mon, 25 Nov 2024 12:21:54 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=410</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -18809,7 +18809,7 @@ modalOverlay.removeEventListener('click', /* 関数 */);
 		<title><![CDATA[ウェブスクレイピングが禁止されているサイトを確認する方法と注意点]]></title>
 		<link>https://2jigenha.com/webscraping-forbidden/</link>
 		<pubDate>Tue, 26 Nov 2024 06:51:07 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=412</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -19114,7 +19114,7 @@ Disallow: /checkout/
 		<title><![CDATA[ウェブスクレイピングにおすすめのプログラミング言語とその使い方]]></title>
 		<link>https://2jigenha.com/webscraping-recommended-language/</link>
 		<pubDate>Tue, 26 Nov 2024 07:20:21 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=415</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:heading -->
@@ -19504,7 +19504,7 @@ echo $title;
 		<title><![CDATA[【完全解説】pandasでデータをフィルタリングする方法]]></title>
 		<link>https://2jigenha.com/pandas-filterling/</link>
 		<pubDate>Tue, 26 Nov 2024 08:00:32 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=420</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -20228,7 +20228,7 @@ print(df_iloc)
 		<title><![CDATA[【完全保存版】pandasの基本的なデータ操作まとめ]]></title>
 		<link>https://2jigenha.com/basic-python-pandas/</link>
 		<pubDate>Tue, 26 Nov 2024 08:06:58 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=424</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:heading -->
@@ -20859,7 +20859,7 @@ df_merged = pd.merge(df_left, df_right, on='キー列')
 		<title><![CDATA[Pythonで始めるデータ分析入門：初心者でもわかるステップバイステップガイド]]></title>
 		<link>https://2jigenha.com/python-datascience-for-biginner/</link>
 		<pubDate>Tue, 26 Nov 2024 08:38:06 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=426</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:heading -->
@@ -21630,7 +21630,7 @@ plt.show()
 		<title><![CDATA[Pandasで欠損値を処理するテクニック：データクレンジングの基本]]></title>
 		<link>https://2jigenha.com/pandas-defect-value/</link>
 		<pubDate>Tue, 26 Nov 2024 08:45:27 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=433</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:heading -->
@@ -22326,7 +22326,7 @@ df.loc[(df['Age'].isnull()) &amp; (df['Score'] &gt; 90), 'Age'] = mean_age
 		<title><![CDATA[Pandasでデータをソートする方法：ステップバイステップガイド]]></title>
 		<link>https://2jigenha.com/pandas-sorting/</link>
 		<pubDate>Tue, 26 Nov 2024 08:53:55 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=438</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:heading -->
@@ -22960,7 +22960,7 @@ print(df_sales_sorted_multi)
 		<title><![CDATA[GASで簡単Webスクレイピング！コード例と注意点を解説]]></title>
 		<link>https://2jigenha.com/gas-web-scraping/</link>
 		<pubDate>Thu, 28 Nov 2024 16:36:25 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=460</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -23308,7 +23308,7 @@ print(df_sales_sorted_multi)
 		<title><![CDATA[WebスクレイピングをJavaScriptで実現する方法【初心者向け】]]></title>
 		<link>https://2jigenha.com/webscraping-javascript/</link>
 		<pubDate>Sat, 30 Nov 2024 12:58:22 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=463</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -23715,7 +23715,7 @@ print(df_sales_sorted_multi)
 		<title><![CDATA[Puppeteerの使い方完全マニュアル【スクレイピング・自動化・応用例】]]></title>
 		<link>https://2jigenha.com/how-to-use-puppeteer/</link>
 		<pubDate>Sat, 30 Nov 2024 13:15:58 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=467</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -24220,7 +24220,7 @@ await page.click('#submit-button');
 		<title><![CDATA[VBAで始めるWebスクレイピング：初心者向けガイド]]></title>
 		<link>https://2jigenha.com/vba-webscraping/</link>
 		<pubDate>Wed, 04 Dec 2024 15:13:41 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=472</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:heading -->
@@ -24616,7 +24616,7 @@ End Sub
 		<title><![CDATA[VBAのIf文入門：基本から実践まで]]></title>
 		<link>https://2jigenha.com/vba-if/</link>
 		<pubDate>Sat, 08 Mar 2025 04:50:43 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=487</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -25502,7 +25502,7 @@ End Sub
 		<title><![CDATA[【中・上級者向け】外資系企業にITエンジニアが転職内定するための履歴書と職務経歴書の書き方]]></title>
 		<link>https://2jigenha.com/how-to-write-a-resume-and-curriculum-vitae-to-get-a-job-offer-from-a-foreign-company-as-an-it-engineer/</link>
 		<pubDate>Sat, 10 May 2025 10:48:24 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=493</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -25867,7 +25867,7 @@ End Sub
 		<title><![CDATA[Webデザイナーにコーディング力は必要？その理由と重要スキルを解説]]></title>
 		<link>https://2jigenha.com/do-web-designers-really-need-programming-skills/</link>
 		<pubDate>Wed, 21 May 2025 13:51:06 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=507</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -26307,7 +26307,7 @@ End Sub
 		<title><![CDATA[image]]></title>
 		<link>https://2jigenha.com/?attachment_id=535</link>
 		<pubDate>Fri, 13 Jun 2025 06:13:12 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2025/06/image.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -26340,7 +26340,7 @@ End Sub
 		<title><![CDATA[ソフトウェア開発におけるMVPとは？ポートフォリオ作成におけるMVPの役割]]></title>
 		<link>https://2jigenha.com/mvp-programming-portfolio/</link>
 		<pubDate>Wed, 18 Jun 2025 06:17:59 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/?p=549</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:paragraph -->
@@ -26617,7 +26617,7 @@ End Sub
 		<title><![CDATA[image (2)]]></title>
 		<link>https://2jigenha.com/python-excel/image-2/</link>
 		<pubDate>Wed, 17 Jan 2024 10:08:11 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">http://2jigenha.com/wp-content/uploads/2024/01/image-2.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -26654,7 +26654,7 @@ End Sub
 		<title><![CDATA[image (3)]]></title>
 		<link>https://2jigenha.com/python-excel/image-3/</link>
 		<pubDate>Wed, 17 Jan 2024 10:34:46 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/01/image-3.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -26691,7 +26691,7 @@ End Sub
 		<title><![CDATA[programming]]></title>
 		<link>https://2jigenha.com/python-list/image-4/</link>
 		<pubDate>Sat, 20 Jan 2024 07:26:50 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/01/image-4.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -26728,7 +26728,7 @@ End Sub
 		<title><![CDATA[image-1]]></title>
 		<link>https://2jigenha.com/google-apps-script-spreadsheet/image-1/</link>
 		<pubDate>Sat, 23 Mar 2024 04:34:13 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-1.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -26761,7 +26761,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-23-13.35.46]]></title>
 		<link>https://2jigenha.com/google-apps-script-spreadsheet/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-23-13-35-46/</link>
 		<pubDate>Sat, 23 Mar 2024 04:36:31 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-23-13.35.46.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -26798,7 +26798,7 @@ End Sub
 		<title><![CDATA[image-3]]></title>
 		<link>https://2jigenha.com/google-apps-script-spreadsheet/image-3-2/</link>
 		<pubDate>Sat, 23 Mar 2024 04:39:41 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-3.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -26835,7 +26835,7 @@ End Sub
 		<title><![CDATA[image-2]]></title>
 		<link>https://2jigenha.com/google-apps-script-spreadsheet/image-2-2/</link>
 		<pubDate>Sat, 23 Mar 2024 04:39:52 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-2.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -26868,7 +26868,7 @@ End Sub
 		<title><![CDATA[image-4]]></title>
 		<link>https://2jigenha.com/google-apps-script-spreadsheet/image-4-2/</link>
 		<pubDate>Sat, 23 Mar 2024 05:05:22 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-4.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -26901,7 +26901,7 @@ End Sub
 		<title><![CDATA[image-5]]></title>
 		<link>https://2jigenha.com/google-apps-script-spreadsheet/image-5/</link>
 		<pubDate>Sat, 23 Mar 2024 05:13:39 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-5.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -26934,7 +26934,7 @@ End Sub
 		<title><![CDATA[image-6]]></title>
 		<link>https://2jigenha.com/google-apps-script-spreadsheet/image-6/</link>
 		<pubDate>Sat, 23 Mar 2024 05:13:47 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-6.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -26967,7 +26967,7 @@ End Sub
 		<title><![CDATA[image-7]]></title>
 		<link>https://2jigenha.com/google-apps-script-spreadsheet/image-7/</link>
 		<pubDate>Sat, 23 Mar 2024 05:13:56 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-7.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27000,7 +27000,7 @@ End Sub
 		<title><![CDATA[image-8]]></title>
 		<link>https://2jigenha.com/google-apps-script-spreadsheet/image-8/</link>
 		<pubDate>Sat, 23 Mar 2024 05:25:14 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-8.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27033,7 +27033,7 @@ End Sub
 		<title><![CDATA[image-9]]></title>
 		<link>https://2jigenha.com/gas_google_form/image-9/</link>
 		<pubDate>Mon, 25 Mar 2024 06:15:39 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-9.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27066,7 +27066,7 @@ End Sub
 		<title><![CDATA[image-10]]></title>
 		<link>https://2jigenha.com/gas_google_form/image-10/</link>
 		<pubDate>Mon, 25 Mar 2024 06:15:45 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-10.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27099,7 +27099,7 @@ End Sub
 		<title><![CDATA[image-11]]></title>
 		<link>https://2jigenha.com/gas_google_form/image-11/</link>
 		<pubDate>Mon, 25 Mar 2024 06:18:52 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-11.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27132,7 +27132,7 @@ End Sub
 		<title><![CDATA[image-12]]></title>
 		<link>https://2jigenha.com/gas_google_form/image-12/</link>
 		<pubDate>Mon, 25 Mar 2024 06:29:43 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-12.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27165,7 +27165,7 @@ End Sub
 		<title><![CDATA[image-13]]></title>
 		<link>https://2jigenha.com/gas_google_form/image-13/</link>
 		<pubDate>Mon, 25 Mar 2024 06:41:23 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-13.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27198,7 +27198,7 @@ End Sub
 		<title><![CDATA[image-13-1]]></title>
 		<link>https://2jigenha.com/gas_google_form/image-13-1/</link>
 		<pubDate>Mon, 25 Mar 2024 06:41:23 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-13-1.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27231,7 +27231,7 @@ End Sub
 		<title><![CDATA[image-14]]></title>
 		<link>https://2jigenha.com/gas_google_form/image-14/</link>
 		<pubDate>Mon, 25 Mar 2024 06:41:33 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-14.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27264,7 +27264,7 @@ End Sub
 		<title><![CDATA[image]]></title>
 		<link>https://2jigenha.com/?attachment_id=536</link>
 		<pubDate>Fri, 13 Jun 2025 06:13:41 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2025/06/image-1.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27297,7 +27297,7 @@ End Sub
 		<title><![CDATA[image-15]]></title>
 		<link>https://2jigenha.com/gas_google_form/image-15/</link>
 		<pubDate>Mon, 25 Mar 2024 06:48:14 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-15.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27330,7 +27330,7 @@ End Sub
 		<title><![CDATA[image]]></title>
 		<link>https://2jigenha.com/gas_spreadsheet_get/image/</link>
 		<pubDate>Mon, 25 Mar 2024 07:55:58 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27363,7 +27363,7 @@ End Sub
 		<title><![CDATA[image-1]]></title>
 		<link>https://2jigenha.com/gas_spreadsheet_get/image-1-2/</link>
 		<pubDate>Mon, 25 Mar 2024 07:57:51 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-1.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27396,7 +27396,7 @@ End Sub
 		<title><![CDATA[image-2]]></title>
 		<link>https://2jigenha.com/gas_spreadsheet_get/image-2-3/</link>
 		<pubDate>Mon, 25 Mar 2024 07:59:22 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27429,7 +27429,7 @@ End Sub
 		<title><![CDATA[image-3]]></title>
 		<link>https://2jigenha.com/gas_spreadsheet_get/image-3-3/</link>
 		<pubDate>Mon, 25 Mar 2024 08:00:58 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-3.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27462,7 +27462,7 @@ End Sub
 		<title><![CDATA[image-16]]></title>
 		<link>https://2jigenha.com/google-spreadsheet-googlecalendar/image-16/</link>
 		<pubDate>Mon, 25 Mar 2024 13:21:48 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-16.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27495,7 +27495,7 @@ End Sub
 		<title><![CDATA[image-17]]></title>
 		<link>https://2jigenha.com/google-spreadsheet-googlecalendar/image-17/</link>
 		<pubDate>Mon, 25 Mar 2024 13:24:03 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-17.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27528,7 +27528,7 @@ End Sub
 		<title><![CDATA[image-18]]></title>
 		<link>https://2jigenha.com/google-spreadsheet-googlecalendar/image-18/</link>
 		<pubDate>Mon, 25 Mar 2024 13:24:20 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-18.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27561,7 +27561,7 @@ End Sub
 		<title><![CDATA[image-19]]></title>
 		<link>https://2jigenha.com/google-spreadsheet-googlecalendar/image-19/</link>
 		<pubDate>Mon, 25 Mar 2024 13:31:41 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-19.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27594,7 +27594,7 @@ End Sub
 		<title><![CDATA[image-4]]></title>
 		<link>https://2jigenha.com/gas-spreadsheet-search/image-4-3/</link>
 		<pubDate>Tue, 26 Mar 2024 03:45:52 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-4.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27627,7 +27627,7 @@ End Sub
 		<title><![CDATA[image-20]]></title>
 		<link>https://2jigenha.com/google-spreadsheet-scripteditor-open/image-20/</link>
 		<pubDate>Tue, 26 Mar 2024 06:31:45 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-20.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27660,7 +27660,7 @@ End Sub
 		<title><![CDATA[image-21]]></title>
 		<link>https://2jigenha.com/python-interesting-code/image-21/</link>
 		<pubDate>Tue, 26 Mar 2024 07:25:53 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-21.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27693,7 +27693,7 @@ End Sub
 		<title><![CDATA[image-22]]></title>
 		<link>https://2jigenha.com/pip-install/image-22/</link>
 		<pubDate>Tue, 26 Mar 2024 07:44:25 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-22.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27726,7 +27726,7 @@ End Sub
 		<title><![CDATA[image-23]]></title>
 		<link>https://2jigenha.com/python-interesting-code/image-23/</link>
 		<pubDate>Tue, 26 Mar 2024 07:52:34 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-23.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27763,7 +27763,7 @@ End Sub
 		<title><![CDATA[image-24]]></title>
 		<link>https://2jigenha.com/python-face-recognition/image-24/</link>
 		<pubDate>Thu, 28 Mar 2024 00:20:00 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-24.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27796,7 +27796,7 @@ End Sub
 		<title><![CDATA[image-25]]></title>
 		<link>https://2jigenha.com/python-face-recognition/image-25/</link>
 		<pubDate>Thu, 28 Mar 2024 00:37:59 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-25.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27829,7 +27829,7 @@ End Sub
 		<title><![CDATA[group_pic]]></title>
 		<link>https://2jigenha.com/python-face-recognition/image-26/</link>
 		<pubDate>Thu, 28 Mar 2024 00:42:14 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-26.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27866,7 +27866,7 @@ End Sub
 		<title><![CDATA[image-27]]></title>
 		<link>https://2jigenha.com/python-reportlab/image-27/</link>
 		<pubDate>Thu, 28 Mar 2024 01:13:46 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-27.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27899,7 +27899,7 @@ End Sub
 		<title><![CDATA[reportlab]]></title>
 		<link>https://2jigenha.com/python-reportlab/image-28/</link>
 		<pubDate>Thu, 28 Mar 2024 01:16:30 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-28.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27936,7 +27936,7 @@ End Sub
 		<title><![CDATA[image-29]]></title>
 		<link>https://2jigenha.com/python-else/image-29/</link>
 		<pubDate>Thu, 28 Mar 2024 01:28:58 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-29.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -27973,7 +27973,7 @@ End Sub
 		<title><![CDATA[image-30]]></title>
 		<link>https://2jigenha.com/python-mecab/image-30/</link>
 		<pubDate>Thu, 28 Mar 2024 08:22:58 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-30.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28006,7 +28006,7 @@ End Sub
 		<title><![CDATA[image-31]]></title>
 		<link>https://2jigenha.com/python-mecab/image-31/</link>
 		<pubDate>Thu, 28 Mar 2024 08:28:21 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-31.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28039,7 +28039,7 @@ End Sub
 		<title><![CDATA[image-6]]></title>
 		<link>https://2jigenha.com/python-mecab/image-6-2/</link>
 		<pubDate>Thu, 28 Mar 2024 08:34:54 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-6.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28076,7 +28076,7 @@ End Sub
 		<title><![CDATA[image-32]]></title>
 		<link>https://2jigenha.com/python-ternary-operator/image-32/</link>
 		<pubDate>Thu, 28 Mar 2024 08:49:59 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-32.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28109,7 +28109,7 @@ End Sub
 		<title><![CDATA[image-33]]></title>
 		<link>https://2jigenha.com/seaborn-python/image-33/</link>
 		<pubDate>Thu, 28 Mar 2024 09:56:17 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-33.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28142,7 +28142,7 @@ End Sub
 		<title><![CDATA[image-7]]></title>
 		<link>https://2jigenha.com/seaborn-python/image-7-2/</link>
 		<pubDate>Thu, 28 Mar 2024 10:07:35 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-7.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28175,7 +28175,7 @@ End Sub
 		<title><![CDATA[image-34]]></title>
 		<link>https://2jigenha.com/seaborn-heatmap/image-34/</link>
 		<pubDate>Fri, 29 Mar 2024 08:25:22 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-34.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28208,7 +28208,7 @@ End Sub
 		<title><![CDATA[image-35]]></title>
 		<link>https://2jigenha.com/seaborn-heatmap/image-35/</link>
 		<pubDate>Fri, 29 Mar 2024 08:26:12 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-35.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28241,7 +28241,7 @@ End Sub
 		<title><![CDATA[image-36]]></title>
 		<link>https://2jigenha.com/seaborn-heatmap/image-36/</link>
 		<pubDate>Fri, 29 Mar 2024 08:26:46 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-36.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28274,7 +28274,7 @@ End Sub
 		<title><![CDATA[image-37]]></title>
 		<link>https://2jigenha.com/seaborn-heatmap/image-37/</link>
 		<pubDate>Fri, 29 Mar 2024 08:27:18 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-37.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28307,7 +28307,7 @@ End Sub
 		<title><![CDATA[image-38]]></title>
 		<link>https://2jigenha.com/seaborn-heatmap/image-38/</link>
 		<pubDate>Fri, 29 Mar 2024 08:27:47 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-38.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28340,7 +28340,7 @@ End Sub
 		<title><![CDATA[image-39]]></title>
 		<link>https://2jigenha.com/seaborn-heatmap/image-39/</link>
 		<pubDate>Fri, 29 Mar 2024 08:28:15 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-39.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28373,7 +28373,7 @@ End Sub
 		<title><![CDATA[image-40]]></title>
 		<link>https://2jigenha.com/seaborn-heatmap/image-40/</link>
 		<pubDate>Fri, 29 Mar 2024 08:28:37 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-40.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28406,7 +28406,7 @@ End Sub
 		<title><![CDATA[image-41]]></title>
 		<link>https://2jigenha.com/seaborn-heatmap/image-41/</link>
 		<pubDate>Fri, 29 Mar 2024 08:29:49 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-41.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28439,7 +28439,7 @@ End Sub
 		<title><![CDATA[image-42]]></title>
 		<link>https://2jigenha.com/seaborn-heatmap/image-42/</link>
 		<pubDate>Fri, 29 Mar 2024 08:30:16 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-42.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28472,7 +28472,7 @@ End Sub
 		<title><![CDATA[image-8]]></title>
 		<link>https://2jigenha.com/seaborn-heatmap/image-8-2/</link>
 		<pubDate>Fri, 29 Mar 2024 08:33:02 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-8.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28505,7 +28505,7 @@ End Sub
 		<title><![CDATA[image-43]]></title>
 		<link>https://2jigenha.com/seaborn-boxplot/image-43/</link>
 		<pubDate>Fri, 29 Mar 2024 08:59:25 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-43.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28538,7 +28538,7 @@ End Sub
 		<title><![CDATA[image-44]]></title>
 		<link>https://2jigenha.com/seaborn-boxplot/image-44/</link>
 		<pubDate>Fri, 29 Mar 2024 09:02:04 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-44.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28571,7 +28571,7 @@ End Sub
 		<title><![CDATA[image-45]]></title>
 		<link>https://2jigenha.com/seaborn-boxplot/image-45/</link>
 		<pubDate>Fri, 29 Mar 2024 09:02:40 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-45.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28604,7 +28604,7 @@ End Sub
 		<title><![CDATA[image-46]]></title>
 		<link>https://2jigenha.com/seaborn-boxplot/image-46/</link>
 		<pubDate>Fri, 29 Mar 2024 09:03:04 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-46.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28637,7 +28637,7 @@ End Sub
 		<title><![CDATA[image-47]]></title>
 		<link>https://2jigenha.com/seaborn-boxplot/image-47/</link>
 		<pubDate>Fri, 29 Mar 2024 09:03:44 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-47.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28670,7 +28670,7 @@ End Sub
 		<title><![CDATA[image-48]]></title>
 		<link>https://2jigenha.com/seaborn-boxplot/image-48/</link>
 		<pubDate>Fri, 29 Mar 2024 09:04:11 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-48.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28703,7 +28703,7 @@ End Sub
 		<title><![CDATA[image-49]]></title>
 		<link>https://2jigenha.com/seaborn-boxplot/image-49/</link>
 		<pubDate>Fri, 29 Mar 2024 13:04:37 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-49.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28736,7 +28736,7 @@ End Sub
 		<title><![CDATA[image-50]]></title>
 		<link>https://2jigenha.com/seaborn-boxplot/image-50/</link>
 		<pubDate>Fri, 29 Mar 2024 13:05:04 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-50.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28769,7 +28769,7 @@ End Sub
 		<title><![CDATA[image-51]]></title>
 		<link>https://2jigenha.com/seaborn-boxplot/image-51/</link>
 		<pubDate>Fri, 29 Mar 2024 13:05:25 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-51.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28802,7 +28802,7 @@ End Sub
 		<title><![CDATA[image-52]]></title>
 		<link>https://2jigenha.com/seaborn-boxplot/image-52/</link>
 		<pubDate>Fri, 29 Mar 2024 13:06:02 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-52.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28835,7 +28835,7 @@ End Sub
 		<title><![CDATA[image-53]]></title>
 		<link>https://2jigenha.com/seaborn-boxplot/image-53/</link>
 		<pubDate>Fri, 29 Mar 2024 13:06:24 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-53.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28868,7 +28868,7 @@ End Sub
 		<title><![CDATA[image-54]]></title>
 		<link>https://2jigenha.com/seaborn-boxplot/image-54/</link>
 		<pubDate>Fri, 29 Mar 2024 13:06:48 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-54.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28901,7 +28901,7 @@ End Sub
 		<title><![CDATA[image-55]]></title>
 		<link>https://2jigenha.com/seaborn-boxplot/image-55/</link>
 		<pubDate>Fri, 29 Mar 2024 13:14:07 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/image-55.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28934,7 +28934,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-19.38.02]]></title>
 		<link>https://2jigenha.com/seaborn-scatterplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-19-38-02/</link>
 		<pubDate>Sat, 30 Mar 2024 10:49:36 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-19.38.02.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -28967,7 +28967,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-19.50.21]]></title>
 		<link>https://2jigenha.com/seaborn-scatterplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-19-50-21/</link>
 		<pubDate>Sat, 30 Mar 2024 10:52:34 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-19.50.21.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29000,7 +29000,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-19.50.29]]></title>
 		<link>https://2jigenha.com/seaborn-scatterplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-19-50-29/</link>
 		<pubDate>Sat, 30 Mar 2024 10:52:56 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-19.50.29.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29033,7 +29033,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-19.50.35]]></title>
 		<link>https://2jigenha.com/seaborn-scatterplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-19-50-35/</link>
 		<pubDate>Sat, 30 Mar 2024 10:53:12 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-19.50.35.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29066,7 +29066,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-19.50.41]]></title>
 		<link>https://2jigenha.com/seaborn-scatterplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-19-50-41/</link>
 		<pubDate>Sat, 30 Mar 2024 10:53:32 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-19.50.41.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29099,7 +29099,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-19.50.48]]></title>
 		<link>https://2jigenha.com/seaborn-scatterplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-19-50-48/</link>
 		<pubDate>Sat, 30 Mar 2024 10:54:14 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-19.50.48.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29132,7 +29132,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-19.50.55]]></title>
 		<link>https://2jigenha.com/seaborn-scatterplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-19-50-55/</link>
 		<pubDate>Sat, 30 Mar 2024 10:54:48 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-19.50.55.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29165,7 +29165,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-19.51.03]]></title>
 		<link>https://2jigenha.com/seaborn-scatterplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-19-51-03/</link>
 		<pubDate>Sat, 30 Mar 2024 10:55:18 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-19.51.03.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29198,7 +29198,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-19.51.10]]></title>
 		<link>https://2jigenha.com/seaborn-scatterplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-19-51-10/</link>
 		<pubDate>Sat, 30 Mar 2024 10:55:48 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-19.51.10.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29231,7 +29231,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-19.51.15]]></title>
 		<link>https://2jigenha.com/seaborn-scatterplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-19-51-15/</link>
 		<pubDate>Sat, 30 Mar 2024 10:56:08 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-19.51.15.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29264,7 +29264,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-19.51.26]]></title>
 		<link>https://2jigenha.com/seaborn-scatterplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-19-51-26/</link>
 		<pubDate>Sat, 30 Mar 2024 10:56:29 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-19.51.26.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29297,7 +29297,7 @@ End Sub
 		<title><![CDATA[narityan_scatterplot_graph_black_and_white_3ca12157-1214-4927-a0d0-1cc0f7eed47c]]></title>
 		<link>https://2jigenha.com/seaborn-scatterplot/narityan_scatterplot_graph_black_and_white_3ca12157-1214-4927-a0d0-1cc0f7eed47c/</link>
 		<pubDate>Sat, 30 Mar 2024 11:02:25 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/narityan_scatterplot_graph_black_and_white_3ca12157-1214-4927-a0d0-1cc0f7eed47c.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29330,7 +29330,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-20.15.41]]></title>
 		<link>https://2jigenha.com/seaborn-barplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-20-15-41/</link>
 		<pubDate>Sat, 30 Mar 2024 11:18:16 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-20.15.41.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29363,7 +29363,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-20.15.49]]></title>
 		<link>https://2jigenha.com/seaborn-barplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-20-15-49/</link>
 		<pubDate>Sat, 30 Mar 2024 11:19:32 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-20.15.49.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29396,7 +29396,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-20.15.59]]></title>
 		<link>https://2jigenha.com/seaborn-barplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-20-15-59/</link>
 		<pubDate>Sat, 30 Mar 2024 11:19:57 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-20.15.59.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29429,7 +29429,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-20.16.06]]></title>
 		<link>https://2jigenha.com/seaborn-barplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-20-16-06/</link>
 		<pubDate>Sat, 30 Mar 2024 11:22:09 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-20.16.06.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29462,7 +29462,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-20.16.14]]></title>
 		<link>https://2jigenha.com/seaborn-barplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-20-16-14/</link>
 		<pubDate>Sat, 30 Mar 2024 11:22:35 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-20.16.14.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29495,7 +29495,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-20.16.21]]></title>
 		<link>https://2jigenha.com/seaborn-barplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-20-16-21/</link>
 		<pubDate>Sat, 30 Mar 2024 11:23:19 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-20.16.21.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29528,7 +29528,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-20.16.31]]></title>
 		<link>https://2jigenha.com/seaborn-barplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-20-16-31/</link>
 		<pubDate>Sat, 30 Mar 2024 11:23:41 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-20.16.31.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29561,7 +29561,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-20.16.39]]></title>
 		<link>https://2jigenha.com/seaborn-barplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-20-16-39/</link>
 		<pubDate>Sat, 30 Mar 2024 11:24:28 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-20.16.39.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29594,7 +29594,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-20.16.47]]></title>
 		<link>https://2jigenha.com/seaborn-barplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-20-16-47/</link>
 		<pubDate>Sat, 30 Mar 2024 11:24:50 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-20.16.47.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29627,7 +29627,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-20.16.54]]></title>
 		<link>https://2jigenha.com/seaborn-barplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-20-16-54/</link>
 		<pubDate>Sat, 30 Mar 2024 11:25:43 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-20.16.54.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29660,7 +29660,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-20.17.03]]></title>
 		<link>https://2jigenha.com/seaborn-barplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-20-17-03/</link>
 		<pubDate>Sat, 30 Mar 2024 11:26:11 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-20.17.03.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29693,7 +29693,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-20.17.11]]></title>
 		<link>https://2jigenha.com/seaborn-barplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-20-17-11/</link>
 		<pubDate>Sat, 30 Mar 2024 11:26:33 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-20.17.11.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29726,7 +29726,7 @@ End Sub
 		<title><![CDATA[narityan_barplot_graph_black_and_white_8c064555-0f79-4a62-a7d1-040f97100fde]]></title>
 		<link>https://2jigenha.com/seaborn-barplot/narityan_barplot_graph_black_and_white_8c064555-0f79-4a62-a7d1-040f97100fde/</link>
 		<pubDate>Sat, 30 Mar 2024 11:31:03 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/narityan_barplot_graph_black_and_white_8c064555-0f79-4a62-a7d1-040f97100fde.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29759,7 +29759,7 @@ End Sub
 		<title><![CDATA[narityan_programming_code_beautiful_girl_is_writing_the_code_us_0c400f35-2358-4d45-86c5-fc069118fdca]]></title>
 		<link>https://2jigenha.com/python-if/narityan_programming_code_beautiful_girl_is_writing_the_code_us_0c400f35-2358-4d45-86c5-fc069118fdca/</link>
 		<pubDate>Sat, 30 Mar 2024 11:58:36 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/narityan_programming_code_beautiful_girl_is_writing_the_code_us_0c400f35-2358-4d45-86c5-fc069118fdca.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29796,7 +29796,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-21.24.54]]></title>
 		<link>https://2jigenha.com/seaborn-lineplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-21-24-54/</link>
 		<pubDate>Sat, 30 Mar 2024 12:25:54 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-21.24.54.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29829,7 +29829,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-21.25.00]]></title>
 		<link>https://2jigenha.com/seaborn-lineplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-21-25-00/</link>
 		<pubDate>Sat, 30 Mar 2024 12:26:24 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-21.25.00.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29862,7 +29862,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-21.25.07]]></title>
 		<link>https://2jigenha.com/seaborn-lineplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-21-25-07/</link>
 		<pubDate>Sat, 30 Mar 2024 12:26:41 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-21.25.07.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29895,7 +29895,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-21.25.13]]></title>
 		<link>https://2jigenha.com/seaborn-lineplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-21-25-13/</link>
 		<pubDate>Sat, 30 Mar 2024 12:27:01 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-21.25.13.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29928,7 +29928,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-03-30-21.25.19]]></title>
 		<link>https://2jigenha.com/seaborn-lineplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-03-30-21-25-19/</link>
 		<pubDate>Sat, 30 Mar 2024 12:27:19 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/スクリーンショット-2024-03-30-21.25.19.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29961,7 +29961,7 @@ End Sub
 		<title><![CDATA[narityan_lineplot_graph_black_and_white_line_art_76d0c106-c214-4c42-a9c7-27da56507b5d]]></title>
 		<link>https://2jigenha.com/seaborn-lineplot/narityan_lineplot_graph_black_and_white_line_art_76d0c106-c214-4c42-a9c7-27da56507b5d/</link>
 		<pubDate>Sat, 30 Mar 2024 12:30:32 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/03/narityan_lineplot_graph_black_and_white_line_art_76d0c106-c214-4c42-a9c7-27da56507b5d.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -29998,7 +29998,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-02-12.53.03]]></title>
 		<link>https://2jigenha.com/seaborn-histplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-02-12-53-03/</link>
 		<pubDate>Tue, 02 Apr 2024 03:53:36 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-02-12.53.03.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30031,7 +30031,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-02-12.50.44]]></title>
 		<link>https://2jigenha.com/seaborn-histplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-02-12-50-44/</link>
 		<pubDate>Tue, 02 Apr 2024 03:54:21 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-02-12.50.44.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30064,7 +30064,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-02-12.50.51]]></title>
 		<link>https://2jigenha.com/seaborn-histplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-02-12-50-51/</link>
 		<pubDate>Tue, 02 Apr 2024 03:54:28 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-02-12.50.51.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30097,7 +30097,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-02-12.50.56]]></title>
 		<link>https://2jigenha.com/seaborn-histplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-02-12-50-56/</link>
 		<pubDate>Tue, 02 Apr 2024 03:54:33 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-02-12.50.56.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30130,7 +30130,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-02-12.51.05]]></title>
 		<link>https://2jigenha.com/seaborn-histplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-02-12-51-05/</link>
 		<pubDate>Tue, 02 Apr 2024 03:54:40 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-02-12.51.05.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30163,7 +30163,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-02-12.51.12]]></title>
 		<link>https://2jigenha.com/seaborn-histplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-02-12-51-12/</link>
 		<pubDate>Tue, 02 Apr 2024 03:54:46 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-02-12.51.12.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30196,7 +30196,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-02-12.51.20]]></title>
 		<link>https://2jigenha.com/seaborn-histplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-02-12-51-20/</link>
 		<pubDate>Tue, 02 Apr 2024 03:54:52 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-02-12.51.20.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30229,7 +30229,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-02-12.51.25]]></title>
 		<link>https://2jigenha.com/seaborn-histplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-02-12-51-25/</link>
 		<pubDate>Tue, 02 Apr 2024 03:54:59 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-02-12.51.25.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30262,7 +30262,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-02-12.51.34]]></title>
 		<link>https://2jigenha.com/seaborn-histplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-02-12-51-34/</link>
 		<pubDate>Tue, 02 Apr 2024 03:55:04 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-02-12.51.34.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30295,7 +30295,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-02-12.51.43]]></title>
 		<link>https://2jigenha.com/seaborn-histplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-02-12-51-43/</link>
 		<pubDate>Tue, 02 Apr 2024 03:55:10 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-02-12.51.43.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30328,7 +30328,7 @@ End Sub
 		<title><![CDATA[narityan_histogram_black_and_white_line_art_77000c9e-6a05-4cfe-a688-d8c8ac2b39d2]]></title>
 		<link>https://2jigenha.com/seaborn-histplot/narityan_histogram_black_and_white_line_art_77000c9e-6a05-4cfe-a688-d8c8ac2b39d2/</link>
 		<pubDate>Tue, 02 Apr 2024 06:45:41 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/narityan_histogram_black_and_white_line_art_77000c9e-6a05-4cfe-a688-d8c8ac2b39d2.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30361,7 +30361,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-05-21.36.36]]></title>
 		<link>https://2jigenha.com/seaborn-paiaplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-05-21-36-36/</link>
 		<pubDate>Fri, 05 Apr 2024 12:38:02 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-05-21.36.36.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30394,7 +30394,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-05-21.36.23]]></title>
 		<link>https://2jigenha.com/seaborn-paiaplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-05-21-36-23/</link>
 		<pubDate>Fri, 05 Apr 2024 12:38:30 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-05-21.36.23.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30427,7 +30427,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-05-21.36.08]]></title>
 		<link>https://2jigenha.com/seaborn-paiaplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-05-21-36-08/</link>
 		<pubDate>Fri, 05 Apr 2024 12:38:40 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-05-21.36.08.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30460,7 +30460,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-05-21.36.00]]></title>
 		<link>https://2jigenha.com/seaborn-paiaplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-05-21-36-00/</link>
 		<pubDate>Fri, 05 Apr 2024 12:38:58 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-05-21.36.00.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30493,7 +30493,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-05-21.35.48]]></title>
 		<link>https://2jigenha.com/seaborn-paiaplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-05-21-35-48/</link>
 		<pubDate>Fri, 05 Apr 2024 12:39:09 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-05-21.35.48.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30526,7 +30526,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-05-21.35.41]]></title>
 		<link>https://2jigenha.com/seaborn-paiaplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-05-21-35-41/</link>
 		<pubDate>Fri, 05 Apr 2024 12:39:20 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-05-21.35.41.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30559,7 +30559,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-05-21.35.25]]></title>
 		<link>https://2jigenha.com/seaborn-paiaplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-05-21-35-25/</link>
 		<pubDate>Fri, 05 Apr 2024 12:39:36 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-05-21.35.25.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30592,7 +30592,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-05-21.35.11]]></title>
 		<link>https://2jigenha.com/seaborn-paiaplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-05-21-35-11/</link>
 		<pubDate>Fri, 05 Apr 2024 12:39:48 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-05-21.35.11.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30625,7 +30625,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-05-21.35.02]]></title>
 		<link>https://2jigenha.com/seaborn-paiaplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-05-21-35-02/</link>
 		<pubDate>Fri, 05 Apr 2024 12:40:03 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-05-21.35.02.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30658,7 +30658,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-05-21.34.46]]></title>
 		<link>https://2jigenha.com/seaborn-paiaplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-05-21-34-46/</link>
 		<pubDate>Fri, 05 Apr 2024 12:40:17 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-05-21.34.46.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30691,7 +30691,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-05-21.34.33]]></title>
 		<link>https://2jigenha.com/seaborn-paiaplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-05-21-34-33/</link>
 		<pubDate>Fri, 05 Apr 2024 12:40:30 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-05-21.34.33.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30724,7 +30724,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-05-21.34.15]]></title>
 		<link>https://2jigenha.com/seaborn-paiaplot/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-05-21-34-15/</link>
 		<pubDate>Fri, 05 Apr 2024 12:40:40 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-05-21.34.15.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30757,7 +30757,7 @@ End Sub
 		<title><![CDATA[narityan_programming_code_with_beautiful_girl_black_and_white_l_d55e7625-9b32-411e-b21a-e95074f6e9e6]]></title>
 		<link>https://2jigenha.com/gas-scriptapp-newtrigger/narityan_programming_code_with_beautiful_girl_black_and_white_l_d55e7625-9b32-411e-b21a-e95074f6e9e6/</link>
 		<pubDate>Fri, 05 Apr 2024 13:44:48 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/narityan_programming_code_with_beautiful_girl_black_and_white_l_d55e7625-9b32-411e-b21a-e95074f6e9e6.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30794,7 +30794,7 @@ End Sub
 		<title><![CDATA[programming_language_ratings_apr_2024]]></title>
 		<link>https://2jigenha.com/programming-ranking/programming_language_ratings_apr_2024/</link>
 		<pubDate>Mon, 08 Apr 2024 09:37:23 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/programming_language_ratings_apr_2024.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30827,7 +30827,7 @@ End Sub
 		<title><![CDATA[a]]></title>
 		<link>https://2jigenha.com/programming-ranking/a/</link>
 		<pubDate>Mon, 08 Apr 2024 09:46:10 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/a.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30860,7 +30860,7 @@ End Sub
 		<title><![CDATA[a-1]]></title>
 		<link>https://2jigenha.com/programming-ranking/a-1/</link>
 		<pubDate>Mon, 08 Apr 2024 09:48:24 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/a-1.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30893,7 +30893,7 @@ End Sub
 		<title><![CDATA[b]]></title>
 		<link>https://2jigenha.com/programming-ranking/b/</link>
 		<pubDate>Mon, 08 Apr 2024 09:57:59 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/b.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30926,7 +30926,7 @@ End Sub
 		<title><![CDATA[narityan_a_podium_black_and_white_line_art_72f9935b-2f27-4c4f-b601-018168216797]]></title>
 		<link>https://2jigenha.com/programming-ranking/narityan_a_podium_black_and_white_line_art_72f9935b-2f27-4c4f-b601-018168216797/</link>
 		<pubDate>Mon, 08 Apr 2024 10:33:33 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/narityan_a_podium_black_and_white_line_art_72f9935b-2f27-4c4f-b601-018168216797.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30959,7 +30959,7 @@ End Sub
 		<title><![CDATA[DALL·E-2024-04-08-20.06.28-Create-a-simple-and-clean-image-representing-HTML-featuring-the-iconic-angled-brackets-surrounding-the-letters-HTML.-The-color-scheme-should-be-bas]]></title>
 		<link>https://2jigenha.com/why-html-is-not-programming-language/dall%c2%b7e-2024-04-08-20-06-28-create-a-simple-and-clean-image-representing-html-featuring-the-iconic-angled-brackets-surrounding-the-letters-html-the-color-scheme-should-be-bas/</link>
 		<pubDate>Mon, 08 Apr 2024 11:10:16 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/DALL·E-2024-04-08-20.06.28-Create-a-simple-and-clean-image-representing-HTML-featuring-the-iconic-angled-brackets-surrounding-the-letters-HTML.-The-color-scheme-should-be-bas.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -30992,7 +30992,7 @@ End Sub
 		<title><![CDATA[DALL·E-2024-04-08-20.09.29-Create-a-simple-image-that-visually-represents-the-relationship-between-HTML-and-programming-languages.-The-image-should-depict-HTML-as-the-foundation]]></title>
 		<link>https://2jigenha.com/why-html-is-not-programming-language/dall%c2%b7e-2024-04-08-20-09-29-create-a-simple-image-that-visually-represents-the-relationship-between-html-and-programming-languages-the-image-should-depict-html-as-the-foundation/</link>
 		<pubDate>Mon, 08 Apr 2024 11:10:56 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/DALL·E-2024-04-08-20.09.29-Create-a-simple-image-that-visually-represents-the-relationship-between-HTML-and-programming-languages.-The-image-should-depict-HTML-as-the-foundation.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31025,7 +31025,7 @@ End Sub
 		<title><![CDATA[narityan_beautiful_woman_is_denying_something_black_and_white_l_85a2d8c5-97ce-47a0-b177-e3688ed49705]]></title>
 		<link>https://2jigenha.com/why-html-is-not-programming-language/narityan_beautiful_woman_is_denying_something_black_and_white_l_85a2d8c5-97ce-47a0-b177-e3688ed49705/</link>
 		<pubDate>Mon, 08 Apr 2024 11:11:34 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/narityan_beautiful_woman_is_denying_something_black_and_white_l_85a2d8c5-97ce-47a0-b177-e3688ed49705.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31058,7 +31058,7 @@ End Sub
 		<title><![CDATA[narityan_version_confirmation_black_and_white_line_art_15285840-a4cf-42d6-9892-8813c8f14837]]></title>
 		<link>https://2jigenha.com/python-version/narityan_version_confirmation_black_and_white_line_art_15285840-a4cf-42d6-9892-8813c8f14837/</link>
 		<pubDate>Mon, 08 Apr 2024 12:32:17 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/narityan_version_confirmation_black_and_white_line_art_15285840-a4cf-42d6-9892-8813c8f14837.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31091,7 +31091,7 @@ End Sub
 		<title><![CDATA[narityan_woman_is_coding_programming_code_on_mac_book_pro_black_d787cbc5-72ad-497a-a67f-75cfe773aca8]]></title>
 		<link>https://2jigenha.com/python-pep8/narityan_woman_is_coding_programming_code_on_mac_book_pro_black_d787cbc5-72ad-497a-a67f-75cfe773aca8/</link>
 		<pubDate>Tue, 09 Apr 2024 12:34:39 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/narityan_woman_is_coding_programming_code_on_mac_book_pro_black_d787cbc5-72ad-497a-a67f-75cfe773aca8.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31124,7 +31124,7 @@ End Sub
 		<title><![CDATA[typescript]]></title>
 		<link>https://2jigenha.com/typescript/typescript/</link>
 		<pubDate>Thu, 11 Apr 2024 05:39:23 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/typescript.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31157,7 +31157,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-11-14.40.18]]></title>
 		<link>https://2jigenha.com/typescript/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-11-14-40-18/</link>
 		<pubDate>Thu, 11 Apr 2024 05:43:03 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-11-14.40.18.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31190,7 +31190,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-13-23.10.23]]></title>
 		<link>https://2jigenha.com/javascript-alert/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-13-23-10-23/</link>
 		<pubDate>Sat, 13 Apr 2024 14:11:47 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-13-23.10.23.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31223,7 +31223,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-13-23.12.33]]></title>
 		<link>https://2jigenha.com/javascript-alert/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-13-23-12-33/</link>
 		<pubDate>Sat, 13 Apr 2024 14:13:18 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-13-23.12.33.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31260,7 +31260,7 @@ End Sub
 		<title><![CDATA[narityan_the_computer_prompt_including_the_word_alert_black_and_5da029e0-bcb3-45a8-a3f8-d5f27fbb2410]]></title>
 		<link>https://2jigenha.com/javascript-alert/narityan_the_computer_prompt_including_the_word_alert_black_and_5da029e0-bcb3-45a8-a3f8-d5f27fbb2410/</link>
 		<pubDate>Sat, 13 Apr 2024 14:18:33 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/narityan_the_computer_prompt_including_the_word_alert_black_and_5da029e0-bcb3-45a8-a3f8-d5f27fbb2410.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31293,7 +31293,7 @@ End Sub
 		<title><![CDATA[narityan_the_computer_prompt_including_the_word_map_black_and_w_e81c342c-eff6-4ed5-8be1-e34db4d36968]]></title>
 		<link>https://2jigenha.com/javascript-map/narityan_the_computer_prompt_including_the_word_map_black_and_w_e81c342c-eff6-4ed5-8be1-e34db4d36968/</link>
 		<pubDate>Sat, 13 Apr 2024 15:42:56 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/narityan_the_computer_prompt_including_the_word_map_black_and_w_e81c342c-eff6-4ed5-8be1-e34db4d36968.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31326,7 +31326,7 @@ End Sub
 		<title><![CDATA[narityan_the_computer_prompt_including_the_word__black_and__89a45dc3-5067-4d8b-8dc1-ed6ed46622eb]]></title>
 		<link>https://2jigenha.com/javascript-map-object/narityan_the_computer_prompt_including_the_word__black_and__89a45dc3-5067-4d8b-8dc1-ed6ed46622eb/</link>
 		<pubDate>Sat, 13 Apr 2024 15:59:07 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/narityan_the_computer_prompt_including_the_word__black_and__89a45dc3-5067-4d8b-8dc1-ed6ed46622eb.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31359,7 +31359,7 @@ End Sub
 		<title><![CDATA[narityan_the_computer_prompt_including_the_word_push_black_and__4661e36c-e5a0-42e1-b595-4bdbb8211b43]]></title>
 		<link>https://2jigenha.com/javascript-push/narityan_the_computer_prompt_including_the_word_push_black_and__4661e36c-e5a0-42e1-b595-4bdbb8211b43/</link>
 		<pubDate>Sun, 14 Apr 2024 00:50:59 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/narityan_the_computer_prompt_including_the_word_push_black_and__4661e36c-e5a0-42e1-b595-4bdbb8211b43.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31396,7 +31396,7 @@ End Sub
 		<title><![CDATA[narityan_the_computer_prompt_including_the_word_find_black_and__d72e1da5-02d6-4969-bef5-2aad185ca1a9]]></title>
 		<link>https://2jigenha.com/javascript-find/narityan_the_computer_prompt_including_the_word_find_black_and__d72e1da5-02d6-4969-bef5-2aad185ca1a9/</link>
 		<pubDate>Mon, 15 Apr 2024 15:14:50 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/narityan_the_computer_prompt_including_the_word_find_black_and__d72e1da5-02d6-4969-bef5-2aad185ca1a9.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31433,7 +31433,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-04-17-17.08.14]]></title>
 		<link>https://2jigenha.com/scikit-learn-install/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-04-17-17-08-14/</link>
 		<pubDate>Wed, 17 Apr 2024 08:08:54 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/スクリーンショット-2024-04-17-17.08.14.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31470,7 +31470,7 @@ End Sub
 		<title><![CDATA[narityan_function_line_art_5f3dcf2e-ef27-408d-b7f2-4a0d6c374120]]></title>
 		<link>https://2jigenha.com/javascript-arrow-this/narityan_function_line_art_5f3dcf2e-ef27-408d-b7f2-4a0d6c374120/</link>
 		<pubDate>Sat, 27 Apr 2024 15:02:15 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/narityan_function_line_art_5f3dcf2e-ef27-408d-b7f2-4a0d6c374120.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31503,7 +31503,7 @@ End Sub
 		<title><![CDATA[narityan_dataset_devided_by_line_on_the_two_demension_graph_bla_1572ba30-faab-4e11-bb5e-6e53987d12ac]]></title>
 		<link>https://2jigenha.com/python-tynydb/narityan_dataset_devided_by_line_on_the_two_demension_graph_bla_1572ba30-faab-4e11-bb5e-6e53987d12ac/</link>
 		<pubDate>Tue, 30 Apr 2024 15:53:36 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/04/narityan_dataset_devided_by_line_on_the_two_demension_graph_bla_1572ba30-faab-4e11-bb5e-6e53987d12ac.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31536,7 +31536,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-05-09-20.16.10]]></title>
 		<link>https://2jigenha.com/matplotlib-japanease/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-05-09-20-16-10/</link>
 		<pubDate>Thu, 09 May 2024 11:16:41 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/05/スクリーンショット-2024-05-09-20.16.10.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31569,7 +31569,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-05-09-20.45.54]]></title>
 		<link>https://2jigenha.com/matplotlib-japanease/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-05-09-20-45-54/</link>
 		<pubDate>Thu, 09 May 2024 11:46:25 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/05/スクリーンショット-2024-05-09-20.45.54.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31602,7 +31602,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-05-09-20.49.47]]></title>
 		<link>https://2jigenha.com/matplotlib-japanease/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-05-09-20-49-47/</link>
 		<pubDate>Thu, 09 May 2024 11:50:05 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/05/スクリーンショット-2024-05-09-20.49.47.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31635,7 +31635,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-05-12-0.27.12]]></title>
 		<link>https://2jigenha.com/matplotlib-saveefig/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-05-12-0-27-12/</link>
 		<pubDate>Sat, 11 May 2024 15:28:53 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/05/スクリーンショット-2024-05-12-0.27.12.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31668,7 +31668,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-05-12-23.08.46]]></title>
 		<link>https://2jigenha.com/matplotlib-ticks/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-05-12-23-08-46/</link>
 		<pubDate>Sun, 12 May 2024 14:09:08 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/05/スクリーンショット-2024-05-12-23.08.46.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31701,7 +31701,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-05-12-23.08.46-1]]></title>
 		<link>https://2jigenha.com/matplotlib-ticks/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-05-12-23-08-46-1/</link>
 		<pubDate>Sun, 12 May 2024 15:25:37 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/05/スクリーンショット-2024-05-12-23.08.46-1.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31734,7 +31734,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-05-13-0.25.52]]></title>
 		<link>https://2jigenha.com/matplotlib-ticks/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-05-13-0-25-52/</link>
 		<pubDate>Sun, 12 May 2024 15:26:25 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/05/スクリーンショット-2024-05-13-0.25.52.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31767,7 +31767,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-11-25-20.01.34]]></title>
 		<link>https://2jigenha.com/javascript-alert/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-11-25-20-01-34/</link>
 		<pubDate>Mon, 25 Nov 2024 11:02:02 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/スクリーンショット-2024-11-25-20.01.34.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31800,7 +31800,7 @@ End Sub
 		<title><![CDATA[スクリーンショット 2024-11-27 10.10.01]]></title>
 		<link>https://2jigenha.com/matplotlib-saveefig/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-11-27-10-10-01/</link>
 		<pubDate>Wed, 27 Nov 2024 01:10:36 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/05/スクリーンショット-2024-11-27-10.10.01.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31833,7 +31833,7 @@ End Sub
 		<title><![CDATA[スクリーンショット 2024-11-27 10.14.13]]></title>
 		<link>https://2jigenha.com/matplotlib-saveefig/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-11-27-10-14-13/</link>
 		<pubDate>Wed, 27 Nov 2024 01:14:35 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/05/スクリーンショット-2024-11-27-10.14.13.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31866,7 +31866,7 @@ End Sub
 		<title><![CDATA[スクリーンショット 2024-11-27 10.19.37]]></title>
 		<link>https://2jigenha.com/matplotlib-saveefig/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-11-27-10-19-37/</link>
 		<pubDate>Wed, 27 Nov 2024 01:19:52 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/05/スクリーンショット-2024-11-27-10.19.37.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31899,7 +31899,7 @@ End Sub
 		<title><![CDATA[スクリーンショット 2024-11-27 10.21.00]]></title>
 		<link>https://2jigenha.com/matplotlib-saveefig/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-11-27-10-21-00/</link>
 		<pubDate>Wed, 27 Nov 2024 01:21:14 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/05/スクリーンショット-2024-11-27-10.21.00.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31932,7 +31932,7 @@ End Sub
 		<title><![CDATA[matplotlib_savefig_様々な保存方法]]></title>
 		<link>https://2jigenha.com/matplotlib-saveefig/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-11-27-10-28-05/</link>
 		<pubDate>Wed, 27 Nov 2024 01:28:28 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/05/スクリーンショット-2024-11-27-10.28.05.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -31969,7 +31969,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-08-18-23.19.10]]></title>
 		<link>https://2jigenha.com/pandas_dataframe_delete/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-08-18-23-19-10/</link>
 		<pubDate>Sun, 18 Aug 2024 14:21:44 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/08/スクリーンショット-2024-08-18-23.19.10.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32002,7 +32002,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-08-18-23.21.27]]></title>
 		<link>https://2jigenha.com/pandas_dataframe_delete/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-08-18-23-21-27/</link>
 		<pubDate>Sun, 18 Aug 2024 14:21:53 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/08/スクリーンショット-2024-08-18-23.21.27.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32035,7 +32035,7 @@ End Sub
 		<title><![CDATA[pandas]]></title>
 		<link>https://2jigenha.com/pandas_dataframe_delete/pandas/</link>
 		<pubDate>Sun, 18 Aug 2024 14:34:24 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/08/pandas.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32068,7 +32068,7 @@ End Sub
 		<title><![CDATA[DALL·E-2024-08-23-00.25.12-A-modern-clean-and-minimalistic-image-representing-data-analysis-using-Pythons-Pandas-library.-The-image-features-an-open-laptop-with-Python-code-o]]></title>
 		<link>https://2jigenha.com/pandas-iloc/dall%c2%b7e-2024-08-23-00-25-12-a-modern-clean-and-minimalistic-image-representing-data-analysis-using-pythons-pandas-library-the-image-features-an-open-laptop-with-python-code-o/</link>
 		<pubDate>Thu, 22 Aug 2024 15:25:17 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/08/DALL·E-2024-08-23-00.25.12-A-modern-clean-and-minimalistic-image-representing-data-analysis-using-Pythons-Pandas-library.-The-image-features-an-open-laptop-with-Python-code-o.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32101,7 +32101,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-08-23-0.35.43]]></title>
 		<link>https://2jigenha.com/gas-free/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-08-23-0-35-43/</link>
 		<pubDate>Thu, 22 Aug 2024 15:36:05 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/08/スクリーンショット-2024-08-23-0.35.43.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32134,7 +32134,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-08-28-19.45.28]]></title>
 		<link>https://2jigenha.com/pandas-groupby/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-08-28-19-45-28/</link>
 		<pubDate>Wed, 28 Aug 2024 10:45:49 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/08/スクリーンショット-2024-08-28-19.45.28.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32167,7 +32167,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-08-28-19.46.40]]></title>
 		<link>https://2jigenha.com/pandas-groupby/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-08-28-19-46-40/</link>
 		<pubDate>Wed, 28 Aug 2024 10:46:52 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/08/スクリーンショット-2024-08-28-19.46.40.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32200,7 +32200,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-08-28-19.47.45]]></title>
 		<link>https://2jigenha.com/pandas-groupby/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-08-28-19-47-45/</link>
 		<pubDate>Wed, 28 Aug 2024 10:48:01 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/08/スクリーンショット-2024-08-28-19.47.45.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32233,7 +32233,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-08-29-10.51.00]]></title>
 		<link>https://2jigenha.com/pandas-groupby/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-08-29-10-51-00/</link>
 		<pubDate>Thu, 29 Aug 2024 01:51:13 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/08/スクリーンショット-2024-08-29-10.51.00.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32266,7 +32266,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-08-29-10.51.35]]></title>
 		<link>https://2jigenha.com/pandas-groupby/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-08-29-10-51-35/</link>
 		<pubDate>Thu, 29 Aug 2024 01:51:48 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/08/スクリーンショット-2024-08-29-10.51.35.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32299,7 +32299,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-08-29-10.52.11]]></title>
 		<link>https://2jigenha.com/pandas-groupby/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-08-29-10-52-11/</link>
 		<pubDate>Thu, 29 Aug 2024 01:52:22 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/08/スクリーンショット-2024-08-29-10.52.11.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32332,7 +32332,7 @@ End Sub
 		<title><![CDATA[groupby]]></title>
 		<link>https://2jigenha.com/pandas-groupby/groupby/</link>
 		<pubDate>Thu, 29 Aug 2024 01:56:23 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/08/groupby.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32365,7 +32365,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-09-28-23.56.46]]></title>
 		<link>https://2jigenha.com/python-pyscript/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-09-28-23-56-46/</link>
 		<pubDate>Sat, 28 Sep 2024 14:56:58 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/09/スクリーンショット-2024-09-28-23.56.46.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32398,7 +32398,7 @@ End Sub
 		<title><![CDATA[Screenshot 2024-12-06 at 22.52.17]]></title>
 		<link>https://2jigenha.com/matplotlib-ticks/screenshot-2024-12-06-at-22-52-17/</link>
 		<pubDate>Fri, 06 Dec 2024 13:53:12 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/05/Screenshot-2024-12-06-at-22.52.17.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32431,7 +32431,7 @@ End Sub
 		<title><![CDATA[Screenshot 2024-12-06 at 22.55.45]]></title>
 		<link>https://2jigenha.com/matplotlib-ticks/screenshot-2024-12-06-at-22-55-45/</link>
 		<pubDate>Fri, 06 Dec 2024 13:56:08 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/05/Screenshot-2024-12-06-at-22.55.45.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32464,7 +32464,7 @@ End Sub
 		<title><![CDATA[Screenshot 2024-12-06 at 22.57.16]]></title>
 		<link>https://2jigenha.com/matplotlib-ticks/screenshot-2024-12-06-at-22-57-16/</link>
 		<pubDate>Fri, 06 Dec 2024 13:57:34 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/05/Screenshot-2024-12-06-at-22.57.16.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32497,7 +32497,7 @@ End Sub
 		<title><![CDATA[Screenshot 2024-12-06 at 22.58.05]]></title>
 		<link>https://2jigenha.com/matplotlib-ticks/screenshot-2024-12-06-at-22-58-05/</link>
 		<pubDate>Fri, 06 Dec 2024 13:58:23 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/05/Screenshot-2024-12-06-at-22.58.05.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32530,7 +32530,7 @@ End Sub
 		<title><![CDATA[Screenshot 2024-12-06 at 22.58.56]]></title>
 		<link>https://2jigenha.com/matplotlib-ticks/screenshot-2024-12-06-at-22-58-56/</link>
 		<pubDate>Fri, 06 Dec 2024 13:59:14 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/05/Screenshot-2024-12-06-at-22.58.56.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32563,7 +32563,7 @@ End Sub
 		<title><![CDATA[image]]></title>
 		<link>https://2jigenha.com/matplotlib-ticks/image-56/</link>
 		<pubDate>Fri, 06 Dec 2024 13:59:23 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/05/image.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32600,7 +32600,7 @@ End Sub
 		<title><![CDATA[Screenshot 2024-12-06 at 23.02.46]]></title>
 		<link>https://2jigenha.com/matplotlib-ticks/screenshot-2024-12-06-at-23-02-46/</link>
 		<pubDate>Fri, 06 Dec 2024 14:03:03 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/05/Screenshot-2024-12-06-at-23.02.46.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32637,7 +32637,7 @@ End Sub
 		<title><![CDATA[pyscript]]></title>
 		<link>https://2jigenha.com/python-pyscript/dall%c2%b7e-2024-09-29-00-02-33-a-clean-modern-web-page-interface-with-a-python-logo-subtly-incorporated-the-page-features-code-snippets-in-python-alongside-graphical-elements-like/</link>
 		<pubDate>Sat, 28 Sep 2024 15:03:14 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/09/DALL·E-2024-09-29-00.02.33-A-clean-modern-web-page-interface-with-a-Python-logo-subtly-incorporated.-The-page-features-code-snippets-in-Python-alongside-graphical-elements-like.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32674,7 +32674,7 @@ End Sub
 		<title><![CDATA[openpyxl]]></title>
 		<link>https://2jigenha.com/python-openpyxl-install/openpyxl/</link>
 		<pubDate>Sun, 29 Sep 2024 08:46:14 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/09/openpyxl.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32707,7 +32707,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-09-30-11.53.33]]></title>
 		<link>https://2jigenha.com/openpyxl-excel-load/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-09-30-11-53-33/</link>
 		<pubDate>Mon, 30 Sep 2024 02:54:19 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/09/スクリーンショット-2024-09-30-11.53.33.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32740,7 +32740,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-11-25-18.15.47]]></title>
 		<link>https://2jigenha.com/openpyxl-excel-load/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-11-25-18-15-47/</link>
 		<pubDate>Mon, 25 Nov 2024 09:16:20 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/スクリーンショット-2024-11-25-18.15.47.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32773,7 +32773,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-11-25-18.17.35]]></title>
 		<link>https://2jigenha.com/openpyxl-excel-load/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-11-25-18-17-35/</link>
 		<pubDate>Mon, 25 Nov 2024 09:17:47 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/スクリーンショット-2024-11-25-18.17.35.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32806,7 +32806,7 @@ End Sub
 		<title><![CDATA[narityan_the_computer_displaying_the_letter_OpenPyXl_black_and__ab97b96b-c83b-4d9a-9f12-3d5ff129d7cd]]></title>
 		<link>https://2jigenha.com/openpyxl-excel-load/narityan_the_computer_displaying_the_letter_openpyxl_black_and__ab97b96b-c83b-4d9a-9f12-3d5ff129d7cd/</link>
 		<pubDate>Mon, 25 Nov 2024 09:33:10 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/narityan_the_computer_displaying_the_letter_OpenPyXl_black_and__ab97b96b-c83b-4d9a-9f12-3d5ff129d7cd.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32843,7 +32843,7 @@ End Sub
 		<title><![CDATA[narityan_the_MacBook_computer_displaying_the_letter_OpenPyXl_bl_dc255f9c-a635-40af-9137-16b9454c7472]]></title>
 		<link>https://2jigenha.com/openpyxl-command-compilation/narityan_the_macbook_computer_displaying_the_letter_openpyxl_bl_dc255f9c-a635-40af-9137-16b9454c7472/</link>
 		<pubDate>Mon, 25 Nov 2024 09:38:56 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/narityan_the_MacBook_computer_displaying_the_letter_OpenPyXl_bl_dc255f9c-a635-40af-9137-16b9454c7472.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32880,7 +32880,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-11-25-18.44.41]]></title>
 		<link>https://2jigenha.com/openpyxl-application/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-11-25-18-44-41/</link>
 		<pubDate>Mon, 25 Nov 2024 09:45:07 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/スクリーンショット-2024-11-25-18.44.41.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32913,7 +32913,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-11-25-18.46.12]]></title>
 		<link>https://2jigenha.com/openpyxl-application/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-11-25-18-46-12/</link>
 		<pubDate>Mon, 25 Nov 2024 09:46:34 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/スクリーンショット-2024-11-25-18.46.12.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32946,7 +32946,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-11-25-18.47.19]]></title>
 		<link>https://2jigenha.com/openpyxl-application/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-11-25-18-47-19/</link>
 		<pubDate>Mon, 25 Nov 2024 09:47:39 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/スクリーンショット-2024-11-25-18.47.19.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -32979,7 +32979,7 @@ End Sub
 		<title><![CDATA[narityan_the_computer_displaying_bar_charts_black_and_white_lin_59fc7148-a149-418b-b4be-86321a20101b]]></title>
 		<link>https://2jigenha.com/openpyxl-application/narityan_the_computer_displaying_bar_charts_black_and_white_lin_59fc7148-a149-418b-b4be-86321a20101b/</link>
 		<pubDate>Mon, 25 Nov 2024 09:49:59 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/narityan_the_computer_displaying_bar_charts_black_and_white_lin_59fc7148-a149-418b-b4be-86321a20101b.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33012,7 +33012,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-11-25-20.34.05]]></title>
 		<link>https://2jigenha.com/javascript-confirm/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-11-25-20-34-05/</link>
 		<pubDate>Mon, 25 Nov 2024 11:34:15 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/スクリーンショット-2024-11-25-20.34.05.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33045,7 +33045,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-11-25-20.35.09]]></title>
 		<link>https://2jigenha.com/javascript-confirm/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-11-25-20-35-09/</link>
 		<pubDate>Mon, 25 Nov 2024 11:35:38 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/スクリーンショット-2024-11-25-20.35.09.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33078,7 +33078,7 @@ End Sub
 		<title><![CDATA[スクリーンショット-2024-11-25-20.36.16]]></title>
 		<link>https://2jigenha.com/javascript-confirm/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-11-25-20-36-16/</link>
 		<pubDate>Mon, 25 Nov 2024 11:36:32 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/スクリーンショット-2024-11-25-20.36.16.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33111,7 +33111,7 @@ End Sub
 		<title><![CDATA[narityan_web_scraping_fbb6b2d8-29d3-4179-b0b0-cf4f8ac0f38f]]></title>
 		<link>https://2jigenha.com/webscraping-forbidden/narityan_web_scraping_fbb6b2d8-29d3-4179-b0b0-cf4f8ac0f38f/</link>
 		<pubDate>Tue, 26 Nov 2024 06:49:42 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/narityan_web_scraping_fbb6b2d8-29d3-4179-b0b0-cf4f8ac0f38f.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33148,7 +33148,7 @@ End Sub
 		<title><![CDATA[narityan_programming_web_scraping_e85d71c2-62a8-439d-82c1-79a277bde1ba]]></title>
 		<link>https://2jigenha.com/webscraping-recommended-language/narityan_programming_web_scraping_e85d71c2-62a8-439d-82c1-79a277bde1ba/</link>
 		<pubDate>Tue, 26 Nov 2024 07:19:46 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/narityan_programming_web_scraping_e85d71c2-62a8-439d-82c1-79a277bde1ba.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33181,7 +33181,7 @@ End Sub
 		<title><![CDATA[narityan_wide_PC_display_is_displaying_programming_code_the_cod_620c0722-8e5b-489f-a1ed-d2631fa18461]]></title>
 		<link>https://2jigenha.com/pandas-filterling/narityan_wide_pc_display_is_displaying_programming_code_the_cod_620c0722-8e5b-489f-a1ed-d2631fa18461/</link>
 		<pubDate>Tue, 26 Nov 2024 08:00:15 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/narityan_wide_PC_display_is_displaying_programming_code_the_cod_620c0722-8e5b-489f-a1ed-d2631fa18461.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33218,7 +33218,7 @@ End Sub
 		<title><![CDATA[スクリーンショット 2024-11-26 17.34.50]]></title>
 		<link>https://2jigenha.com/python-datascience-for-biginner/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-11-26-17-34-50/</link>
 		<pubDate>Tue, 26 Nov 2024 08:35:13 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/スクリーンショット-2024-11-26-17.34.50.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33251,7 +33251,7 @@ End Sub
 		<title><![CDATA[スクリーンショット 2024-11-26 17.35.56]]></title>
 		<link>https://2jigenha.com/python-datascience-for-biginner/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-11-26-17-35-56/</link>
 		<pubDate>Tue, 26 Nov 2024 08:36:31 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/スクリーンショット-2024-11-26-17.35.56.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33284,7 +33284,7 @@ End Sub
 		<title><![CDATA[スクリーンショット 2024-11-26 17.44.07]]></title>
 		<link>https://2jigenha.com/pandas-defect-value/%e3%82%b9%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e3%82%b7%e3%83%a7%e3%83%83%e3%83%88-2024-11-26-17-44-07/</link>
 		<pubDate>Tue, 26 Nov 2024 08:44:20 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/スクリーンショット-2024-11-26-17.44.07.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33321,7 +33321,7 @@ End Sub
 		<title><![CDATA[GAS_Logo]]></title>
 		<link>https://2jigenha.com/gas-web-scraping/gas_logo/</link>
 		<pubDate>Thu, 28 Nov 2024 16:34:22 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/GAS_Logo.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33354,7 +33354,7 @@ End Sub
 		<title><![CDATA[Screenshot 2024-11-30 at 21.53.59]]></title>
 		<link>https://2jigenha.com/webscraping-javascript/screenshot-2024-11-30-at-21-53-59/</link>
 		<pubDate>Sat, 30 Nov 2024 12:55:05 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/Screenshot-2024-11-30-at-21.53.59.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33387,7 +33387,7 @@ End Sub
 		<title><![CDATA[gpme2h882i6xab1cp3vt]]></title>
 		<link>https://2jigenha.com/webscraping-javascript/gpme2h882i6xab1cp3vt/</link>
 		<pubDate>Sat, 30 Nov 2024 12:56:38 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/11/gpme2h882i6xab1cp3vt.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33424,7 +33424,7 @@ End Sub
 		<title><![CDATA[837b481b6978c3bcd12ad23db76dbfb6-640x463]]></title>
 		<link>https://2jigenha.com/vba-webscraping/837b481b6978c3bcd12ad23db76dbfb6-640x463/</link>
 		<pubDate>Wed, 04 Dec 2024 15:07:56 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/12/837b481b6978c3bcd12ad23db76dbfb6-640x463-1.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33457,7 +33457,7 @@ End Sub
 		<title><![CDATA[download]]></title>
 		<link>https://2jigenha.com/vba-webscraping/download/</link>
 		<pubDate>Wed, 04 Dec 2024 15:10:37 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2024/12/download.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33494,7 +33494,7 @@ End Sub
 		<title><![CDATA[57493956-8c11-4aef-bab3-3ce3876979d8]]></title>
 		<link>https://2jigenha.com/vba-if/57493956-8c11-4aef-bab3-3ce3876979d8/</link>
 		<pubDate>Sat, 08 Mar 2025 04:36:13 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2025/03/57493956-8c11-4aef-bab3-3ce3876979d8.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33527,7 +33527,7 @@ End Sub
 		<title><![CDATA[Screenshot 2025-03-08 at 1.49.56 pm]]></title>
 		<link>https://2jigenha.com/vba-if/screenshot-2025-03-08-at-1-49-56-pm/</link>
 		<pubDate>Sat, 08 Mar 2025 04:50:38 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2025/03/Screenshot-2025-03-08-at-1.49.56 pm.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33560,7 +33560,7 @@ End Sub
 		<title><![CDATA[rectangle_large_type_2_682af287ef2ff1d41792fa3c3e71dcc4]]></title>
 		<link>https://2jigenha.com/how-to-write-a-resume-and-curriculum-vitae-to-get-a-job-offer-from-a-foreign-company-as-an-it-engineer/rectangle_large_type_2_682af287ef2ff1d41792fa3c3e71dcc4/</link>
 		<pubDate>Sat, 10 May 2025 10:41:50 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2025/05/rectangle_large_type_2_682af287ef2ff1d41792fa3c3e71dcc4.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33593,7 +33593,7 @@ End Sub
 		<title><![CDATA[resume on table Office Business]]></title>
 		<link>https://2jigenha.com/how-to-write-a-resume-and-curriculum-vitae-to-get-a-job-offer-from-a-foreign-company-as-an-it-engineer/resume-on-table-office-business/</link>
 		<pubDate>Sat, 10 May 2025 10:48:15 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2025/05/AdobeStock_208753444.jpeg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33626,7 +33626,7 @@ End Sub
 		<title><![CDATA[Collection of logos printed on white paper of the 4 largest digital companies also known by the acronym GAFA]]></title>
 		<link>https://2jigenha.com/how-to-write-a-resume-and-curriculum-vitae-to-get-a-job-offer-from-a-foreign-company-as-an-it-engineer/collection-of-logos-printed-on-white-paper-of-the-4-largest-digital-companies-also-known-by-the-acronym-gafa/</link>
 		<pubDate>Wed, 14 May 2025 08:50:33 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2025/05/AdobeStock_304370363_Editorial_Use_Only.jpeg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33663,7 +33663,7 @@ End Sub
 		<title><![CDATA[Jasper_2025-05-21T134931.889Z]]></title>
 		<link>https://2jigenha.com/do-web-designers-really-need-programming-skills/jasper_2025-05-21t134931-889z/</link>
 		<pubDate>Wed, 21 May 2025 13:49:38 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2025/05/Jasper_2025-05-21T133A493A31.889Z.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
@@ -33700,7 +33700,7 @@ End Sub
 		<title><![CDATA[fe63a75f-bdcf-4ee7-8b6e-2ffd830e7a6f]]></title>
 		<link>https://2jigenha.com/mvp-programming-portfolio/fe63a75f-bdcf-4ee7-8b6e-2ffd830e7a6f/</link>
 		<pubDate>Wed, 18 Jun 2025 06:17:35 +0000</pubDate>
-		<dc:creator><![CDATA[m2rnrt]]></dc:creator>
+		<dc:creator><![CDATA[SiiD編集部]]></dc:creator>
 		<guid isPermaLink="false">https://2jigenha.com/wp-content/uploads/2025/06/fe63a75f-bdcf-4ee7-8b6e-2ffd830e7a6f.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>

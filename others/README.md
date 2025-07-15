@@ -1,11 +1,11 @@
-1. 必要なモジュールをインストール
+https://blog.microcms.io/wordpress-to-microcms-migration/
 
+# media
 ```
-pip install lxml
+npm run images
 ```
 
-2. 実行
-
+# articles
 ```
-python converter.py
+npm run start
 ```

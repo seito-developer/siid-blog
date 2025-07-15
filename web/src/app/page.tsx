@@ -1,14 +1,39 @@
-import Image from "next/image";
+import Link from 'next/link';
+import { client } from '../libs/microcms';
 
-export default function Home() {
+// ブログ記事の型定義
+type Props = {
+  id: string;
+  title: string;
+};
+
+// microCMSからブログ記事を取得
+async function getBlogPosts(): Promise<Props[]> {
+  const data = await client.get({
+    endpoint: 'blogs', // 'blog'はmicroCMSのエンドポイント名
+    queries: {
+      fields: 'id,title',  // idとtitleを取得
+      limit: 5,  // 最新の5件を取得
+    },
+  });
+  return data.contents;
+}
+
+export default async function Home() {
+  const posts = await getBlogPosts();
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        
-      </footer>
-    </div>
+    <main>
+      <h1>ブログ記事一覧</h1>
+      <ul>
+        {posts.map((post) => (
+          <li key={post.id}>
+            <Link href={`/blogs/${post.id}`}> {/* 記事へのリンクを生成 */}
+              {post.title} {/* タイトルを表示 */}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </main>
   );
 }
