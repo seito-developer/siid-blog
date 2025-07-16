@@ -1,7 +1,7 @@
 import { client } from "@/libs/microcms";
 import { BLOG_API_ENDPOINT } from "@/app/constants";
 import BlogHeader from "@/components/blog-header";
-import { CategoryProps, TagProps } from "@/interfaces/common";
+import { CategoryProps, EyecatchProps, TagProps } from "@/interfaces/common";
 import ArticleBody from "@/components/article-body/article-body";
 import Breadcrumbs from "@/components/breadcrumbs";
 
@@ -14,11 +14,7 @@ type Props = {
   revisedAt: string;
   title: string;
   contents: string;
-  eyecatch: {
-    url: string;
-    height: number;
-    width: number;
-  };
+  eyecatch: EyecatchProps;
   author: string;
   categories: CategoryProps[];
   tags: TagProps[];
