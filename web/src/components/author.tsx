@@ -1,4 +1,4 @@
-import { formatDate } from "@/lib/utils";
+import { formatDate } from "@/libs/utils";
 import Image from "next/image";
 
 interface AuthorProps {

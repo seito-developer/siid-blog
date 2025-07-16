@@ -2,6 +2,7 @@ import { client } from "@/libs/microcms";
 import { BLOG_API_ENDPOINT } from "@/app/constants";
 import BlogHeader from "@/components/blog-header";
 import { CategoryProps, TagProps } from "@/interfaces/common";
+import ArticleBody from "@/components/article-body/article-body";
 
 // ブログ記事の型定義
 type Props = {
@@ -38,7 +39,6 @@ export default async function BlogPostPage({
 }) {
   const { id } = await params; // IDを取得
   const post = await getBlogPost(id);
-  console.log("post:", post);
   
   return (
     <main className="min-h-screen bg-[#F4F4F4]">
@@ -51,7 +51,9 @@ export default async function BlogPostPage({
         title={post.title}
       />
       {/* 記事本文を表示 */}
-      <div dangerouslySetInnerHTML={{ __html: post.contents || "" }} />{" "}
+      <ArticleBody>
+        {post.contents || "" }
+      </ArticleBody>
     </main>
   );
 }
