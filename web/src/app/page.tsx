@@ -4,24 +4,26 @@ import ArticleList from '@/components/article-list';
 import { ArticleProps } from '@/interfaces/common';
 
 // microCMSからブログ記事を取得
-async function getBlogPosts(): Promise<ArticleProps[]> {
+async function getBlogPosts(): Promise<{posts: ArticleProps[], totalCount: number}> {
   const data = await client.get({
     endpoint: BLOG_API_ENDPOINT, // 'blog'はmicroCMSのエンドポイント名
     queries: {
-      // fields: 'id,title',  // idとtitleを取得
-      limit: 10,  // 最新の5件を取得
+      offset: 0,
+      limit: 10,
     },
   });
-  return data.contents;
+  return {
+    posts: data.contents,
+    totalCount: data.totalCount
+  };
 }
 
 export default async function Home() {
-  const posts = await getBlogPosts();
+  const { posts, totalCount } = await getBlogPosts();
 
   return (
     <main>
-      <h1>ブログ記事一覧</h1>
-      <ArticleList articles={posts} />
+      <ArticleList articles={posts} totalCount={totalCount} />
     </main>
   );
 }

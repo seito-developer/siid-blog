@@ -39,7 +39,7 @@ export default async function BlogPostPage({
   const post = await getBlogPost(id);
 
   const categoryBreadcrumbs = [
-    { label: post.categories[0].name, href: `/${post.categories[0].id}` },
+    // { label: post.categories[0].name, href: `/${post.categories[0].id}` },
     { label: post.title, isCurrentPage: true },
   ]
   

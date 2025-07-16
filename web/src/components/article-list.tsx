@@ -1,3 +1,5 @@
+'use client';
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, User } from "lucide-react"
@@ -5,8 +7,12 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArticleProps } from "@/interfaces/common"
 import { BLOG_API_ENDPOINT } from "@/app/constants"
+import { useState } from "react";
+import { OffsetPagination } from "./ui/offset-pagination";
 
-export default function ArticleList({ articles }: { articles: ArticleProps[] }) {
+export default function ArticleList({ articles, totalCount }: { articles: ArticleProps[], totalCount: number }) {
+  const [offsetCurrentPage, setOffsetCurrentPage] = useState<number>(1)
+
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#F4F4F4", fontFamily: "Noto Sans JP, sans-serif" }}>
       <div className="container mx-auto px-4 py-8">
@@ -92,16 +98,14 @@ export default function ArticleList({ articles }: { articles: ArticleProps[] }) 
           ))}
         </div>
 
-        {/* Load More Button */}
-        <div className="text-center mt-12">
-          <button
-            className="px-8 py-3 rounded-lg font-medium text-white transition-colors hover:opacity-90"
-            style={{ backgroundColor: "#EE7D2B" }}
-          >
-            さらに記事を読む
-          </button>
-        </div>
       </div>
+
+      <OffsetPagination
+        totalItems={totalCount}
+        itemsPerPage={10}
+        currentPage={offsetCurrentPage}
+        onPageChange={setOffsetCurrentPage}
+      />
     </div>
   )
 }
