@@ -3,6 +3,7 @@ import { BLOG_API_ENDPOINT } from "@/app/constants";
 import BlogHeader from "@/components/blog-header";
 import { CategoryProps, TagProps } from "@/interfaces/common";
 import ArticleBody from "@/components/article-body/article-body";
+import Breadcrumbs from "@/components/breadcrumbs";
 
 // ブログ記事の型定義
 type Props = {
@@ -31,6 +32,7 @@ async function getBlogPost(id: string): Promise<Props> {
   return data;
 }
 
+
 // 記事詳細ページの生成
 export default async function BlogPostPage({
   params,
@@ -39,9 +41,15 @@ export default async function BlogPostPage({
 }) {
   const { id } = await params; // IDを取得
   const post = await getBlogPost(id);
+
+  const categoryBreadcrumbs = [
+    { label: post.categories[0].name, href: `/${post.categories[0].id}` },
+    { label: post.title, isCurrentPage: true },
+  ]
   
   return (
     <main className="min-h-screen bg-[#F4F4F4]">
+      <Breadcrumbs items={categoryBreadcrumbs} />
       <BlogHeader
         eyecatchImage={post.eyecatch.url}
         authorName={post.author}
