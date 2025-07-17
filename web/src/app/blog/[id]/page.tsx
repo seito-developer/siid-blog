@@ -5,6 +5,7 @@ import { CategoryProps, EyecatchProps, TagProps } from "@/interfaces/common";
 import ArticleBody from "@/components/article-body/article-body";
 import Breadcrumbs from "@/components/breadcrumbs";
 import BannerSiid from "@/components/bannaer-siid";
+import { JSDOM } from "jsdom";
 
 // ブログ記事の型定義
 type Props = {
@@ -77,4 +78,37 @@ export async function generateStaticParams() {
   return contentIds.map((contentId) => ({
     id: contentId, // 各記事のIDをパラメータとして返す
   }));
+}
+
+// HTMLタグを除去してテキストのみを取得
+function stripHtmlTags(html: string): string {
+  const dom = new JSDOM(html);
+  return dom.window.document.body.textContent || "";
+}
+
+// メタデータの生成
+export async function generateMetadata({ params }: { params: { id: string } }) {
+  const { id } = await params;
+  console.log('id:', id);
+  const post = await getBlogPost(id);
+
+  const plainTextContent = stripHtmlTags(post.contents);
+  const description = plainTextContent.slice(0, 120) + "...";
+
+  return {
+    title: post.title,
+    description: description,           // 120 文字要約
+    alternates: {
+      canonical: `https://blog.bug-fix.org/blog/${id}`,
+    },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: description,
+      url: `https://blog.bug-fix.org/blog/${id}`,
+      images: [{ url: post.eyecatch.url }],
+      publishedTime: post.publishedAt,
+      authors: [post.author],
+    },
+  };
 }
