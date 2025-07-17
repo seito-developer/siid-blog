@@ -7,10 +7,10 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           {/* Links Section */}
           <div className="flex gap-5 sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6">
-            <Link href="#" className="text-white hover:text-[#289B8F] transition-colors duration-200 font-medium">
+            <Link href="#" className="text-white hover:text-[#289B8F] transition-colors duration-200 font-medium underline">
               SiiD 公式
             </Link>
-            <Link href="#" className="text-white hover:text-[#289B8F] transition-colors duration-200 font-medium">
+            <Link href="#" className="text-white hover:text-[#289B8F] transition-colors duration-200 font-medium underline">
               運営会社BugFix
             </Link>
           </div>

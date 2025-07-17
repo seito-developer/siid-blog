@@ -4,7 +4,7 @@ import React from "react";
 
 function BannerSiid() {
   return (
-    <div style={{ display: "block", padding: "30px 15px" }}>
+    <div style={{ display: "block", padding: "30px 15px", maxWidth: '520px', margin: '0 auto' }}>
       <Link href="https://bug-fix.org/siid" target="_blank">
         <Image
           src="/banner-1.png"
