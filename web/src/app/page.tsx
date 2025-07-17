@@ -45,7 +45,7 @@ export default async function Home({
 }
 
 // microCMSからブログ記事を取得
-export async function getBlogPosts({
+async function getBlogPosts({
   offset = 0,
   limit = POSTS_NUM_PER_PAGE,
 }: {
