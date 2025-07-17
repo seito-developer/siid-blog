@@ -12,7 +12,7 @@ export default function ArticleManager({
   articles: ArticleProps[];
   totalCount: number;
 }) {
-  const { offsetCurrentPage, clickPage } = usePages(totalCount, 10);
+  const { offsetCurrentPage, clickPage } = usePages();
 
   return (
     <>
