@@ -87,9 +87,8 @@ function stripHtmlTags(html: string): string {
 }
 
 // メタデータの生成
-export async function generateMetadata({ params }: { params: { id: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  console.log('id:', id);
   const post = await getBlogPost(id);
 
   const plainTextContent = stripHtmlTags(post.contents);
