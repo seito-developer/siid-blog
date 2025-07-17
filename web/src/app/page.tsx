@@ -2,6 +2,17 @@ import { client } from "../libs/microcms";
 import { BLOG_API_ENDPOINT, POSTS_NUM_PER_PAGE } from "./constants";
 import { ArticleProps } from "@/interfaces/common";
 import ArticleManager from "@/components/article-manager";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "記事一覧 | SiiD BLOG",
+  description: "YouTube登録者数12万人を誇るセイト先生が教える、プログラミングスクールSiiDのブログメディア。エンジニア転職や技術学習に関連する有益な情報を発信中！",
+  openGraph: {
+    title: "記事一覧 | SiiD BLOG",
+    description: "YouTube登録者数12万人を誇るセイト先生が教える、プログラミングスクールSiiDのブログメディア。エンジニア転職や技術学習に関連する有益な情報を発信中！",
+    type: "website",
+  },
+};
 
 export default async function Home({
   searchParams,
