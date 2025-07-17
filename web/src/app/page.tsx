@@ -6,9 +6,9 @@ import ArticleManager from "@/components/article-manager";
 export default async function Home({
   searchParams,
 }: {
-  searchParams: { page?: string; perPage?: string };
+  searchParams: Promise<{ page?: string; perPage?: string }>;
 }) {
-  const { page, perPage } = searchParams;
+  const { page, perPage } = await searchParams;
   const limit =
     typeof perPage === "string" ? parseInt(perPage) : POSTS_NUM_PER_PAGE;
   const offset = typeof page === "string" ? (parseInt(page) - 1) * limit : 0;
