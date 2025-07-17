@@ -4,7 +4,7 @@ import axios from "axios";
 import { glob } from "glob";
 import "dotenv/config";
 
-const serviceDomain = process.env.MICROCMS_SERVICE_DOMAIN;
+const serviceDomain = process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN;
 const apiKey = process.env.MICROCMS_API_KEY;
 const wordpressMediaBasePath = process.env.WORDPRESS_MEDIA_BASE_PATH;
 

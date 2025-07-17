@@ -1,6 +1,4 @@
-"use client"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 interface PaginationProps {
   totalItems: number
@@ -35,9 +33,9 @@ export function OffsetPagination({ totalItems, itemsPerPage, currentPage, onPage
   }
 
   return (
-    <Card className="w-full py-5" style={{ backgroundColor: "#F4F4F4" }}>
+    <div className="w-full py-5" style={{ backgroundColor: "#F4F4F4" }}>
       
-      <CardContent className="space-y-4">
+      <div className="space-y-4">
         <div className="text-sm" style={{ color: "#000", textAlign: "center" }}>
           {startItem}-{endItem} / {totalItems} Pages
         </div>
@@ -95,7 +93,7 @@ export function OffsetPagination({ totalItems, itemsPerPage, currentPage, onPage
             Next
           </Button>
         </div>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   )
 }

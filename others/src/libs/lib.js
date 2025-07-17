@@ -33,7 +33,7 @@ export const hashKeyword = (keyword, length = 10) => {
 	return hash.substring(0, length);
 };
 
-const serviceDomain = process.env.MICROCMS_SERVICE_DOMAIN;
+const serviceDomain = process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN;
 const apiKey = process.env.MICROCMS_API_KEY;
 
 /**
