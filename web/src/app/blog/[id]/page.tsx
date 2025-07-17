@@ -4,6 +4,7 @@ import BlogHeader from "@/components/blog-header";
 import { CategoryProps, EyecatchProps, TagProps } from "@/interfaces/common";
 import ArticleBody from "@/components/article-body/article-body";
 import Breadcrumbs from "@/components/breadcrumbs";
+import BannerSiid from "@/components/bannaer-siid";
 
 // ブログ記事の型定義
 type Props = {
@@ -63,6 +64,7 @@ export default async function BlogPostPage({
       <ArticleBody>
         {post.contents || "" }
       </ArticleBody>
+      <BannerSiid />
     </main>
   );
 }
