@@ -135,8 +135,8 @@
 
   /* Inline code */
   code {
-    background-color: #f4f4f4;
-    color: #214a4a;
+    background-color: #163333;
+    color: #fff;
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
     font-size: 0.875rem;
@@ -146,7 +146,7 @@
 
   /* Code block */
   pre {
-    background-color: #214a4a;
+    background-color: #163333;
     color: white;
     padding: 1rem;
     border-radius: 0.5rem;
