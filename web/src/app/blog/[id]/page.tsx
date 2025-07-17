@@ -22,10 +22,15 @@ type Props = {
 
 // microCMSから特定の記事を取得
 async function getBlogPost(id: string): Promise<Props> {
-  const data = await client.get({
-    endpoint: `${BLOG_API_ENDPOINT}/${id}`,
-  });
-  return data;
+  try {
+    const data = await client.get({
+      endpoint: `${BLOG_API_ENDPOINT}/${id}`,
+    });
+    return data;
+  } catch (error) {
+    console.error(`Error fetching blog post ${id}:`, error);
+    throw new Error(`Blog post with ID ${id} not found`);
+  }
 }
 
 

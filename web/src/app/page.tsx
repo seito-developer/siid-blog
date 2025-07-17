@@ -5,9 +5,10 @@ import ArticleManager from "@/components/article-manager";
 
 
 export default async function Home() {
-  const {posts, totalCount} = await getBlogPosts(0);
-
-  return (
+  try {
+    const {posts, totalCount} = await getBlogPosts(0);
+    
+    return (
     <main
       className="min-h-screen"
       style={{
@@ -32,7 +33,22 @@ export default async function Home() {
 
       </div>
     </main>
-  );
+    );
+  } catch (error) {
+    console.error('Error fetching blog posts:', error);
+    return (
+      <main className="min-h-screen" style={{ backgroundColor: "#F4F4F4", fontFamily: "Noto Sans JP, sans-serif" }}>
+        <div className="container mx-auto px-4 py-8">
+          <div className="mb-12 text-center">
+            <h1 className="text-4xl font-bold mb-4" style={{ color: "#214a4a" }}>記事一覧</h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              記事を読み込み中にエラーが発生しました。microCMSの設定を確認してください。
+            </p>
+          </div>
+        </div>
+      </main>
+    );
+  }
 }
 
 // microCMSからブログ記事を取得
