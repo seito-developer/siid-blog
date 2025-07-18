@@ -5,8 +5,6 @@ import { CategoryProps, EyecatchProps, TagProps } from "@/interfaces/common";
 import ArticleBody from "@/components/article-body/article-body";
 import Breadcrumbs from "@/components/breadcrumbs";
 import BannerSiid from "@/components/bannaer-siid";
-import { JSDOM } from "jsdom";
-
 // ブログ記事の型定義
 type Props = {
   id: string;
@@ -56,8 +54,8 @@ export default async function BlogPostPage({
       <BlogHeader
         eyecatchImage={post.eyecatch.url}
         authorName={post.author}
-        tags={post.tags}
-        category={post.categories[0]?.name}
+        tags={post.tags || []}
+        category={post.categories[0]?.name || ""}
         date={post.publishedAt}
         title={post.title}
       />
@@ -80,10 +78,22 @@ export async function generateStaticParams() {
   }));
 }
 
-// HTMLタグを除去してテキストのみを取得
-function stripHtmlTags(html: string): string {
-  const dom = new JSDOM(html);
-  return dom.window.document.body.textContent || "";
+// HTMLタグを除去してテキストのみを取得（サーバーサイドのみ）
+async function stripHtmlTags(html: string): Promise<string> {
+  // サーバーサイドでのみJSDOMを使用
+  if (typeof window === 'undefined') {
+    try {
+      const { JSDOM } = await import('jsdom');
+      const dom = new JSDOM(html);
+      return dom.window.document.body.textContent || "";
+    } catch {
+      // JSDOMが利用できない場合は正規表現で代替
+      return html.replace(/<[^>]*>/g, '').trim();
+    }
+  }
+  
+  // クライアントサイドでは単純な正規表現で代替
+  return html.replace(/<[^>]*>/g, '').trim();
 }
 
 // メタデータの生成
@@ -91,7 +101,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const { id } = await params;
   const post = await getBlogPost(id);
 
-  const plainTextContent = stripHtmlTags(post.contents);
+  const plainTextContent = await stripHtmlTags(post.contents);
   const description = plainTextContent.slice(0, 120) + "...";
 
   return {
