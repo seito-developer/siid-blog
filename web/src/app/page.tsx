@@ -40,14 +40,15 @@ export default async function Home({
       <div className="container mx-auto px-4 py-8">
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold mb-4" style={{ color: "#214a4a" }}>
-            記事一覧
+            SiiD BLOG
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Web開発、デザイン、UXに関する最新の記事をお届けします
+            プログラミングスクールSiiDによるブログメディア。<br />
+            エンジニア転職や技術学習に関する有益な情報を発信中！
           </p>
         </div>
         
-        {page && <p>Page: {page}</p>}
+        {page && <h2 className="text-2xl font-bold mb-4" style={{color: "#214a4a"}}>Page: {page}</h2>}
 
         <ArticleManager articles={posts} totalCount={totalCount} />
       </div>

@@ -37,7 +37,7 @@ export function OffsetPagination({ totalItems, itemsPerPage, currentPage, onPage
       
       <div className="space-y-4">
         <div className="text-sm" style={{ color: "#000", textAlign: "center" }}>
-          {startItem}-{endItem} / {totalItems} Pages
+          {startItem}-{endItem} / {totalItems} Articles
         </div>
 
         <div className="flex items-center justify-center gap-2">
