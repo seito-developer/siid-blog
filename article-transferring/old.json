@@ -1,0 +1,624 @@
+[
+  {
+    "id": 549,
+    "slug": "mvp-programming-portfolio",
+    "link": "https://2jigenha.com/mvp-programming-portfolio/",
+    "title": {
+      "rendered": "\u30bd\u30d5\u30c8\u30a6\u30a7\u30a2\u958b\u767a\u306b\u304a\u3051\u308bMVP\u3068\u306f\uff1f\u30dd\u30fc\u30c8\u30d5\u30a9\u30ea\u30aa\u4f5c\u6210\u306b\u304a\u3051\u308bMVP\u306e\u5f79\u5272"
+    }
+  },
+  {
+    "id": 507,
+    "slug": "do-web-designers-really-need-programming-skills",
+    "link": "https://2jigenha.com/do-web-designers-really-need-programming-skills/",
+    "title": {
+      "rendered": "Web\u30c7\u30b6\u30a4\u30ca\u30fc\u306b\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\u529b\u306f\u5fc5\u8981\uff1f\u305d\u306e\u7406\u7531\u3068\u91cd\u8981\u30b9\u30ad\u30eb\u3092\u89e3\u8aac"
+    }
+  },
+  {
+    "id": 493,
+    "slug": "how-to-write-a-resume-and-curriculum-vitae-to-get-a-job-offer-from-a-foreign-company-as-an-it-engineer",
+    "link": "https://2jigenha.com/how-to-write-a-resume-and-curriculum-vitae-to-get-a-job-offer-from-a-foreign-company-as-an-it-engineer/",
+    "title": {
+      "rendered": "\u3010\u4e2d\u30fb\u4e0a\u7d1a\u8005\u5411\u3051\u3011\u5916\u8cc7\u7cfb\u4f01\u696d\u306bIT\u30a8\u30f3\u30b8\u30cb\u30a2\u304c\u8ee2\u8077\u5185\u5b9a\u3059\u308b\u305f\u3081\u306e\u5c65\u6b74\u66f8\u3068\u8077\u52d9\u7d4c\u6b74\u66f8\u306e\u66f8\u304d\u65b9"
+    }
+  },
+  {
+    "id": 487,
+    "slug": "vba-if",
+    "link": "https://2jigenha.com/vba-if/",
+    "title": {
+      "rendered": "VBA\u306eIf\u6587\u5165\u9580\uff1a\u57fa\u672c\u304b\u3089\u5b9f\u8df5\u307e\u3067"
+    }
+  },
+  {
+    "id": 472,
+    "slug": "vba-webscraping",
+    "link": "https://2jigenha.com/vba-webscraping/",
+    "title": {
+      "rendered": "VBA\u3067\u59cb\u3081\u308bWeb\u30b9\u30af\u30ec\u30a4\u30d4\u30f3\u30b0\uff1a\u521d\u5fc3\u8005\u5411\u3051\u30ac\u30a4\u30c9"
+    }
+  },
+  {
+    "id": 467,
+    "slug": "how-to-use-puppeteer",
+    "link": "https://2jigenha.com/how-to-use-puppeteer/",
+    "title": {
+      "rendered": "Puppeteer\u306e\u4f7f\u3044\u65b9\u5b8c\u5168\u30de\u30cb\u30e5\u30a2\u30eb\u3010\u30b9\u30af\u30ec\u30a4\u30d4\u30f3\u30b0\u30fb\u81ea\u52d5\u5316\u30fb\u5fdc\u7528\u4f8b\u3011"
+    }
+  },
+  {
+    "id": 463,
+    "slug": "webscraping-javascript",
+    "link": "https://2jigenha.com/webscraping-javascript/",
+    "title": {
+      "rendered": "Web\u30b9\u30af\u30ec\u30a4\u30d4\u30f3\u30b0\u3092JavaScript\u3067\u5b9f\u73fe\u3059\u308b\u65b9\u6cd5\u3010\u521d\u5fc3\u8005\u5411\u3051\u3011"
+    }
+  },
+  {
+    "id": 460,
+    "slug": "gas-web-scraping",
+    "link": "https://2jigenha.com/gas-web-scraping/",
+    "title": {
+      "rendered": "GAS\u3067\u7c21\u5358Web\u30b9\u30af\u30ec\u30a4\u30d4\u30f3\u30b0\uff01\u30b3\u30fc\u30c9\u4f8b\u3068\u6ce8\u610f\u70b9\u3092\u89e3\u8aac"
+    }
+  },
+  {
+    "id": 438,
+    "slug": "pandas-sorting",
+    "link": "https://2jigenha.com/pandas-sorting/",
+    "title": {
+      "rendered": "Pandas\u3067\u30c7\u30fc\u30bf\u3092\u30bd\u30fc\u30c8\u3059\u308b\u65b9\u6cd5\uff1a\u30b9\u30c6\u30c3\u30d7\u30d0\u30a4\u30b9\u30c6\u30c3\u30d7\u30ac\u30a4\u30c9"
+    }
+  },
+  {
+    "id": 433,
+    "slug": "pandas-defect-value",
+    "link": "https://2jigenha.com/pandas-defect-value/",
+    "title": {
+      "rendered": "Pandas\u3067\u6b20\u640d\u5024\u3092\u51e6\u7406\u3059\u308b\u30c6\u30af\u30cb\u30c3\u30af\uff1a\u30c7\u30fc\u30bf\u30af\u30ec\u30f3\u30b8\u30f3\u30b0\u306e\u57fa\u672c"
+    }
+  },
+  {
+    "id": 426,
+    "slug": "python-datascience-for-biginner",
+    "link": "https://2jigenha.com/python-datascience-for-biginner/",
+    "title": {
+      "rendered": "Python\u3067\u59cb\u3081\u308b\u30c7\u30fc\u30bf\u5206\u6790\u5165\u9580\uff1a\u521d\u5fc3\u8005\u3067\u3082\u308f\u304b\u308b\u30b9\u30c6\u30c3\u30d7\u30d0\u30a4\u30b9\u30c6\u30c3\u30d7\u30ac\u30a4\u30c9"
+    }
+  },
+  {
+    "id": 424,
+    "slug": "basic-python-pandas",
+    "link": "https://2jigenha.com/basic-python-pandas/",
+    "title": {
+      "rendered": "\u3010\u5b8c\u5168\u4fdd\u5b58\u7248\u3011pandas\u306e\u57fa\u672c\u7684\u306a\u30c7\u30fc\u30bf\u64cd\u4f5c\u307e\u3068\u3081"
+    }
+  },
+  {
+    "id": 420,
+    "slug": "pandas-filterling",
+    "link": "https://2jigenha.com/pandas-filterling/",
+    "title": {
+      "rendered": "\u3010\u5b8c\u5168\u89e3\u8aac\u3011pandas\u3067\u30c7\u30fc\u30bf\u3092\u30d5\u30a3\u30eb\u30bf\u30ea\u30f3\u30b0\u3059\u308b\u65b9\u6cd5"
+    }
+  },
+  {
+    "id": 415,
+    "slug": "webscraping-recommended-language",
+    "link": "https://2jigenha.com/webscraping-recommended-language/",
+    "title": {
+      "rendered": "\u30a6\u30a7\u30d6\u30b9\u30af\u30ec\u30a4\u30d4\u30f3\u30b0\u306b\u304a\u3059\u3059\u3081\u306e\u30d7\u30ed\u30b0\u30e9\u30df\u30f3\u30b0\u8a00\u8a9e\u3068\u305d\u306e\u4f7f\u3044\u65b9"
+    }
+  },
+  {
+    "id": 412,
+    "slug": "webscraping-forbidden",
+    "link": "https://2jigenha.com/webscraping-forbidden/",
+    "title": {
+      "rendered": "\u30a6\u30a7\u30d6\u30b9\u30af\u30ec\u30a4\u30d4\u30f3\u30b0\u304c\u7981\u6b62\u3055\u308c\u3066\u3044\u308b\u30b5\u30a4\u30c8\u3092\u78ba\u8a8d\u3059\u308b\u65b9\u6cd5\u3068\u6ce8\u610f\u70b9"
+    }
+  },
+  {
+    "id": 410,
+    "slug": "javascript-modal",
+    "link": "https://2jigenha.com/javascript-modal/",
+    "title": {
+      "rendered": "JavaScript\u3067\u30ab\u30b9\u30bf\u30e0\u30c0\u30a4\u30a2\u30ed\u30b0\u3092\u4f5c\u6210\u3059\u308b\u65b9\u6cd5\uff08\u30e2\u30fc\u30c0\u30eb\u30a6\u30a3\u30f3\u30c9\u30a6\uff09\u3092\u521d\u5fc3\u8005\u5411\u3051\u306b\u89e3\u8aac"
+    }
+  },
+  {
+    "id": 407,
+    "slug": "javascript-prompt",
+    "link": "https://2jigenha.com/javascript-prompt/",
+    "title": {
+      "rendered": "JavaScript\u306eprompt\u95a2\u6570\u3067\u30e6\u30fc\u30b6\u30fc\u5165\u529b\u3092\u53d6\u5f97\u3059\u308b\u65b9\u6cd5"
+    }
+  },
+  {
+    "id": 400,
+    "slug": "javascript-confirm",
+    "link": "https://2jigenha.com/javascript-confirm/",
+    "title": {
+      "rendered": "JavaScript\u306econfirm\u95a2\u6570\u306e\u4f7f\u3044\u65b9\u3092\u521d\u5fc3\u8005\u5411\u3051\u306b\u89e3\u8aac"
+    }
+  },
+  {
+    "id": 393,
+    "slug": "openpyxl-application-examples",
+    "link": "https://2jigenha.com/openpyxl-application-examples/",
+    "title": {
+      "rendered": "OpenPyXL\u3092\u4f7f\u3063\u305f\u5b9f\u7528\u7684\u306a\u30b9\u30af\u30ea\u30d7\u30c8\u4f8b\uff06\u52b9\u7387\u7684\u306a\u30c7\u30fc\u30bf\u64cd\u4f5c\u65b9\u6cd5"
+    }
+  },
+  {
+    "id": 387,
+    "slug": "openpyxl-application",
+    "link": "https://2jigenha.com/openpyxl-application/",
+    "title": {
+      "rendered": "OpenPyXL\u5fdc\u7528\u7de8\uff1a\u6761\u4ef6\u4ed8\u304d\u66f8\u5f0f\u3068\u30b0\u30e9\u30d5\u4f5c\u6210"
+    }
+  },
+  {
+    "id": 384,
+    "slug": "openpyxl-command-compilation",
+    "link": "https://2jigenha.com/openpyxl-command-compilation/",
+    "title": {
+      "rendered": "OpenPyXL\u30b3\u30de\u30f3\u30c9\u96c6\uff1aExcel\u30d5\u30a1\u30a4\u30eb\u306e\u8aad\u307f\u8fbc\u307f\u30fb\u4fdd\u5b58\u30fb\u66f8\u304d\u63db\u3048\u30fb\u65b0\u898f\u4f5c\u6210\u306a\u3069"
+    }
+  },
+  {
+    "id": 375,
+    "slug": "openpyxl-excel-load",
+    "link": "https://2jigenha.com/openpyxl-excel-load/",
+    "title": {
+      "rendered": "OpenPyXL\u306b\u3088\u308bExcel\u30d5\u30a1\u30a4\u30eb\u306e\u8aad\u307f\u8fbc\u307f\u3068\u66f8\u304d\u8fbc\u307f\u306e\u57fa\u672c\u64cd\u4f5c"
+    }
+  },
+  {
+    "id": 371,
+    "slug": "python-openpyxl-install",
+    "link": "https://2jigenha.com/python-openpyxl-install/",
+    "title": {
+      "rendered": "Openpyxl\u306e\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u65b9\u6cd5\uff1a\u958b\u767a\u74b0\u5883\u5225\u30ac\u30a4\u30c9"
+    }
+  },
+  {
+    "id": 366,
+    "slug": "python-pyscript",
+    "link": "https://2jigenha.com/python-pyscript/",
+    "title": {
+      "rendered": "PyScript\u306e\u4e00\u822c\u7684\u306a\u6982\u5ff5\u3068\u4f7f\u3044\u65b9\u306e\u30c1\u30e5\u30fc\u30c8\u30ea\u30a2\u30eb"
+    }
+  },
+  {
+    "id": 356,
+    "slug": "pandas-groupby",
+    "link": "https://2jigenha.com/pandas-groupby/",
+    "title": {
+      "rendered": "Pandas\u306egroupby\u3092\u4f7f\u3044\u3053\u306a\u3059\u305f\u3081\u306e\u30ac\u30a4\u30c9"
+    }
+  },
+  {
+    "id": 350,
+    "slug": "gas-free",
+    "link": "https://2jigenha.com/gas-free/",
+    "title": {
+      "rendered": "\u7121\u6599\u3067\u3067\u304d\u308b\uff01Google Apps Script\u3067\u696d\u52d9\u3092\u81ea\u52d5\u5316\u3059\u308b"
+    }
+  },
+  {
+    "id": 347,
+    "slug": "pandas-iloc",
+    "link": "https://2jigenha.com/pandas-iloc/",
+    "title": {
+      "rendered": "Pandas iloc\u3067\u7279\u5b9a\u306e\u884c\u3084\u5217\u3092\u62bd\u51fa\u3059\u308b\u65b9\u6cd5\u3092\u89e3\u8aac"
+    }
+  },
+  {
+    "id": 342,
+    "slug": "pandas_dataframe_delete",
+    "link": "https://2jigenha.com/pandas_dataframe_delete/",
+    "title": {
+      "rendered": "\u3010\u5b8c\u5168\u89e3\u8aac\u3011pandas\u3067\u884c\u30fb\u5217\u3092\u524a\u9664\u3059\u308b\u69d8\u3005\u306a\u65b9\u6cd5"
+    }
+  },
+  {
+    "id": 335,
+    "slug": "matplotlib-ticks",
+    "link": "https://2jigenha.com/matplotlib-ticks/",
+    "title": {
+      "rendered": "Matplotlib\u3067\u76ee\u76db\u9593\u9694\u3092\u81ea\u5728\u306b\u8a2d\u5b9a\u3010\u7c21\u6f54\uff06\u591a\u5f69\u306a\u5b9f\u7528\u4f8b\u3011"
+    }
+  },
+  {
+    "id": 331,
+    "slug": "matplotlib-saveefig",
+    "link": "https://2jigenha.com/matplotlib-saveefig/",
+    "title": {
+      "rendered": "\u3010savefig\u3011matplotlib\u3067\u30b0\u30e9\u30d5\u3092\u4fdd\u5b58\u3059\u308b\u65b9\u6cd5\u306e\u30d0\u30ea\u30a8\u30fc\u30b7\u30e7\u30f3"
+    }
+  },
+  {
+    "id": 326,
+    "slug": "matplotlib-japanease",
+    "link": "https://2jigenha.com/matplotlib-japanease/",
+    "title": {
+      "rendered": "matplotlib\u3067\u65e5\u672c\u8a9e\u304c\u6587\u5b57\u5316\u3051\uff01\u89e3\u6c7a\u7b56\u3092\u89e3\u8aac\u3057\u307e\u3059"
+    }
+  },
+  {
+    "id": 321,
+    "slug": "python-tynydb",
+    "link": "https://2jigenha.com/python-tynydb/",
+    "title": {
+      "rendered": "TynyDB\u3067\u30b5\u30af\u30c3\u3068\u30c7\u30fc\u30bf\u30d9\u30fc\u30b9\u3092\u4f7f\u3063\u3066\u307f\u305f"
+    }
+  },
+  {
+    "id": 313,
+    "slug": "javascript-arrow-this",
+    "link": "https://2jigenha.com/javascript-arrow-this/",
+    "title": {
+      "rendered": "\u30a2\u30ed\u30fc\u95a2\u6570\u306b\u304a\u3051\u308bThis\u306e\u4f7f\u3044\u65b9"
+    }
+  },
+  {
+    "id": 310,
+    "slug": "javascript-comment",
+    "link": "https://2jigenha.com/javascript-comment/",
+    "title": {
+      "rendered": "JavaScript\u3067\u30b3\u30e1\u30f3\u30c8\u30a2\u30a6\u30c8\u3092\u3059\u308b\uff12\u3064\u306e\u65b9\u6cd5"
+    }
+  },
+  {
+    "id": 308,
+    "slug": "javascript-for",
+    "link": "https://2jigenha.com/javascript-for/",
+    "title": { "rendered": "\u3010JavaScript\u3011for\u6587\u306e\u69cb\u6587" }
+  },
+  {
+    "id": 306,
+    "slug": "javascript-tolocalestring",
+    "link": "https://2jigenha.com/javascript-tolocalestring/",
+    "title": {
+      "rendered": "\u3010JavaScript\u3011toLocaleString()\u3067\u5730\u57df\u306b\u9069\u3057\u305f\u30c7\u30fc\u30bf\u306b\u5909\u63db\u3059\u308b"
+    }
+  },
+  {
+    "id": 304,
+    "slug": "javascript-undefined",
+    "link": "https://2jigenha.com/javascript-undefined/",
+    "title": {
+      "rendered": "\u3010JavaScript\u3011\u5024\u306e\u306a\u3044\u5909\u6570\u300cundefined\u300d\u306b\u3064\u3044\u3066"
+    }
+  },
+  {
+    "id": 300,
+    "slug": "scikit-learn-install",
+    "link": "https://2jigenha.com/scikit-learn-install/",
+    "title": {
+      "rendered": "\u6a5f\u68b0\u5b66\u7fd2\u30e9\u30a4\u30d6\u30e9\u30ea\u3010scikit-learn\u3011\u306e\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u65b9\u6cd5"
+    }
+  },
+  {
+    "id": 295,
+    "slug": "javascript-jsonstringfy",
+    "link": "https://2jigenha.com/javascript-jsonstringfy/",
+    "title": {
+      "rendered": "\u3010JSON.stringify\u3011JavaScript\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u3092JSON\u6587\u5b57\u5217\u3078\u5909\u63db\u3059\u308b\u5f37\u529b\u306a\u30e1\u30bd\u30c3\u30c9"
+    }
+  },
+  {
+    "id": 292,
+    "slug": "javascript-find",
+    "link": "https://2jigenha.com/javascript-find/",
+    "title": {
+      "rendered": "JavaScript\u306efind\u95a2\u6570\u306b\u3064\u3044\u3066"
+    }
+  },
+  {
+    "id": 290,
+    "slug": "javascript-arrow",
+    "link": "https://2jigenha.com/javascript-arrow/",
+    "title": {
+      "rendered": "\u3010 JavaScript\u3011\u30a2\u30ed\u30fc\u95a2\u6570\u3067\u7c21\u5358\u306b\u95a2\u6570\u3092\u8a18\u8ff0\u3059\u308b"
+    }
+  },
+  {
+    "id": 287,
+    "slug": "javascript-push",
+    "link": "https://2jigenha.com/javascript-push/",
+    "title": {
+      "rendered": "JavaScript\u3067\u914d\u5217\u306b\u8ffd\u52a0\u3059\u308b\uff13\u3064\u306e\u65b9\u6cd5"
+    }
+  },
+  {
+    "id": 284,
+    "slug": "javascript-map-object",
+    "link": "https://2jigenha.com/javascript-map-object/",
+    "title": {
+      "rendered": "JavaScript\u306b\u304a\u3051\u308b\u9023\u60f3\u914d\u5217\u306e\u5b9f\u88c5"
+    }
+  },
+  {
+    "id": 280,
+    "slug": "javascript-map",
+    "link": "https://2jigenha.com/javascript-map/",
+    "title": {
+      "rendered": "JavaScript\u306emap()\u95a2\u6570\u306e\u4f7f\u3044\u65b9"
+    }
+  },
+  {
+    "id": 275,
+    "slug": "javascript-alert",
+    "link": "https://2jigenha.com/javascript-alert/",
+    "title": {
+      "rendered": "\u3010\u5b8c\u5168\u4fdd\u5b58\u7248\u3011JavaScript\u306ealert\u5b8c\u5168\u30ac\u30a4\u30c9\uff1a\u4f7f\u3044\u65b9\u3068\u5fdc\u7528\u30c6\u30af\u30cb\u30c3\u30af"
+    }
+  },
+  {
+    "id": 271,
+    "slug": "typescript",
+    "link": "https://2jigenha.com/typescript/",
+    "title": {
+      "rendered": "TypeScript\u3068\u306f\uff1f\u301cJavaScript\u3068\u7570\u306a\u308b\u9759\u7684\u578b\u4ed8\u3051\u8a00\u8a9e\u301c"
+    }
+  },
+  {
+    "id": 269,
+    "slug": "javascrip-foreach",
+    "link": "https://2jigenha.com/javascrip-foreach/",
+    "title": {
+      "rendered": "\u3010JavaScrip\u3011forEach()\u30e1\u30bd\u30c3\u30c9\u306e\u4f7f\u3044\u65b9"
+    }
+  },
+  {
+    "id": 267,
+    "slug": "python-requests",
+    "link": "https://2jigenha.com/python-requests/",
+    "title": {
+      "rendered": "Python\u306erequests | HTTP\u30ea\u30af\u30a8\u30b9\u30c8\u306e\u30e9\u30a4\u30d6\u30e9\u30ea"
+    }
+  },
+  {
+    "id": 265,
+    "slug": "python-round",
+    "link": "https://2jigenha.com/python-round/",
+    "title": {
+      "rendered": "Python\u3067\u56db\u6368\u4e94\u5165\u3059\u308b4\u3064\u306e\u65b9\u6cd5"
+    }
+  },
+  {
+    "id": 262,
+    "slug": "python-pep8",
+    "link": "https://2jigenha.com/python-pep8/",
+    "title": {
+      "rendered": "Python \u30b3\u30fc\u30c9\u306e\u30b9\u30bf\u30a4\u30eb\u30ac\u30a4\u30c9\u3010PEP8\u3011\u3068\u306f\uff1f"
+    }
+  },
+  {
+    "id": 259,
+    "slug": "python-version",
+    "link": "https://2jigenha.com/python-version/",
+    "title": {
+      "rendered": "Python\u306e\u30d0\u30fc\u30b8\u30e7\u30f3\u3092\u78ba\u8a8d\u3092\u3059\u308b\u65b9\u6cd5"
+    }
+  },
+  {
+    "id": 254,
+    "slug": "why-html-is-not-programming-language",
+    "link": "https://2jigenha.com/why-html-is-not-programming-language/",
+    "title": {
+      "rendered": "\u306a\u305cHTML\u306f\u30d7\u30ed\u30b0\u30e9\u30df\u30f3\u30b0\u8a00\u8a9e\u3067\u306f\u306a\u3044\u306e\u304b"
+    }
+  },
+  {
+    "id": 245,
+    "slug": "programming-ranking",
+    "link": "https://2jigenha.com/programming-ranking/",
+    "title": {
+      "rendered": "\u30102024\u5e74\u3011\u30d7\u30ed\u30b0\u30e9\u30df\u30f3\u30b0\u8a00\u8a9e\u30e9\u30f3\u30ad\u30f3\u30b0\uff5cTIOBE index\u3068Google\u691c\u7d22\u6570"
+    }
+  },
+  {
+    "id": 241,
+    "slug": "gas-scriptapp-newtrigger",
+    "link": "https://2jigenha.com/gas-scriptapp-newtrigger/",
+    "title": {
+      "rendered": "\u3010GAS\u3011\u3055\u307e\u3056\u307e\u306a\u30c8\u30ea\u30ac\u30fc\u3092\u8a2d\u5b9a\u3059\u308bScriptApp.newTrigger()\u306b\u3064\u3044\u3066"
+    }
+  },
+  {
+    "id": 227,
+    "slug": "seaborn-paiaplot",
+    "link": "https://2jigenha.com/seaborn-paiaplot/",
+    "title": {
+      "rendered": "Seaborn\u3092\u7528\u3044\u305f\u30da\u30a2\u30d7\u30ed\u30c3\u30c8\uff08paiaplot\uff09\u306e\u4f5c\u308a\u65b9"
+    }
+  },
+  {
+    "id": 213,
+    "slug": "seaborn-histplot",
+    "link": "https://2jigenha.com/seaborn-histplot/",
+    "title": {
+      "rendered": "Seaborn\u3092\u7528\u3044\u305f\u30d2\u30b9\u30c8\u30b0\u30e9\u30e0\uff08histplot\uff09\u306e\u4f5c\u308a\u65b9"
+    }
+  },
+  {
+    "id": 203,
+    "slug": "seaborn-lineplot",
+    "link": "https://2jigenha.com/seaborn-lineplot/",
+    "title": {
+      "rendered": "Seaborn\u3092\u7528\u3044\u305f\u7dda\u30b0\u30e9\u30d5\uff08lineplot\uff09\u306e\u4f5c\u308a\u65b9"
+    }
+  },
+  {
+    "id": 200,
+    "slug": "python-if",
+    "link": "https://2jigenha.com/python-if/",
+    "title": {
+      "rendered": "Python\u306eif\u6587\u306b\u304a\u3051\u308b\u8907\u6570\u6761\u4ef6\u306e\u653b\u7565"
+    }
+  },
+  {
+    "id": 183,
+    "slug": "seaborn-barplot",
+    "link": "https://2jigenha.com/seaborn-barplot/",
+    "title": {
+      "rendered": "Seaborn\u3092\u7528\u3044\u305f\u68d2\u30b0\u30e9\u30d5\uff08barplot\uff09\u306e\u4f5c\u308a\u65b9"
+    }
+  },
+  {
+    "id": 169,
+    "slug": "seaborn-scatterplot",
+    "link": "https://2jigenha.com/seaborn-scatterplot/",
+    "title": {
+      "rendered": "Seaborn\u3092\u7528\u3044\u305f\u6563\u5e03\u56f3\uff08scatterplot\uff09\u306e\u4f5c\u308a\u65b9"
+    }
+  },
+  {
+    "id": 153,
+    "slug": "seaborn-boxplot",
+    "link": "https://2jigenha.com/seaborn-boxplot/",
+    "title": {
+      "rendered": "Seaborn\u3092\u7528\u3044\u305f\u7bb1\u3072\u3052\u56f3\uff08boxplot\uff09\u306e\u4f5c\u308a\u65b9"
+    }
+  },
+  {
+    "id": 141,
+    "slug": "seaborn-heatmap",
+    "link": "https://2jigenha.com/seaborn-heatmap/",
+    "title": {
+      "rendered": "Seaborn\u306b\u3088\u308b\u30d2\u30fc\u30c8\u30de\u30c3\u30d7(heatmap)\u306e\u4f5c\u308a\u65b9"
+    }
+  },
+  {
+    "id": 137,
+    "slug": "seaborn-python",
+    "link": "https://2jigenha.com/seaborn-python/",
+    "title": {
+      "rendered": "\u30b0\u30e9\u30d5\u63cf\u753b\u30e9\u30a4\u30d6\u30e9\u30eaSeaborn\u3092\u4f7f\u3063\u3066\u307f\u3088\u3046\u3010Python\u3011"
+    }
+  },
+  {
+    "id": 132,
+    "slug": "python-ternary-operator",
+    "link": "https://2jigenha.com/python-ternary-operator/",
+    "title": {
+      "rendered": "\u3010Python\u3011\u4e09\u9805\u6f14\u7b97\u5b50\u3068\u306f\u4f55\u304b\uff1f"
+    }
+  },
+  {
+    "id": 125,
+    "slug": "python-mecab",
+    "link": "https://2jigenha.com/python-mecab/",
+    "title": {
+      "rendered": "\u3010\u5f62\u614b\u7d20\u89e3\u6790\u3011mecab\u3092python\u3067\u4f7f\u7528\u3059\u308b\u65b9\u6cd5"
+    }
+  },
+  {
+    "id": 122,
+    "slug": "python-else",
+    "link": "https://2jigenha.com/python-else/",
+    "title": {
+      "rendered": "Python\u306b\u304a\u3051\u308belse\u306e\u4f7f\u3044\u65b93\u9078"
+    }
+  },
+  {
+    "id": 117,
+    "slug": "python-reportlab",
+    "link": "https://2jigenha.com/python-reportlab/",
+    "title": {
+      "rendered": "Python\u306ePDF\u751f\u6210\u30e9\u30a4\u30d6\u30e9\u30ea\u300creportlab\u300d\u306e\u4f7f\u3044\u65b9"
+    }
+  },
+  {
+    "id": 112,
+    "slug": "python-face-recognition",
+    "link": "https://2jigenha.com/python-face-recognition/",
+    "title": {
+      "rendered": "\u3010Python\u3011\u9854\u8a8d\u8b58\u30e9\u30a4\u30d6\u30e9\u30ea face_recognition \u306e\u4f7f\u3044\u65b9"
+    }
+  },
+  {
+    "id": 100,
+    "slug": "python-interesting-code",
+    "link": "https://2jigenha.com/python-interesting-code/",
+    "title": {
+      "rendered": "\u521d\u5fc3\u8005\u3067\u3082\u66f8\u3051\u308b\u9762\u767d\u3044Python\u30b3\u30fc\u30c9"
+    }
+  },
+  {
+    "id": 102,
+    "slug": "pip-install",
+    "link": "https://2jigenha.com/pip-install/",
+    "title": {
+      "rendered": "pip\u3092\u4f7f\u3063\u3066Python\u30e9\u30a4\u30d6\u30e9\u30ea\u3092\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u3059\u308b\u65b9\u6cd5"
+    }
+  },
+  {
+    "id": 97,
+    "slug": "google-spreadsheet-scripteditor-open",
+    "link": "https://2jigenha.com/google-spreadsheet-scripteditor-open/",
+    "title": {
+      "rendered": "Google\u30b9\u30d7\u30ec\u30c3\u30c9 \u30b7\u30fc\u30c8\u3067\u300c\u30b9\u30af\u30ea\u30d7\u30c8\u30a8\u30c7\u30a3\u30bf\u300d\u304c\u51fa \u3066\u3053\u306a\u3044\u6642\u306e\u5bfe\u51e6\u6cd5"
+    }
+  },
+  {
+    "id": 88,
+    "slug": "gas-spreadsheet-search",
+    "link": "https://2jigenha.com/gas-spreadsheet-search/",
+    "title": {
+      "rendered": "GAS\u3092\u4f7f\u3063\u3066Google\u30b9\u30d7\u30ec\u30c3\u30c9\u30b7\u30fc\u30c8\u3092\u691c\u7d22\u3059\u308b\u65b9\u6cd5"
+    }
+  },
+  {
+    "id": 80,
+    "slug": "google-spreadsheet-googlecalendar",
+    "link": "https://2jigenha.com/google-spreadsheet-googlecalendar/",
+    "title": {
+      "rendered": "\u3010Google\u3011\u30b9\u30d7\u30ec\u30c3\u30c9\u30b7\u30fc\u30c8\u304b\u3089\u30ab\u30ec\u30f3\u30c0\u30fc\u306bGAS\u3067\u81ea\u52d5\u7684\u306b\u30a4\u30d9\u30f3\u30c8\u3092\u7d44\u307f\u8fbc\u3080\u65b9\u6cd5"
+    }
+  },
+  {
+    "id": 73,
+    "slug": "gas_spreadsheet_get",
+    "link": "https://2jigenha.com/gas_spreadsheet_get/",
+    "title": {
+      "rendered": "Google Apps Script\u3067\u30b9\u30d7\u30ec\u30c3\u30c9\u30b7\u30fc\u30c8\u306e\u30b7\u30fc\u30c8\u3068\u30bb\u30eb\u3092\u53d6\u5f97\u3059\u308b\u95a2\u6570\u4e00\u89a7"
+    }
+  },
+  {
+    "id": 61,
+    "slug": "gas_google_form",
+    "link": "https://2jigenha.com/gas_google_form/",
+    "title": {
+      "rendered": "Google Apps Script\u3010GAS\u3011\u306b\u3088\u308bGoogle\u30d5\u30a9\u30fc\u30e0\u306e\u6271\u3044\u65b9\u5165\u9580"
+    }
+  },
+  {
+    "id": 47,
+    "slug": "google-apps-script-spreadsheet",
+    "link": "https://2jigenha.com/google-apps-script-spreadsheet/",
+    "title": {
+      "rendered": "Google Apps Script\u3067Google \u30b9\u30d7\u30ec\u30c3\u30c9\u30b7\u30fc\u30c8\u3092\u64cd\u308b\u65b9\u6cd5\u3010\u696d\u52d9\u81ea\u52d5\u5316\u3011"
+    }
+  },
+  {
+    "id": 34,
+    "slug": "python-list",
+    "link": "https://2jigenha.com/python-list/",
+    "title": {
+      "rendered": "Python\u306b\u304a\u3051\u308b\u914d\u5217\u306e\u6271\u3044\u65b9"
+    }
+  },
+  {
+    "id": 15,
+    "slug": "python-excel",
+    "link": "https://2jigenha.com/python-excel/",
+    "title": {
+      "rendered": "Python\u3067Excel\u3092\u81ea\u5728\u306b\u64cd\u308b\u305f\u3081\u306e\uff14\u3064\u306e\u65b9\u6cd5"
+    }
+  }
+]
