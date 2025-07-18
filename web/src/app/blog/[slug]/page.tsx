@@ -1,35 +1,21 @@
 import { client } from "@/libs/microcms";
 import { BLOG_API_ENDPOINT } from "@/app/constants";
 import BlogHeader from "@/components/blog-header";
-import { CategoryProps, EyecatchProps, TagProps } from "@/interfaces/common";
+import { ArticleContentProps } from "@/interfaces/common";
 import ArticleBody from "@/components/article-body/article-body";
 import Breadcrumbs from "@/components/breadcrumbs";
 import BannerSiid from "@/components/bannaer-siid";
-// ブログ記事の型定義
-type Props = {
-  id: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  revisedAt: string;
-  title: string;
-  contents: string;
-  eyecatch: EyecatchProps;
-  author: string;
-  categories: CategoryProps[];
-  tags: TagProps[];
-};
 
 // microCMSから特定の記事を取得
-async function getBlogPost(id: string): Promise<Props> {
+async function getBlogPost(slug: string): Promise<ArticleContentProps> {
   try {
     const data = await client.get({
-      endpoint: `${BLOG_API_ENDPOINT}/${id}`,
+      endpoint: `${BLOG_API_ENDPOINT}/${slug}`,
     });
     return data;
   } catch (error) {
-    console.error(`Error fetching blog post ${id}:`, error);
-    throw new Error(`Blog post with ID ${id} not found`);
+    console.error(`Error fetching blog post ${slug}:`, error);
+    throw new Error(`Blog post with id ${slug} not found`);
   }
 }
 
@@ -38,10 +24,10 @@ async function getBlogPost(id: string): Promise<Props> {
 export default async function BlogPostPage({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { id } = await params; // IDを取得
-  const post = await getBlogPost(id);
+  const { slug } = await params; // IDを取得
+  const post = await getBlogPost(slug);
 
   const categoryBreadcrumbs = [
     // { label: post.categories[0].name, href: `/${post.categories[0].id}` },
@@ -53,7 +39,7 @@ export default async function BlogPostPage({
       <Breadcrumbs items={categoryBreadcrumbs} />
       <BlogHeader
         eyecatchImage={post.eyecatch.url}
-        authorName={post.author}
+        author={post.author}
         tags={post.tags || []}
         category={post.categories[0]?.name || ""}
         date={post.publishedAt}
@@ -74,7 +60,7 @@ export async function generateStaticParams() {
     endpoint: BLOG_API_ENDPOINT,
   });
   return contentIds.map((contentId) => ({
-    id: contentId, // 各記事のIDをパラメータとして返す
+    slug: contentId, // 各記事のIDをパラメータとして返す
   }));
 }
 
@@ -97,9 +83,9 @@ async function stripHtmlTags(html: string): Promise<string> {
 }
 
 // メタデータの生成
-export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params;
-  const post = await getBlogPost(id);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = await getBlogPost(slug);
 
   const plainTextContent = await stripHtmlTags(post.contents);
   const description = plainTextContent.slice(0, 120) + "...";
@@ -108,13 +94,13 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     title: post.title,
     description: description,           // 120 文字要約
     alternates: {
-      canonical: `https://blog.bug-fix.org/blog/${id}`,
+      canonical: `https://blog.bug-fix.org/blog/${slug}`,
     },
     openGraph: {
       type: "article",
       title: post.title,
       description: description,
-      url: `https://blog.bug-fix.org/blog/${id}`,
+      url: `https://blog.bug-fix.org/blog/${slug}`,
       images: [{ url: post.eyecatch.url }],
       publishedTime: post.publishedAt,
       authors: [post.author],

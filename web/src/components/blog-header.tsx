@@ -1,11 +1,11 @@
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import Author from "./author"
-import { TagProps } from "@/interfaces/common"
+import { AuthorProps, TagProps } from "@/interfaces/common"
 
 interface BlogHeaderProps {
   eyecatchImage: string
-  authorName: string
+  author: AuthorProps
   tags: TagProps[]
   category: string
   date: string
@@ -14,7 +14,7 @@ interface BlogHeaderProps {
 
 export default function BlogHeader({
   eyecatchImage,
-  authorName,
+  author,
   tags,
   category,
   date,
@@ -42,7 +42,7 @@ export default function BlogHeader({
       <div className="max-w-4xl mx-auto px-6 py-8">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           {/* Author and Date Info */}
-          <Author authorImage="" authorName={authorName} date={date} />
+          <Author postDate={date} author={author}  />
 
           {/* Category and Tags */}
           <div className="flex flex-wrap items-center gap-3">

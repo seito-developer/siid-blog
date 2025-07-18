@@ -1,3 +1,4 @@
+
 export interface TagProps {
   id: string;
   name: string;
@@ -22,15 +23,31 @@ export interface EyecatchProps {
   width: number;
 }
 
+export interface AuthorProps {
+  createdAt: string;
+  description: string;
+  image: EyecatchProps;
+  name: string;
+  publishedAt: string;
+  revisedAt: string;
+  updatedAt: string;
+}
+
 export interface ArticleProps {
   id: string;
   title: string;
   excerpt: string;
-  author: string;
+  author: AuthorProps;
   publishedAt: string;
+  createdAt: string;
+  updatedAt: string;
   readTime: string;
   categories: CategoryProps[];
   tags: TagProps[];
   eyecatch: EyecatchProps;
   slug: string;
+}
+
+export interface ArticleContentProps extends ArticleProps {
+  contents: string;
 }
