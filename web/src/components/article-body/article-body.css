@@ -118,6 +118,9 @@
 
   li {
     line-height: 1.75;
+    p {
+      display: inline;
+    }
   }
 
   /* Blockquote */
