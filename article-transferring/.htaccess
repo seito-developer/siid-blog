@@ -1,4 +1,9 @@
+# Block the include-only files.
+<IfModule mod_rewrite.c>
 RewriteEngine On
+RewriteBase /
+
+# ---- Legacy URL 301 redirects added 2025-07-18 ----
 RewriteRule ^mvp\-programming\-portfolio/?$ https://blog.bug-fix.org/blog/068814875f/ [R=301,L]
 RewriteRule ^do\-web\-designers\-really\-need\-programming\-skills/?$ https://blog.bug-fix.org/blog/a435270b90/ [R=301,L]
 RewriteRule ^how\-to\-write\-a\-resume\-and\-curriculum\-vitae\-to\-get\-a\-job\-offer\-from\-a\-foreign\-company\-as\-an\-it\-engineer/?$ https://blog.bug-fix.org/blog/560aa3e6e9/ [R=301,L]
@@ -77,6 +82,40 @@ RewriteRule ^gas_google_form/?$ https://blog.bug-fix.org/blog/d029fa3a95/ [R=301
 RewriteRule ^google\-apps\-script\-spreadsheet/?$ https://blog.bug-fix.org/blog/31489056e0/ [R=301,L]
 RewriteRule ^python\-list/?$ https://blog.bug-fix.org/blog/86e5014965/ [R=301,L]
 RewriteRule ^python\-excel/?$ https://blog.bug-fix.org/blog/e629fa6598/ [R=301,L]
+# ---- End redirects ----
 
-# Fallback 410 for unmatched
-RewriteRule ^ - [G,L]
+# Security rules
+RewriteRule ^wp-admin/includes/ - [F,L]
+RewriteRule !^wp-includes/ - [S=3]
+RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
+RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
+RewriteRule ^wp-includes/theme-compat/ - [F,L]
+</IfModule>
+
+<Files wp-config.php>
+order allow,deny
+deny from all
+</Files>
+
+# BEGIN WordPress
+# "BEGIN WordPress" から "END WordPress" までのディレクティブ (行) は
+# 動的に生成され、WordPress フィルターによってのみ修正が可能です。
+# これらのマーカー間にあるディレクティブへのいかなる変更も上書きされてしまいます。
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# “ea-php74” パッケージを既定の “PHP” プログラミング言語として設定します。
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php74 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
