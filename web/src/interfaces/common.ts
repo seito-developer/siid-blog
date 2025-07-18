@@ -26,7 +26,7 @@ export interface EyecatchProps {
 export interface AuthorProps {
   createdAt: string;
   description: string;
-  image: EyecatchProps;
+  image: EyecatchProps | null;
   name: string;
   publishedAt: string;
   revisedAt: string;
@@ -37,7 +37,7 @@ export interface ArticleProps {
   id: string;
   title: string;
   excerpt: string;
-  author: AuthorProps;
+  author: AuthorProps | null;
   publishedAt: string;
   createdAt: string;
   updatedAt: string;

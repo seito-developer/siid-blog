@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
-import { Calendar, Clock, User } from "lucide-react";
+import { Calendar, User } from "lucide-react";
 
 export default function Article({ article }: { article: ArticleProps }) {
 
@@ -64,7 +64,7 @@ export default function Article({ article }: { article: ArticleProps }) {
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1">
                 <User className="w-3 h-3" />
-                <span>{article.author.name}</span>
+                <span>{article.author?.name || "AI講師 シンディ"}</span>
               </div>
             </div>
             <div className="flex items-center gap-1">

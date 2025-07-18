@@ -13,8 +13,26 @@ async function getBlogPost(slug: string): Promise<ArticleContentProps> {
       endpoint: `${BLOG_API_ENDPOINT}/${slug}`,
     });
     return data;
-  } catch (error) {
-    console.error(`Error fetching blog post ${slug}:`, error);
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error(`Error fetching blog post ${slug}:`, error);
+      
+      // Rate limit エラーの場合は少し待って再試行
+      if (error.message?.includes('429') || error.message?.includes('Too many requests')) {
+        console.log(`Rate limited, waiting 1 second before retry for ${slug}`);
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        try {
+          const data = await client.get({
+            endpoint: `${BLOG_API_ENDPOINT}/${slug}`,
+          });
+          return data;
+        } catch (retryError) {
+          console.error(`Retry failed for blog post ${slug}:`, retryError);
+          throw new Error(`Blog post with id ${slug} not found after retry`);
+        }
+      }
+    }
+    
     throw new Error(`Blog post with id ${slug} not found`);
   }
 }
@@ -39,7 +57,19 @@ export default async function BlogPostPage({
       <Breadcrumbs items={categoryBreadcrumbs} />
       <BlogHeader
         eyecatchImage={post.eyecatch.url}
-        author={post.author}
+        author={post.author || {
+          name: "AI講師 シンディ",
+          image: {
+            url: "/sindi.png",
+            height: 44,
+            width: 44
+          },
+          description: "",
+          createdAt: "",
+          updatedAt: "",
+          publishedAt: "",
+          revisedAt: ""
+        }}
         tags={post.tags || []}
         category={post.categories[0]?.name || ""}
         date={post.publishedAt}
@@ -103,7 +133,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       url: `https://blog.bug-fix.org/blog/${slug}`,
       images: [{ url: post.eyecatch.url }],
       publishedTime: post.publishedAt,
-      authors: [post.author],
+      authors: [post.author?.name || "AI講師 シンディ"],
     },
   };
 }
