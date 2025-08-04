@@ -18,7 +18,6 @@ export default async function BlogPostPage({
 }) {
   const { slug } = await params; // IDを取得
   const post = await getBlogPost(slug);
-  console.log('Fetched post:', post);
   const categoryBreadcrumbs = [
     // { label: post.categories[0].name, href: `/${post.categories[0].id}` },
     { label: post.title, isCurrentPage: true },
@@ -36,7 +35,7 @@ export default async function BlogPostPage({
         title={post.title}
       />
       {/* 記事本文を表示 */}
-      <ArticleBody>
+      <ArticleBody author={post.author || null}>
         {post.contents || "" }
       </ArticleBody>
       <BannerSiid />

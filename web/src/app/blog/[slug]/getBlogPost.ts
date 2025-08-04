@@ -15,7 +15,6 @@ export async function getBlogPost(slug: string): Promise<ArticleContentProps> {
       
       // Rate limit エラーの場合は少し待って再試行
       if (error.message?.includes('429') || error.message?.includes('Too many requests')) {
-        console.log(`Rate limited, waiting 1 second before retry for ${slug}`);
         await new Promise(resolve => setTimeout(resolve, 1000));
         try {
           const data = await client.get({
