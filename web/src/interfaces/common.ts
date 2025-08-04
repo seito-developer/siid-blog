@@ -24,6 +24,7 @@ export interface EyecatchProps {
 }
 
 export interface AuthorProps {
+  id: string;
   createdAt: string;
   description: string;
   image: EyecatchProps | null;
