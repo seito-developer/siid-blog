@@ -1,12 +1,15 @@
+import { AuthorProps } from "@/interfaces/common";
 import Link from "next/link";
 
-export default function ArticleFooter() {
+export default function ArticleFooter({ author }: { author: AuthorProps | null }) {
   return (
     <div className="pt-10 mt-25 border-t border-gray-300 border-solid">
-      <p>
-        ...ところで、ワタシタチはオンラインのプログラミングスクールSiiDを運営していマス。<br />
-        登録者数12万人を超えるYouTube CHのセイト先生から学べてしまいマス。
-      </p>
+      {author?.name === "AI講師シンディ" &&  (
+        <p>
+          ...ところで、ワタシタチはオンラインのプログラミングスクールSiiDを運営していマス。<br />
+          登録者数12万人を超えるYouTube CHのセイト先生から学べてしまいマス。
+        </p>
+      )}
 
       <p>もし、</p>
 
@@ -21,7 +24,7 @@ export default function ArticleFooter() {
       </p>
 
       <p>
-        などと感じられたら、ぜひ検討してみてくだサイ。
+        などと感じられたら、ぜひ検討してみてください。
       </p>
 
       <p>

@@ -24,7 +24,7 @@ export default function ArticleBody({ children, author }: ArticleBodyProps) {
             <ArticleHeader />
           )}
           <div dangerouslySetInnerHTML={{ __html: decode(children as string) || ''}} />
-          <ArticleFooter />
+          <ArticleFooter author={author} />
         </div>
       </article>
     </div>
