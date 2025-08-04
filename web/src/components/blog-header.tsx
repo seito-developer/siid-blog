@@ -23,23 +23,22 @@ export default function BlogHeader({
   return (
     <header className="w-full bg-[#F4F4F4]">
       {/* Eyecatch Image */}
-      <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+      <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
         <Image src={eyecatchImage || "/placeholder.svg"} alt={title} fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+      </div>
 
         {/* Title overlay on image */}
-        <div className="absolute bottom-8 left-8 right-8 text-white">
+        <div className="p-4  bottom-8 left-8 right-8 text-white bg-[#214a4a]">
           <h1
-            className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-4xl mx-auto"
             style={{ fontFamily: "Noto Sans JP, sans-serif" }}
           >
             {title}
           </h1>
         </div>
-      </div>
 
       {/* Article Meta Information */}
-      <div className="max-w-4xl mx-auto px-6 py-8">
+      <div className="max-w-4xl mx-auto px-6 pt-8 pb-4">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           {/* Author and Date Info */}
           <Author postDate={date} author={author}  />
