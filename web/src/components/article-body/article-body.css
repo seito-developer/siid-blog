@@ -167,4 +167,26 @@
   br {
     display: block;
   }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  table th,
+  table td {
+    border: 1px solid #214a4a;
+    padding: 0.75rem;
+    text-align: left;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  table th {
+    background-color: #eee;
+    font-weight: 600;
+  }
 }
