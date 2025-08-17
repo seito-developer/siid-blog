@@ -14,9 +14,9 @@ import { defaultAuthor } from "./defaultAuthor";
 export default async function BlogPostPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }) {
-  const { slug } = await params; // IDを取得
+  const { slug } = params; // IDを取得
   const post = await getBlogPost(slug);
   const categoryBreadcrumbs = [
     // { label: post.categories[0].name, href: `/${post.categories[0].id}` },
