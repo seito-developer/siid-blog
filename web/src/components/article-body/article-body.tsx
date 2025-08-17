@@ -6,6 +6,7 @@ const notoSansJP = Inter({ subsets: ["latin"] })
 import React, { ReactNode } from "react";
 import ArticleFooter from "./article-footer";
 import ArticleHeader from "./article-header";
+import { decode } from "html-entities";
 import { AuthorProps } from "@/interfaces/common";
 
 type ArticleBodyProps = {
@@ -22,7 +23,7 @@ export default function ArticleBody({ children, author }: ArticleBodyProps) {
           {author?.name === "AI講師シンディ" &&  (
             <ArticleHeader />
           )}
-          <div dangerouslySetInnerHTML={{ __html: children as string || ''}} />
+          <div dangerouslySetInnerHTML={{ __html: decode(children as string) || ''}} />
           <ArticleFooter author={author} />
         </div>
       </article>
