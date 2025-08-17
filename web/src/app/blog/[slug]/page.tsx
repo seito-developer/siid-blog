@@ -8,8 +8,6 @@ import BannerSiid from "@/components/bannaer-siid";
 import { getBlogPost } from "./getBlogPost";
 import { defaultAuthor } from "./defaultAuthor";
 
-
-
 // 記事詳細ページの生成
 export default async function BlogPostPage({
   params,
@@ -72,8 +70,8 @@ async function stripHtmlTags(html: string): Promise<string> {
 }
 
 // メタデータの生成
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const { slug } = params;
   const post = await getBlogPost(slug);
 
   const plainTextContent = await stripHtmlTags(post.contents);
