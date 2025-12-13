@@ -1,13 +1,13 @@
 import "./article-body.css";
-import { Inter } from "next/font/google"
+import { Inter } from "next/font/google";
 
-const notoSansJP = Inter({ subsets: ["latin"] })
+const notoSansJP = Inter({ subsets: ["latin"] });
 
 import React, { ReactNode } from "react";
 import ArticleFooter from "./article-footer";
 import ArticleHeader from "./article-header";
-import { decode } from "html-entities";
 import { AuthorProps } from "@/interfaces/common";
+import { sanitizeArticleHtml } from "./sanitize-article-html";
 
 type ArticleBodyProps = {
   children: ReactNode;
@@ -15,18 +15,19 @@ type ArticleBodyProps = {
 };
 
 export default function ArticleBody({ children, author }: ArticleBodyProps) {
+  const raw = typeof children === "string" ? children : "";
+  const safeHtml = sanitizeArticleHtml(raw);
+
   return (
     <div className={`max-w-4xl mx-auto px-6 pb-8 ${notoSansJP.className}`}>
       {/* Article Body Content */}
       <article className="prose prose-lg max-w-none">
         <div className="article-body space-y-6">
-          {author?.name === "AI講師シンディ" &&  (
-            <ArticleHeader />
-          )}
-          <div dangerouslySetInnerHTML={{ __html: decode(children as string) || ''}} />
+          {author?.name === "AI講師シンディ" && <ArticleHeader />}
+          <div dangerouslySetInnerHTML={{ __html: safeHtml }} />
           <ArticleFooter author={author} />
         </div>
       </article>
     </div>
-  )
+  );
 }
