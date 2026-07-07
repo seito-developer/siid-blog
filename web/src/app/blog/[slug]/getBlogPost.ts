@@ -43,7 +43,8 @@ async function fetchBlogPost(
       return null;
     }
     if (!res.ok) {
-      throw new Error(`Failed to fetch blog post: ${slug}`);
+      // ステータスを含める（429 の場合に下の catch でリトライ判定するため）
+      throw new Error(`Failed to fetch blog post: ${slug} (status ${res.status})`);
     }
     return res.json();
   } catch (error: unknown) {
