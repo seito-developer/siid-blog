@@ -1,7 +1,7 @@
 import { createHmac, timingSafeEqual } from "crypto";
 import { revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
-import { BLOG_API_ENDPOINT } from "@/app/constants";
+import { BLOG_API_ENDPOINT, blogCacheTag } from "@/app/constants";
 
 // microCMS の Webhook 受け口。記事の公開・更新・削除時に発火し、
 // 該当記事の ISR キャッシュ（tags: ["blog-<id>"]）を再検証する。
@@ -13,7 +13,6 @@ import { BLOG_API_ENDPOINT } from "@/app/constants";
 type MicroCMSWebhookBody = {
   api?: string;
   id?: string;
-  type?: string;
 };
 
 // シークレットによる署名検証（HMAC-SHA256、タイミング攻撃対策込み）
@@ -53,7 +52,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const tag = `blog-${body.id}`;
+  const tag = blogCacheTag(body.id);
   revalidateTag(tag);
 
   return NextResponse.json({ revalidated: true, tag }, { status: 200 });
