@@ -16,8 +16,12 @@ export default async function BlogPostPage({
 }: Props) {
   const { slug } = await params; // IDを取得
   const post = await getBlogPost(slug);
+  // 1記事1カテゴリ運用の方針（MEMO.md）に合わせ先頭カテゴリのみリンクする
+  const category = post.categories[0];
   const categoryBreadcrumbs = [
-    // { label: post.categories[0].name, href: `/${post.categories[0].id}` },
+    ...(category
+      ? [{ label: category.name, href: `/category/${category.id}` }]
+      : []),
     { label: post.title, isCurrentPage: true },
   ]
   
