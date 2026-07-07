@@ -36,6 +36,7 @@ npm run lint      # ESLint
 - `NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN` — microCMS サービスドメイン（`siid-web`）
 - `NEXT_PUBLIC_MICROCMS_API_KEY` — microCMS API キー
 - `NEXT_PUBLIC_GA_ID` — Google Analytics 測定 ID
+- `MICROCMS_WEBHOOK_SECRET` — microCMS Webhook の署名検証用シークレット（サーバー専用。`/api/revalidate` で使用。ローカル開発では未設定でも可）
 
 ## アーキテクチャ
 
@@ -51,7 +52,7 @@ npm run lint      # ESLint
 
 - **記事の公開・更新**: microCMS 管理画面から手動（コード変更不要）
 - **コード変更の反映**: `main` ブランチへ push すると Vercel が自動デプロイ
-- **注意**: `revalidateTag` を呼ぶ API Route が存在しないため、既存記事の更新は再デプロイまで静的ページに反映されない可能性がある（既知の課題。`docs/SPEC.md` 参照）
+- **記事更新の反映**: microCMS の Webhook が `web/src/app/api/revalidate/route.ts` に POST し、`revalidateTag("blog-<id>")` で該当記事の静的ページを再検証する（署名検証に `MICROCMS_WEBHOOK_SECRET` を使用。`docs/SPEC.md` §6 参照）
 
 ## 既知の課題（変更時に留意）
 
