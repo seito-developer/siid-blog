@@ -8,15 +8,13 @@ import BannerSiid from "@/components/bannaer-siid";
 import { getBlogPost } from "./getBlogPost";
 import { defaultAuthor } from "./defaultAuthor";
 
-
+type Props = { params: Promise<{ slug: string }> };
 
 // 記事詳細ページの生成
 export default async function BlogPostPage({
   params,
-}: {
-  params: { slug: string };
-}) {
-  const { slug } = params; // IDを取得
+}: Props) {
+  const { slug } = await params; // IDを取得
   const post = await getBlogPost(slug);
   const categoryBreadcrumbs = [
     // { label: post.categories[0].name, href: `/${post.categories[0].id}` },
@@ -72,7 +70,7 @@ async function stripHtmlTags(html: string): Promise<string> {
 }
 
 // メタデータの生成
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const post = await getBlogPost(slug);
 

@@ -9,6 +9,7 @@
     font-weight: 700; /* font-bold */
     color: #214a4a; /* text-main */
     margin-bottom: 1.5rem; /* mb-6 */
+    margin-top: 4rem;
     line-height: 1.25; /* leading-tight */
   }
 
@@ -138,7 +139,7 @@
 
   /* Inline code */
   code {
-    background-color: #163333;
+    background-color: #222;
     color: #fff;
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
@@ -149,7 +150,7 @@
 
   /* Code block */
   pre {
-    background-color: #163333;
+    background-color: #222;
     color: white;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -166,5 +167,27 @@
   /* Line break */
   br {
     display: block;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  table th,
+  table td {
+    border: 1px solid #214a4a;
+    padding: 0.75rem;
+    text-align: left;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  table th {
+    background-color: #eee;
+    font-weight: 600;
   }
 }
