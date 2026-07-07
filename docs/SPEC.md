@@ -1,0 +1,171 @@
+# SiiD BLOG 仕様書
+
+最終更新: 2026-07-08
+
+## 1. プロジェクト概要
+
+| 項目 | 内容 |
+|---|---|
+| サイト名 | SiiD BLOG |
+| 公開URL | https://blog.bug-fix.org/ |
+| 目的 | AIプログラミングスクール SiiD のブログメディア。エンジニア転職・技術学習の情報発信を通じ、SEO 流入とスクール受講へのコンバージョンを狙う |
+| 運営 | SiiD（セイト先生 / YouTube登録者数12万人） |
+| ホスティング | Vercel |
+| CMS | microCMS（サービスドメイン: `siid-web`） |
+| アクセス解析 | Google Analytics (gtag.js) |
+
+### 経緯
+
+元は WordPress で運用していたブログを microCMS + Next.js に移行したもの。移行作業は完了済みで、リポジトリ内の `others/`（移行スクリプト）と `article-transferring/`（マッピング・変換データ）はその遺物。今後の開発対象は `web/` のみ。
+
+## 2. 技術スタック
+
+- Next.js 15.4 (App Router, Turbopack dev)
+- React 19 / TypeScript 5
+- Tailwind CSS 4（+ tailwindcss-animate / tw-animate-css）
+- shadcn/ui 系コンポーネント（Radix UI, class-variance-authority, `web/components.json`）
+- microcms-js-sdk 3.x
+- sanitize-html（記事本文の XSS 対策）
+- jsdom（メタデータ生成時の HTML→テキスト変換、サーバーサイドのみ）
+- dayjs, lucide-react
+
+## 3. ディレクトリ構成
+
+```
+siid-blog/
+├── web/                      # Next.js アプリ本体（開発対象）
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── page.tsx              # 記事一覧（トップ）
+│   │   │   ├── layout.tsx            # 共通レイアウト・サイト全体メタデータ・GA
+│   │   │   ├── not-found.tsx         # 404
+│   │   │   ├── constants.ts          # API定数・ページサイズ
+│   │   │   └── blog/[slug]/          # 記事詳細
+│   │   │       ├── page.tsx          #   本体 + generateStaticParams + generateMetadata
+│   │   │       ├── getBlogPost.ts    #   記事取得（fetch + リトライ）
+│   │   │       └── defaultAuthor.ts  #   著者フォールバック
+│   │   ├── components/
+│   │   │   ├── article-body/         # 記事本文表示（sanitize / header / footer / css）
+│   │   │   ├── ui/                   # shadcn/ui 系（badge, button, card, pagination）
+│   │   │   └── *.tsx                 # 一覧・検索・パンくず・バナー・GA 等
+│   │   ├── hooks/usePages.ts         # ページネーション用フック
+│   │   ├── interfaces/common.ts      # 型定義（データモデル）
+│   │   └── libs/microcms.ts          # microCMS SDK クライアント
+│   └── package.json
+├── others/                   # 【遺物】WordPress→microCMS 移行ツール（Node.js）
+├── article-transferring/     # 【遺物】移行時のマッピング・変換データ
+├── MEMO.md                   # オーナーの改善メモ（今後の展望のソース）
+└── docs/SPEC.md              # 本書
+```
+
+## 4. データモデル（microCMS）
+
+API は **`blog` エンドポイント1つのみ**。著者・カテゴリ・タグは別 API ではなく、blog 記事のフィールドとして保持する。
+
+型定義: `web/src/interfaces/common.ts`
+
+### ArticleContentProps（記事）
+
+| フィールド | 型 | 備考 |
+|---|---|---|
+| id | string | microCMS コンテンツID。URL の slug として使用 |
+| title | string | 記事タイトル |
+| contents | string | 本文（リッチエディタの HTML） |
+| excerpt | string | 抜粋 |
+| author | AuthorProps \| null | null の場合は「AI講師 シンディ」にフォールバック |
+| categories | CategoryProps[] | 現状は配列。**今後1記事1カテゴリに変更予定** |
+| tags | TagProps[] | **今後廃止予定** |
+| eyecatch | { url, width, height } | アイキャッチ画像（microcms-assets.io 配信） |
+| readTime | string | 読了時間 |
+| publishedAt / createdAt / updatedAt | string | 日時 |
+| slug | string | フィールドとして存在するが、ルーティングには id を使用 |
+
+## 5. 画面仕様
+
+### 5.1 記事一覧（トップ） `/`
+
+- ファイル: `web/src/app/page.tsx`（動的レンダリング）
+- クエリパラメータ:
+  - `page` — ページ番号（1始まり）。`(page - 1) × perPage` を offset に変換
+  - `perPage` — 1ページ件数（デフォルト 10 = `POSTS_NUM_PER_PAGE`）
+  - `q` — 検索キーワード。microCMS の全文検索 `q` パラメータにそのまま渡す
+- 並び順: `publishedAt` 降順
+- 構成: ヒーロー見出し → 検索バー →（検索時: 件数表示）→ 記事カード一覧（`article-list.tsx` / `article.tsx`）→ オフセットページネーション
+- 検索バー（`search-bar.tsx`）は client component。送信で `/?q=...` に遷移
+- ページネーション（`article-manager.tsx` + `usePages.ts`）は client component。クリックで `?page=N` に遷移（スクロール位置維持）
+
+### 5.2 記事詳細 `/blog/[slug]`
+
+- ファイル: `web/src/app/blog/[slug]/page.tsx`
+- slug = microCMS のコンテンツ ID。`generateStaticParams` で全記事分を静的生成（新規記事は on-demand で生成される）
+- 構成: パンくず（`breadcrumbs.tsx`）→ 記事ヘッダー（アイキャッチ・著者・タグ・カテゴリ・日付・タイトル）→ 本文（`article-body`）→ SiiD 受講バナー（`bannaer-siid.tsx`）
+- 本文は microCMS のリッチエディタ HTML を `sanitize-article-html.tsx`（sanitize-html）でサニタイズして描画。表示スタイルは `article-body.css`
+- メタデータ（`generateMetadata`）: 本文 HTML をテキスト化し先頭120文字を description に。canonical / OGP（article 型・アイキャッチ画像）を出力
+
+### 5.3 共通
+
+- レイアウト: `layout.tsx`（サイト全体のメタデータ・OGP・GA スクリプト・フッター）
+- 404: `not-found.tsx`
+- テーマ: メインカラー `#214a4a`（深緑）、背景 `#F4F4F4`、本文フォント Noto Sans JP（トップ）/ Geist（レイアウト変数）
+
+## 6. データ取得と キャッシュ戦略
+
+| 対象 | 方式 |
+|---|---|
+| 記事一覧 | microcms-js-sdk (`client.get`) でリクエスト時取得（searchParams 依存の動的ページ） |
+| 記事詳細 | 素の `fetch` に `X-MICROCMS-API-KEY` ヘッダー。`next: { tags: ["blog-<slug>"] }` でタグ付けし ISR キャッシュに載せる。429 (rate limit) 時は 1 秒待って SDK で再試行（`getBlogPost.ts`） |
+
+**既知の課題**: `revalidateTag("blog-<slug>")` を呼ぶ API Route / Webhook 受け口が実装されていないため、タグは付いているが再検証は発動しない。既存記事を microCMS で更新しても、次回デプロイまで静的ページに反映されない可能性がある。
+
+## 7. 運用フロー
+
+### 記事の公開・更新
+
+microCMS 管理画面（https://siid-web.microcms.io）から手動で行う。コード変更・デプロイ操作は不要（ただし上記キャッシュ課題あり）。
+
+### コードの変更
+
+1. 修正して `main` ブランチに push（または PR をマージ）
+2. Vercel が自動デプロイ
+
+※ GitHub 運用フロー（ブランチ戦略・PR ルール）の確立は今後の課題（MEMO.md）。
+
+### 環境変数
+
+| 変数 | 用途 |
+|---|---|
+| `NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN` | microCMS サービスドメイン（`siid-web`） |
+| `NEXT_PUBLIC_MICROCMS_API_KEY` | microCMS API キー |
+| `NEXT_PUBLIC_GA_ID` | Google Analytics 測定 ID |
+
+- 本番: Vercel のプロジェクト設定に登録済み
+- ローカル: `web/.env.local` に設定する（gitignore 済み。手元に無い場合は Vercel の設定値から作成）
+
+## 8. 既知の課題・改善候補
+
+1. **記事更新の即時反映ができない** — revalidate 用の API Route（microCMS Webhook 受け口）が未実装（§6）
+2. **API キーのクライアント露出** — `NEXT_PUBLIC_` 接頭辞のためブラウザバンドルに含まれ得る。キーの権限（GET 専用か否か）は未確認。サーバー専用の環境変数に移行し、キー権限を GET のみに制限することを推奨
+3. **テストが無い** — 現状は lint + build + 目視のみ。今後 Vitest 等を導入したい意向あり
+4. **パンくずのカテゴリリンクがコメントアウト** — カテゴリページ自体が未実装（`blog/[slug]/page.tsx`）
+5. **`html lang="en"`** — 日本語サイトだが `layout.tsx` の lang 属性が `en` のまま
+6. **ファイル名 typo** — `bannaer-siid.tsx`（banner の誤り）
+
+## 9. 今後の展望（MEMO.md より）
+
+### 目的
+
+現状は「とりあえず作った」段階で、SEO やスクール（SiiD）受講へのコンバージョンを考慮した設計になっていない。また記事の更新・運用がしやすい状態でもない。これらを解消する。
+
+### セットアップ系
+
+- GitHub の運用フローの確立（ブランチ戦略・PR ルール）
+- 必要なスキルや MCP の設定
+- SEO を考慮したマークアップ改善
+
+### 記事更新の省力化
+
+- **タグの廃止** — 運用負荷が高いため排除する
+- **カテゴリは1記事1つのみ** — 現状の複数カテゴリ配列を単一に変更
+- **サムネイルのプリセット化** — あらかじめ用意した画像アイコンから選ぶ方式にする（zenn.dev のような仕様）
+
+> タグ・カテゴリ・サムネイル周りに手を入れる際は、この方針との整合を必ず確認すること。
