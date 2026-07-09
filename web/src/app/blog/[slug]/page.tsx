@@ -1,6 +1,7 @@
 import { client } from "@/libs/microcms";
-import { BLOG_API_ENDPOINT } from "@/app/constants";
+import { BLOG_API_ENDPOINT, SITE_URL } from "@/app/constants";
 import BlogHeader from "@/components/blog-header";
+import JsonLd from "@/components/json-ld";
 
 import ArticleBody from "@/components/article-body/article-body";
 import Breadcrumbs from "@/components/breadcrumbs";
@@ -27,8 +28,49 @@ export default async function BlogPostPage({
     { label: post.title, isCurrentPage: true },
   ]
   
+  const articleUrl = `${SITE_URL}/blog/${slug}`;
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    image: [post.eyecatch.url],
+    datePublished: post.publishedAt,
+    dateModified: post.updatedAt || post.publishedAt,
+    author: {
+      "@type": "Person",
+      name: (post.author || defaultAuthor).name,
+    },
+    publisher: { "@type": "Organization", name: "SiiD" },
+    mainEntityOfPage: articleUrl,
+  };
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      ...(category
+        ? [
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: category.name,
+              item: `${SITE_URL}/category/${category.slug}`,
+            },
+          ]
+        : []),
+      {
+        "@type": "ListItem",
+        position: category ? 3 : 2,
+        name: post.title,
+        item: articleUrl,
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-[#F4F4F4]">
+      <JsonLd data={articleJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
       <Breadcrumbs items={categoryBreadcrumbs} />
       <BlogHeader
         eyecatchImage={post.eyecatch.url}
@@ -87,13 +129,13 @@ export async function generateMetadata({ params }: Props) {
     title: post.title,
     description: description,           // 120 文字要約
     alternates: {
-      canonical: `https://blog.bug-fix.org/blog/${slug}`,
+      canonical: `${SITE_URL}/blog/${slug}`,
     },
     openGraph: {
       type: "article",
       title: post.title,
       description: description,
-      url: `https://blog.bug-fix.org/blog/${slug}`,
+      url: `${SITE_URL}/blog/${slug}`,
       images: [{ url: post.eyecatch.url }],
       publishedTime: post.publishedAt,
       author: [post.author?.name || "AI講師 シンディ"],

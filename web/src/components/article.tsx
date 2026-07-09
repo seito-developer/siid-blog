@@ -1,7 +1,7 @@
 import { BLOG_API_ENDPOINT } from "@/app/constants";
 import { ArticleProps } from "@/interfaces/common";
 import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, CardHeader } from "./ui/card";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
 import { Calendar, User } from "lucide-react";
@@ -9,10 +9,12 @@ import { Calendar, User } from "lucide-react";
 export default function Article({ article }: { article: ArticleProps }) {
 
   return (
+    // 記事カードは独立したコンテンツなので article 要素にする
+    <article>
     <Link
       key={article.id}
       href={`/${BLOG_API_ENDPOINT}/${article.id}`}
-      className="group"
+      className="group block h-full"
     >
       <Card className="h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-white border-0 shadow-sm">
         {/* Article Image */}
@@ -37,12 +39,14 @@ export default function Article({ article }: { article: ArticleProps }) {
         </div>
 
         <CardHeader className="pb-3">
-          <CardTitle
-            className="text-lg font-bold line-clamp-2 group-hover:text-opacity-80 transition-colors"
+          {/* 記事タイトルは見出し要素にする（SEO・アクセシビリティ） */}
+          <h2
+            data-slot="card-title"
+            className="leading-none font-semibold text-lg font-bold line-clamp-2 group-hover:text-opacity-80 transition-colors"
             style={{ color: "#214a4a" }}
           >
             {article.title}
-          </CardTitle>
+          </h2>
         </CardHeader>
 
         <CardContent className="pt-0">
@@ -77,5 +81,6 @@ export default function Article({ article }: { article: ArticleProps }) {
         </CardContent>
       </Card>
     </Link>
+    </article>
   );
 }
