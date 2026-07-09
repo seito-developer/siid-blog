@@ -7,9 +7,13 @@ import { ArticleContentProps } from "@/interfaces/common";
 import { client } from "@/libs/microcms";
 import { notFound } from "next/navigation";
 
-// microCMSから特定の記事を取得。存在しない記事（削除済み含む）は 404 ページを表示する
-export async function getBlogPost(slug: string): Promise<ArticleContentProps> {
-  const post = await fetchBlogPost(slug);
+// microCMSから特定の記事を取得。存在しない記事（削除済み含む）は 404 ページを表示する。
+// draftKey を渡すと下書きを取得する（プレビュー用。キャッシュには載せない）
+export async function getBlogPost(
+  slug: string,
+  draftKey?: string
+): Promise<ArticleContentProps> {
+  const post = await fetchBlogPost(slug, draftKey);
   if (post === null) {
     notFound();
   }
@@ -18,7 +22,8 @@ export async function getBlogPost(slug: string): Promise<ArticleContentProps> {
 
 // 記事を取得する。microCMS が 404 を返した場合は null を返す
 async function fetchBlogPost(
-  slug: string
+  slug: string,
+  draftKey?: string
 ): Promise<ArticleContentProps | null> {
   try {
     if (
@@ -29,14 +34,22 @@ async function fetchBlogPost(
       throw new Error("any keys are missing");
     }
 
-    const url = `${BLOG_API_BASE}/${BLOG_API_ENDPOINT}/${slug}`;
+    const url = new URL(`${BLOG_API_BASE}/${BLOG_API_ENDPOINT}/${slug}`);
+    if (draftKey) {
+      url.searchParams.set("draftKey", draftKey);
+    }
     const res = await fetch(url, {
       headers: {
         "X-MICROCMS-API-KEY": process.env.MICROCMS_API_KEY,
       },
-      // 記事ごとの再検証タグ（このタグ名で revalidateTag を呼ぶ）
-      next: { tags: [blogCacheTag(slug)] },
-      // 通常はISRキャッシュに乗せる（no-storeは付けない）
+      ...(draftKey
+        ? // 下書きプレビューはキャッシュに載せず毎回取得する
+          { cache: "no-store" as const }
+        : {
+            // 記事ごとの再検証タグ（このタグ名で revalidateTag を呼ぶ）
+            next: { tags: [blogCacheTag(slug)] },
+            // 通常はISRキャッシュに乗せる（no-storeは付けない）
+          }),
     });
 
     if (res.status === 404) {
@@ -60,6 +73,7 @@ async function fetchBlogPost(
         try {
           const data = await client.get({
             endpoint: `${BLOG_API_ENDPOINT}/${slug}`,
+            queries: draftKey ? { draftKey } : undefined,
           });
           return data;
         } catch (retryError) {
