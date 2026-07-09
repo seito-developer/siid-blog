@@ -15,8 +15,10 @@ export async function GET(request: NextRequest) {
   const slug = request.nextUrl.searchParams.get("slug");
   const draftKey = request.nextUrl.searchParams.get("draftKey");
 
-  if (!slug) {
-    return NextResponse.json({ message: "slug is required" }, { status: 400 });
+  // microCMS のコンテンツ ID 形式のみ許可する（"#" や "/" 等を混ぜて
+  // 検証用リクエストの URL を改変されないように）
+  if (!slug || !/^[A-Za-z0-9_-]+$/.test(slug)) {
+    return NextResponse.json({ message: "invalid slug" }, { status: 400 });
   }
 
   // 公開済み記事のプレビュー（下書きが無い場合 draftKey は空）は

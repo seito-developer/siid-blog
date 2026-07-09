@@ -11,10 +11,14 @@ export async function GET(request: NextRequest) {
   const cookieStore = await cookies();
   cookieStore.delete(DRAFT_KEY_COOKIE);
 
-  // 戻り先はサイト内パスのみ許可する（オープンリダイレクト対策）
+  // 戻り先はサイト内パスのみ許可する（オープンリダイレクト対策）。
+  // バックスラッシュはブラウザが "/" に正規化し "//host" になり得るため拒否する
   const redirectTo = request.nextUrl.searchParams.get("redirect");
   const safePath =
-    redirectTo && redirectTo.startsWith("/") && !redirectTo.startsWith("//")
+    redirectTo &&
+    redirectTo.startsWith("/") &&
+    !redirectTo.startsWith("//") &&
+    !redirectTo.includes("\\")
       ? redirectTo
       : "/";
   redirect(safePath);
