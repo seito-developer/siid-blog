@@ -53,7 +53,7 @@ npm test          # ユニットテスト (Vitest)
 ## デプロイ・運用
 
 - **記事の公開・更新**: microCMS 管理画面から手動（コード変更不要）
-- **コード変更の反映**: `main` ブランチへ push すると Vercel が自動デプロイ
+- **コード変更の反映**: 作業ブランチ → develop に PR、リリース時にオーナーが develop → main をマージすると Vercel が自動デプロイ（フロー詳細は `docs/WORKFLOW.md`）
 - **記事更新の反映**: microCMS の Webhook が `web/src/app/api/revalidate/route.ts` に POST し、`revalidateTag("blog-<id>")` で該当記事の静的ページを再検証する（署名検証に `MICROCMS_WEBHOOK_SECRET` を使用。`docs/SPEC.md` §6 参照）
 
 ## 既知の課題（変更時に留意）
