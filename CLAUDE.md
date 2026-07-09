@@ -25,9 +25,11 @@ npm install       # 依存インストール
 npm run dev       # 開発サーバー起動 (Turbopack, http://localhost:3000)
 npm run build     # 本番ビルド（変更後は必ずビルドが通ることを確認する）
 npm run lint      # ESLint
+npm run typecheck # TypeScript 型チェック (tsc --noEmit)
+npm test          # ユニットテスト (Vitest)
 ```
 
-テストは現状存在しない（今後 Vitest 等の導入を検討中）。品質担保は `lint` + `build` + 目視確認。
+テストは Vitest（`web/vitest.config.ts`、`src/**/*.test.ts`）。PR ごとに GitHub Actions（`.github/workflows/ci.yml`）で lint / typecheck / test が自動実行される。build はシークレットが必要なため Vercel 側で担保。
 
 ### 環境変数
 
