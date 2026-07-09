@@ -34,7 +34,7 @@ npm run lint      # ESLint
 ローカル実行には `web/.env.local` が必要（gitignore 済みのためリポジトリには無い。無ければユーザーに値を確認して作成する）:
 
 - `NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN` — microCMS サービスドメイン（`siid-web`）
-- `NEXT_PUBLIC_MICROCMS_API_KEY` — microCMS API キー
+- `MICROCMS_API_KEY` — microCMS API キー（サーバー専用。`NEXT_PUBLIC_` を付けないこと）
 - `NEXT_PUBLIC_GA_ID` — Google Analytics 測定 ID
 - `MICROCMS_WEBHOOK_SECRET` — microCMS Webhook の署名検証用シークレット（サーバー専用。`/api/revalidate` で使用。ローカル開発では未設定でも可）
 
@@ -56,5 +56,4 @@ npm run lint      # ESLint
 
 ## 既知の課題（変更時に留意）
 
-- microCMS API キーが `NEXT_PUBLIC_` 接頭辞でクライアントに露出し得る（キーの権限は未確認）。サーバー専用化が改善候補
 - タグ機能は今後**廃止予定**、カテゴリは**1記事1つ**に変更予定（MEMO.md）。タグ・カテゴリ周りの新規実装は事前にオーナーへ確認する

@@ -24,7 +24,7 @@ async function fetchBlogPost(
     if (
       !BLOG_API_BASE ||
       !BLOG_API_ENDPOINT ||
-      !process.env.NEXT_PUBLIC_MICROCMS_API_KEY
+      !process.env.MICROCMS_API_KEY
     ) {
       throw new Error("any keys are missing");
     }
@@ -32,7 +32,7 @@ async function fetchBlogPost(
     const url = `${BLOG_API_BASE}/${BLOG_API_ENDPOINT}/${slug}`;
     const res = await fetch(url, {
       headers: {
-        "X-MICROCMS-API-KEY": process.env.NEXT_PUBLIC_MICROCMS_API_KEY,
+        "X-MICROCMS-API-KEY": process.env.MICROCMS_API_KEY,
       },
       // 記事ごとの再検証タグ（このタグ名で revalidateTag を呼ぶ）
       next: { tags: [blogCacheTag(slug)] },
