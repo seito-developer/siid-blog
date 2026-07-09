@@ -102,7 +102,15 @@ API は **`blog` エンドポイント1つのみ**。著者・カテゴリ・タ
 - 本文は microCMS のリッチエディタ HTML を `sanitize-article-html.tsx`（sanitize-html）でサニタイズして描画。表示スタイルは `article-body.css`
 - メタデータ（`generateMetadata`）: 本文 HTML をテキスト化し先頭120文字を description に。canonical / OGP（article 型・アイキャッチ画像）を出力
 
-### 5.3 共通
+### 5.3 カテゴリ別記事一覧 `/category/[slug]`
+
+- ファイル: `web/src/app/category/[slug]/page.tsx`（動的レンダリング）
+- URL はカテゴリ名ベースのスラッグ（例: `/category/programming`）。slug ↔ microCMS カテゴリ ID の対応表は `web/src/app/category/categories.ts` でコード管理（**カテゴリを追加・変更したらここに追記する**。整合性はユニットテストで担保）
+- microCMS の `filters: categories[contains]<id>` でカテゴリ別に取得。`?page=` によるページネーションはトップと共通（`ArticleManager`）
+- 未知のスラッグ・記事0件のカテゴリは 404
+- 記事詳細のパンくずから先頭カテゴリへリンク（対応表に無いカテゴリはリンクなし）
+
+### 5.4 共通
 
 - レイアウト: `layout.tsx`（サイト全体のメタデータ・OGP・GA スクリプト・フッター）
 - 404: `not-found.tsx`
