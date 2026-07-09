@@ -4,7 +4,7 @@ import BlogHeader from "@/components/blog-header";
 
 import ArticleBody from "@/components/article-body/article-body";
 import Breadcrumbs from "@/components/breadcrumbs";
-import BannerSiid from "@/components/bannaer-siid";
+import BannerSiid from "@/components/banner-siid";
 import { getBlogPost } from "./getBlogPost";
 import { defaultAuthor } from "./defaultAuthor";
 

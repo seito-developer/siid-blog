@@ -25,16 +25,18 @@ npm install       # 依存インストール
 npm run dev       # 開発サーバー起動 (Turbopack, http://localhost:3000)
 npm run build     # 本番ビルド（変更後は必ずビルドが通ることを確認する）
 npm run lint      # ESLint
+npm run typecheck # TypeScript 型チェック (tsc --noEmit)
+npm test          # ユニットテスト (Vitest)
 ```
 
-テストは現状存在しない（今後 Vitest 等の導入を検討中）。品質担保は `lint` + `build` + 目視確認。
+テストは Vitest（`web/vitest.config.ts`、`src/**/*.test.ts`）。PR ごとに GitHub Actions（`.github/workflows/ci.yml`）で lint / typecheck / test が自動実行される。build はシークレットが必要なため Vercel 側で担保。
 
 ### 環境変数
 
 ローカル実行には `web/.env.local` が必要（gitignore 済みのためリポジトリには無い。無ければユーザーに値を確認して作成する）:
 
 - `NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN` — microCMS サービスドメイン（`siid-web`）
-- `NEXT_PUBLIC_MICROCMS_API_KEY` — microCMS API キー
+- `MICROCMS_API_KEY` — microCMS API キー（サーバー専用。`NEXT_PUBLIC_` を付けないこと）
 - `NEXT_PUBLIC_GA_ID` — Google Analytics 測定 ID
 - `MICROCMS_WEBHOOK_SECRET` — microCMS Webhook の署名検証用シークレット（サーバー専用。`/api/revalidate` で使用。ローカル開発では未設定でも可）
 
@@ -51,10 +53,9 @@ npm run lint      # ESLint
 ## デプロイ・運用
 
 - **記事の公開・更新**: microCMS 管理画面から手動（コード変更不要）
-- **コード変更の反映**: `main` ブランチへ push すると Vercel が自動デプロイ
+- **コード変更の反映**: 作業ブランチ → develop に PR、リリース時にオーナーが develop → main をマージすると Vercel が自動デプロイ（フロー詳細は `docs/WORKFLOW.md`）
 - **記事更新の反映**: microCMS の Webhook が `web/src/app/api/revalidate/route.ts` に POST し、`revalidateTag("blog-<id>")` で該当記事の静的ページを再検証する（署名検証に `MICROCMS_WEBHOOK_SECRET` を使用。`docs/SPEC.md` §6 参照）
 
 ## 既知の課題（変更時に留意）
 
-- microCMS API キーが `NEXT_PUBLIC_` 接頭辞でクライアントに露出し得る（キーの権限は未確認）。サーバー専用化が改善候補
 - タグ機能は今後**廃止予定**、カテゴリは**1記事1つ**に変更予定（MEMO.md）。タグ・カテゴリ周りの新規実装は事前にオーナーへ確認する
