@@ -1,9 +1,12 @@
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export const usePages = () => {
     const router = useRouter()
-    const [offsetCurrentPage, setOffsetCurrentPage] = useState<number>(0);
+    const searchParams = useSearchParams()
+    // URL の ?page= を初期値にする（無い・不正な場合は 1）
+    const initialPage = Math.max(1, parseInt(searchParams.get("page") ?? "1", 10) || 1)
+    const [offsetCurrentPage, setOffsetCurrentPage] = useState<number>(initialPage);
 
     const clickPage = async (num: number) => {
         setOffsetCurrentPage(num);
