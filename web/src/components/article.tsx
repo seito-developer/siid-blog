@@ -9,10 +9,10 @@ import { Calendar, User } from "lucide-react";
 export default function Article({ article }: { article: ArticleProps }) {
 
   return (
-    // 記事カードは独立したコンテンツなので article 要素にする
     <article>
-    <Link
-      key={article.id}
+      {/* 記事カードは独立したコンテンツなので article 要素にする */}
+      <Link
+        key={article.id}
       href={`/${BLOG_API_ENDPOINT}/${article.id}`}
       className="group block h-full"
     >
