@@ -47,7 +47,7 @@ export default async function BlogPostPage({
         <div className="sticky top-0 z-50 bg-[#EE7D2B] text-white text-sm text-center py-2 px-4">
           下書きプレビュー表示中（この内容は公開されていません）
           <a
-            href={`/api/exit-preview?redirect=/blog/${slug}`}
+            href={`/api/exit-preview?redirect=${encodeURIComponent(`/blog/${slug}`)}`}
             className="underline ml-3"
           >
             プレビューを終了

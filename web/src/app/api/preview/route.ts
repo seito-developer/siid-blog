@@ -43,6 +43,13 @@ export async function GET(request: NextRequest) {
     headers: { "X-MICROCMS-API-KEY": process.env.MICROCMS_API_KEY },
     cache: "no-store",
   });
+  // 上流障害（5xx）は認証失敗と区別して返す（障害時の切り分けのため）
+  if (res.status >= 500) {
+    return NextResponse.json(
+      { message: "microCMS is unavailable" },
+      { status: 502 }
+    );
+  }
   if (!res.ok) {
     return NextResponse.json(
       { message: "Invalid slug or draftKey" },
