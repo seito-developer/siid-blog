@@ -1,13 +1,20 @@
 import { client } from "../libs/microcms";
-import { BLOG_API_ENDPOINT, POSTS_NUM_PER_PAGE } from "./constants";
+import {
+  BLOG_API_ENDPOINT,
+  POSTS_NUM_PER_PAGE,
+  SITE_NAME,
+  SITE_URL,
+} from "./constants";
 import { ArticleProps } from "@/interfaces/common";
 import ArticleManager from "@/components/article-manager";
 import SearchBar from "@/components/search-bar";
+import JsonLd from "@/components/json-ld";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "記事一覧 | SiiD BLOG",
   description: "YouTube登録者数12万人を誇るセイト先生が教える、プログラミングスクールSiiDのブログメディア。エンジニア転職や技術学習に関連する有益な情報を発信中！",
+  alternates: { canonical: SITE_URL },
   openGraph: {
     title: "記事一覧 | SiiD BLOG",
     description: "YouTube登録者数12万人を誇るセイト先生が教える、プログラミングスクールSiiDのブログメディア。エンジニア転職や技術学習に関連する有益な情報を発信中！",
@@ -32,6 +39,14 @@ export default async function Home({
     q: searchQuery,
   });
 
+  const webSiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    url: SITE_URL,
+    publisher: { "@type": "Organization", name: "SiiD" },
+  };
+
   return (
     <main
       className="min-h-screen"
@@ -40,6 +55,7 @@ export default async function Home({
         fontFamily: "Noto Sans JP, sans-serif",
       }}
     >
+      <JsonLd data={webSiteJsonLd} />
       <div className="container mx-auto px-4 py-8">
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold mb-4" style={{ color: "#214a4a" }}>
