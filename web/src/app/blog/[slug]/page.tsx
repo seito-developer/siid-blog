@@ -9,15 +9,29 @@ import BannerSiid from "@/components/banner-siid";
 import { getBlogPost } from "./getBlogPost";
 import { defaultAuthor } from "./defaultAuthor";
 import { findCategoryById } from "@/app/category/categories";
+import { draftMode, cookies } from "next/headers";
+import { DRAFT_KEY_COOKIE } from "@/app/api/preview/constants";
 
 type Props = { params: Promise<{ slug: string }> };
+
+// Draft Mode（microCMS プレビュー）中は Cookie の draftKey を返す。
+// 通常時は undefined（静的生成では draftMode が無効のため cookies() には触れない）
+async function getDraftKey(): Promise<string | undefined> {
+  const { isEnabled } = await draftMode();
+  if (!isEnabled) {
+    return undefined;
+  }
+  const cookieStore = await cookies();
+  return cookieStore.get(DRAFT_KEY_COOKIE)?.value;
+}
 
 // 記事詳細ページの生成
 export default async function BlogPostPage({
   params,
 }: Props) {
   const { slug } = await params; // IDを取得
-  const post = await getBlogPost(slug);
+  const draftKey = await getDraftKey();
+  const post = await getBlogPost(slug, draftKey);
   // 1記事1カテゴリ運用の方針（MEMO.md）に合わせ先頭カテゴリのみリンクする
   // （スラッグ対応表に無いカテゴリはリンクを出さない）
   const category = post.categories[0] && findCategoryById(post.categories[0].id);
@@ -69,6 +83,17 @@ export default async function BlogPostPage({
 
   return (
     <main className="min-h-screen bg-[#F4F4F4]">
+      {draftKey && (
+        <div className="sticky top-0 z-50 bg-[#EE7D2B] text-white text-sm text-center py-2 px-4">
+          下書きプレビュー表示中（この内容は公開されていません）
+          <a
+            href={`/api/exit-preview?redirect=${encodeURIComponent(`/blog/${slug}`)}`}
+            className="underline ml-3"
+          >
+            プレビューを終了
+          </a>
+        </div>
+      )}
       <JsonLd data={articleJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
       <Breadcrumbs items={categoryBreadcrumbs} />
@@ -120,7 +145,8 @@ async function stripHtmlTags(html: string): Promise<string> {
 // メタデータの生成
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
-  const post = await getBlogPost(slug);
+  // プレビュー中は下書きでメタデータを生成する（新規未公開記事の 404 回避）
+  const post = await getBlogPost(slug, await getDraftKey());
 
   const plainTextContent = await stripHtmlTags(post.contents);
   const description = plainTextContent.slice(0, 120) + "...";

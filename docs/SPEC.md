@@ -132,6 +132,10 @@ API は **`blog` エンドポイント1つのみ**。著者・カテゴリ・タ
 
 microCMS 側の設定: 管理画面 > blog API > API 設定 > Webhook で「カスタム通知」を追加し、URL に `https://blog.bug-fix.org/api/revalidate`、シークレットに `MICROCMS_WEBHOOK_SECRET` と同じ値を設定する（コンテンツの公開・更新・削除時に通知）。
 
+**下書きプレビュー（画面プレビュー）**: microCMS の記事編集画面「Page Preview」から `web/src/app/api/preview/route.ts` に遷移する。draftKey を microCMS への問い合わせで検証してから Next.js の Draft Mode を有効化し、draftKey を httpOnly Cookie に保持して記事ページへリダイレクト。記事ページは Draft Mode 中のみ draftKey 付きで下書きを取得する（`cache: no-store`、公開キャッシュには載せない）。プレビュー中はページ上部にバナーを表示し、`/api/exit-preview` で終了できる。
+
+microCMS 側の設定: 管理画面 > blog API > API 設定 > 画面プレビュー に `https://blog.bug-fix.org/api/preview?slug={CONTENT_ID}&draftKey={DRAFT_KEY}` を設定する。
+
 ## 7. 運用フロー
 
 ### 記事の公開・更新
