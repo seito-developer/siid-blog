@@ -112,8 +112,13 @@ API は **`blog` エンドポイント1つのみ**。著者・カテゴリ・タ
 
 ### 5.4 共通
 
-- レイアウト: `layout.tsx`（サイト全体のメタデータ・OGP・GA スクリプト・フッター）
+- レイアウト: `layout.tsx`（サイト全体のメタデータ・OGP・GA スクリプト・フッター。`metadataBase` = `SITE_URL`）
 - 404: `not-found.tsx`
+- SEO:
+  - `app/sitemap.ts` — 全記事 + 記事のあるカテゴリ + トップを列挙（1日1回再生成）
+  - `app/robots.ts` — 全許可。検索・ページ送りのパラメータ付き URL は disallow
+  - JSON-LD（`components/json-ld.tsx`）— 記事: Article + BreadcrumbList / カテゴリ: BreadcrumbList / トップ: WebSite
+  - canonical はトップ・記事・カテゴリ各ページで出力。サイト URL は `constants.ts` の `SITE_URL` で一元管理
 - テーマ: メインカラー `#214a4a`（深緑）、背景 `#F4F4F4`、本文フォント Noto Sans JP（トップ）/ Geist（レイアウト変数）
 
 ## 6. データ取得と キャッシュ戦略

@@ -1,5 +1,10 @@
 import { client } from "@/libs/microcms";
-import { BLOG_API_ENDPOINT, POSTS_NUM_PER_PAGE } from "@/app/constants";
+import {
+  BLOG_API_ENDPOINT,
+  POSTS_NUM_PER_PAGE,
+  SITE_URL,
+} from "@/app/constants";
+import JsonLd from "@/components/json-ld";
 import { ArticleProps } from "@/interfaces/common";
 import ArticleManager from "@/components/article-manager";
 import Breadcrumbs from "@/components/breadcrumbs";
@@ -50,8 +55,23 @@ export default async function CategoryPage(props: Props) {
     notFound();
   }
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: category.name,
+        item: `${SITE_URL}/category/${category.slug}`,
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-[#F4F4F4]">
+      <JsonLd data={breadcrumbJsonLd} />
       <Breadcrumbs items={[{ label: category.name, isCurrentPage: true }]} />
       <div className="container mx-auto px-4 py-8">
         <div className="mb-12 text-center">
@@ -75,6 +95,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   return {
     title,
     description,
+    alternates: { canonical: `${SITE_URL}/category/${category.slug}` },
     openGraph: { title, description, type: "website" },
   };
 }
