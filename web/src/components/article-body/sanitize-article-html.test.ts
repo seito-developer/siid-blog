@@ -44,3 +44,82 @@ describe("sanitizeArticleHtml", () => {
     expect(result).not.toContain("style=");
   });
 });
+
+describe("sanitizeArticleHtml: 動画埋め込み (iframe)", () => {
+  // microCMS のリッチエディタが出力する YouTube 埋め込みの実形式
+  const youtubeEmbed =
+    '<div style="position: relative; padding-bottom: 56.25%;">' +
+    '<iframe src="https://www.youtube.com/embed/zOtDiXqUkiI?rel=0"' +
+    ' style="position: absolute;" allowfullscreen scrolling="no"' +
+    ' allow="encrypted-media *;" referrerpolicy="strict-origin"></iframe></div>';
+
+  it("YouTube の iframe を保持する（src・allowfullscreen 等）", () => {
+    const result = sanitizeArticleHtml(youtubeEmbed);
+    expect(result).toContain("<iframe");
+    expect(result).toContain(
+      'src="https://www.youtube.com/embed/zOtDiXqUkiI?rel=0"'
+    );
+    expect(result).toContain("allowfullscreen");
+  });
+
+  it("iframe のインライン style は除去する（表示は CSS で担保）", () => {
+    const result = sanitizeArticleHtml(youtubeEmbed);
+    expect(result).not.toContain("style=");
+  });
+
+  it("許可ホスト以外の iframe はタグごと除去する", () => {
+    const result = sanitizeArticleHtml(
+      '<iframe src="https://evil.example.com/embed/x"></iframe>'
+    );
+    expect(result).not.toContain("<iframe");
+    expect(result).not.toContain("evil.example.com");
+  });
+
+  it("https 以外のスキームの iframe を除去する", () => {
+    const result = sanitizeArticleHtml(
+      '<iframe src="http://www.youtube.com/embed/x"></iframe>'
+    );
+    expect(result).not.toContain("<iframe");
+  });
+
+  it("不許可の埋め込みを除去した後、空のラッパー div を残さない", () => {
+    const result = sanitizeArticleHtml(
+      '<p>before</p><div style="position:relative"><iframe src="https://evil.example.com/embed"></iframe></div><p>after</p>'
+    );
+    expect(result).toBe("<p>before</p><p>after</p>");
+  });
+
+  it("画像だけを含む div は除去しない", () => {
+    const result = sanitizeArticleHtml(
+      '<div><img src="https://example.com/a.png" alt="x"></div>'
+    );
+    expect(result).toContain("<img");
+    expect(result).toContain("<div>");
+  });
+
+  it("youtube-nocookie / Vimeo の iframe は許可する", () => {
+    expect(
+      sanitizeArticleHtml(
+        '<iframe src="https://www.youtube-nocookie.com/embed/x"></iframe>'
+      )
+    ).toContain("<iframe");
+    expect(
+      sanitizeArticleHtml(
+        '<iframe src="https://player.vimeo.com/video/123"></iframe>'
+      )
+    ).toContain("<iframe");
+  });
+
+  it("ホスト名の偽装（サブドメイン・ユーザー情報付き）を許可しない", () => {
+    expect(
+      sanitizeArticleHtml(
+        '<iframe src="https://www.youtube.com.evil.com/embed/x"></iframe>'
+      )
+    ).not.toContain("<iframe");
+    expect(
+      sanitizeArticleHtml(
+        '<iframe src="https://www.youtube.com@evil.com/embed/x"></iframe>'
+      )
+    ).not.toContain("<iframe");
+  });
+});

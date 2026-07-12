@@ -3,6 +3,15 @@
     margin-top: 1.5rem; /* space-y-6 相当 */
   }
 
+  /* 動画埋め込み（YouTube 等の iframe）。
+     サニタイズでインライン style を除去するため、ここで 16:9 のレスポンシブ表示にする */
+  iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+  }
+
   /* Headings */
   h1 {
     font-size: 2.25rem; /* text-4xl */
