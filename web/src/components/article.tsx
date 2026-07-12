@@ -1,6 +1,7 @@
 import { BLOG_API_ENDPOINT } from "@/app/constants";
 import { ArticleProps } from "@/interfaces/common";
 import { getArticleCategory } from "@/libs/article-category";
+import { getArticleThumbnail } from "@/libs/article-thumbnail";
 import Link from "next/link";
 import { Card, CardContent, CardHeader } from "./ui/card";
 import Image from "next/image";
@@ -9,6 +10,7 @@ import { Calendar, User } from "lucide-react";
 
 export default function Article({ article }: { article: ArticleProps }) {
   const category = getArticleCategory(article);
+  const thumbnail = getArticleThumbnail(article);
 
   return (
     <article>
@@ -22,11 +24,11 @@ export default function Article({ article }: { article: ArticleProps }) {
         {/* Article Image */}
         <div className="relative overflow-hidden rounded-t-lg">
           <Image
-            src={article.eyecatch.url || ""}
+            src={thumbnail.url}
             alt={article.title}
             className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-            width={article.eyecatch.width}
-            height={article.eyecatch.height}
+            width={thumbnail.width}
+            height={thumbnail.height}
             objectFit="cover"
           />
           {/* カテゴリ未設定の記事はバッジを出さない（従来はここでクラッシュしていた） */}
