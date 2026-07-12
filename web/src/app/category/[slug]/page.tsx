@@ -114,6 +114,9 @@ const getBlogPostsByCategory = cache(
         offset,
         limit,
         orders: "-publishedAt",
+        // 現行スキーマの複数参照フィールドで絞り込む。
+        // microCMS で単一参照フィールド category へ移行した際は
+        // `category[equals]${categoryId}` に変更すること（Issue #12）
         filters: `categories[contains]${categoryId}`,
       },
     });

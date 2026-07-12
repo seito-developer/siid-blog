@@ -9,6 +9,7 @@ import BannerSiid from "@/components/banner-siid";
 import { getBlogPost } from "./getBlogPost";
 import { defaultAuthor } from "./defaultAuthor";
 import { findCategoryById } from "@/app/category/categories";
+import { getArticleCategory } from "@/libs/article-category";
 import { draftMode, cookies } from "next/headers";
 import { DRAFT_KEY_COOKIE } from "@/app/api/preview/constants";
 
@@ -32,9 +33,9 @@ export default async function BlogPostPage({
   const { slug } = await params; // IDを取得
   const draftKey = await getDraftKey();
   const post = await getBlogPost(slug, draftKey);
-  // 1記事1カテゴリ運用の方針（MEMO.md）に合わせ先頭カテゴリのみリンクする
-  // （スラッグ対応表に無いカテゴリはリンクを出さない）
-  const category = post.categories[0] && findCategoryById(post.categories[0].id);
+  // 1記事1カテゴリ（Issue #12）。スラッグ対応表に無いカテゴリはリンクを出さない
+  const postCategory = getArticleCategory(post);
+  const category = postCategory && findCategoryById(postCategory.id);
   const categoryBreadcrumbs = [
     ...(category
       ? [{ label: category.name, href: `/category/${category.slug}` }]
@@ -100,7 +101,7 @@ export default async function BlogPostPage({
       <BlogHeader
         eyecatchImage={post.eyecatch.url}
         author={post.author || defaultAuthor}
-        category={post.categories[0]?.name || ""}
+        category={postCategory?.name || ""}
         date={post.publishedAt}
         title={post.title}
       />
