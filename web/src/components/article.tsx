@@ -50,19 +50,6 @@ export default function Article({ article }: { article: ArticleProps }) {
         </CardHeader>
 
         <CardContent className="pt-0">
-          {/* Tags */}
-          <div className="flex flex-wrap gap-1 mb-4">
-            {article.tags.map((tag) => (
-              <Badge
-                key={tag.id}
-                variant="outline"
-                className="text-xs border-gray-300 text-gray-600 hover:border-gray-400"
-              >
-                {tag.name}
-              </Badge>
-            ))}
-          </div>
-
           {/* Article Meta */}
           <div className="flex items-center justify-between text-xs text-gray-500">
             <div className="flex items-center gap-4">
