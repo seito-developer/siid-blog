@@ -43,6 +43,6 @@ npm run dev   # http://localhost:3000
 | 変更箇所 | 確認方法 |
 |---|---|
 | `/api/revalidate` | 署名付き curl（HMAC-SHA256、`MICROCMS_WEBHOOK_SECRET`） |
-| `/api/preview` | `/api/preview?slug=<公開記事ID>&draftKey=dummy` → バナー表示 → 終了リンク |
+| `/api/preview` | `/api/preview?slug=<公開記事ID>&draftKey=dummy` → バナー表示 → 終了リンク。※dummy キーで通るのは**公開済み記事に限り** microCMS が不正 draftKey を無視して 200 を返すため（実測済みの仕様）。実際の下書き内容の確認は microCMS の「Page Preview」ボタン（本物の draftKey）でのみ可能 |
 | sitemap / robots | `curl localhost:3000/sitemap.xml` / `robots.txt` |
 | サニタイズ | `npm test`（sanitize-article-html.test.ts）+ 実記事の表示 |
