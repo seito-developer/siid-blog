@@ -64,8 +64,14 @@ export function sanitizeArticleHtml(html: string) {
     allowedSchemes: ["http", "https", "mailto"],
     allowProtocolRelative: false,
     disallowedTagsMode: "escape",
-    // 許可ホスト外で src が除去された iframe（空タグ）は丸ごと取り除く
-    exclusiveFilter: (frame) => frame.tag === "iframe" && !frame.attribs.src,
+    // 許可ホスト外で src が除去された iframe（空タグ）と、
+    // その結果空になった埋め込みラッパー div を丸ごと取り除く
+    // （空 div が残ると記事内に無意味な余白ができるため）
+    exclusiveFilter: (frame) =>
+      (frame.tag === "iframe" && !frame.attribs.src) ||
+      (frame.tag === "div" &&
+        !frame.text.trim() &&
+        frame.mediaChildren.length === 0),
 
     transformTags: {
       a: (tagName, attribs) => {

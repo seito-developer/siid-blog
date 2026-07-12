@@ -79,7 +79,22 @@ describe("sanitizeArticleHtml: 動画埋め込み (iframe)", () => {
     const result = sanitizeArticleHtml(
       '<iframe src="http://www.youtube.com/embed/x"></iframe>'
     );
-    expect(result).not.toContain('src="http://');
+    expect(result).not.toContain("<iframe");
+  });
+
+  it("不許可の埋め込みを除去した後、空のラッパー div を残さない", () => {
+    const result = sanitizeArticleHtml(
+      '<p>before</p><div style="position:relative"><iframe src="https://evil.example.com/embed"></iframe></div><p>after</p>'
+    );
+    expect(result).toBe("<p>before</p><p>after</p>");
+  });
+
+  it("画像だけを含む div は除去しない", () => {
+    const result = sanitizeArticleHtml(
+      '<div><img src="https://example.com/a.png" alt="x"></div>'
+    );
+    expect(result).toContain("<img");
+    expect(result).toContain("<div>");
   });
 
   it("youtube-nocookie / Vimeo の iframe は許可する", () => {
