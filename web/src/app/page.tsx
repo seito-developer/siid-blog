@@ -1,6 +1,7 @@
 import { client } from "../libs/microcms";
 import {
   BLOG_API_ENDPOINT,
+  DEFAULT_OGP_IMAGE,
   POSTS_NUM_PER_PAGE,
   SITE_NAME,
   SITE_URL,
@@ -19,6 +20,9 @@ export const metadata: Metadata = {
     title: "記事一覧 | SiiD BLOG",
     description: "YouTube登録者数12万人を誇るセイト先生が教える、プログラミングスクールSiiDのブログメディア。エンジニア転職や技術学習に関連する有益な情報を発信中！",
     type: "website",
+    url: SITE_URL,
+    // 相対パスは metadataBase で絶対 URL 化される
+    images: [{ url: DEFAULT_OGP_IMAGE, width: 1200, height: 630 }],
   },
 };
 
