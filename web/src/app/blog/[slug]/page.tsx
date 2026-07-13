@@ -10,6 +10,7 @@ import { getBlogPost } from "./getBlogPost";
 import { defaultAuthor } from "./defaultAuthor";
 import { findCategoryById } from "@/app/category/categories";
 import { getArticleCategory } from "@/libs/article-category";
+import { getArticleThumbnail } from "@/libs/article-thumbnail";
 import { draftMode, cookies } from "next/headers";
 import { DRAFT_KEY_COOKIE } from "@/app/api/preview/constants";
 
@@ -44,11 +45,16 @@ export default async function BlogPostPage({
   ]
   
   const articleUrl = `${SITE_URL}/blog/${slug}`;
+  // eyecatch 未設定時はプリセットにフォールバック（相対パスは絶対 URL 化）
+  const thumbnail = getArticleThumbnail(post);
+  const thumbnailAbsoluteUrl = thumbnail.url.startsWith("/")
+    ? `${SITE_URL}${thumbnail.url}`
+    : thumbnail.url;
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
-    image: [post.eyecatch.url],
+    image: [thumbnailAbsoluteUrl],
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
     author: {
@@ -99,7 +105,7 @@ export default async function BlogPostPage({
       <JsonLd data={breadcrumbJsonLd} />
       <Breadcrumbs items={categoryBreadcrumbs} />
       <BlogHeader
-        eyecatchImage={post.eyecatch.url}
+        eyecatchImage={thumbnail.url}
         author={post.author || defaultAuthor}
         category={postCategory?.name || ""}
         date={post.publishedAt}
@@ -162,7 +168,8 @@ export async function generateMetadata({ params }: Props) {
       title: post.title,
       description: description,
       url: `${SITE_URL}/blog/${slug}`,
-      images: [{ url: post.eyecatch.url }],
+      // eyecatch 未設定時はプリセット（相対パスは metadataBase で絶対 URL 化される）
+      images: [{ url: getArticleThumbnail(post).url }],
       publishedTime: post.publishedAt,
       author: [post.author?.name || "AI講師 シンディ"],
     },
