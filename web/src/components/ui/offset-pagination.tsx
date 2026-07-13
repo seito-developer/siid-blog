@@ -9,10 +9,16 @@ interface PaginationProps {
   buildHref: (page: number) => string
 }
 
-export function OffsetPagination({ totalItems, itemsPerPage, currentPage, buildHref }: PaginationProps) {
+export function OffsetPagination({ totalItems, itemsPerPage, currentPage: rawCurrentPage, buildHref }: PaginationProps) {
   const totalPages = Math.ceil(totalItems / itemsPerPage)
-  const startItem = (currentPage - 1) * itemsPerPage + 1
+  // URL 直叩きで page が範囲外でも実在ページの範囲に丸める
+  const currentPage = Math.min(Math.max(1, rawCurrentPage), Math.max(1, totalPages))
+  const startItem = totalItems === 0 ? 0 : (currentPage - 1) * itemsPerPage + 1
   const endItem = Math.min(currentPage * itemsPerPage, totalItems)
+  // 0件・ページ超過時に存在しないページへの <a href> を出さない
+  // （クローラーの無限クロールトラップ防止）
+  const hasPrev = currentPage > 1
+  const hasNext = currentPage < totalPages
 
   const getPageNumbers = () => {
     const pages = []
@@ -42,8 +48,9 @@ export function OffsetPagination({ totalItems, itemsPerPage, currentPage, buildH
           {startItem}-{endItem} / {totalItems} Articles
         </div>
 
+        {totalPages > 1 && (
         <div className="flex items-center justify-center gap-2">
-          {currentPage === 1 ? (
+          {!hasPrev ? (
             <Button
               variant="outline"
               size="sm"
@@ -95,7 +102,7 @@ export function OffsetPagination({ totalItems, itemsPerPage, currentPage, buildH
             </Button>
           ))}
 
-          {currentPage === totalPages ? (
+          {!hasNext ? (
             <Button
               variant="outline"
               size="sm"
@@ -117,6 +124,7 @@ export function OffsetPagination({ totalItems, itemsPerPage, currentPage, buildH
             </Button>
           )}
         </div>
+        )}
       </div>
     </nav>
   )
