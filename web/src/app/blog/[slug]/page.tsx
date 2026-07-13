@@ -100,7 +100,6 @@ export default async function BlogPostPage({
       <BlogHeader
         eyecatchImage={post.eyecatch.url}
         author={post.author || defaultAuthor}
-        tags={post.tags || []}
         category={post.categories[0]?.name || ""}
         date={post.publishedAt}
         title={post.title}
