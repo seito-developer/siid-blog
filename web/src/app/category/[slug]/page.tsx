@@ -105,6 +105,13 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       // 相対パスは metadataBase で絶対 URL 化される
       images: [{ url: DEFAULT_OGP_IMAGE, width: 1200, height: 630 }],
     },
+    // 指定しないと layout のサイト共通値（SiiD BLOG）が使われ og:title と食い違う
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [DEFAULT_OGP_IMAGE],
+    },
   };
 }
 

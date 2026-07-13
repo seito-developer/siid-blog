@@ -24,6 +24,13 @@ export const metadata: Metadata = {
     // 相対パスは metadataBase で絶対 URL 化される
     images: [{ url: DEFAULT_OGP_IMAGE, width: 1200, height: 630 }],
   },
+  // 指定しないと layout のサイト共通値（SiiD BLOG）が使われ og:title と食い違う
+  twitter: {
+    card: "summary_large_image",
+    title: "記事一覧 | SiiD BLOG",
+    description: "YouTube登録者数12万人を誇るセイト先生が教える、プログラミングスクールSiiDのブログメディア。エンジニア転職や技術学習に関連する有益な情報を発信中！",
+    images: [DEFAULT_OGP_IMAGE],
+  },
 };
 
 export default async function Home({
