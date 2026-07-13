@@ -28,7 +28,9 @@ export interface AuthorProps {
 export interface ArticleProps {
   id: string;
   title: string;
-  excerpt: string;
+  // 記事の説明文（メタディスクリプション用）。microCMS 側にフィールド未追加のため
+  // 現状は常に undefined。フィールド追加後は meta description に優先使用される
+  excerpt?: string;
   author: AuthorProps | null;
   publishedAt: string;
   createdAt: string;
