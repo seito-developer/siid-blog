@@ -9,6 +9,8 @@ import BannerSiid from "@/components/banner-siid";
 import { getBlogPost } from "./getBlogPost";
 import { defaultAuthor } from "./defaultAuthor";
 import { findCategoryById } from "@/app/category/categories";
+import { getArticleCategory } from "@/libs/article-category";
+import { getArticleThumbnail } from "@/libs/article-thumbnail";
 import { draftMode, cookies } from "next/headers";
 import { DRAFT_KEY_COOKIE } from "@/app/api/preview/constants";
 
@@ -32,9 +34,9 @@ export default async function BlogPostPage({
   const { slug } = await params; // IDを取得
   const draftKey = await getDraftKey();
   const post = await getBlogPost(slug, draftKey);
-  // 1記事1カテゴリ運用の方針（MEMO.md）に合わせ先頭カテゴリのみリンクする
-  // （スラッグ対応表に無いカテゴリはリンクを出さない）
-  const category = post.categories[0] && findCategoryById(post.categories[0].id);
+  // 1記事1カテゴリ（Issue #12）。スラッグ対応表に無いカテゴリはリンクを出さない
+  const postCategory = getArticleCategory(post);
+  const category = postCategory && findCategoryById(postCategory.id);
   const categoryBreadcrumbs = [
     ...(category
       ? [{ label: category.name, href: `/category/${category.slug}` }]
@@ -43,11 +45,16 @@ export default async function BlogPostPage({
   ]
   
   const articleUrl = `${SITE_URL}/blog/${slug}`;
+  // eyecatch 未設定時はプリセットにフォールバック（相対パスは絶対 URL 化）
+  const thumbnail = getArticleThumbnail(post);
+  const thumbnailAbsoluteUrl = thumbnail.url.startsWith("/")
+    ? `${SITE_URL}${thumbnail.url}`
+    : thumbnail.url;
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
-    image: [post.eyecatch.url],
+    image: [thumbnailAbsoluteUrl],
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
     author: {
@@ -98,10 +105,9 @@ export default async function BlogPostPage({
       <JsonLd data={breadcrumbJsonLd} />
       <Breadcrumbs items={categoryBreadcrumbs} />
       <BlogHeader
-        eyecatchImage={post.eyecatch.url}
+        eyecatchImage={thumbnail.url}
         author={post.author || defaultAuthor}
-        tags={post.tags || []}
-        category={post.categories[0]?.name || ""}
+        category={postCategory?.name || ""}
         date={post.publishedAt}
         title={post.title}
       />
@@ -162,7 +168,8 @@ export async function generateMetadata({ params }: Props) {
       title: post.title,
       description: description,
       url: `${SITE_URL}/blog/${slug}`,
-      images: [{ url: post.eyecatch.url }],
+      // eyecatch 未設定時はプリセット（相対パスは metadataBase で絶対 URL 化される）
+      images: [{ url: getArticleThumbnail(post).url }],
       publishedTime: post.publishedAt,
       author: [post.author?.name || "AI講師 シンディ"],
     },

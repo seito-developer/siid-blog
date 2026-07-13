@@ -50,6 +50,13 @@ npm test          # ユニットテスト (Vitest)
 - **著者フォールバック**: 記事に author が無い場合は `defaultAuthor.ts`（AI講師 シンディ）を使用
 - **UI コンポーネント**: `web/src/components/ui/` は shadcn/ui スタイル（components.json あり）。テーマカラーは `#214a4a`（深緑）、背景 `#F4F4F4`
 
+## 開発支援（スキル・MCP）
+
+- **プロジェクトスキル**（`.claude/skills/`）:
+  - `feature-work` — Issue 起点の標準開発フロー（ブランチ→実装→検証→PR→セルフレビュー）
+  - `verify-web` — ローカル検証の標準手順（lint / typecheck / test / build / ブラウザ確認）
+- **MCP サーバー**（`.mcp.json`）: microCMS 公式 `microcms-mcp-server`（コンテンツの参照・下書き操作）。API キーは環境変数 `MICROCMS_API_KEY` から渡す（`web/.env.local` と同じ値。シェルに export するか、未設定なら接続失敗するだけで他機能に影響なし）
+
 ## デプロイ・運用
 
 - **記事の公開・更新**: microCMS 管理画面から手動（コード変更不要）
@@ -58,4 +65,4 @@ npm test          # ユニットテスト (Vitest)
 
 ## 既知の課題（変更時に留意）
 
-- タグ機能は今後**廃止予定**、カテゴリは**1記事1つ**に変更予定（MEMO.md）。タグ・カテゴリ周りの新規実装は事前にオーナーへ確認する
+- タグ機能は**廃止済み**（フロント非表示・型削除済み。microCMS の tags フィールド削除は管理画面作業）。カテゴリは**1記事1つ**に変更予定（MEMO.md）。カテゴリ周りの新規実装は事前にオーナーへ確認する
