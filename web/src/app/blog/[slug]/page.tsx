@@ -11,6 +11,7 @@ import { defaultAuthor } from "./defaultAuthor";
 import { findCategoryById } from "@/app/category/categories";
 import { getArticleCategory } from "@/libs/article-category";
 import { getArticleThumbnail } from "@/libs/article-thumbnail";
+import { buildArticleDescription } from "@/libs/article-description";
 import { draftMode, cookies } from "next/headers";
 import { DRAFT_KEY_COOKIE } from "@/app/api/preview/constants";
 
@@ -155,11 +156,13 @@ export async function generateMetadata({ params }: Props) {
   const post = await getBlogPost(slug, await getDraftKey());
 
   const plainTextContent = await stripHtmlTags(post.contents);
-  const description = plainTextContent.slice(0, 120) + "...";
+  // microCMS の説明文フィールド（excerpt）を優先し、無ければ本文を文末で切り詰める
+  const description = buildArticleDescription(post.excerpt, plainTextContent);
+  const thumbnailUrl = getArticleThumbnail(post).url;
 
   return {
     title: post.title,
-    description: description,           // 120 文字要約
+    description: description,
     alternates: {
       canonical: `${SITE_URL}/blog/${slug}`,
     },
@@ -169,9 +172,18 @@ export async function generateMetadata({ params }: Props) {
       description: description,
       url: `${SITE_URL}/blog/${slug}`,
       // eyecatch 未設定時はプリセット（相対パスは metadataBase で絶対 URL 化される）
-      images: [{ url: getArticleThumbnail(post).url }],
+      images: [{ url: thumbnailUrl }],
       publishedTime: post.publishedAt,
+      modifiedTime: post.updatedAt || post.publishedAt,
       author: [post.author?.name || "AI講師 シンディ"],
+    },
+    // 指定しないと layout のサイト共通値（SiiD BLOG）が使われ、
+    // X 共有時のカードに記事タイトルが表示されない
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: description,
+      images: [thumbnailUrl],
     },
   };
 }
