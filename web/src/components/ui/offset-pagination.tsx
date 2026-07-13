@@ -1,13 +1,15 @@
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 interface PaginationProps {
   totalItems: number
   itemsPerPage: number
   currentPage: number
-  onPageChange: (page: number) => void
+  // ページ番号から遷移先 URL を組み立てる（q / perPage 等の引き継ぎは呼び出し側で行う）
+  buildHref: (page: number) => string
 }
 
-export function OffsetPagination({ totalItems, itemsPerPage, currentPage, onPageChange }: PaginationProps) {
+export function OffsetPagination({ totalItems, itemsPerPage, currentPage, buildHref }: PaginationProps) {
   const totalPages = Math.ceil(totalItems / itemsPerPage)
   const startItem = (currentPage - 1) * itemsPerPage + 1
   const endItem = Math.min(currentPage * itemsPerPage, totalItems)
@@ -33,34 +35,42 @@ export function OffsetPagination({ totalItems, itemsPerPage, currentPage, onPage
   }
 
   return (
-    <div className="w-full py-5" style={{ backgroundColor: "#F4F4F4" }}>
-      
+    <nav aria-label="ページ送り" className="w-full py-5" style={{ backgroundColor: "#F4F4F4" }}>
+
       <div className="space-y-4">
         <div className="text-sm" style={{ color: "#000", textAlign: "center" }}>
           {startItem}-{endItem} / {totalItems} Articles
         </div>
 
         <div className="flex items-center justify-center gap-2">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => onPageChange(currentPage - 1)}
-            disabled={currentPage === 1}
-            style={{
-              cursor: 'pointer',
-              borderColor: "#214a4a",
-              color: currentPage === 1 ? "#999" : "#214a4a",
-            }}
-          >
-            Prev
-          </Button>
+          {currentPage === 1 ? (
+            <Button
+              variant="outline"
+              size="sm"
+              disabled
+              style={{ borderColor: "#214a4a", color: "#999" }}
+            >
+              Prev
+            </Button>
+          ) : (
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
+              style={{ cursor: "pointer", borderColor: "#214a4a", color: "#214a4a" }}
+            >
+              <Link href={buildHref(currentPage - 1)} scroll={false} rel="prev">
+                Prev
+              </Link>
+            </Button>
+          )}
 
           {getPageNumbers().map((page) => (
             <Button
               key={page}
+              asChild
               variant={currentPage === page ? "default" : "outline"}
               size="sm"
-              onClick={() => onPageChange(page)}
               style={
                 currentPage === page
                   ? {
@@ -75,25 +85,39 @@ export function OffsetPagination({ totalItems, itemsPerPage, currentPage, onPage
                     }
               }
             >
-              {page}
+              <Link
+                href={buildHref(page)}
+                scroll={false}
+                aria-current={currentPage === page ? "page" : undefined}
+              >
+                {page}
+              </Link>
             </Button>
           ))}
 
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => onPageChange(currentPage + 1)}
-            disabled={currentPage === totalPages}
-            style={{
-              cursor: 'pointer',
-              borderColor: "#214a4a",
-              color: currentPage === totalPages ? "#999" : "#214a4a",
-            }}
-          >
-            Next
-          </Button>
+          {currentPage === totalPages ? (
+            <Button
+              variant="outline"
+              size="sm"
+              disabled
+              style={{ borderColor: "#214a4a", color: "#999" }}
+            >
+              Next
+            </Button>
+          ) : (
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
+              style={{ cursor: "pointer", borderColor: "#214a4a", color: "#214a4a" }}
+            >
+              <Link href={buildHref(currentPage + 1)} scroll={false} rel="next">
+                Next
+              </Link>
+            </Button>
+          )}
         </div>
       </div>
-    </div>
+    </nav>
   )
 }
