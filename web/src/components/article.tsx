@@ -2,6 +2,7 @@ import { BLOG_API_ENDPOINT } from "@/app/constants";
 import { ArticleProps } from "@/interfaces/common";
 import { getArticleCategory } from "@/libs/article-category";
 import { getArticleThumbnail } from "@/libs/article-thumbnail";
+import { formatDate } from "@/libs/utils";
 import Link from "next/link";
 import { Card, CardContent, CardHeader } from "./ui/card";
 import Image from "next/image";
@@ -29,7 +30,8 @@ export default function Article({ article }: { article: ArticleProps }) {
             className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
             width={thumbnail.width}
             height={thumbnail.height}
-            objectFit="cover"
+            // 一覧グリッド（1〜3カラム）の表示幅に合わせた画像だけを配信する
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
           {/* カテゴリ未設定の記事はバッジを出さない（従来はここでクラッシュしていた） */}
           {category && (
@@ -67,9 +69,7 @@ export default function Article({ article }: { article: ArticleProps }) {
             </div>
             <div className="flex items-center gap-1">
               <Calendar className="w-3 h-3" />
-              <span>
-                {new Date(article.publishedAt).toLocaleDateString("ja-JP")}
-              </span>
+              <span>{formatDate(article.publishedAt)}</span>
             </div>
           </div>
         </CardContent>
