@@ -1,6 +1,7 @@
 import { client } from "@/libs/microcms";
 import {
   BLOG_API_ENDPOINT,
+  DEFAULT_OGP_IMAGE,
   POSTS_NUM_PER_PAGE,
   SITE_URL,
 } from "@/app/constants";
@@ -96,7 +97,21 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     title,
     description,
     alternates: { canonical: `${SITE_URL}/category/${category.slug}` },
-    openGraph: { title, description, type: "website" },
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      url: `${SITE_URL}/category/${category.slug}`,
+      // 相対パスは metadataBase で絶対 URL 化される
+      images: [{ url: DEFAULT_OGP_IMAGE, width: 1200, height: 630 }],
+    },
+    // 指定しないと layout のサイト共通値（SiiD BLOG）が使われ og:title と食い違う
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [DEFAULT_OGP_IMAGE],
+    },
   };
 }
 
