@@ -7,6 +7,26 @@ const ALLOWED_IFRAME_HOSTNAMES = [
   "player.vimeo.com",
 ];
 
+// microCMS の画像は入稿原寸（幅1920px超もある）がそのまま配信されるため、
+// 画像 API（imgix 互換）のパラメータで WebP 変換・リサイズして配信する
+const MICROCMS_ASSETS_HOSTNAME = "images.microcms-assets.io";
+const IMG_SRCSET_WIDTHS = [640, 960, 1280];
+const IMG_DEFAULT_WIDTH = 1280;
+// 本文は max-w-4xl(896px) - パディングで最大約 848px 表示
+const IMG_SIZES = "(max-width: 896px) 100vw, 848px";
+
+function withImageParams(src: string, width: number): string | undefined {
+  try {
+    const url = new URL(src);
+    url.searchParams.set("w", String(width));
+    url.searchParams.set("fm", "webp");
+    url.searchParams.set("q", "75");
+    return url.toString();
+  } catch {
+    return undefined;
+  }
+}
+
 export function sanitizeArticleHtml(html: string) {
   return sanitizeHtml(html, {
     allowedTags: [
@@ -46,7 +66,17 @@ export function sanitizeArticleHtml(html: string) {
     ],
     allowedAttributes: {
       a: ["href", "title", "target", "rel"],
-      img: ["src", "alt", "title", "width", "height", "loading", "decoding"],
+      img: [
+        "src",
+        "srcset",
+        "sizes",
+        "alt",
+        "title",
+        "width",
+        "height",
+        "loading",
+        "decoding",
+      ],
       iframe: [
         "src",
         "title",
@@ -86,6 +116,34 @@ export function sanitizeArticleHtml(html: string) {
         } else {
           if (nextAttribs.target) delete nextAttribs.target;
           if (nextAttribs.rel) delete nextAttribs.rel;
+        }
+
+        return { tagName, attribs: nextAttribs };
+      },
+      img: (tagName, attribs) => {
+        const nextAttribs: Record<string, string> = {
+          ...attribs,
+          loading: "lazy",
+          decoding: "async",
+        };
+
+        const src = attribs.src || "";
+        let hostname = "";
+        try {
+          hostname = new URL(src).hostname;
+        } catch {
+          // 相対パス等はそのまま（最適化パラメータは付けない）
+        }
+
+        if (hostname === MICROCMS_ASSETS_HOSTNAME) {
+          const defaultSrc = withImageParams(src, IMG_DEFAULT_WIDTH);
+          if (defaultSrc) {
+            nextAttribs.src = defaultSrc;
+            nextAttribs.srcset = IMG_SRCSET_WIDTHS.map(
+              (width) => `${withImageParams(src, width)} ${width}w`
+            ).join(", ");
+            nextAttribs.sizes = IMG_SIZES;
+          }
         }
 
         return { tagName, attribs: nextAttribs };

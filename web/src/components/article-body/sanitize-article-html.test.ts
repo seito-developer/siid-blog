@@ -123,3 +123,42 @@ describe("sanitizeArticleHtml: 動画埋め込み (iframe)", () => {
     ).not.toContain("<iframe");
   });
 });
+
+describe("sanitizeArticleHtml: 本文画像の最適化", () => {
+  const microcmsImg =
+    '<img src="https://images.microcms-assets.io/assets/abc/def/photo.png" alt="図">';
+
+  it("すべての img に loading=lazy と decoding=async を付与する", () => {
+    const result = sanitizeArticleHtml(microcmsImg);
+    expect(result).toContain('loading="lazy"');
+    expect(result).toContain('decoding="async"');
+  });
+
+  it("microCMS 画像には WebP 変換・リサイズのパラメータと srcset / sizes を付与する", () => {
+    const result = sanitizeArticleHtml(microcmsImg);
+    expect(result).toContain("w=1280");
+    expect(result).toContain("fm=webp");
+    expect(result).toContain("srcset=");
+    expect(result).toContain("640w");
+    expect(result).toContain("1280w");
+    expect(result).toContain("sizes=");
+  });
+
+  it("microCMS 以外の画像の src は変更しない", () => {
+    const result = sanitizeArticleHtml(
+      '<img src="https://example.com/a.png" alt="x">'
+    );
+    expect(result).toContain('src="https://example.com/a.png"');
+    expect(result).not.toContain("srcset=");
+    // lazy loading は付与される
+    expect(result).toContain('loading="lazy"');
+  });
+
+  it("既存のクエリパラメータがあっても壊さず上書きする", () => {
+    const result = sanitizeArticleHtml(
+      '<img src="https://images.microcms-assets.io/assets/a/b/c.png?width=100" alt="">'
+    );
+    expect(result).toContain("width=100");
+    expect(result).toContain("fm=webp");
+  });
+});
