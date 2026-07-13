@@ -9,13 +9,14 @@ export const revalidate = 86400;
 type SitemapArticle = {
   id: string;
   revisedAt?: string;
-  categories?: { id: string }[];
+  category?: { id: string }; // 新スキーマ: 単一参照
+  categories?: { id: string }[]; // 旧スキーマ: 複数参照
 };
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const articles = await client.getAllContents<SitemapArticle>({
     endpoint: BLOG_API_ENDPOINT,
-    queries: { fields: "id,revisedAt,categories" },
+    queries: { fields: "id,revisedAt,categories,category" },
   });
 
   const articleEntries: MetadataRoute.Sitemap = articles.map((article) => ({
@@ -24,13 +25,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   // 記事が1件以上あり、スラッグ対応表に載っているカテゴリのみを列挙する
+  // （1記事1カテゴリ方針。単一参照 category を優先し categories[0] にフォールバック）
   const usedCategorySlugs = new Set<string>();
   for (const article of articles) {
-    for (const category of article.categories ?? []) {
-      const mapped = findCategoryById(category.id);
-      if (mapped) {
-        usedCategorySlugs.add(mapped.slug);
-      }
+    const category = article.category ?? article.categories?.[0];
+    const mapped = category && findCategoryById(category.id);
+    if (mapped) {
+      usedCategorySlugs.add(mapped.slug);
     }
   }
   const categoryEntries: MetadataRoute.Sitemap = [...usedCategorySlugs].map(
