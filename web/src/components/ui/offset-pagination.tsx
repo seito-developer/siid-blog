@@ -9,6 +9,11 @@ interface PaginationProps {
   buildHref: (page: number) => string
 }
 
+// クローラーが2ページ目以降を辿れるよう、ページ送りは <a href> で出力する（Issue #36）。
+// JSX 上は <Button> だが、asChild 指定時は button 要素ではなく子の <Link>（= <a>）が
+// そのままレンダリングされる（shadcn/ui の Slot パターン）。実 DOM に button が
+// 残るのは、リンクを持たせない先頭ページの Prev / 末尾ページの Next だけ。
+
 export function OffsetPagination({ totalItems, itemsPerPage, currentPage: rawCurrentPage, buildHref }: PaginationProps) {
   const totalPages = Math.ceil(totalItems / itemsPerPage)
   // URL 直叩きで page が範囲外でも実在ページの範囲に丸める
