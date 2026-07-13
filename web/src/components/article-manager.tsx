@@ -1,6 +1,6 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { ArticleProps } from "@/interfaces/common";
 import { POSTS_NUM_PER_PAGE } from "@/app/constants";
 import ArticleList from "./article-list";
@@ -13,6 +13,9 @@ export default function ArticleManager({
   articles: ArticleProps[];
   totalCount: number;
 }) {
+  // トップ（/）とカテゴリ（/category/*）の両方で使われるため、
+  // リンク先は現在のパスを基準にする
+  const pathname = usePathname();
   const searchParams = useSearchParams();
   const currentPage = Math.max(
     1,
@@ -27,7 +30,7 @@ export default function ArticleManager({
   const buildHref = (page: number) => {
     const params = new URLSearchParams(searchParams.toString());
     params.set("page", String(page));
-    return `/?${params.toString()}`;
+    return `${pathname}?${params.toString()}`;
   };
 
   return (
