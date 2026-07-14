@@ -21,14 +21,6 @@ export const metadata: Metadata = {
   title: "SiiD BLOG",
   description:
     "YouTube登録者数12万人を誇るセイト先生が教える、プログラミングスクールSiiDのブログメディア。エンジニア転職や技術学習に関連する有益な情報を発信中！",
-  keywords: [
-    "プログラミング",
-    "エンジニア転職",
-    "技術学習",
-    "SiiD",
-    "セイト先生",
-    "ブログ",
-  ],
   authors: [{ name: "SiiD" }],
   creator: "SiiD",
   publisher: "SiiD",
