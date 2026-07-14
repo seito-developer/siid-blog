@@ -16,6 +16,10 @@
 //   node scripts/migrate-categories-issue51.mjs --apply   # 実際に反映する
 //
 // MICROCMS_API_KEY は web/.env.local から自動読み込み（環境変数があれば優先）。
+//
+// 注意: コンテンツ API は公開記事しか返さないため、下書き記事は付け替え対象に
+// ならない。旧カテゴリを参照する下書きがある場合は、実行前に microCMS 管理画面で
+// カテゴリを付け替えておくこと（カテゴリ削除時に下書き側の参照は無言で外れる）。
 
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -75,13 +79,14 @@ async function api(path, options = {}) {
   return res.json().catch(() => ({}));
 }
 
+// 404 のときだけ「存在しない」と判定する（429 等の一時エラーを不存在と誤認しない）
 async function categoryExists(id) {
-  try {
-    await api(`/categories/${id}?fields=id`);
-    return true;
-  } catch {
-    return false;
-  }
+  const res = await fetch(`${API_BASE}/categories/${id}?fields=id`, {
+    headers: { "X-MICROCMS-API-KEY": API_KEY },
+  });
+  if (res.ok) return true;
+  if (res.status === 404) return false;
+  throw new Error(`GET /categories/${id} failed: ${res.status} ${await res.text()}`);
 }
 
 // 旧カテゴリのいずれかが付いた記事を全件集める（重複は id で除去）
