@@ -1,8 +1,8 @@
 // カテゴリ URL スラッグ ↔ microCMS カテゴリの対応表。
 // スラッグは URL（/category/<slug>）に使うためコード側で管理する。
 // microCMS 側でカテゴリを追加・変更した場合はここにも追記すること。
-// ※「Programming」は「プログラミング」と重複しているため、
-//   カテゴリ整理（Issue #12）での統合を想定して暫定スラッグにしている。
+// ※「Programming」(英語) は「プログラミング」に統合済み（Issue #42。
+//   付け替えは scripts/merge-programming-category.mjs で実施）。
 
 export type Category = {
   slug: string; // URL 用スラッグ（英小文字・ハイフン）
@@ -15,7 +15,6 @@ export const CATEGORIES: Category[] = [
   { slug: "career", id: "89b7505ad7", name: "キャリア" },
   { slug: "marketing", id: "h9561nc0p7kh", name: "マーケティング" },
   { slug: "job-change", id: "423af599b3", name: "転職" },
-  { slug: "programming-en", id: "ab2620f9b7", name: "Programming" },
   { slug: "javascript", id: "eda71746c0", name: "JavaScript" },
   { slug: "typescript", id: "969545dde1", name: "TypeScript" },
   { slug: "python", id: "11a4a60b51", name: "Python" },
