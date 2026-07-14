@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import Author from "./author"
 import { AuthorProps } from "@/interfaces/common"
@@ -7,6 +8,7 @@ interface BlogHeaderProps {
   eyecatchImage: string
   author: AuthorProps
   category: string
+  categoryHref?: string // カテゴリ一覧ページへのリンク（対応表に無いカテゴリは undefined）
   date: string
   title: string
 }
@@ -15,9 +17,19 @@ export default function BlogHeader({
   eyecatchImage,
   author,
   category,
+  categoryHref,
   date,
   title,
 }: BlogHeaderProps) {
+  const categoryBadge = (
+    <Badge
+      variant="secondary"
+      className="bg-[#214a4a] text-white hover:bg-[#214a4a]/90 px-3 py-1"
+      style={{ fontFamily: "Noto Sans JP, sans-serif" }}
+    >
+      {category}
+    </Badge>
+  )
   return (
     <header className="w-full bg-[#F4F4F4]">
       {/* Eyecatch Image */}
@@ -43,13 +55,11 @@ export default function BlogHeader({
 
           {/* Category */}
           <div className="flex flex-wrap items-center gap-3">
-            <Badge
-              variant="secondary"
-              className="bg-[#214a4a] text-white hover:bg-[#214a4a]/90 px-3 py-1"
-              style={{ fontFamily: "Noto Sans JP, sans-serif" }}
-            >
-              {category}
-            </Badge>
+            {categoryHref ? (
+              <Link href={categoryHref}>{categoryBadge}</Link>
+            ) : (
+              categoryBadge
+            )}
           </div>
         </div>
       </div>

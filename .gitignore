@@ -4,3 +4,4 @@ others/.env
 others/data/log.txt
 .vercel
 .env*
+.playwright-mcp
