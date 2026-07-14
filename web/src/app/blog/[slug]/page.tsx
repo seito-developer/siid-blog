@@ -109,6 +109,7 @@ export default async function BlogPostPage({
         eyecatchImage={thumbnail.url}
         author={post.author || defaultAuthor}
         category={postCategory?.name || ""}
+        categoryHref={category ? `/category/${category.slug}` : undefined}
         date={post.publishedAt}
         title={post.title}
       />
