@@ -44,7 +44,8 @@ function loadEnvLocal(name) {
   const envPath = join(dirname(fileURLToPath(import.meta.url)), "..", ".env.local");
   try {
     const match = readFileSync(envPath, "utf8").match(new RegExp(`^${name}=(.+)$`, "m"));
-    if (match) return match[1].trim();
+    // 引用符付きの値（KEY="..."）でも署名が壊れないよう外して返す
+    if (match) return match[1].trim().replace(/^(["'])(.*)\1$/, "$2");
   } catch {
     // .env.local が無い場合は環境変数必須
   }
@@ -72,6 +73,7 @@ async function listAllArticleIds() {
     });
     if (!res.ok) throw new Error(`記事一覧の取得に失敗: ${res.status} ${await res.text()}`);
     const data = await res.json();
+    if (data.contents.length === 0) return ids;
     ids.push(...data.contents.map((c) => c.id));
     offset += 100;
     if (offset >= data.totalCount) return ids;
@@ -91,7 +93,11 @@ async function revalidate(site, id) {
     body,
   });
   const text = await res.text();
-  if (!res.ok) throw new Error(`revalidate ${id} failed: ${res.status} ${text}`);
+  // ルートは対象外のリクエストにも 200（"Nothing to revalidate"）を返すため、
+  // 実際に再検証されたことまで確認する
+  if (!res.ok || !text.includes('"revalidated":true')) {
+    throw new Error(`revalidate ${id} failed: ${res.status} ${text}`);
+  }
   return text;
 }
 
