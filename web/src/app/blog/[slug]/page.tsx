@@ -1,6 +1,6 @@
 import { client } from "@/libs/microcms";
 import { BLOG_API_ENDPOINT, SITE_NAME, SITE_URL } from "@/app/constants";
-import { SIID_SITE_URL, X_URL, YOUTUBE_SEITO_URL } from "@/app/links";
+import { X_URL, YOUTUBE_SEITO_URL } from "@/app/links";
 import BlogHeader from "@/components/blog-header";
 import JsonLd from "@/components/json-ld";
 
@@ -67,7 +67,7 @@ export default async function BlogPostPage({
           ? { description: post.author!.description }
           : {}),
         ...(isSeitoAuthor(post.author)
-          ? { url: SIID_SITE_URL, sameAs: [YOUTUBE_SEITO_URL, X_URL] }
+          ? { url: YOUTUBE_SEITO_URL, sameAs: [YOUTUBE_SEITO_URL, X_URL] }
           : {}),
       };
   const articleJsonLd = {

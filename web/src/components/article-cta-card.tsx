@@ -1,6 +1,5 @@
 import { Youtube } from "lucide-react";
 import CtaLink from "./cta-link";
-import { withUtm } from "@/libs/utm";
 import {
   COUNSELING_URL,
   DOCUMENT_REQUEST_URL,
@@ -12,13 +11,10 @@ import {
 
 // 記事末の統合 CTA カード（Issue #57）。
 // 無料個別面談（主）/ 資料請求・公式LINE（副）の3導線 + SNS リンク。
-// 全リンクに UTM を付与し、クリックは CtaLink 経由で GA4 に送信する。
+// UTM 付与・GA4 送信は CtaLink 側でまとめて行う（docs/ANALYTICS.md）。
 const CTA_POSITION = "article_bottom";
 
 export default function ArticleCtaCard({ slug }: { slug: string }) {
-  const utm = (url: string, ctaType: string) =>
-    withUtm(url, { campaign: slug, content: `${CTA_POSITION}_${ctaType}` });
-
   return (
     <section className="max-w-4xl mx-auto px-6 pb-12">
       <div className="rounded-2xl bg-[#214a4a] text-white px-6 py-10 sm:px-10 text-center">
@@ -34,7 +30,7 @@ export default function ArticleCtaCard({ slug }: { slug: string }) {
         <div className="flex flex-col items-center gap-4">
           {/* 主導線: 無料個別面談（白背景 × #214a4a でコントラスト AA を確保） */}
           <CtaLink
-            href={utm(COUNSELING_URL, "counseling")}
+            baseUrl={COUNSELING_URL}
             ctaType="counseling"
             ctaPosition={CTA_POSITION}
             articleSlug={slug}
@@ -45,7 +41,7 @@ export default function ArticleCtaCard({ slug }: { slug: string }) {
 
           <div className="flex flex-col sm:flex-row w-full sm:w-auto items-stretch justify-center gap-4">
             <CtaLink
-              href={utm(DOCUMENT_REQUEST_URL, "document")}
+              baseUrl={DOCUMENT_REQUEST_URL}
               ctaType="document"
               ctaPosition={CTA_POSITION}
               articleSlug={slug}
@@ -54,7 +50,7 @@ export default function ArticleCtaCard({ slug }: { slug: string }) {
               資料請求はこちら
             </CtaLink>
             <CtaLink
-              href={utm(LINE_LP_URL, "line")}
+              baseUrl={LINE_LP_URL}
               ctaType="line"
               ctaPosition={CTA_POSITION}
               articleSlug={slug}
@@ -72,7 +68,7 @@ export default function ArticleCtaCard({ slug }: { slug: string }) {
         {/* SNS リンク（YouTube / X）はカード下部にまとめる */}
         <div className="mt-8 pt-6 border-t border-white/25 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm">
           <CtaLink
-            href={utm(YOUTUBE_SEITO_URL, "youtube_seito")}
+            baseUrl={YOUTUBE_SEITO_URL}
             ctaType="youtube_seito"
             ctaPosition={CTA_POSITION}
             articleSlug={slug}
@@ -82,7 +78,7 @@ export default function ArticleCtaCard({ slug }: { slug: string }) {
             セイト先生メイン
           </CtaLink>
           <CtaLink
-            href={utm(YOUTUBE_SIID_URL, "youtube_siid")}
+            baseUrl={YOUTUBE_SIID_URL}
             ctaType="youtube_siid"
             ctaPosition={CTA_POSITION}
             articleSlug={slug}
@@ -92,7 +88,7 @@ export default function ArticleCtaCard({ slug }: { slug: string }) {
             SiiD受講生さま実績
           </CtaLink>
           <CtaLink
-            href={utm(X_URL, "x")}
+            baseUrl={X_URL}
             ctaType="x"
             ctaPosition={CTA_POSITION}
             articleSlug={slug}
