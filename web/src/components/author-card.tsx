@@ -1,17 +1,13 @@
 import Image from "next/image";
-import { Youtube, User } from "lucide-react";
+import { User } from "lucide-react";
 import { AuthorProps } from "@/interfaces/common";
-import { isAiAuthor, isSeitoAuthor } from "@/libs/author";
-import { X_URL, YOUTUBE_SEITO_URL } from "@/app/links";
+import { isAiAuthor } from "@/libs/author";
 
 // 「この記事を書いた人」カード（Issue #58）。
 // AI 著者シンディの場合は AI アシスタントであることを明示する（Issue #60）
 export default function AuthorCard({ author }: { author: AuthorProps }) {
   const isAi = isAiAuthor(author);
   const imageUrl = author.image?.url || (isAi ? "/sindi.png" : null);
-  // SNS はセイト先生本人・AI（運営）著者にのみ表示する。
-  // 未知の実在著者に他人（セイト先生）の SNS を出して誤認させない
-  const showSocial = isSeitoAuthor(author) || isAi;
 
   return (
     <section className="max-w-4xl mx-auto px-6 pb-10">
@@ -30,10 +26,7 @@ export default function AuthorCard({ author }: { author: AuthorProps }) {
                 sizes="80px"
               />
             ) : (
-              <User
-                className="w-full h-full p-4 text-gray-400"
-                aria-hidden
-              />
+              <User className="w-full h-full p-4 text-gray-400" aria-hidden />
             )}
           </div>
           <div className="min-w-0">
@@ -57,30 +50,6 @@ export default function AuthorCard({ author }: { author: AuthorProps }) {
                   記事は SiiD 運営チームの確認のもとで公開しています。
                 </p>
               )
-            )}
-            {showSocial && (
-              <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
-                <a
-                  href={YOUTUBE_SEITO_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-[#214a4a] underline hover:text-[#289B8F]"
-                >
-                  <Youtube className="w-4 h-4" aria-hidden />
-                  YouTube（セイト先生）
-                </a>
-                <a
-                  href={X_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-[#214a4a] underline hover:text-[#289B8F]"
-                >
-                  <span className="font-bold" aria-hidden>
-                    𝕏
-                  </span>
-                  X（旧Twitter）
-                </a>
-              </div>
             )}
           </div>
         </div>
