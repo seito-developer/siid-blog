@@ -56,6 +56,7 @@ export default function GlobalHeader() {
   };
 
   return (
+    <>
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
       <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-4">
         <Logo />
@@ -131,7 +132,11 @@ export default function GlobalHeader() {
           </form>
         </div>
       )}
+      </header>
 
+      {/* ドロワーは header の外に置く。header は backdrop-filter を持つため、
+          内側に置くと position: fixed の包含ブロックが header になり
+          ドロワーが header の高さ（64px）にクリップされてしまう */}
       <MobileDrawer
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
@@ -139,7 +144,7 @@ export default function GlobalHeader() {
         onSearchTermChange={setSearchTerm}
         onSubmitSearch={submitSearch}
       />
-    </header>
+    </>
   );
 }
 

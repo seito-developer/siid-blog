@@ -72,7 +72,9 @@ export default function HeroCarousel() {
               role="group"
               aria-roledescription="スライド"
               aria-label={`${i + 1} / ${count}`}
-              aria-hidden={i !== index}
+              // 非アクティブスライドはフォーカス不可・a11yツリーから除外
+              // （aria-hidden 内に focusable なリンクを残さない）
+              inert={i !== index}
             >
               <CtaLink
                 baseUrl={slide.baseUrl}
