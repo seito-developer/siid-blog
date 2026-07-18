@@ -1,11 +1,15 @@
 import { client } from "@/libs/microcms";
-import { BLOG_API_ENDPOINT, SITE_URL } from "@/app/constants";
+import { BLOG_API_ENDPOINT, SITE_NAME, SITE_URL } from "@/app/constants";
+import { SIID_SITE_URL, X_URL, YOUTUBE_SEITO_URL } from "@/app/links";
 import BlogHeader from "@/components/blog-header";
 import JsonLd from "@/components/json-ld";
 
 import ArticleBody from "@/components/article-body/article-body";
 import Breadcrumbs from "@/components/breadcrumbs";
-import BannerSiid from "@/components/banner-siid";
+import ArticleCtaCard from "@/components/article-cta-card";
+import AuthorCard from "@/components/author-card";
+import RelatedArticles from "@/components/related-articles";
+import { isAiAuthor, isSeitoAuthor } from "@/libs/author";
 import { getBlogPost } from "./getBlogPost";
 import { defaultAuthor } from "./defaultAuthor";
 import { findCategoryById } from "@/app/category/categories";
@@ -51,6 +55,21 @@ export default async function BlogPostPage({
   const thumbnailAbsoluteUrl = thumbnail.url.startsWith("/")
     ? `${SITE_URL}${thumbnail.url}`
     : thumbnail.url;
+  // AI 著者シンディの記事は author を Person にせず Organization(SiiD) とし、
+  // 実在人物と誤認される構造を避ける（Issue #60）。実在著者は Person に
+  // description / url / sameAs（セイト先生のみ YouTube・X）を付与する（Issue #58）
+  const articleAuthorJsonLd = isAiAuthor(post.author)
+    ? { "@id": `${SITE_URL}/#organization` }
+    : {
+        "@type": "Person",
+        name: post.author!.name,
+        ...(post.author!.description
+          ? { description: post.author!.description }
+          : {}),
+        ...(isSeitoAuthor(post.author)
+          ? { url: SIID_SITE_URL, sameAs: [YOUTUBE_SEITO_URL, X_URL] }
+          : {}),
+      };
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -58,11 +77,9 @@ export default async function BlogPostPage({
     image: [thumbnailAbsoluteUrl],
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
-    author: {
-      "@type": "Person",
-      name: (post.author || defaultAuthor).name,
-    },
-    publisher: { "@type": "Organization", name: "SiiD" },
+    author: articleAuthorJsonLd,
+    // Organization 本体は layout.tsx で全ページに出力している（Issue #59）
+    publisher: { "@id": `${SITE_URL}/#organization` },
     mainEntityOfPage: articleUrl,
   };
   const breadcrumbJsonLd = {
@@ -117,7 +134,10 @@ export default async function BlogPostPage({
       <ArticleBody author={post.author || null}>
         {post.contents || "" }
       </ArticleBody>
-      <BannerSiid />
+      {/* 本文直後: 著者カード → 統合CTAカード → 関連記事（Issue #56/#57/#58） */}
+      <AuthorCard author={post.author || defaultAuthor} />
+      <ArticleCtaCard slug={slug} />
+      <RelatedArticles categoryId={postCategory?.id} currentId={slug} />
     </main>
   );
 }
@@ -162,7 +182,8 @@ export async function generateMetadata({ params }: Props) {
   const thumbnailUrl = getArticleThumbnail(post).url;
 
   return {
-    title: post.title,
+    // TOP・カテゴリページとサイト名サフィックスを統一（Issue #59）
+    title: `${post.title} | ${SITE_NAME}`,
     description: description,
     alternates: {
       canonical: `${SITE_URL}/blog/${slug}`,
