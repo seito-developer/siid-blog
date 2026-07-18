@@ -22,7 +22,7 @@ CTA を追加・変更する際は必ず本書のルールに従うこと。
 |---|---|---|
 | `utm_source` | `blog` | 固定。SiiD BLOG 発であることを示す |
 | `utm_medium` | `cta` | 固定。CTA 経由の流入 |
-| `utm_campaign` | 記事の slug（例: `abc123`） | どの記事から流入したか |
+| `utm_campaign` | 記事の slug（例: `abc123`）。TOP 等の記事以外は `top` | どの記事から流入したか |
 | `utm_content` | `<位置>_<CTA種別>`（例: `article_bottom_counseling`） | どの位置のどの CTA か |
 
 ### 位置（position）の語彙
@@ -30,12 +30,22 @@ CTA を追加・変更する際は必ず本書のルールに従うこと。
 | 値 | 場所 |
 |---|---|
 | `article_bottom` | 記事末の CTA カード |
+| `header` | グローバルヘッダーの「無料で相談する」（Issue #62） |
+| `hero` | TOP ヒーローカルーセルのスライド（Issue #63） |
+| `cta_band` | TOP のスクール紹介 CTA 帯（Issue #65） |
+| `top_youtube` | TOP の YouTube セクション（Issue #65） |
 
-今後 CTA を増やす場合（ヘッダー常設・本文途中・追従バー等）は、`header` / `article_middle` / `sticky_bar` のように追加し本表を更新する。
+今後 CTA を増やす場合（本文途中・追従バー等）は、`article_middle` / `sticky_bar` のように追加し本表を更新する。
 
 ### CTA 種別（type）の語彙
 
-現状は無料個別面談への1導線に特化しているため `counseling` のみ。今後 CTA を増やす場合は `document`（資料請求）/ `line`（公式LINE）等を追加し本表を更新する。
+| 値 | 用途 |
+|---|---|
+| `counseling` | 無料個別面談 |
+| `document` | 資料請求（Issue #65。正式 URL 確定まで暫定リンク） |
+| `line` | 公式LINE（Issue #65。正式 URL 確定まで暫定リンク） |
+| `service` / `benefit` / `campaign` | ヒーローカルーセル各スライド（Issue #63） |
+| `youtube_seito` / `youtube_siid` | YouTube 各チャンネル（Issue #65） |
 
 ---
 
