@@ -4,7 +4,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
 import GoogleAnalytics from "@/components/google-analytics";
+import JsonLd from "@/components/json-ld";
 import { DEFAULT_OGP_IMAGE, SITE_URL } from "./constants";
+import { SIID_SITE_URL, X_URL, YOUTUBE_SEITO_URL, YOUTUBE_SIID_URL } from "./links";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,6 +50,19 @@ export const metadata: Metadata = {
   },
 };
 
+// 運営組織の JSON-LD（Issue #59）。全ページに出力し、記事の publisher /
+// AI 著者記事の author からは @id で参照する（blog/[slug]/page.tsx）
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
+  name: "SiiD",
+  url: SIID_SITE_URL,
+  // 専用ロゴ画像が未整備のためサイト共通 OGP 画像を暫定使用。用意でき次第差し替える
+  logo: `${SITE_URL}${DEFAULT_OGP_IMAGE}`,
+  sameAs: [YOUTUBE_SEITO_URL, YOUTUBE_SIID_URL, X_URL],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -59,6 +74,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <GoogleAnalytics />
+        <JsonLd data={organizationJsonLd} />
         {children}
         <Footer />
       </body>

@@ -4,9 +4,9 @@ import { Inter } from "next/font/google";
 const notoSansJP = Inter({ subsets: ["latin"] });
 
 import React, { ReactNode } from "react";
-import ArticleFooter from "./article-footer";
 import ArticleHeader from "./article-header";
 import { AuthorProps } from "@/interfaces/common";
+import { isAiAuthor } from "@/libs/author";
 import { sanitizeArticleHtml } from "./sanitize-article-html";
 
 type ArticleBodyProps = {
@@ -23,9 +23,9 @@ export default function ArticleBody({ children, author }: ArticleBodyProps) {
       {/* Article Body Content */}
       <article className="prose prose-lg max-w-none">
         <div className="article-body space-y-6">
-          {author?.name === "AI講師シンディ" && <ArticleHeader />}
+          {/* 表記ゆれを吸収するため isAiAuthor で判定（従来は完全一致で表示されないことがあった） */}
+          {isAiAuthor(author) && <ArticleHeader />}
           <div dangerouslySetInnerHTML={{ __html: safeHtml }} />
-          <ArticleFooter author={author} />
         </div>
       </article>
     </div>

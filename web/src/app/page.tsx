@@ -55,7 +55,8 @@ export default async function Home({
     "@type": "WebSite",
     name: SITE_NAME,
     url: SITE_URL,
-    publisher: { "@type": "Organization", name: "SiiD" },
+    // Organization 本体は layout.tsx で出力している（Issue #59）
+    publisher: { "@id": `${SITE_URL}/#organization` },
   };
 
   return (
@@ -87,8 +88,6 @@ export default async function Home({
             </p>
           </div>
         )}
-        
-        {page && <h2 className="text-2xl font-bold mb-4" style={{color: "#214a4a"}}>Page: {page}</h2>}
 
         <ArticleManager articles={posts} totalCount={totalCount} />
       </div>
