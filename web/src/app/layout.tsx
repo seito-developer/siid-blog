@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import "./globals.css";
 import Footer from "@/components/footer";
+import GlobalHeader from "@/components/global-header";
 import GoogleAnalytics from "@/components/google-analytics";
 import JsonLd from "@/components/json-ld";
 import { DEFAULT_OGP_IMAGE, SITE_URL } from "./constants";
@@ -75,6 +76,7 @@ export default function RootLayout({
       >
         <GoogleAnalytics />
         <JsonLd data={organizationJsonLd} />
+        <GlobalHeader />
         {children}
         <Footer />
       </body>
