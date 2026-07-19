@@ -1,7 +1,5 @@
 import Link from "next/link";
 import { Youtube } from "lucide-react";
-import { client } from "@/libs/microcms";
-import { BLOG_API_ENDPOINT } from "@/app/constants";
 import { CATEGORIES } from "@/app/category/categories";
 import {
   SIID_SITE_URL,
@@ -9,25 +7,9 @@ import {
   YOUTUBE_SEITO_URL,
   YOUTUBE_SIID_URL,
 } from "@/app/links";
-import { ArticleProps } from "@/interfaces/common";
 
-// サイト共通フッター（Issue #65 で強化）。全ページ（記事詳細含む）で使用。
-// カテゴリ / 注目記事（最新記事）/ SNS / 運営者情報。
-// 注目記事は取得失敗してもフッター全体を落とさない（try/catch）。
-
-const FOOTER_ARTICLES_LIMIT = 5;
-
-async function getFooterArticles(): Promise<ArticleProps[]> {
-  try {
-    const data = await client.get({
-      endpoint: BLOG_API_ENDPOINT,
-      queries: { limit: FOOTER_ARTICLES_LIMIT, orders: "-publishedAt", fields: "id,title" },
-    });
-    return data.contents as ArticleProps[];
-  } catch {
-    return [];
-  }
-}
+// サイト共通フッター（Issue #65 で強化 / #78 で注目記事セクションを削除）。
+// 全ページ（記事詳細含む）で使用。カテゴリ / SNS / 運営者情報。
 
 // X（旧Twitter）ロゴは lucide-react に無いため簡易 SVG で用意
 function XIcon({ className }: { className?: string }) {
@@ -38,13 +20,11 @@ function XIcon({ className }: { className?: string }) {
   );
 }
 
-export default async function Footer() {
-  const articles = await getFooterArticles();
-
+export default function Footer() {
   return (
     <footer className="mt-auto bg-[#214a4a] text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {/* サイト情報 + SNS */}
           <div>
             <p className="text-lg font-bold">SiiD BLOG</p>
@@ -100,27 +80,6 @@ export default async function Footer() {
               ))}
             </ul>
           </nav>
-
-          {/* 注目記事（最新記事） */}
-          {articles.length > 0 && (
-            <nav aria-label="注目記事">
-              <p className="text-sm font-bold uppercase tracking-wide text-gray-200">
-                注目記事
-              </p>
-              <ul className="mt-3 space-y-2">
-                {articles.map((a) => (
-                  <li key={a.id}>
-                    <Link
-                      href={`/${BLOG_API_ENDPOINT}/${a.id}`}
-                      className="line-clamp-1 text-sm text-gray-300 transition-colors hover:text-white"
-                    >
-                      {a.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          )}
 
           {/* 運営者情報 */}
           <nav aria-label="運営者情報">
