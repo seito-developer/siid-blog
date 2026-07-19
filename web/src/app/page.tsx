@@ -108,9 +108,7 @@ export default async function Home({
             <div className="space-y-12">
               <HeroCarousel />
 
-              <div className="mx-auto max-w-2xl">
-                <SearchBar />
-              </div>
+              {/* 検索はグローバルヘッダーに常設のため TOP からは削除 */}
 
               <FeaturedArticles />
 
