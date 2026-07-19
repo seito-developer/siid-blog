@@ -12,6 +12,10 @@ import { getAuthorSocials, isAiAuthor } from "@/libs/author";
 
 type Props = { params: Promise<{ id: string }> };
 
+// 著者名義の記事一覧は静的生成だが、新規記事が1日以内に反映されるよう
+// 日次で再生成する（webhook 再検証は blog-<id> 単位のため著者ページは対象外・sitemap と同方針）
+export const revalidate = 86400;
+
 // X（旧Twitter）ロゴは lucide-react に無いため簡易 SVG
 function XIcon({ className }: { className?: string }) {
   return (

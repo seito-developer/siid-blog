@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { client } from "@/libs/microcms";
 import { BLOG_API_ENDPOINT } from "@/app/constants";
 import { ArticleProps, AuthorProps } from "@/interfaces/common";
@@ -13,12 +14,14 @@ type PostWithAuthor = ArticleProps & { author: AuthorProps | null };
 const FIELDS =
   "id,title,eyecatch,thumbnailPreset,categories,category,publishedAt,author";
 
-async function getAllPostsWithAuthor(): Promise<PostWithAuthor[]> {
-  return client.getAllContents<PostWithAuthor>({
-    endpoint: BLOG_API_ENDPOINT,
-    queries: { fields: FIELDS, orders: "-publishedAt" },
-  });
-}
+// 同一レンダー内（generateMetadata + page など）の重複取得を React cache で排除する
+const getAllPostsWithAuthor = cache(
+  async (): Promise<PostWithAuthor[]> =>
+    client.getAllContents<PostWithAuthor>({
+      endpoint: BLOG_API_ENDPOINT,
+      queries: { fields: FIELDS, orders: "-publishedAt" },
+    })
+);
 
 // 記事に紐づく著者の id 一覧（重複排除）。generateStaticParams 用。
 // 著者未設定（defaultAuthor フォールバック）は id を持たないため対象外。
