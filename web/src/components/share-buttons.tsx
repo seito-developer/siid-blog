@@ -1,11 +1,7 @@
-"use client";
-
-import { useState } from "react";
-import { Check, Link2 } from "lucide-react";
-
-// シェアボタン（Issue #68）。X / はてなブックマーク / LINE / URLコピー。
+// シェアボタン（Issue #68）。X / Threads / LINE。
 // デザインはモノトーン＋ホバーでティール（SNSブランドカラーでは塗らない）。
 // アイコンボタンは aria-label 必須・タップターゲット44px（h-11 w-11）。
+// いずれも外部インテント URL へのリンクのみのためサーバーコンポーネントで完結する。
 
 function XIcon({ className }: { className?: string }) {
   return (
@@ -15,14 +11,11 @@ function XIcon({ className }: { className?: string }) {
   );
 }
 
-function HatenaIcon({ className }: { className?: string }) {
+function ThreadsIcon({ className }: { className?: string }) {
   return (
-    <span
-      aria-hidden
-      className={`inline-flex items-center justify-center font-bold ${className ?? ""}`}
-    >
-      B!
-    </span>
+    <svg viewBox="0 0 24 24" aria-hidden className={className} fill="currentColor">
+      <path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.166 1.43 1.781 3.631 2.695 6.54 2.717 2.623-.02 4.358-.629 5.8-2.045 1.646-1.615 1.616-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32l-1.696-1.14c.98-1.46 2.568-2.263 4.478-2.263h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.322.142 1.487.7 2.576 1.761 3.15 3.07.8 1.822.847 4.79-1.312 7.16C18.104 22.688 15.76 24 12.186 24Z" />
+    </svg>
   );
 }
 
@@ -44,27 +37,16 @@ export default function ShareButtons({
   url: string;
   title: string;
 }) {
-  const [copied, setCopied] = useState(false);
-
   const shareX = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
     title
   )}&url=${encodeURIComponent(url)}`;
-  const shareHatena = `https://b.hatena.ne.jp/add?mode=confirm&url=${encodeURIComponent(
-    url
-  )}&title=${encodeURIComponent(title)}`;
+  // Threads の Web インテントは url パラメータを持たないため、本文にタイトル＋URLを含める
+  const shareThreads = `https://www.threads.net/intent/post?text=${encodeURIComponent(
+    `${title} ${url}`
+  )}`;
   const shareLine = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(
     url
   )}`;
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(url);
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 2000);
-    } catch {
-      // クリップボード API 不可（非対応・権限拒否）の場合は無反応にとどめる
-    }
-  };
 
   return (
     <div className="max-w-4xl mx-auto px-6 pb-8">
@@ -81,13 +63,13 @@ export default function ShareButtons({
             <XIcon className="h-4 w-4" />
           </a>
           <a
-            href={shareHatena}
+            href={shareThreads}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="はてなブックマークに追加"
+            aria-label="Threads でシェア"
             className={BTN_CLASS}
           >
-            <HatenaIcon className="text-sm" />
+            <ThreadsIcon className="h-5 w-5" />
           </a>
           <a
             href={shareLine}
@@ -98,27 +80,6 @@ export default function ShareButtons({
           >
             <LineIcon className="h-5 w-5" />
           </a>
-          <button
-            type="button"
-            onClick={handleCopy}
-            aria-label={copied ? "URL をコピーしました" : "URL をコピー"}
-            className={BTN_CLASS}
-          >
-            {copied ? (
-              <Check className="h-4 w-4" aria-hidden />
-            ) : (
-              <Link2 className="h-4 w-4" aria-hidden />
-            )}
-          </button>
-          <span
-            role="status"
-            aria-live="polite"
-            className={`text-xs text-[#289B8F] transition-opacity ${
-              copied ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            コピーしました
-          </span>
         </div>
       </div>
     </div>
