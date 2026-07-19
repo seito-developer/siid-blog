@@ -88,6 +88,15 @@ export default function Footer() {
             </p>
             <ul className="mt-3 space-y-2">
               <li>
+                {/* 運営者情報ページ（Issue #70） */}
+                <Link
+                  href="/about"
+                  className="text-sm text-gray-300 transition-colors hover:text-white"
+                >
+                  運営者情報
+                </Link>
+              </li>
+              <li>
                 <Link
                   href={SIID_SITE_URL}
                   target="_blank"
