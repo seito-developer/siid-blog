@@ -5,10 +5,17 @@ import BlogHeader from "@/components/blog-header";
 import JsonLd from "@/components/json-ld";
 
 import ArticleBody from "@/components/article-body/article-body";
+import ArticleToc from "@/components/article-body/article-toc";
 import Breadcrumbs from "@/components/breadcrumbs";
 import ArticleCtaCard from "@/components/article-cta-card";
 import AuthorCard from "@/components/author-card";
 import RelatedArticles from "@/components/related-articles";
+import ShareButtons from "@/components/share-buttons";
+import CvWidget from "@/components/cv-widget";
+import SidebarYouTube from "@/components/sidebar-youtube";
+import SpStickyCta from "@/components/sp-sticky-cta";
+import { buildArticleContent, inlineCtaSegmentIndex } from "@/libs/article-content";
+import { getRelatedArticles } from "@/libs/related-articles";
 import { isAiAuthor, isSeitoAuthor } from "@/libs/author";
 import { getBlogPost } from "./getBlogPost";
 import { defaultAuthor } from "./defaultAuthor";
@@ -42,6 +49,12 @@ export default async function BlogPostPage({
   // 1記事1カテゴリ（Issue #12）。スラッグ対応表に無いカテゴリはリンクを出さない
   const postCategory = getArticleCategory(post);
   const category = postCategory && findCategoryById(postCategory.id);
+
+  // 本文の後処理（サニタイズ → 見出し id 付与 → h2 区切り分割）と本文途中 CTA の挿入位置
+  const articleContent = await buildArticleContent(post.contents || "");
+  const inlineCtaIndex = inlineCtaSegmentIndex(articleContent.segments.length);
+  // 関連記事は1回だけ取得し、SP（本文末）と PC（サイドバー）で使い回す（Issue #56 / #66）
+  const relatedArticles = await getRelatedArticles(postCategory?.id, slug);
   const categoryBreadcrumbs = [
     ...(category
       ? [{ label: category.name, href: `/category/${category.slug}` }]
@@ -130,14 +143,52 @@ export default async function BlogPostPage({
         date={post.publishedAt}
         title={post.title}
       />
-      {/* 記事本文を表示 */}
-      <ArticleBody author={post.author || null}>
-        {post.contents || "" }
-      </ArticleBody>
-      {/* 本文直後: 著者カード → 統合CTAカード → 関連記事（Issue #56/#57/#58） */}
-      <AuthorCard author={post.author || defaultAuthor} />
-      <ArticleCtaCard slug={slug} />
-      <RelatedArticles categoryId={postCategory?.id} currentId={slug} />
+
+      {/* PC は2カラム（本文 + サイドバー320px）、lg 未満は1カラム（Issue #66） */}
+      <div className="mx-auto max-w-6xl py-8 lg:px-6 lg:py-12">
+        <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start lg:gap-8">
+          {/* 本文カラム */}
+          <div className="min-w-0">
+            {/* SP: 本文冒頭に目次（折りたたみ）。PC はサイドバー側で表示（Issue #67） */}
+            <div className="mb-8 px-6 lg:hidden">
+              <ArticleToc headings={articleContent.headings} variant="mobile" />
+            </div>
+
+            <ArticleBody
+              author={post.author || null}
+              segments={articleContent.segments}
+              slug={slug}
+              inlineCtaIndex={inlineCtaIndex}
+            />
+
+            {/* 本文末: シェアボタン → 著者カード → 統合CTA（Issue #68/#58/#57） */}
+            <ShareButtons url={articleUrl} title={post.title} />
+            <AuthorCard author={post.author || defaultAuthor} />
+            <ArticleCtaCard slug={slug} />
+
+            {/* SP: 関連記事 → YouTube を本文末に縦積み（PC はサイドバー側で表示） */}
+            <div className="px-6 lg:hidden">
+              <RelatedArticles articles={relatedArticles} variant="grid" />
+              <section className="pb-16">
+                <SidebarYouTube slug={slug} variant="stacked" />
+              </section>
+            </div>
+          </div>
+
+          {/* PC サイドバー: 目次 → CVウィジェット → YouTube → 関連記事（Issue #66） */}
+          <aside className="hidden lg:block">
+            <div className="sticky top-24 space-y-8">
+              <ArticleToc headings={articleContent.headings} variant="desktop" />
+              <CvWidget slug={slug} />
+              <SidebarYouTube slug={slug} variant="sidebar" />
+              <RelatedArticles articles={relatedArticles} variant="sidebar" />
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      {/* SP 限定の下部追従 CTA バー（Issue #69） */}
+      <SpStickyCta slug={slug} />
     </main>
   );
 }
