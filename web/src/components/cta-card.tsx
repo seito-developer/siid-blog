@@ -33,7 +33,7 @@ export default function CtaCard({
         articleSlug={articleSlug}
         className="inline-block w-full sm:w-auto sm:min-w-80 rounded-full bg-white px-8 py-4 text-lg font-bold text-[#214a4a] transition-opacity hover:opacity-85"
       >
-        無料個別面談に申し込む
+        SiiDの詳細を見る
       </CtaLink>
     </div>
   );

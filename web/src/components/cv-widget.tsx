@@ -10,7 +10,7 @@ const CTA_POSITION = "sidebar";
 
 const BUTTONS = [
   {
-    label: "無料個別面談",
+    label: "SiiDの詳細を見る",
     baseUrl: COUNSELING_URL,
     ctaType: "counseling",
     Icon: CalendarCheck,
