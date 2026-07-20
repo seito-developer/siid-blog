@@ -59,7 +59,7 @@ export default function Article({
           {/* 記事タイトルは見出し要素にする（SEO・アクセシビリティ） */}
           <Heading
             data-slot="card-title"
-            className="leading-none font-semibold text-lg font-bold line-clamp-2 group-hover:text-opacity-80 transition-colors"
+            className="leading-6 font-semibold text-lg font-bold line-clamp-2 group-hover:text-opacity-80 transition-colors"
             style={{ color: "#214a4a" }}
           >
             {article.title}

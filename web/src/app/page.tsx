@@ -75,7 +75,7 @@ export default async function Home({
       }}
     >
       <JsonLd data={webSiteJsonLd} />
-      <div className="container mx-auto px-4 py-8">
+      <div className="container max-w-6xl mx-auto px-6 py-8">
         {isSearching ? (
           /* 検索時: 従来どおり検索バー + 検索結果一覧 */
           <>

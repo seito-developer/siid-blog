@@ -33,15 +33,15 @@ export default function BlogHeader({
   return (
     <header className="w-full bg-[#F4F4F4]">
       {/* Eyecatch Image */}
-      <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
+      <div className="relative max-w-6xl mx-auto w-full h-fulllg:px-6">
+         {/* h-[400px] md:h-[500px] lg:h-[600px] */}
         {/* アイキャッチはビューポート全幅のヒーロー（2カラム化後も本文上の全幅表示） */}
         <Image
           src={eyecatchImage || "/placeholder.svg"}
           alt={title}
-          fill
-          sizes="100vw"
-          className="object-cover"
-          priority
+          className=" w-full h-full object-cover aspect-16/9 max-h-[400px]"
+          width={1600}
+          height={900}
         />
       </div>
 

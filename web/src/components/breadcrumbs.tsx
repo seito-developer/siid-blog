@@ -27,7 +27,7 @@ export default function Breadcrumbs({
   return (
     <nav
       aria-label="Breadcrumb"
-      className={cn("flex items-center space-x-2 text-sm py-2 px-6 lg:px-0 max-w-6xl", className)}
+      className={cn("flex items-center space-x-2 text-sm py-2 px-6 max-w-6xl mx-auto", className)}
       style={{ fontFamily: "Noto Sans JP, sans-serif" }}
     >
           {/* /* overflow: hidden; */
