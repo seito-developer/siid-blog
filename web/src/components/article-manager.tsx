@@ -9,9 +9,11 @@ import { OffsetPagination } from "./ui/offset-pagination";
 export default function ArticleManager({
   articles,
   totalCount,
+  headingLevel = "h2",
 }: {
   articles: ArticleProps[];
   totalCount: number;
+  headingLevel?: "h2" | "h3";
 }) {
   // トップ（/）とカテゴリ（/category/*）の両方で使われるため、
   // リンク先は現在のパスを基準にする
@@ -35,7 +37,7 @@ export default function ArticleManager({
 
   return (
     <>
-      <ArticleList articles={articles} />
+      <ArticleList articles={articles} headingLevel={headingLevel} />
       <OffsetPagination
         totalItems={totalCount}
         itemsPerPage={itemsPerPage}

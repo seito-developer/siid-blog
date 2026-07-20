@@ -34,7 +34,15 @@ export default function BlogHeader({
     <header className="w-full bg-[#F4F4F4]">
       {/* Eyecatch Image */}
       <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
-        <Image src={eyecatchImage || "/placeholder.svg"} alt={title} fill className="object-cover" priority />
+        {/* アイキャッチはビューポート全幅のヒーロー（2カラム化後も本文上の全幅表示） */}
+        <Image
+          src={eyecatchImage || "/placeholder.svg"}
+          alt={title}
+          fill
+          sizes="100vw"
+          className="object-cover"
+          priority
+        />
       </div>
 
         {/* Title overlay on image */}

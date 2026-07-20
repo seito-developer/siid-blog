@@ -3,6 +3,12 @@
     margin-top: 1.5rem; /* space-y-6 相当 */
   }
 
+  /* 目次アンカー遷移時に sticky ヘッダー(h-16=4rem)へ隠れないための余白（#67） */
+  h2,
+  h3 {
+    scroll-margin-top: 5rem;
+  }
+
   /* 動画埋め込み（YouTube 等の iframe）。
      サニタイズでインライン style を除去するため、ここで 16:9 のレスポンシブ表示にする */
   iframe {

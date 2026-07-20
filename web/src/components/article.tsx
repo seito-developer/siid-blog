@@ -9,9 +9,17 @@ import Image from "next/image";
 import { Badge } from "./ui/badge";
 import { Calendar, User } from "lucide-react";
 
-export default function Article({ article }: { article: ArticleProps }) {
+export default function Article({
+  article,
+  headingLevel = "h2",
+}: {
+  article: ArticleProps;
+  // カード見出しの要素。TOP のセクション（h2）配下では h3 を渡して階層を整える
+  headingLevel?: "h2" | "h3";
+}) {
   const category = getArticleCategory(article);
   const thumbnail = getArticleThumbnail(article);
+  const Heading = headingLevel;
 
   return (
     <article>
@@ -49,13 +57,13 @@ export default function Article({ article }: { article: ArticleProps }) {
 
         <CardHeader className="pb-3">
           {/* 記事タイトルは見出し要素にする（SEO・アクセシビリティ） */}
-          <h2
+          <Heading
             data-slot="card-title"
             className="leading-none font-semibold text-lg font-bold line-clamp-2 group-hover:text-opacity-80 transition-colors"
             style={{ color: "#214a4a" }}
           >
             {article.title}
-          </h2>
+          </Heading>
         </CardHeader>
 
         <CardContent className="pt-0">

@@ -10,6 +10,12 @@ import { ArticleProps } from "@/interfaces/common";
 import ArticleManager from "@/components/article-manager";
 import SearchBar from "@/components/search-bar";
 import JsonLd from "@/components/json-ld";
+import HeroCarousel from "@/components/top/hero-carousel";
+import FeaturedArticles from "@/components/top/featured-articles";
+import Interviews from "@/components/top/interviews";
+import CategoryNav from "@/components/top/category-nav";
+import YouTubeSection from "@/components/top/youtube-section";
+import CtaBand from "@/components/top/cta-band";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -43,6 +49,7 @@ export default async function Home({
     typeof perPage === "string" ? parseInt(perPage) : POSTS_NUM_PER_PAGE;
   const offset = typeof page === "string" ? (parseInt(page) - 1) * limit : 0;
   const searchQuery = q || "";
+  const isSearching = searchQuery.trim().length > 0;
 
   const { posts, totalCount } = await getBlogPosts({
     offset,
@@ -55,7 +62,8 @@ export default async function Home({
     "@type": "WebSite",
     name: SITE_NAME,
     url: SITE_URL,
-    publisher: { "@type": "Organization", name: "SiiD" },
+    // Organization 本体は layout.tsx で出力している（Issue #59）
+    publisher: { "@id": `${SITE_URL}/#organization` },
   };
 
   return (
@@ -68,29 +76,67 @@ export default async function Home({
     >
       <JsonLd data={webSiteJsonLd} />
       <div className="container mx-auto px-4 py-8">
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold mb-4" style={{ color: "#214a4a" }}>
-            SiiD BLOG
-          </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            プログラミングスクールSiiDによるブログメディア。<br />
-            エンジニア転職や技術学習に関する有益な情報を発信中！
-          </p>
-        </div>
-        
-        <SearchBar />
-        
-        {searchQuery && (
-          <div className="mb-6 text-center">
-            <p className="text-gray-600">
-              「<span className="font-semibold text-[#214a4a]">{searchQuery}</span>」の検索結果: {totalCount}件
-            </p>
-          </div>
-        )}
-        
-        {page && <h2 className="text-2xl font-bold mb-4" style={{color: "#214a4a"}}>Page: {page}</h2>}
+        {isSearching ? (
+          /* 検索時: 従来どおり検索バー + 検索結果一覧 */
+          <>
+            <h1
+              className="mb-6 text-center text-2xl font-bold"
+              style={{ color: "#214a4a" }}
+            >
+              記事を検索
+            </h1>
+            <SearchBar />
+            <div className="mb-6 text-center">
+              <p className="text-gray-600">
+                「
+                <span className="font-semibold text-[#214a4a]">
+                  {searchQuery}
+                </span>
+                」の検索結果: {totalCount}件
+              </p>
+            </div>
+            <ArticleManager articles={posts} totalCount={totalCount} />
+          </>
+        ) : (
+          /* 通常時: TOP ランディング（Issue #63〜65） */
+          <>
+            {/* 見出し階層のため h1 を1つ置く（ビジュアルはカルーセルが担う） */}
+            <h1 className="sr-only">
+              SiiD BLOG｜プログラミング・エンジニア転職の学習メディア
+            </h1>
 
-        <ArticleManager articles={posts} totalCount={totalCount} />
+            <div className="space-y-12">
+              <HeroCarousel />
+
+              {/* 検索はグローバルヘッダーに常設のため TOP からは削除 */}
+
+              <FeaturedArticles />
+
+              <Interviews />
+
+              <CategoryNav />
+
+              {/* 新着記事 */}
+              <section aria-labelledby="latest-heading">
+                <h2
+                  id="latest-heading"
+                  className="mb-6 text-2xl font-bold text-[#214a4a]"
+                >
+                  新着記事
+                </h2>
+                <ArticleManager
+                  articles={posts}
+                  totalCount={totalCount}
+                  headingLevel="h3"
+                />
+              </section>
+
+              <YouTubeSection />
+
+              <CtaBand />
+            </div>
+          </>
+        )}
       </div>
     </main>
   );
