@@ -26,7 +26,7 @@ export const INTERVIEWS: Interview[] = [
     beforeJob: "販売職",
     afterJob: "フロントエンドエンジニア",
     comment: "未経験から半年でWeb系企業へ転職できました。",
-    imageSrc: "/sindi.png",
+    imageSrc: "/editors.png",
     href: "#",
   },
   {
@@ -35,7 +35,7 @@ export const INTERVIEWS: Interview[] = [
     beforeJob: "事務職",
     afterJob: "バックエンドエンジニア",
     comment: "働きながらでも無理なく学習を続けられました。",
-    imageSrc: "/sindi.png",
+    imageSrc: "/editors.png",
     href: "#",
   },
   {
@@ -44,7 +44,7 @@ export const INTERVIEWS: Interview[] = [
     beforeJob: "営業職",
     afterJob: "社内SE",
     comment: "AI活用の学習法で効率よくスキルが身につきました。",
-    imageSrc: "/sindi.png",
+    imageSrc: "/editors.png",
     href: "#",
   },
 ];
