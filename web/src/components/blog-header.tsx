@@ -33,22 +33,22 @@ export default function BlogHeader({
   return (
     <header className="w-full bg-[#F4F4F4]">
       {/* Eyecatch Image */}
-      <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
+      <div className="relative max-w-6xl mx-auto w-full h-fulllg:px-6">
+         {/* h-[400px] md:h-[500px] lg:h-[600px] */}
         {/* アイキャッチはビューポート全幅のヒーロー（2カラム化後も本文上の全幅表示） */}
         <Image
           src={eyecatchImage || "/placeholder.svg"}
           alt={title}
-          fill
-          sizes="100vw"
-          className="object-cover"
-          priority
+          className=" w-full h-full object-cover aspect-16/9 max-h-[400px]"
+          width={1600}
+          height={900}
         />
       </div>
 
         {/* Title overlay on image */}
-        <div className="p-4  bottom-8 left-8 right-8 text-white bg-[#214a4a]">
+        <div className="py-4  bottom-8 left-8 right-8 text-white bg-[#214a4a]">
           <h1
-            className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-4xl mx-auto"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-6xl mx-auto px-6"
             style={{ fontFamily: "Noto Sans JP, sans-serif" }}
           >
             {title}
@@ -56,8 +56,8 @@ export default function BlogHeader({
         </div>
 
       {/* Article Meta Information */}
-      <div className="max-w-4xl mx-auto px-6 pt-8 pb-4">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+      <div className="max-w-6xl mx-auto px-6 pt-8 pb-4">
+        <div className="flex flex-row lg:items-center justify-between gap-6">
           {/* Author and Date Info */}
           <Author postDate={date} author={author}  />
 
@@ -69,6 +69,7 @@ export default function BlogHeader({
               categoryBadge
             )}
           </div>
+          <div className="max-w-2xl hidden lg:block"></div>
         </div>
       </div>
     </header>

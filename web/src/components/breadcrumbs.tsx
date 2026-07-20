@@ -27,18 +27,22 @@ export default function Breadcrumbs({
   return (
     <nav
       aria-label="Breadcrumb"
-      className={cn("flex items-center space-x-2 text-sm p-2", className)}
+      className={cn("flex items-center space-x-2 text-sm py-2 px-6 max-w-6xl mx-auto", className)}
       style={{ fontFamily: "Noto Sans JP, sans-serif" }}
     >
-      <ol className="flex items-center space-x-2">
+          {/* /* overflow: hidden; */
+    /* white-space: nowrap; */
+    /* text-overflow: ellipsis; */}
+      <ol className="flex items-center space-x-2 overflow-hidden white-space ellipsis">
         {allItems.map((item, index) => {
           const isLast = index === allItems.length - 1
           const isHome = showHome && index === 0
 
           return (
-            <li key={index} className="flex items-center">
+            // if index = 1, add class "text-overflow: ellipsis; and white-space: nowrap;"
+            <li key={index} className={cn("flex items-center", index === 1 ? "whitespace-nowrap text-ellipsis" : "")}>
               {index > 0 && (
-                <span className="mx-2 text-gray-400" aria-hidden="true">
+                <span className="mx-1 text-gray-400" aria-hidden="true">
                   {separator}
                 </span>
               )}

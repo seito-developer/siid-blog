@@ -10,12 +10,12 @@ export default function AuthorCard({ author }: { author: AuthorProps }) {
   const imageUrl = author.image?.url || (isAi ? "/sindi.png" : null);
 
   return (
-    <section className="max-w-4xl mx-auto px-6 pb-10">
+    <section className="max-w-4xl mx-auto px-6 lg:px-0 pb-10">
       <div className="rounded-2xl bg-white shadow-sm p-6 sm:p-8">
         <h2 className="text-lg font-bold text-[#214a4a] mb-5">
           この記事を書いた人
         </h2>
-        <div className="flex flex-col sm:flex-row gap-5">
+        <div className="flex sm:flex-row gap-5">
           <div className="relative w-20 h-20 shrink-0 rounded-full overflow-hidden border-2 border-[#289B8F] bg-gray-100">
             {imageUrl ? (
               <Image

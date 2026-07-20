@@ -16,13 +16,13 @@ type Channel = {
 const CHANNELS: Channel[] = [
   {
     id: "seito",
-    name: "セイト先生の Web 制作・プログラミング",
+    name: "セイト先生（登録者数：13万人）",
     url: YOUTUBE_SEITO_URL,
     ctaType: "youtube_seito",
   },
   {
     id: "siid",
-    name: "SiiD プログラミングスクール",
+    name: "SiiD卒業生さま対談CH",
     url: YOUTUBE_SIID_URL,
     ctaType: "youtube_siid",
   },

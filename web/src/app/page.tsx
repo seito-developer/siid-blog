@@ -10,11 +10,11 @@ import { ArticleProps } from "@/interfaces/common";
 import ArticleManager from "@/components/article-manager";
 import SearchBar from "@/components/search-bar";
 import JsonLd from "@/components/json-ld";
-import HeroCarousel from "@/components/top/hero-carousel";
+// import HeroCarousel from "@/components/top/hero-carousel";
 import FeaturedArticles from "@/components/top/featured-articles";
-import Interviews from "@/components/top/interviews";
+// import Interviews from "@/components/top/interviews";
 import CategoryNav from "@/components/top/category-nav";
-import YouTubeSection from "@/components/top/youtube-section";
+// import YouTubeSection from "@/components/top/youtube-section";
 import CtaBand from "@/components/top/cta-band";
 import type { Metadata } from "next";
 
@@ -75,7 +75,7 @@ export default async function Home({
       }}
     >
       <JsonLd data={webSiteJsonLd} />
-      <div className="container mx-auto px-4 py-8">
+      <div className="container max-w-6xl mx-auto px-6 py-8">
         {isSearching ? (
           /* 検索時: 従来どおり検索バー + 検索結果一覧 */
           <>
@@ -106,13 +106,13 @@ export default async function Home({
             </h1>
 
             <div className="space-y-12">
-              <HeroCarousel />
+              {/* <HeroCarousel /> */}
 
               {/* 検索はグローバルヘッダーに常設のため TOP からは削除 */}
 
               <FeaturedArticles />
 
-              <Interviews />
+              {/* <Interviews /> */}
 
               <CategoryNav />
 
@@ -131,7 +131,7 @@ export default async function Home({
                 />
               </section>
 
-              <YouTubeSection />
+              {/* <YouTubeSection /> */}
 
               <CtaBand />
             </div>

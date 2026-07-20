@@ -69,7 +69,7 @@ export default function PrevNextNav({ prev, next }: AdjacentArticles) {
   return (
     <nav
       aria-label="前後の記事"
-      className="max-w-4xl mx-auto px-6 pb-16"
+      className="max-w-6xl mx-auto px-6 pb-16"
     >
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {/* 前が無い場合も次を右側に保つためのプレースホルダ */}

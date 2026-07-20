@@ -18,7 +18,7 @@ type Channel = {
 const CHANNELS: Channel[] = [
   {
     id: "seito",
-    name: "セイト先生の Web 制作・プログラミング",
+    name: "セイト先生 by AIプログラミングスクールSiiD",
     handle: "@webit7652",
     subscribers: "登録者 約13万人",
     url: YOUTUBE_SEITO_URL,
@@ -26,8 +26,7 @@ const CHANNELS: Channel[] = [
   },
   {
     id: "siid",
-    name: "SiiD プログラミングスクール",
-    // TODO(owner): 正確なチャンネル名・登録者数を確認して差し替える
+    name: "AIプログラミングスクールSiiD",
     handle: "@programming-siid",
     subscribers: "登録者数を確認中",
     url: YOUTUBE_SIID_URL,

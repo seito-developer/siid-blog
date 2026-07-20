@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Menu, Search, X } from "lucide-react";
@@ -21,7 +22,12 @@ function Logo() {
       className="text-xl font-bold tracking-tight text-[#214a4a]"
       aria-label="SiiD BLOG トップへ"
     >
-      SiiD BLOG
+      <Image
+        src="/logo.png"
+        alt="SiiD BLOG ロゴ"
+        width={80}
+        height={20}
+      />
     </Link>
   );
 }
@@ -36,7 +42,7 @@ function HeaderCta({ className }: { className?: string }) {
       articleSlug="top"
       className={className}
     >
-      無料で相談する
+      SiiD無料カウンセリング
     </CtaLink>
   );
 }
@@ -58,7 +64,7 @@ export default function GlobalHeader() {
   return (
     <>
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
-      <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-4">
+      <div className="container max-w-6xl mx-auto flex h-16 items-center justify-between gap-4 px-6">
         <Logo />
 
         {/* PC ナビ */}
