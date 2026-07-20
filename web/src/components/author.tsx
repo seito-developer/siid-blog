@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const defaultAuthor = {
     image: "/sindi.png",
-    name: "AI講師 シンディ",
+    name: "SiiD BLOG編集部",
 }
 
 export default function Author({postDate, author}: {postDate: string, author: AuthorProps | null}) {

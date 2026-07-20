@@ -72,7 +72,7 @@ export default function Article({
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1">
                 <User className="w-3 h-3" />
-                <span>{article.author?.name || "AI講師 シンディ"}</span>
+                <span>{article.author?.name || "SiiD BLOG編集部"}</span>
               </div>
             </div>
             <div className="flex items-center gap-1">

@@ -22,7 +22,6 @@ type ArticleBodyProps = {
 
 export default function ArticleBody({
   segments,
-  author,
   slug,
   inlineCtaIndex,
 }: ArticleBodyProps) {
