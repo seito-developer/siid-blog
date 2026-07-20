@@ -11,13 +11,12 @@ type SitemapArticle = {
   revisedAt?: string;
   category?: { id: string }; // 新スキーマ: 単一参照
   categories?: { id: string }[]; // 旧スキーマ: 複数参照
-  author?: { id: string } | null; // 著者ページ（/authors/[id]）列挙用（Issue #70）
 };
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const articles = await client.getAllContents<SitemapArticle>({
     endpoint: BLOG_API_ENDPOINT,
-    queries: { fields: "id,revisedAt,categories,category,author" },
+    queries: { fields: "id,revisedAt,categories,category" },
   });
 
   const articleEntries: MetadataRoute.Sitemap = articles.map((article) => ({
@@ -41,22 +40,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })
   );
 
-  // 著者ページ（記事に紐づく著者IDのみ・Issue #70）
-  const authorIds = new Set<string>();
-  for (const article of articles) {
-    if (article.author?.id) {
-      authorIds.add(article.author.id);
-    }
-  }
-  const authorEntries: MetadataRoute.Sitemap = [...authorIds].map((id) => ({
-    url: `${SITE_URL}/authors/${id}`,
-  }));
-
-  return [
-    { url: SITE_URL },
-    { url: `${SITE_URL}/about` },
-    ...articleEntries,
-    ...categoryEntries,
-    ...authorEntries,
-  ];
+  return [{ url: SITE_URL }, ...articleEntries, ...categoryEntries];
 }
