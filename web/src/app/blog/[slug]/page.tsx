@@ -13,7 +13,6 @@ import RelatedArticles from "@/components/related-articles";
 import ShareButtons from "@/components/share-buttons";
 import CvWidget from "@/components/cv-widget";
 import SidebarYouTube from "@/components/sidebar-youtube";
-import SpStickyCta from "@/components/sp-sticky-cta";
 import PrevNextNav from "@/components/prev-next-nav";
 import { buildArticleContent, inlineCtaSegmentIndex } from "@/libs/article-content";
 import { getRelatedArticles } from "@/libs/related-articles";
@@ -197,9 +196,6 @@ export default async function BlogPostPage({
 
       {/* 前後記事ナビ（関連記事の下・全幅・Issue #71） */}
       <PrevNextNav prev={adjacentArticles.prev} next={adjacentArticles.next} />
-
-      {/* SP 限定の下部追従 CTA バー（Issue #69） */}
-      <SpStickyCta slug={slug} />
     </main>
   );
 }
