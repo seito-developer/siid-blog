@@ -88,6 +88,17 @@ export default function Footer() {
             </p>
             <ul className="mt-3 space-y-2">
               <li>
+                {/* 運営者情報は運営会社サイトへ（Issue #70 レビュー: 専用ページは作らない） */}
+                <Link
+                  href="https://bug-fix.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-300 transition-colors hover:text-white"
+                >
+                  運営者情報
+                </Link>
+              </li>
+              <li>
                 <Link
                   href={SIID_SITE_URL}
                   target="_blank"
