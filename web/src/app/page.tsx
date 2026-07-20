@@ -19,11 +19,11 @@ import CtaBand from "@/components/top/cta-band";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "記事一覧 | SiiD BLOG",
+  title: "SiiD BLOG｜AI×プログラミング×エンジニア×キャリア",
   description: "YouTube登録者数12万人を誇るセイト先生が教える、プログラミングスクールSiiDのブログメディア。エンジニア転職や技術学習に関連する有益な情報を発信中！",
   alternates: { canonical: SITE_URL },
   openGraph: {
-    title: "記事一覧 | SiiD BLOG",
+    title: "SiiD BLOG｜AI×プログラミング×エンジニア×キャリア",
     description: "YouTube登録者数12万人を誇るセイト先生が教える、プログラミングスクールSiiDのブログメディア。エンジニア転職や技術学習に関連する有益な情報を発信中！",
     type: "website",
     url: SITE_URL,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   // 指定しないと layout のサイト共通値（SiiD BLOG）が使われ og:title と食い違う
   twitter: {
     card: "summary_large_image",
-    title: "記事一覧 | SiiD BLOG",
+    title: "SiiD BLOG｜AI×プログラミング×エンジニア×キャリア",
     description: "YouTube登録者数12万人を誇るセイト先生が教える、プログラミングスクールSiiDのブログメディア。エンジニア転職や技術学習に関連する有益な情報を発信中！",
     images: [DEFAULT_OGP_IMAGE],
   },
