@@ -30,12 +30,19 @@ function parseArgs() {
   const opts = { site: DEFAULT_SITE, ids: null };
   for (let i = 0; i < args.length; i++) {
     if (args[i] === "--site" && args[i + 1]) opts.site = args[++i];
-    else if (args[i] === "--ids" && args[i + 1]) opts.ids = args[++i].split(",").filter(Boolean);
+    else if (args[i] === "--ids" && args[i + 1])
+      // `--ids id1, id2` のように空白が入っても ID 先頭に空白が残らないよう trim する
+      opts.ids = args[++i]
+        .split(",")
+        .map((id) => id.trim())
+        .filter(Boolean);
     else {
       console.error(`不明な引数: ${args[i]}`);
       process.exit(1);
     }
   }
+  // 末尾の / を除去して `...//api/revalidate` にならないよう正規化する
+  opts.site = opts.site.replace(/\/+$/, "");
   return opts;
 }
 
@@ -94,8 +101,17 @@ async function revalidate(site, id) {
   });
   const text = await res.text();
   // ルートは対象外のリクエストにも 200（"Nothing to revalidate"）を返すため、
-  // 実際に再検証されたことまで確認する
-  if (!res.ok || !text.includes('"revalidated":true')) {
+  // 実際に再検証されたことまで確認する。JSON の空白・プロパティ順に依存しないよう
+  // パースして revalidated === true を判定する（エラーレスポンスは生テキストのまま表示）
+  let ok = false;
+  if (res.ok) {
+    try {
+      ok = JSON.parse(text).revalidated === true;
+    } catch {
+      ok = false;
+    }
+  }
+  if (!ok) {
     throw new Error(`revalidate ${id} failed: ${res.status} ${text}`);
   }
   return text;
@@ -116,7 +132,9 @@ async function run() {
       process.stdout.write(`\r再検証済み: ${ok}/${targets.length}`);
     } catch (err) {
       failed.push(id);
-      console.error(`\n[${id}] ${err.message}`);
+      // err は Error とは限らないため、原因が確実にログに出るよう文字列化する
+      const reason = err instanceof Error ? err.message : String(err);
+      console.error(`\n[${id}] ${reason}`);
     }
   }
   console.log();
