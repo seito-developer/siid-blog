@@ -14,8 +14,10 @@ import ShareButtons from "@/components/share-buttons";
 import CvWidget from "@/components/cv-widget";
 import SidebarYouTube from "@/components/sidebar-youtube";
 import SpStickyCta from "@/components/sp-sticky-cta";
+import PrevNextNav from "@/components/prev-next-nav";
 import { buildArticleContent, inlineCtaSegmentIndex } from "@/libs/article-content";
 import { getRelatedArticles } from "@/libs/related-articles";
+import { getAdjacentArticles } from "@/libs/adjacent-articles";
 import { isAiAuthor, isSeitoAuthor } from "@/libs/author";
 import { getBlogPost } from "./getBlogPost";
 import { defaultAuthor } from "./defaultAuthor";
@@ -55,6 +57,12 @@ export default async function BlogPostPage({
   const inlineCtaIndex = inlineCtaSegmentIndex(articleContent.segments.length);
   // 関連記事は1回だけ取得し、SP（本文末）と PC（サイドバー）で使い回す（Issue #56 / #66）
   const relatedArticles = await getRelatedArticles(postCategory?.id, slug);
+  // 前後記事ナビ（同カテゴリの publishedAt 前後1件ずつ・Issue #71）
+  const adjacentArticles = await getAdjacentArticles(
+    postCategory?.id,
+    slug,
+    post.publishedAt
+  );
   const categoryBreadcrumbs = [
     ...(category
       ? [{ label: category.name, href: `/category/${category.slug}` }]
@@ -186,6 +194,9 @@ export default async function BlogPostPage({
           </aside>
         </div>
       </div>
+
+      {/* 前後記事ナビ（関連記事の下・全幅・Issue #71） */}
+      <PrevNextNav prev={adjacentArticles.prev} next={adjacentArticles.next} />
 
       {/* SP 限定の下部追従 CTA バー（Issue #69） */}
       <SpStickyCta slug={slug} />
