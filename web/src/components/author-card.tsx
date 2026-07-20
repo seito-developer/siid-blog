@@ -7,7 +7,7 @@ import { isAiAuthor } from "@/libs/author";
 // AI 著者シンディの場合は AI アシスタントであることを明示する（Issue #60）
 export default function AuthorCard({ author }: { author: AuthorProps }) {
   const isAi = isAiAuthor(author);
-  const imageUrl = author.image?.url || (isAi ? "/sindi.png" : null);
+  const imageUrl = author.image?.url || (isAi ? "/editors.png" : null);
 
   return (
     <section className="max-w-4xl mx-auto px-6 lg:px-0 pb-10">

@@ -2,7 +2,7 @@ export const defaultAuthor = {
   id: "default-author",
   name: "SiiD BLOG編集部",
   image: {
-    url: "/sindi.png",
+    url: "/editors.png",
     height: 44,
     width: 44,
   },

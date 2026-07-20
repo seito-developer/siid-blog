@@ -3,7 +3,7 @@ import { formatDate } from "@/libs/utils";
 import Image from "next/image";
 
 const defaultAuthor = {
-    image: "/sindi.png",
+    image: "/editors.png",
     name: "SiiD BLOG編集部",
 }
 
