@@ -10,11 +10,11 @@ import { ArticleProps } from "@/interfaces/common";
 import ArticleManager from "@/components/article-manager";
 import SearchBar from "@/components/search-bar";
 import JsonLd from "@/components/json-ld";
-import HeroCarousel from "@/components/top/hero-carousel";
+// import HeroCarousel from "@/components/top/hero-carousel";
 import FeaturedArticles from "@/components/top/featured-articles";
-import Interviews from "@/components/top/interviews";
+// import Interviews from "@/components/top/interviews";
 import CategoryNav from "@/components/top/category-nav";
-import YouTubeSection from "@/components/top/youtube-section";
+// import YouTubeSection from "@/components/top/youtube-section";
 import CtaBand from "@/components/top/cta-band";
 import type { Metadata } from "next";
 

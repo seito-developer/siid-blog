@@ -1,6 +1,6 @@
-import { CalendarCheck, FileText, MessageCircle } from "lucide-react";
+import { CalendarCheck } from "lucide-react";
 import CtaLink from "./cta-link";
-import { COUNSELING_URL, DOCUMENT_URL, LINE_URL } from "@/app/links";
+import { COUNSELING_URL } from "@/app/links";
 
 // サイドバーの CV ウィジェット（Issue #66）。
 // 無料個別面談 / 資料請求 / 公式LINE の3導線。UTM 付与・GA4 送信は CtaLink に集約。
