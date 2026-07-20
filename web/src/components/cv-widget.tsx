@@ -16,20 +16,20 @@ const BUTTONS = [
     Icon: CalendarCheck,
     primary: true,
   },
-  {
-    label: "資料請求",
-    baseUrl: DOCUMENT_URL,
-    ctaType: "document",
-    Icon: FileText,
-    primary: false,
-  },
-  {
-    label: "公式LINE",
-    baseUrl: LINE_URL,
-    ctaType: "line",
-    Icon: MessageCircle,
-    primary: false,
-  },
+  // {
+  //   label: "資料請求",
+  //   baseUrl: DOCUMENT_URL,
+  //   ctaType: "document",
+  //   Icon: FileText,
+  //   primary: false,
+  // },
+  // {
+  //   label: "公式LINE",
+  //   baseUrl: LINE_URL,
+  //   ctaType: "line",
+  //   Icon: MessageCircle,
+  //   primary: false,
+  // },
 ];
 
 export default function CvWidget({ slug }: { slug: string }) {

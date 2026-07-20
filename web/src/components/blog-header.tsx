@@ -46,9 +46,9 @@ export default function BlogHeader({
       </div>
 
         {/* Title overlay on image */}
-        <div className="p-4  bottom-8 left-8 right-8 text-white bg-[#214a4a]">
+        <div className="py-4  bottom-8 left-8 right-8 text-white bg-[#214a4a]">
           <h1
-            className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-4xl mx-auto"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-6xl mx-auto px-6"
             style={{ fontFamily: "Noto Sans JP, sans-serif" }}
           >
             {title}
@@ -56,8 +56,8 @@ export default function BlogHeader({
         </div>
 
       {/* Article Meta Information */}
-      <div className="max-w-4xl mx-auto px-6 pt-8 pb-4">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+      <div className="max-w-6xl mx-auto px-6 pt-8 pb-4">
+        <div className="flex flex-row lg:items-center justify-between gap-6">
           {/* Author and Date Info */}
           <Author postDate={date} author={author}  />
 
@@ -69,6 +69,7 @@ export default function BlogHeader({
               categoryBadge
             )}
           </div>
+          <div className="max-w-2xl hidden lg:block"></div>
         </div>
       </div>
     </header>

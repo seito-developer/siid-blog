@@ -106,13 +106,13 @@ export default async function Home({
             </h1>
 
             <div className="space-y-12">
-              <HeroCarousel />
+              {/* <HeroCarousel /> */}
 
               {/* 検索はグローバルヘッダーに常設のため TOP からは削除 */}
 
               <FeaturedArticles />
 
-              <Interviews />
+              {/* <Interviews /> */}
 
               <CategoryNav />
 
@@ -131,7 +131,7 @@ export default async function Home({
                 />
               </section>
 
-              <YouTubeSection />
+              {/* <YouTubeSection /> */}
 
               <CtaBand />
             </div>

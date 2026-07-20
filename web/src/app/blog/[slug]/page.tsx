@@ -155,6 +155,7 @@ export default async function BlogPostPage({
       <div className="mx-auto max-w-6xl py-8 lg:px-6 lg:py-12">
         <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start lg:gap-8">
           {/* 本文カラム */}
+          
           <div className="min-w-0">
             {/* SP: 本文冒頭に目次（折りたたみ）。PC はサイドバー側で表示（Issue #67） */}
             <div className="mb-8 px-6 lg:hidden">

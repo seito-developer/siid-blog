@@ -24,7 +24,7 @@ export default function InlineCta({ slug }: { slug: string }) {
         articleSlug={slug}
         className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#214a4a] px-6 py-3 text-sm font-bold text-white transition-opacity hover:opacity-85 sm:mt-0 sm:w-auto sm:shrink-0"
       >
-        無料で相談する
+        SiiD無料カウンセリング
         <ArrowRight className="h-4 w-4" aria-hidden />
       </CtaLink>
     </aside>

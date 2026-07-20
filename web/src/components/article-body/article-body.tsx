@@ -39,7 +39,7 @@ export default function ArticleBody({
   const afterHtml = showInline ? segments.slice(inlineCtaIndex + 1).join("") : "";
 
   return (
-    <div className={`max-w-4xl mx-auto px-6 pb-8 ${notoSansJP.className}`}>
+    <div className={`max-w-4xl mx-auto px-6 lg:px-0 pb-8 ${notoSansJP.className}`}>
       {/* Article Body Content */}
       <article className="prose prose-lg max-w-none space-y-8">
         <div className="article-body">

@@ -36,7 +36,7 @@ function HeaderCta({ className }: { className?: string }) {
       articleSlug="top"
       className={className}
     >
-      無料で相談する
+      SiiD無料カウンセリング
     </CtaLink>
   );
 }
