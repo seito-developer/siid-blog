@@ -17,8 +17,8 @@ function author(name: string): AuthorProps {
 
 describe("isAiAuthor", () => {
   it("スペース有無どちらの表記のシンディも AI と判定する", () => {
-    expect(isAiAuthor(author("AI講師 シンディ"))).toBe(true);
-    expect(isAiAuthor(author("AI講師シンディ"))).toBe(true);
+    expect(isAiAuthor(author("SiiD BLOG編集部"))).toBe(true);
+    expect(isAiAuthor(author("SiiD BLOG編集部"))).toBe(true);
   });
 
   it("著者未設定（null）は AI（デフォルト著者）扱い", () => {
@@ -33,7 +33,7 @@ describe("isAiAuthor", () => {
 describe("isSeitoAuthor", () => {
   it("セイト先生を判定する", () => {
     expect(isSeitoAuthor(author("セイト先生"))).toBe(true);
-    expect(isSeitoAuthor(author("AI講師 シンディ"))).toBe(false);
+    expect(isSeitoAuthor(author("SiiD BLOG編集部"))).toBe(false);
     expect(isSeitoAuthor(null)).toBe(false);
   });
 });

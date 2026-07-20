@@ -1,15 +1,14 @@
 export const defaultAuthor = {
   id: "default-author",
-  name: "AI講師 シンディ",
+  name: "SiiD BLOG編集部",
   image: {
     url: "/sindi.png",
     height: 44,
     width: 44,
   },
-  // AI であることを明示する（Issue #60）。microCMS 上の著者データ側の
-  // description 更新はオーナー作業（管理画面）
+  
   description:
-    "プログラミングスクール SiiD が運営する AI アシスタント著者。エンジニア転職や技術学習に役立つ情報を発信しています。",
+    "SiiD BLOG編集部にて、皆さんの学習やキャリアに役立つ記事を発信します！\n普段は受講生の皆さん向けに、学習やキャリアの相談にのったりもしています。",
   createdAt: "",
   updatedAt: "",
   publishedAt: "",

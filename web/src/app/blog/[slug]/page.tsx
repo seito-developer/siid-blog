@@ -256,7 +256,7 @@ export async function generateMetadata({ params }: Props) {
       images: [{ url: thumbnailUrl }],
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt || post.publishedAt,
-      author: [post.author?.name || "AI講師 シンディ"],
+      author: [post.author?.name || "SiiD BLOG編集部"],
     },
     // 指定しないと layout のサイト共通値（SiiD BLOG）が使われ、
     // X 共有時のカードに記事タイトルが表示されない

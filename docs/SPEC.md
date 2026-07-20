@@ -72,7 +72,7 @@ API は **`blog` エンドポイント1つのみ**。著者・カテゴリ・タ
 | title | string | 記事タイトル |
 | contents | string | 本文（リッチエディタの HTML） |
 | excerpt | string | 抜粋 |
-| author | AuthorProps \| null | null の場合は「AI講師 シンディ」にフォールバック |
+| author | AuthorProps \| null | null の場合は「SiiD BLOG編集部」にフォールバック |
 | category / categories | CategoryProps（単一参照） / CategoryProps[]（旧・複数参照） | **1記事1カテゴリ**。コードは `libs/article-category.ts` の `getArticleCategory()` 経由で取得し、新旧どちらのスキーマでも動く（旧配列は先頭のみ使用）。microCMS の単一参照への移行は管理画面作業 |
 | tags | - | **廃止済み**（フロントでは非表示・型からも削除。microCMS スキーマからのフィールド削除は管理画面作業） |
 | eyecatch | { url, width, height }（任意） | アップロード式のアイキャッチ（microcms-assets.io 配信）。設定されていれば最優先で使用 |
