@@ -1,12 +1,10 @@
-import "./article-body.css";
 import { Inter } from "next/font/google";
+import "./article-body.css";
 
 const notoSansJP = Inter({ subsets: ["latin"] });
 
-import ArticleHeader from "./article-header";
 import InlineCta from "@/components/inline-cta";
 import { AuthorProps } from "@/interfaces/common";
-import { isAiAuthor } from "@/libs/author";
 
 // 記事本文（Issue #67 / #69）。
 // 本文は buildArticleContent で「サニタイズ → 見出し id 付与 → h2 区切り分割」した
@@ -43,8 +41,6 @@ export default function ArticleBody({
       {/* Article Body Content */}
       <article className="prose prose-lg max-w-none space-y-8">
         <div className="article-body">
-          {/* 表記ゆれを吸収するため isAiAuthor で判定（従来は完全一致で表示されないことがあった） */}
-          {isAiAuthor(author) && <ArticleHeader />}
           <div dangerouslySetInnerHTML={{ __html: beforeHtml }} />
         </div>
 
