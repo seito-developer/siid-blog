@@ -1,13 +1,4 @@
 
-export interface TagProps {
-  id: string;
-  name: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  revisedAt: string;
-}
-
 export interface CategoryProps {
   id: string;
   name: string;
@@ -37,15 +28,22 @@ export interface AuthorProps {
 export interface ArticleProps {
   id: string;
   title: string;
-  excerpt: string;
+  // 記事の説明文（メタディスクリプション用）。microCMS 側にフィールド未追加のため
+  // 現状は常に undefined。フィールド追加後は meta description に優先使用される
+  excerpt?: string;
   author: AuthorProps | null;
   publishedAt: string;
   createdAt: string;
   updatedAt: string;
   readTime: string;
-  categories: CategoryProps[];
-  tags: TagProps[];
-  eyecatch: EyecatchProps;
+  // カテゴリは1記事1つ（Issue #12）。取得は libs/article-category.ts の
+  // getArticleCategory() を使うこと（スキーマ移行の前後どちらでも動く）
+  category?: CategoryProps; // 新スキーマ: 単一コンテンツ参照
+  categories?: CategoryProps[]; // 旧スキーマ: 複数コンテンツ参照（先頭のみ使用）
+  // サムネイル（Issue #13）。取得は libs/article-thumbnail.ts の
+  // getArticleThumbnail() を使うこと（未設定時はプリセットにフォールバック）
+  eyecatch?: EyecatchProps;
+  thumbnailPreset?: string | string[]; // microCMS セレクトフィールド（任意）
   slug: string;
 }
 

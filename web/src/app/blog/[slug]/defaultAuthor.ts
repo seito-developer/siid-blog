@@ -1,12 +1,14 @@
 export const defaultAuthor = {
   id: "default-author",
-  name: "AI講師 シンディ",
+  name: "SiiD BLOG編集部",
   image: {
-    url: "/sindi.png",
+    url: "/editors.png",
     height: 44,
     width: 44,
   },
-  description: "",
+  
+  description:
+    "SiiD BLOG編集部にて、皆さんの学習やキャリアに役立つ記事を発信します！\n普段は受講生の皆さん向けに、学習やキャリアの相談にのったりもしています。",
   createdAt: "",
   updatedAt: "",
   publishedAt: "",

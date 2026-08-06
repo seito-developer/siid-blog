@@ -3,11 +3,7 @@
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
-declare global {
-  interface Window {
-    gtag?: (command: string, targetId: string, config?: Record<string, unknown>) => void;
-  }
-}
+// window.gtag の型は src/types/gtag.d.ts で共有宣言している
 
 export default function GoogleAnalyticsPageView() {
   const pathname = usePathname();

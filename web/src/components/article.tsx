@@ -1,81 +1,88 @@
 import { BLOG_API_ENDPOINT } from "@/app/constants";
 import { ArticleProps } from "@/interfaces/common";
+import { getArticleCategory } from "@/libs/article-category";
+import { getArticleThumbnail } from "@/libs/article-thumbnail";
+import { formatDate } from "@/libs/utils";
 import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, CardHeader } from "./ui/card";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
 import { Calendar, User } from "lucide-react";
 
-export default function Article({ article }: { article: ArticleProps }) {
+export default function Article({
+  article,
+  headingLevel = "h2",
+}: {
+  article: ArticleProps;
+  // カード見出しの要素。TOP のセクション（h2）配下では h3 を渡して階層を整える
+  headingLevel?: "h2" | "h3";
+}) {
+  const category = getArticleCategory(article);
+  const thumbnail = getArticleThumbnail(article);
+  const Heading = headingLevel;
 
   return (
-    <Link
-      key={article.id}
+    <article>
+      {/* 記事カードは独立したコンテンツなので article 要素にする */}
+      <Link
+        key={article.id}
       href={`/${BLOG_API_ENDPOINT}/${article.id}`}
-      className="group"
+      className="group block h-full"
     >
       <Card className="h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-white border-0 shadow-sm">
         {/* Article Image */}
         <div className="relative overflow-hidden rounded-t-lg">
           <Image
-            src={article.eyecatch.url || ""}
+            src={thumbnail.url}
             alt={article.title}
             className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-            width={article.eyecatch.width}
-            height={article.eyecatch.height}
-            objectFit="cover"
+            width={thumbnail.width}
+            height={thumbnail.height}
+            // 一覧グリッド（1〜3カラム）の表示幅に合わせた画像だけを配信する
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
-          <div className="absolute top-3 left-3">
-            <Badge
-              variant="secondary"
-              className="text-white font-medium"
-              style={{ backgroundColor: "#289B8F" }}
-            >
-              {article.categories[0].name}
-            </Badge>
-          </div>
+          {/* カテゴリ未設定の記事はバッジを出さない（従来はここでクラッシュしていた） */}
+          {category && (
+            <div className="absolute top-3 left-3">
+              <Badge
+                variant="secondary"
+                className="text-white font-medium"
+                style={{ backgroundColor: "#289B8F" }}
+              >
+                {category.name}
+              </Badge>
+            </div>
+          )}
         </div>
 
         <CardHeader className="pb-3">
-          <CardTitle
-            className="text-lg font-bold line-clamp-2 group-hover:text-opacity-80 transition-colors"
+          {/* 記事タイトルは見出し要素にする（SEO・アクセシビリティ） */}
+          <Heading
+            data-slot="card-title"
+            className="leading-6 font-semibold text-lg font-bold line-clamp-2 group-hover:text-opacity-80 transition-colors"
             style={{ color: "#214a4a" }}
           >
             {article.title}
-          </CardTitle>
+          </Heading>
         </CardHeader>
 
         <CardContent className="pt-0">
-          {/* Tags */}
-          <div className="flex flex-wrap gap-1 mb-4">
-            {article.tags.map((tag) => (
-              <Badge
-                key={tag.id}
-                variant="outline"
-                className="text-xs border-gray-300 text-gray-600 hover:border-gray-400"
-              >
-                {tag.name}
-              </Badge>
-            ))}
-          </div>
-
           {/* Article Meta */}
           <div className="flex items-center justify-between text-xs text-gray-500">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1">
                 <User className="w-3 h-3" />
-                <span>{article.author?.name || "AI講師 シンディ"}</span>
+                <span>{article.author?.name || "SiiD BLOG編集部"}</span>
               </div>
             </div>
             <div className="flex items-center gap-1">
               <Calendar className="w-3 h-3" />
-              <span>
-                {new Date(article.publishedAt).toLocaleDateString("ja-JP")}
-              </span>
+              <span>{formatDate(article.publishedAt)}</span>
             </div>
           </div>
         </CardContent>
       </Card>
     </Link>
+    </article>
   );
 }

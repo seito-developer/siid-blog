@@ -1,71 +1,60 @@
-import Image from "next/image"
+import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
-import Author from "./author"
-import { AuthorProps, TagProps } from "@/interfaces/common"
+import { formatDate } from "@/libs/utils"
 
 interface BlogHeaderProps {
-  eyecatchImage: string
-  author: AuthorProps
-  tags: TagProps[]
   category: string
+  categoryHref?: string // カテゴリ一覧ページへのリンク（対応表に無いカテゴリは undefined）
   date: string
   title: string
 }
 
+// 記事ヘッダー: タイトル → 投稿日時・カテゴリ。
+// サムネイルと著者情報はヘッダーから外し、本文カラム側で表示する（Issue #90）
 export default function BlogHeader({
-  eyecatchImage,
-  author,
-  tags,
   category,
+  categoryHref,
   date,
   title,
 }: BlogHeaderProps) {
+  const categoryBadge = (
+    <Badge
+      variant="secondary"
+      className="bg-[#214a4a] text-white hover:bg-[#214a4a]/90 px-3 py-1"
+      style={{ fontFamily: "Noto Sans JP, sans-serif" }}
+    >
+      {category}
+    </Badge>
+  )
   return (
     <header className="w-full bg-[#F4F4F4]">
-      {/* Eyecatch Image */}
-      <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
-        <Image src={eyecatchImage || "/placeholder.svg"} alt={title} fill className="object-cover" priority />
+      {/* Title */}
+      <div className="py-4 text-white bg-[#214a4a]">
+        <h1
+          className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-6xl mx-auto px-6"
+          style={{ fontFamily: "Noto Sans JP, sans-serif" }}
+        >
+          {title}
+        </h1>
       </div>
 
-        {/* Title overlay on image */}
-        <div className="p-4  bottom-8 left-8 right-8 text-white bg-[#214a4a]">
-          <h1
-            className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-4xl mx-auto"
+      {/* Article Meta Information */}
+      <div className="max-w-6xl mx-auto px-6 pt-8 pb-4">
+        <div className="flex flex-row items-center gap-4">
+          <time
+            dateTime={date}
+            className="text-sm text-gray-600"
             style={{ fontFamily: "Noto Sans JP, sans-serif" }}
           >
-            {title}
-          </h1>
-        </div>
-
-      {/* Article Meta Information */}
-      <div className="max-w-4xl mx-auto px-6 pt-8 pb-4">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-          {/* Author and Date Info */}
-          <Author postDate={date} author={author}  />
-
-          {/* Category and Tags */}
-          <div className="flex flex-wrap items-center gap-3">
-            {/* Category Badge */}
-            <Badge
-              variant="secondary"
-              className="bg-[#214a4a] text-white hover:bg-[#214a4a]/90 px-3 py-1"
-              style={{ fontFamily: "Noto Sans JP, sans-serif" }}
-            >
-              {category}
-            </Badge>
-
-            {/* Tag Badges */}
-            {tags.map((tag: TagProps, index: number) => (
-              <Badge
-                key={index}
-                variant="outline"
-                className="border-[#289B8F] text-[#289B8F] hover:bg-[#289B8F] hover:text-white px-3 py-1"
-                style={{ fontFamily: "Noto Sans JP, sans-serif" }}
-              >
-                #{tag.name}
-              </Badge>
+            {formatDate(date)}
+          </time>
+          {/* カテゴリ未設定記事では空バッジを出さない */}
+          {category &&
+            (categoryHref ? (
+              <Link href={categoryHref}>{categoryBadge}</Link>
+            ) : (
+              categoryBadge
             ))}
-          </div>
         </div>
       </div>
     </header>
