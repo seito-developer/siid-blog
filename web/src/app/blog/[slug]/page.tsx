@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { client } from "@/libs/microcms";
 import { BLOG_API_ENDPOINT, SITE_NAME, SITE_URL } from "@/app/constants";
 import { X_URL, YOUTUBE_SEITO_URL } from "@/app/links";
@@ -143,8 +144,6 @@ export default async function BlogPostPage({
       <JsonLd data={breadcrumbJsonLd} />
       <Breadcrumbs items={categoryBreadcrumbs} />
       <BlogHeader
-        eyecatchImage={thumbnail.url}
-        author={post.author || defaultAuthor}
         category={postCategory?.name || ""}
         categoryHref={category ? `/category/${category.slug}` : undefined}
         date={post.publishedAt}
@@ -157,6 +156,19 @@ export default async function BlogPostPage({
           {/* 本文カラム */}
           
           <div className="min-w-0">
+            {/* サムネイル → 著者カード → 本文の順（Issue #90） */}
+            <div className="max-w-4xl mx-auto px-6 lg:px-0 mb-8">
+              <Image
+                src={thumbnail.url}
+                alt={post.title}
+                className="w-full h-auto object-cover aspect-video rounded-lg"
+                width={1280}
+                height={720}
+                priority
+              />
+            </div>
+            <AuthorCard author={post.author || defaultAuthor} />
+
             {/* SP: 本文冒頭に目次（折りたたみ）。PC はサイドバー側で表示（Issue #67） */}
             <div className="mb-8 px-6 lg:hidden">
               <ArticleToc headings={articleContent.headings} variant="mobile" />
@@ -169,9 +181,8 @@ export default async function BlogPostPage({
               inlineCtaIndex={inlineCtaIndex}
             />
 
-            {/* 本文末: シェアボタン → 著者カード → 統合CTA（Issue #68/#58/#57） */}
+            {/* 本文末: シェアボタン → 統合CTA（著者カードは本文前へ移動・Issue #90） */}
             <ShareButtons url={articleUrl} title={post.title} />
-            <AuthorCard author={post.author || defaultAuthor} />
             <ArticleCtaCard slug={slug} />
 
             {/* SP: 関連記事 → YouTube を本文末に縦積み（PC はサイドバー側で表示） */}
