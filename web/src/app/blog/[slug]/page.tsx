@@ -162,8 +162,9 @@ export default async function BlogPostPage({
                 src={thumbnail.url}
                 alt={post.title}
                 className="w-full h-auto object-cover aspect-video rounded-lg"
-                width={1280}
-                height={720}
+                width={thumbnail.width || 1280}
+                height={thumbnail.height || 720}
+                sizes="(min-width: 1024px) 768px, 100vw"
                 priority
               />
             </div>

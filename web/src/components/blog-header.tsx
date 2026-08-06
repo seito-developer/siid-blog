@@ -42,16 +42,19 @@ export default function BlogHeader({
       <div className="max-w-6xl mx-auto px-6 pt-8 pb-4">
         <div className="flex flex-row items-center gap-4">
           <time
+            dateTime={date}
             className="text-sm text-gray-600"
             style={{ fontFamily: "Noto Sans JP, sans-serif" }}
           >
             {formatDate(date)}
           </time>
-          {categoryHref ? (
-            <Link href={categoryHref}>{categoryBadge}</Link>
-          ) : (
-            categoryBadge
-          )}
+          {/* カテゴリ未設定記事では空バッジを出さない */}
+          {category &&
+            (categoryHref ? (
+              <Link href={categoryHref}>{categoryBadge}</Link>
+            ) : (
+              categoryBadge
+            ))}
         </div>
       </div>
     </header>
