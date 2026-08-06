@@ -35,6 +35,7 @@ export function sanitizeArticleHtml(html: string) {
       "span",
       "div",
       "figure",
+      "figcaption",
     ],
     allowedAttributes: {
       a: ["href", "title", "target", "rel"],
