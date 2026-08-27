@@ -40,5 +40,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })
   );
 
-  return [{ url: SITE_URL }, ...articleEntries, ...categoryEntries];
+  return [
+    { url: SITE_URL },
+    // 新着記事一覧（Issue #94）
+    { url: `${SITE_URL}/articles` },
+    ...articleEntries,
+    ...categoryEntries,
+  ];
 }

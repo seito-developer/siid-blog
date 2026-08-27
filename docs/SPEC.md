@@ -93,8 +93,10 @@ API は **`blog` エンドポイント1つのみ**。著者・カテゴリ・タ
 - 並び順: `publishedAt` 降順
 - 構成:
   - 検索時: 見出し「記事を検索」→ 検索バー → 件数表示 → 記事カード一覧（`article-list.tsx` / `article.tsx`）→ オフセットページネーション
-  - 通常時（TOP ランディング）: 注目記事（`top/featured-articles.tsx`）→ カテゴリから探す（`top/category-nav.tsx`）→ 新着記事 → **受講生様実績（`top/interview-articles.tsx`）** → CTA帯（`top/cta-band.tsx`）
+  - 通常時（TOP ランディング）: 注目記事（`top/featured-articles.tsx`）→ カテゴリから探す（`top/category-nav.tsx`）→ 新着記事（**6件・ページネーションなし**）→ 受講生様実績（`top/interview-articles.tsx`・3件）→ CTA帯（`top/cta-band.tsx`）
+  - 新着記事・受講生様実績の各セクションはカード下に「もっと見る」ボタン（`top/more-button.tsx`）を置き、それぞれ `/articles` と `/category/interview` へ送る（Issue #94）。TOP 自体はページ送りを持たない（`?page=` は検索時のみ有効）
 - 受講生様実績セクション: interview カテゴリの最新3件を新着記事と同じ3カラムで表示し、`/category/interview` へ誘導する。取得失敗・0件時はセクション自体を非表示（`return null`）
+- TOP の新着記事件数は `TOP_LATEST_POSTS_NUM`（= 6、`app/constants.ts`）
 - 検索バー（`search-bar.tsx`）は client component。送信で `/?q=...` に遷移
 - ページネーション（`article-manager.tsx` + `usePages.ts`）は client component。クリックで `?page=N` に遷移（スクロール位置維持）
 
@@ -103,11 +105,19 @@ API は **`blog` エンドポイント1つのみ**。著者・カテゴリ・タ
 - ファイル: `web/src/app/blog/[slug]/page.tsx`
 - slug = microCMS のコンテンツ ID。`generateStaticParams` で全記事分を静的生成（新規記事は on-demand で生成される）
 - 構成: パンくず（`breadcrumbs.tsx`）→ 記事ヘッダー（タイトル・投稿日時・カテゴリ）→ サムネイル → 著者カード → 本文（`article-body`）→ シェアボタン → 統合CTA（アイキャッチと著者はヘッダーから本文カラム側へ移動・Issue #90）
-- PC サイドバー（lg 以上）: 目次 → CV ウィジェット → 受講生様実績への導線（`interview-link-card.tsx`）→ YouTube → 関連記事。lg 未満は本文末に縦積み。受講生様実績カテゴリの記事自身では導線カードを出さない（重複回避）
+- PC サイドバー（lg 以上）: 目次 → 受講生様実績への導線（`interview-link-card.tsx`）→ YouTube → 関連記事 → CV ウィジェット（**CV ウィジェットは最下部**・Issue #94）。lg 未満は本文末に縦積み。受講生様実績カテゴリの記事自身では導線カードを出さない（重複回避）
 - 本文は microCMS のリッチエディタ HTML を `sanitize-article-html.tsx`（sanitize-html）でサニタイズして描画。表示スタイルは `article-body.css`
 - メタデータ（`generateMetadata`）: 本文 HTML をテキスト化し先頭120文字を description に。canonical / OGP（article 型・アイキャッチ画像）を出力
 
-### 5.3 カテゴリ別記事一覧 `/category/[slug]`
+### 5.3 新着記事一覧 `/articles`
+
+- ファイル: `web/src/app/articles/page.tsx`（動的レンダリング）
+- 全記事を `publishedAt` 降順で1ページ10件（`POSTS_NUM_PER_PAGE`）表示。`?page=` でページ送り（`ArticleManager`）
+- TOP から役割を分離したページ（Issue #94）。TOP の「新着記事」は6件のみで、「もっと見る」からここへ遷移する
+- 構造・パンくず・メタデータの作りはカテゴリ一覧（5.4）と揃えている
+- `sitemap.ts` に固定で登録。`robots.ts` の `disallow: /*?page=` によりページ送り URL はクロール対象外
+
+### 5.4 カテゴリ別記事一覧 `/category/[slug]`
 
 - ファイル: `web/src/app/category/[slug]/page.tsx`（動的レンダリング）
 - URL はカテゴリ名ベースのスラッグ（例: `/category/programming`）。slug ↔ microCMS カテゴリ ID の対応表は `web/src/app/category/categories.ts` でコード管理（**カテゴリを追加・変更したらここに追記する**。整合性はユニットテストで担保）
@@ -134,12 +144,14 @@ API は **`blog` エンドポイント1つのみ**。著者・カテゴリ・タ
 - カテゴリを追加する際の注意: 記事0件のカテゴリは 404 になるため、
   ヘッダー・フッターに導線が出る前に microCMS 側で1件以上公開しておくこと
 
-### 5.4 共通
+- 一覧カードのサムネイルは **16:9（`aspect-video`）で統一**（`components/article.tsx`・Issue #94）。プリセット画像（1200x630）も受講生様実績の記事画像も 16:9 前提
+
+### 5.5 共通
 
 - レイアウト: `layout.tsx`（サイト全体のメタデータ・OGP・GA スクリプト・フッター。`metadataBase` = `SITE_URL`）
 - 404: `not-found.tsx`
 - SEO:
-  - `app/sitemap.ts` — 全記事 + 記事のあるカテゴリ + トップを列挙（1日1回再生成）
+  - `app/sitemap.ts` — トップ + 新着記事一覧（`/articles`）+ 全記事 + 記事のあるカテゴリを列挙（1日1回再生成）
   - `app/robots.ts` — 全許可。検索・ページ送りのパラメータ付き URL は disallow
   - JSON-LD（`components/json-ld.tsx`）— 記事: Article + BreadcrumbList / カテゴリ: BreadcrumbList / トップ: WebSite
   - canonical はトップ・記事・カテゴリ各ページで出力。サイト URL は `constants.ts` の `SITE_URL` で一元管理

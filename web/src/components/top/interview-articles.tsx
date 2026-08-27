@@ -1,10 +1,9 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { client } from "@/libs/microcms";
 import { BLOG_API_ENDPOINT } from "@/app/constants";
 import { INTERVIEW_CATEGORY_SLUG } from "@/app/category/categories";
 import { ArticleProps } from "@/interfaces/common";
 import ArticleList from "@/components/article-list";
+import MoreButton from "@/components/top/more-button";
 
 // 受講生様実績セクション。TOP の新着記事の直下に置く。
 // 該当カテゴリの最新3件を新着記事と同じ3カラムで表示し、一覧ページへ誘導する。
@@ -39,20 +38,19 @@ export default async function InterviewArticles() {
 
   return (
     <section aria-labelledby="interview-heading" className="py-4">
-      <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
-        <h2 id="interview-heading" className="text-2xl font-bold text-[#214a4a]">
-          受講生様実績
-        </h2>
-        <Link
-          href={INTERVIEW_CATEGORY_HREF}
-          className="inline-flex items-center gap-1 text-sm font-bold text-[#214a4a] transition-colors hover:text-[#289B8F]"
-        >
-          実績をもっと見る
-          <ArrowRight className="h-4 w-4" aria-hidden />
-        </Link>
-      </div>
+      <h2
+        id="interview-heading"
+        className="mb-6 text-2xl font-bold text-[#214a4a]"
+      >
+        受講生様実績
+      </h2>
       {/* 新着記事と同じ3カラムグリッド。セクション h2 配下なのでカード見出しは h3 */}
       <ArticleList articles={articles} headingLevel="h3" />
+      {/* 導線はカード下のボタンに一本化（Issue #94） */}
+      <MoreButton
+        href={INTERVIEW_CATEGORY_HREF}
+        ariaLabel="受講生様実績の記事一覧を見る"
+      />
     </section>
   );
 }
