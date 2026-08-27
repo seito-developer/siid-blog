@@ -49,7 +49,7 @@ export default async function InterviewArticles() {
       {/* 導線はカード下のボタンに一本化（Issue #94） */}
       <MoreButton
         href={INTERVIEW_CATEGORY_HREF}
-        ariaLabel="受講生様実績の記事一覧を見る"
+        ariaLabel="受講生様実績をもっと見る"
       />
     </section>
   );

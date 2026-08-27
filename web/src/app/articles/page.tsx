@@ -9,6 +9,8 @@ import JsonLd from "@/components/json-ld";
 import { ArticleProps } from "@/interfaces/common";
 import ArticleManager from "@/components/article-manager";
 import Breadcrumbs from "@/components/breadcrumbs";
+import { normalizePage, pageToOffset } from "@/libs/pagination";
+import { notFound } from "next/navigation";
 import { cache } from "react";
 import type { Metadata } from "next";
 
@@ -24,16 +26,17 @@ type Props = {
   searchParams: Promise<{ page?: string }>;
 };
 
-// page パラメータを 1 以上の整数に正規化する（0・負数・数値以外は 1 扱い）
-function normalizePage(page: string | undefined): number {
-  const parsed = parseInt(page ?? "1", 10);
-  return Number.isFinite(parsed) && parsed >= 1 ? parsed : 1;
-}
-
 export default async function ArticlesPage({ searchParams }: Props) {
   const { page } = await searchParams;
-  const offset = (normalizePage(page) - 1) * POSTS_NUM_PER_PAGE;
+  const currentPage = normalizePage(page);
+  const offset = pageToOffset(currentPage, POSTS_NUM_PER_PAGE);
   const { posts, totalCount } = await getBlogPosts(offset, POSTS_NUM_PER_PAGE);
+
+  // 範囲外のページ（?page=99999 等）は空のグリッド + 誤ったページ番号が
+  // 出てしまうため 404 にする。1ページ目が空＝記事0件のときも 404
+  if (posts.length === 0) {
+    notFound();
+  }
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -62,7 +65,11 @@ export default async function ArticlesPage({ searchParams }: Props) {
             全{totalCount}件
           </p>
         </div>
-        <ArticleManager articles={posts} totalCount={totalCount} />
+        <ArticleManager
+          articles={posts}
+          totalCount={totalCount}
+          itemsPerPage={POSTS_NUM_PER_PAGE}
+        />
       </div>
     </main>
   );
