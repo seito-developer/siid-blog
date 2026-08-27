@@ -11,7 +11,9 @@ import CtaLink from "@/components/cta-link";
 
 // グローバルヘッダー（Issue #62）。全ページ共通・sticky。
 // ロゴ / カテゴリ4リンク / 検索 / 「無料で相談する」CTA。
-// SP はハンバーガー → ドロワー（フォーカストラップ・Esc閉じ・背景スクロールロック）。
+// SP〜タブレット（lg 未満）はハンバーガー → ドロワー（フォーカストラップ・Esc閉じ・背景スクロールロック）。
+// ※ カテゴリが5件になり md（768px）では「ナビ5件 + 検索 + CTA」が収まらず
+//   CTA ラベルが3行に折り返すため、横並び表示の閾値を md → lg に引き上げている。
 // CTA の UTM 付与・GA4 送信は CtaLink（docs/ANALYTICS.md）に集約。
 
 // ロゴは h1 にしない（各ページの h1 と競合させないため）
@@ -69,7 +71,7 @@ export default function GlobalHeader() {
 
         {/* PC ナビ */}
         <nav
-          className="hidden items-center gap-6 md:flex"
+          className="hidden items-center gap-6 lg:flex"
           aria-label="カテゴリナビゲーション"
         >
           {CATEGORIES.map((c) => (
@@ -84,7 +86,7 @@ export default function GlobalHeader() {
         </nav>
 
         {/* PC 右側: 検索 + CTA */}
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           <button
             type="button"
             onClick={() => setSearchOpen((v) => !v)}
@@ -98,7 +100,7 @@ export default function GlobalHeader() {
         </div>
 
         {/* SP 右側: CTA(小) + ハンバーガー */}
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
           <HeaderCta className="inline-flex items-center rounded-full bg-[#289B8F] px-3 py-1.5 text-xs font-bold text-white transition-colors hover:bg-[#214a4a]" />
           <button
             type="button"
@@ -113,7 +115,7 @@ export default function GlobalHeader() {
 
       {/* PC インライン検索バー */}
       {searchOpen && (
-        <div className="hidden border-t border-gray-200 bg-white md:block">
+        <div className="hidden border-t border-gray-200 bg-white lg:block">
           <form
             onSubmit={submitSearch}
             className="container mx-auto flex items-center gap-2 px-4 py-3"
@@ -218,7 +220,7 @@ function MobileDrawer({
   if (!open) return null;
 
   return (
-    <div className="md:hidden" role="dialog" aria-modal="true" aria-label="メニュー">
+    <div className="lg:hidden" role="dialog" aria-modal="true" aria-label="メニュー">
       {/* オーバーレイ */}
       <button
         type="button"

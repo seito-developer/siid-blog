@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { Code2, Briefcase, TrendingUp, PenLine, type LucideIcon } from "lucide-react";
-import { CATEGORIES } from "@/app/category/categories";
+import { TOPIC_CATEGORIES } from "@/app/category/categories";
 
 // カテゴリ導線セクション（Issue #64）。
 // 4カード・lucide-react アイコン。SP は 2×2。
+// 受講生様実績は専用セクションを持つため TOPIC_CATEGORIES で除外している。
 // アイコンはカテゴリ slug に対応づける（未定義は既定アイコン）。
 const CATEGORY_ICONS: Record<string, LucideIcon> = {
   programming: Code2,
@@ -13,7 +14,7 @@ const CATEGORY_ICONS: Record<string, LucideIcon> = {
 };
 
 export default function CategoryNav() {
-  if (CATEGORIES.length === 0) return null;
+  if (TOPIC_CATEGORIES.length === 0) return null;
 
   return (
     <section aria-labelledby="category-nav-heading" className="py-4">
@@ -24,7 +25,7 @@ export default function CategoryNav() {
         カテゴリから探す
       </h2>
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-        {CATEGORIES.map((c) => {
+        {TOPIC_CATEGORIES.map((c) => {
           const Icon = CATEGORY_ICONS[c.slug] ?? PenLine;
           return (
             <Link
