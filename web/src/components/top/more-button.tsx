@@ -12,8 +12,10 @@ export default function MoreButton({
 }: {
   href: string;
   label?: string;
-  // 「もっと見る」だけではリンク一覧で意味を成さないため、
-  // 何の一覧へ行くのかを読み上げ用に補う
+  // 「もっと見る」だけではリンク一覧で意味を成さないため何の一覧かを補う。
+  // WCAG 2.5.3（Label in Name）を満たすよう、可視テキスト
+  // 「もっと見る」を必ず含めること（音声操作で「もっと見る」と言って
+  // 反応しなくなるのを防ぐ）
   ariaLabel: string;
 }) {
   return (
@@ -21,7 +23,7 @@ export default function MoreButton({
       <Link
         href={href}
         aria-label={ariaLabel}
-        className="group inline-flex items-center gap-2 rounded-full border border-[#214a4a] bg-white px-8 py-3 text-sm font-bold text-[#214a4a] transition-colors hover:bg-[#214a4a] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#289B8F] focus-visible:ring-offset-2"
+        className="group inline-flex items-center gap-2 rounded-full border border-[#214a4a] bg-white px-8 py-3 text-sm font-bold text-[#214a4a] transition-colors hover:bg-[#214a4a] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#289B8F] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F4F4F4]"
       >
         {label}
         <ArrowRight

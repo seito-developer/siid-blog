@@ -2,30 +2,31 @@
 
 import { usePathname, useSearchParams } from "next/navigation";
 import { ArticleProps } from "@/interfaces/common";
-import { POSTS_NUM_PER_PAGE } from "@/app/constants";
 import ArticleList from "./article-list";
 import { OffsetPagination } from "./ui/offset-pagination";
 
 export default function ArticleManager({
   articles,
   totalCount,
+  itemsPerPage,
   headingLevel = "h2",
 }: {
   articles: ArticleProps[];
   totalCount: number;
+  // 1ページの件数。サーバー側が実際に使った値を必ず渡すこと。
+  // 以前は URL の ?perPage= から読んでいたが、サーバーが perPage を
+  // 無視するページ（/articles・/category/*）ではページ数・件数表示が
+  // 実データとずれ、後半の記事に到達できなくなっていた
+  itemsPerPage: number;
   headingLevel?: "h2" | "h3";
 }) {
-  // トップ（/）とカテゴリ（/category/*）の両方で使われるため、
-  // リンク先は現在のパスを基準にする
+  // トップ（/）・新着記事一覧（/articles）・カテゴリ（/category/*）で
+  // 使われるため、リンク先は現在のパスを基準にする
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const currentPage = Math.max(
     1,
     parseInt(searchParams.get("page") ?? "1", 10) || 1
-  );
-  const itemsPerPage = Math.max(
-    1,
-    parseInt(searchParams.get("perPage") ?? "", 10) || POSTS_NUM_PER_PAGE
   );
 
   // q / perPage を保持したままページ番号だけ差し替えた URL を作る
