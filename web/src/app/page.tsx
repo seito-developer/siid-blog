@@ -5,9 +5,12 @@ import {
   POSTS_NUM_PER_PAGE,
   SITE_NAME,
   SITE_URL,
+  TOP_LATEST_POSTS_NUM,
 } from "./constants";
 import { ArticleProps } from "@/interfaces/common";
 import ArticleManager from "@/components/article-manager";
+import ArticleList from "@/components/article-list";
+import MoreButton from "@/components/top/more-button";
 import SearchBar from "@/components/search-bar";
 import JsonLd from "@/components/json-ld";
 // import HeroCarousel from "@/components/top/hero-carousel";
@@ -51,9 +54,11 @@ export default async function Home({
   const searchQuery = q || "";
   const isSearching = searchQuery.trim().length > 0;
 
+  // 検索時は従来どおりページ送り。通常時（TOP ランディング）は新着6件のみ取得し、
+  // 全件のページ送りは /articles が担う（Issue #94）
   const { posts, totalCount } = await getBlogPosts({
-    offset,
-    limit,
+    offset: isSearching ? offset : 0,
+    limit: isSearching ? limit : TOP_LATEST_POSTS_NUM,
     q: searchQuery,
   });
 
@@ -122,10 +127,10 @@ export default async function Home({
                 >
                   新着記事
                 </h2>
-                <ArticleManager
-                  articles={posts}
-                  totalCount={totalCount}
-                  headingLevel="h3"
+                <ArticleList articles={posts} headingLevel="h3" />
+                <MoreButton
+                  href="/articles"
+                  ariaLabel="新着記事の一覧を見る"
                 />
               </section>
 

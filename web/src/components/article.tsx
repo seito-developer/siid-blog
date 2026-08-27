@@ -31,12 +31,13 @@ export default function Article({
       className="group block h-full"
     >
       <Card className="h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-white border-0 shadow-sm">
-        {/* Article Image */}
+        {/* Article Image: サムネイルは 16:9 に統一（Issue #94）。
+            受講生様実績の記事は元画像が 16:9 で作られているため比率を合わせる */}
         <div className="relative overflow-hidden rounded-t-lg">
           <Image
             src={thumbnail.url}
             alt={article.title}
-            className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+            className="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105"
             width={thumbnail.width}
             height={thumbnail.height}
             // 一覧グリッド（1〜3カラム）の表示幅に合わせた画像だけを配信する
