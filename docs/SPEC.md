@@ -91,7 +91,10 @@ API は **`blog` エンドポイント1つのみ**。著者・カテゴリ・タ
   - `perPage` — 1ページ件数（デフォルト 10 = `POSTS_NUM_PER_PAGE`）
   - `q` — 検索キーワード。microCMS の全文検索 `q` パラメータにそのまま渡す
 - 並び順: `publishedAt` 降順
-- 構成: ヒーロー見出し → 検索バー →（検索時: 件数表示）→ 記事カード一覧（`article-list.tsx` / `article.tsx`）→ オフセットページネーション
+- 構成:
+  - 検索時: 見出し「記事を検索」→ 検索バー → 件数表示 → 記事カード一覧（`article-list.tsx` / `article.tsx`）→ オフセットページネーション
+  - 通常時（TOP ランディング）: 注目記事（`top/featured-articles.tsx`）→ カテゴリから探す（`top/category-nav.tsx`）→ 新着記事 → **受講生様実績（`top/interview-articles.tsx`）** → CTA帯（`top/cta-band.tsx`）
+- 受講生様実績セクション: interview カテゴリの最新3件を新着記事と同じ3カラムで表示し、`/category/interview` へ誘導する。取得失敗・0件時はセクション自体を非表示（`return null`）
 - 検索バー（`search-bar.tsx`）は client component。送信で `/?q=...` に遷移
 - ページネーション（`article-manager.tsx` + `usePages.ts`）は client component。クリックで `?page=N` に遷移（スクロール位置維持）
 
@@ -100,6 +103,7 @@ API は **`blog` エンドポイント1つのみ**。著者・カテゴリ・タ
 - ファイル: `web/src/app/blog/[slug]/page.tsx`
 - slug = microCMS のコンテンツ ID。`generateStaticParams` で全記事分を静的生成（新規記事は on-demand で生成される）
 - 構成: パンくず（`breadcrumbs.tsx`）→ 記事ヘッダー（アイキャッチ・著者・カテゴリ・日付・タイトル）→ 本文（`article-body`）→ SiiD 受講バナー（`banner-siid.tsx`）
+- PC サイドバー（lg 以上）: 目次 → CV ウィジェット → 受講生様実績への導線（`interview-link-card.tsx`）→ YouTube → 関連記事。lg 未満は本文末に縦積み。受講生様実績カテゴリの記事自身では導線カードを出さない（重複回避）
 - 本文は microCMS のリッチエディタ HTML を `sanitize-article-html.tsx`（sanitize-html）でサニタイズして描画。表示スタイルは `article-body.css`
 - メタデータ（`generateMetadata`）: 本文 HTML をテキスト化し先頭120文字を description に。canonical / OGP（article 型・アイキャッチ画像）を出力
 
@@ -110,6 +114,25 @@ API は **`blog` エンドポイント1つのみ**。著者・カテゴリ・タ
 - microCMS の `filters: categories[contains]<id>` でカテゴリ別に取得。`?page=` によるページネーションはトップと共通（`ArticleManager`）
 - 未知のスラッグ・記事0件のカテゴリは 404
 - 記事詳細のパンくずから先頭カテゴリへリンク（対応表に無いカテゴリはリンクなし）
+
+**カテゴリ一覧（`categories.ts`）**
+
+| slug | microCMS ID | サイト表示名 | 備考 |
+| --- | --- | --- | --- |
+| `programming` | `b703z-gs1uw` | プログラミング | |
+| `career` | `89b7505ad7` | キャリア | |
+| `marketing` | `h9561nc0p7kh` | マーケティング | |
+| `column` | `column` | コラム | |
+| `interview` | `interview` | 受講生様実績 | microCMS 側の名称は「受講生様インタビュー」。**サイト内表示は「受講生様実績」に統一**（`displayCategoryName()` で変換）。TOP「カテゴリから探す」には出さない（`isTopic: false`） |
+
+- 表示名は対応表の `name` が正。microCMS のカテゴリ名と意図的に異なる場合があるため、
+  記事カードのバッジ・記事ヘッダーは `displayCategoryName()` を通す
+  （microCMS 名へ「揃える」修正をしないこと）
+- TOP「カテゴリから探す」は `TOPIC_CATEGORIES`（`isTopic !== false`）のみを4枚グリッドで表示する
+- **グローバルヘッダーの横並びナビは lg 以上**。カテゴリが5件になり md（768px）では
+  「ナビ + 検索 + CTA」が収まらないため、lg 未満はドロワーに寄せている
+- カテゴリを追加する際の注意: 記事0件のカテゴリは 404 になるため、
+  ヘッダー・フッターに導線が出る前に microCMS 側で1件以上公開しておくこと
 
 ### 5.4 共通
 
