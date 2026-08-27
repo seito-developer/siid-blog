@@ -4,6 +4,10 @@ export const BLOG_API_BASE = 'https://siid-web.microcms.io/api/v1';
 export const BLOG_API_ENDPOINT = 'blog';
 export const POSTS_NUM_PER_PAGE = 10;
 
+// TOP の「新着記事」セクションの表示件数（Issue #94）。
+// TOP ではページネーションを出さず、「もっと見る」で /articles へ送る
+export const TOP_LATEST_POSTS_NUM = 6;
+
 // サイト共通の OGP 画像（1200x630）。専用画像を用意したらここを差し替える
 export const DEFAULT_OGP_IMAGE = '/thumbnails/tech.png';
 

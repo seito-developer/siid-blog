@@ -208,14 +208,15 @@ export default async function BlogPostPage({
             </div>
           </div>
 
-          {/* PC サイドバー: 目次 → CVウィジェット → 受講生様実績 → YouTube → 関連記事（Issue #66） */}
+          {/* PC サイドバー: 目次 → 受講生様実績 → YouTube → 関連記事 → CVウィジェット
+              （Issue #66。CV ウィジェットは最下部へ移動・Issue #94） */}
           <aside className="hidden lg:block">
             <div className="sticky top-24 space-y-8">
               <ArticleToc headings={articleContent.headings} variant="desktop" />
-              <CvWidget slug={slug} />
               {!isInterviewArticle && <InterviewLinkCard />}
               <SidebarYouTube slug={slug} variant="sidebar" />
               <RelatedArticles articles={relatedArticles} variant="sidebar" />
+              <CvWidget slug={slug} />
             </div>
           </aside>
         </div>
