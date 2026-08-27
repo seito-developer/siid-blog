@@ -14,6 +14,7 @@ import RelatedArticles from "@/components/related-articles";
 import ShareButtons from "@/components/share-buttons";
 import CvWidget from "@/components/cv-widget";
 import SidebarYouTube from "@/components/sidebar-youtube";
+import InterviewLinkCard from "@/components/interview-link-card";
 import PrevNextNav from "@/components/prev-next-nav";
 import { buildArticleContent, inlineCtaSegmentIndex } from "@/libs/article-content";
 import { getRelatedArticles } from "@/libs/related-articles";
@@ -21,7 +22,11 @@ import { getAdjacentArticles } from "@/libs/adjacent-articles";
 import { isAiAuthor, isSeitoAuthor } from "@/libs/author";
 import { getBlogPost } from "./getBlogPost";
 import { defaultAuthor } from "./defaultAuthor";
-import { findCategoryById } from "@/app/category/categories";
+import {
+  findCategoryById,
+  displayCategoryName,
+  INTERVIEW_CATEGORY_SLUG,
+} from "@/app/category/categories";
 import { getArticleCategory } from "@/libs/article-category";
 import { getArticleThumbnail } from "@/libs/article-thumbnail";
 import { buildArticleDescription } from "@/libs/article-description";
@@ -51,6 +56,8 @@ export default async function BlogPostPage({
   // 1記事1カテゴリ（Issue #12）。スラッグ対応表に無いカテゴリはリンクを出さない
   const postCategory = getArticleCategory(post);
   const category = postCategory && findCategoryById(postCategory.id);
+  // 受講生様実績の記事自身にはサイドバー導線を出さない（重複回避）
+  const isInterviewArticle = category?.slug === INTERVIEW_CATEGORY_SLUG;
 
   // 本文の後処理（サニタイズ → 見出し id 付与 → h2 区切り分割）と本文途中 CTA の挿入位置
   const articleContent = await buildArticleContent(post.contents || "");
@@ -144,7 +151,7 @@ export default async function BlogPostPage({
       <JsonLd data={breadcrumbJsonLd} />
       <Breadcrumbs items={categoryBreadcrumbs} />
       <BlogHeader
-        category={postCategory?.name || ""}
+        category={postCategory ? displayCategoryName(postCategory) : ""}
         categoryHref={category ? `/category/${category.slug}` : undefined}
         date={post.publishedAt}
         title={post.title}
@@ -188,6 +195,12 @@ export default async function BlogPostPage({
 
             {/* SP: 関連記事 → YouTube を本文末に縦積み（PC はサイドバー側で表示） */}
             <div className="px-6 lg:hidden">
+              {/* 受講生様実績への導線（SP）。実績記事自身では出さない */}
+              {!isInterviewArticle && (
+                <div className="mb-12">
+                  <InterviewLinkCard />
+                </div>
+              )}
               <RelatedArticles articles={relatedArticles} variant="grid" />
               <section className="pb-16">
                 <SidebarYouTube slug={slug} variant="stacked" />
@@ -195,11 +208,12 @@ export default async function BlogPostPage({
             </div>
           </div>
 
-          {/* PC サイドバー: 目次 → CVウィジェット → YouTube → 関連記事（Issue #66） */}
+          {/* PC サイドバー: 目次 → CVウィジェット → 受講生様実績 → YouTube → 関連記事（Issue #66） */}
           <aside className="hidden lg:block">
             <div className="sticky top-24 space-y-8">
               <ArticleToc headings={articleContent.headings} variant="desktop" />
               <CvWidget slug={slug} />
+              {!isInterviewArticle && <InterviewLinkCard />}
               <SidebarYouTube slug={slug} variant="sidebar" />
               <RelatedArticles articles={relatedArticles} variant="sidebar" />
             </div>

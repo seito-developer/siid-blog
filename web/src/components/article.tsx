@@ -1,6 +1,7 @@
 import { BLOG_API_ENDPOINT } from "@/app/constants";
 import { ArticleProps } from "@/interfaces/common";
 import { getArticleCategory } from "@/libs/article-category";
+import { displayCategoryName } from "@/app/category/categories";
 import { getArticleThumbnail } from "@/libs/article-thumbnail";
 import { formatDate } from "@/libs/utils";
 import Link from "next/link";
@@ -49,7 +50,7 @@ export default function Article({
                 className="text-white font-medium"
                 style={{ backgroundColor: "#289B8F" }}
               >
-                {category.name}
+                {displayCategoryName(category)}
               </Badge>
             </div>
           )}

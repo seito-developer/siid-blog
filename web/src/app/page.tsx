@@ -12,7 +12,7 @@ import SearchBar from "@/components/search-bar";
 import JsonLd from "@/components/json-ld";
 // import HeroCarousel from "@/components/top/hero-carousel";
 import FeaturedArticles from "@/components/top/featured-articles";
-// import Interviews from "@/components/top/interviews";
+import InterviewArticles from "@/components/top/interview-articles";
 import CategoryNav from "@/components/top/category-nav";
 // import YouTubeSection from "@/components/top/youtube-section";
 import CtaBand from "@/components/top/cta-band";
@@ -112,8 +112,6 @@ export default async function Home({
 
               <FeaturedArticles />
 
-              {/* <Interviews /> */}
-
               <CategoryNav />
 
               {/* 新着記事 */}
@@ -130,6 +128,9 @@ export default async function Home({
                   headingLevel="h3"
                 />
               </section>
+
+              {/* 受講生様実績（新着記事の直下） */}
+              <InterviewArticles />
 
               {/* <YouTubeSection /> */}
 
