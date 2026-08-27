@@ -141,15 +141,28 @@
 
   /* Blockquote */
   blockquote {
-    border-left: 4px solid #289b8f;
-    padding-left: 1.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 4px solid #06c75a;
+    margin: 2rem 0;
     background-color: #f4f4f4;
     font-style: italic;
-    color: #214a4a;
-    font-size: 1.125rem; /* text-lg */
+
+    h2,
+    h3 {
+      margin-top: 0;
+    }
+    figure {
+      margin: 1rem;
+    }
+  }
+
+  figure {
+    margin: 2rem 0;
+  }
+
+  figcaption {
+    color: var(--ring);
+    font-style: italic;
   }
 
   /* Inline code */
@@ -159,8 +172,9 @@
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
     font-size: 0.875rem;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      "Liberation Mono", "Courier New", monospace;
+    font-family:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
   }
 
   /* Code block */
@@ -175,8 +189,9 @@
 
   pre code {
     font-size: 0.875rem;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      "Liberation Mono", "Courier New", monospace;
+    font-family:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
   }
 
   /* Line break */

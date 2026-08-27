@@ -102,7 +102,7 @@ API は **`blog` エンドポイント1つのみ**。著者・カテゴリ・タ
 
 - ファイル: `web/src/app/blog/[slug]/page.tsx`
 - slug = microCMS のコンテンツ ID。`generateStaticParams` で全記事分を静的生成（新規記事は on-demand で生成される）
-- 構成: パンくず（`breadcrumbs.tsx`）→ 記事ヘッダー（アイキャッチ・著者・カテゴリ・日付・タイトル）→ 本文（`article-body`）→ SiiD 受講バナー（`banner-siid.tsx`）
+- 構成: パンくず（`breadcrumbs.tsx`）→ 記事ヘッダー（タイトル・投稿日時・カテゴリ）→ サムネイル → 著者カード → 本文（`article-body`）→ シェアボタン → 統合CTA（アイキャッチと著者はヘッダーから本文カラム側へ移動・Issue #90）
 - PC サイドバー（lg 以上）: 目次 → CV ウィジェット → 受講生様実績への導線（`interview-link-card.tsx`）→ YouTube → 関連記事。lg 未満は本文末に縦積み。受講生様実績カテゴリの記事自身では導線カードを出さない（重複回避）
 - 本文は microCMS のリッチエディタ HTML を `sanitize-article-html.tsx`（sanitize-html）でサニタイズして描画。表示スタイルは `article-body.css`
 - メタデータ（`generateMetadata`）: 本文 HTML をテキスト化し先頭120文字を description に。canonical / OGP（article 型・アイキャッチ画像）を出力

@@ -62,6 +62,7 @@ export function sanitizeArticleHtml(html: string) {
       "span",
       "div",
       "figure",
+      "figcaption",
       "iframe",
     ],
     allowedAttributes: {
@@ -140,7 +141,7 @@ export function sanitizeArticleHtml(html: string) {
           if (defaultSrc) {
             nextAttribs.src = defaultSrc;
             nextAttribs.srcset = IMG_SRCSET_WIDTHS.map(
-              (width) => `${withImageParams(src, width)} ${width}w`
+              (width) => `${withImageParams(src, width)} ${width}w`,
             ).join(", ");
             nextAttribs.sizes = IMG_SIZES;
           }
