@@ -8,6 +8,12 @@ import {
   TOP_LATEST_POSTS_NUM,
 } from "./constants";
 import { ArticleProps } from "@/interfaces/common";
+import {
+  normalizePage,
+  normalizePerPage,
+  pageToOffset,
+} from "@/libs/pagination";
+import { redirect } from "next/navigation";
 import ArticleManager from "@/components/article-manager";
 import ArticleList from "@/components/article-list";
 import MoreButton from "@/components/top/more-button";
@@ -48,11 +54,18 @@ export default async function Home({
   searchParams: Promise<{ page?: string; perPage?: string; q?: string }>;
 }) {
   const { page, perPage, q } = await searchParams;
-  const limit =
-    typeof perPage === "string" ? parseInt(perPage) : POSTS_NUM_PER_PAGE;
-  const offset = typeof page === "string" ? (parseInt(page) - 1) * limit : 0;
   const searchQuery = q || "";
   const isSearching = searchQuery.trim().length > 0;
+
+  // TOP ランディングはページ送りを持たない（新着6件のみ）。
+  // 旧 URL・被リンク・Search Console の /?page=N を取りこぼさないよう、
+  // 検索以外で page 指定が来たら新着記事一覧へ引き継ぐ（Issue #94）
+  if (!isSearching && typeof page === "string") {
+    redirect(`/articles?page=${normalizePage(page)}`);
+  }
+
+  const limit = normalizePerPage(perPage, POSTS_NUM_PER_PAGE);
+  const offset = pageToOffset(normalizePage(page), limit);
 
   // 検索時は従来どおりページ送り。通常時（TOP ランディング）は新着6件のみ取得し、
   // 全件のページ送りは /articles が担う（Issue #94）
@@ -100,7 +113,11 @@ export default async function Home({
                 」の検索結果: {totalCount}件
               </p>
             </div>
-            <ArticleManager articles={posts} totalCount={totalCount} />
+            <ArticleManager
+              articles={posts}
+              totalCount={totalCount}
+              itemsPerPage={limit}
+            />
           </>
         ) : (
           /* 通常時: TOP ランディング（Issue #63〜65） */
@@ -130,7 +147,7 @@ export default async function Home({
                 <ArticleList articles={posts} headingLevel="h3" />
                 <MoreButton
                   href="/articles"
-                  ariaLabel="新着記事の一覧を見る"
+                  ariaLabel="新着記事をもっと見る"
                 />
               </section>
 

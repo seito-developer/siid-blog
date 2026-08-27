@@ -10,6 +10,7 @@ import { ArticleProps } from "@/interfaces/common";
 import ArticleManager from "@/components/article-manager";
 import Breadcrumbs from "@/components/breadcrumbs";
 import { findCategoryBySlug, Category } from "../categories";
+import { normalizePage, pageToOffset } from "@/libs/pagination";
 import { notFound } from "next/navigation";
 import { cache } from "react";
 import type { Metadata } from "next";
@@ -18,12 +19,6 @@ type Props = {
   params: Promise<{ slug: string }>;
   searchParams: Promise<{ page?: string }>;
 };
-
-// page パラメータを 1 以上の整数に正規化する（0・負数・数値以外は 1 扱い）
-function normalizePage(page: string | undefined): number {
-  const parsed = parseInt(page ?? "1", 10);
-  return Number.isFinite(parsed) && parsed >= 1 ? parsed : 1;
-}
 
 // URL スラッグから対象カテゴリと offset を解決する（未知のスラッグは 404）
 async function resolveRequest({ params, searchParams }: Props): Promise<{
@@ -38,7 +33,7 @@ async function resolveRequest({ params, searchParams }: Props): Promise<{
   }
   return {
     category,
-    offset: (normalizePage(page) - 1) * POSTS_NUM_PER_PAGE,
+    offset: pageToOffset(normalizePage(page), POSTS_NUM_PER_PAGE),
   };
 }
 
@@ -51,8 +46,9 @@ export default async function CategoryPage(props: Props) {
     POSTS_NUM_PER_PAGE
   );
 
-  // 記事が1件も無いカテゴリは404
-  if (totalCount === 0) {
+  // 記事が1件も無いカテゴリ、および範囲外のページ（?page=99999 等）は404
+  // （空グリッド + 誤ったページ番号が出てしまうため）
+  if (posts.length === 0) {
     notFound();
   }
 
@@ -83,7 +79,11 @@ export default async function CategoryPage(props: Props) {
             「{category.name}」の記事一覧: {totalCount}件
           </p>
         </div>
-        <ArticleManager articles={posts} totalCount={totalCount} />
+        <ArticleManager
+          articles={posts}
+          totalCount={totalCount}
+          itemsPerPage={POSTS_NUM_PER_PAGE}
+        />
       </div>
     </main>
   );
