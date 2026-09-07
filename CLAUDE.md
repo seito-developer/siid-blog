@@ -57,8 +57,9 @@ cp web/.env.example web/.env.local
 
 - **入稿用キーをサイト側に設定してはいけない。** 未公開の下書き記事が公開ページと `sitemap.xml` に露出する（2026-09-07 に本番で発生。Issue #100 / #101）
 - サイト側は GET のみで足りる。`web/src/` に microCMS への書き込み呼び出しは 1 件も無い
-- **「下書きの取得」をオフにしてもプレビューは壊れない。** `web/src/app/api/preview/route.ts` は記事ごとの `draftKey` を付けて取得するため、キー側に下書き権限が無くても該当記事だけは読める
+- **「下書きの取得」をオフにしてもプレビューは壊れない。** `web/src/app/api/preview/route.ts` は記事ごとの `draftKey` を付けて取得するため、キー側に下書き権限が無くても該当記事だけは読める（2026-09-07 に本番で疎通確認済み）
 - キーは共用せず用途ごとに発行する。共用すると片方の都合で再発行したときにもう片方が落ちる（2026-09-07 の障害の原因）
+- `web/scripts/*.mjs` は書き込みを行うため入稿用キーが要る。これらは `process.env.MICROCMS_API_KEY` を優先し無ければ `web/.env.local` を読むので、`.env.local` はサイト用キーのまま、実行時に `MICROCMS_API_KEY=<入稿用キー> node scripts/xxx.mjs` と上書きする
 
 ## アーキテクチャ
 
