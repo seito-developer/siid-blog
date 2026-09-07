@@ -24,10 +24,17 @@ https://blog.bug-fix.org/
    cd web
    npm install
    ```
-2. 開発サーバーの起動
+2. 環境変数の設定
+   ```sh
+   cp .env.example .env.local
+   ```
+   `.env.local` の各値を埋める（値はオーナーに確認するか、Vercel のプロジェクト設定から取得）。
+   `MICROCMS_API_KEY` は**サイト用キー（GET のみ・下書きの取得はオフ）**を使うこと。
+   詳細と注意点は `.env.example` のコメントおよび `docs/SPEC.md` の「環境変数」を参照。
+3. 開発サーバーの起動
    ```sh
    npm run dev
    ```
-3. ブラウザで `http://localhost:3000` にアクセス
+4. ブラウザで `http://localhost:3000` にアクセス
 
 移行ツールの利用方法は `others/README.md` を参照してください。
