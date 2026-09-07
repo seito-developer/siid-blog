@@ -33,12 +33,32 @@ npm test          # ユニットテスト (Vitest)
 
 ### 環境変数
 
-ローカル実行には `web/.env.local` が必要（gitignore 済みのためリポジトリには無い。無ければユーザーに値を確認して作成する）:
+ローカル実行には `web/.env.local` が必要（gitignore 済みのためリポジトリには無い）。`web/.env.example` をコピーして作る:
+
+```sh
+cp web/.env.example web/.env.local
+```
 
 - `NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN` — microCMS サービスドメイン（`siid-web`）
 - `MICROCMS_API_KEY` — microCMS API キー（サーバー専用。`NEXT_PUBLIC_` を付けないこと）
 - `NEXT_PUBLIC_GA_ID` — Google Analytics 測定 ID
 - `MICROCMS_WEBHOOK_SECRET` — microCMS Webhook の署名検証用シークレット（サーバー専用。`/api/revalidate` で使用。ローカル開発では未設定でも可）
+
+値が無い場合はオーナーに確認する。**推測で別のキーを入れないこと**（下記のとおり事故になる）。
+
+#### microCMS の API キーは2系統ある（重要）
+
+| | サイト用 | 入稿用 |
+|---|---|---|
+| 使う場所 | このサイト（`web/.env.local` と Vercel の `MICROCMS_API_KEY`） | 記事入稿 AI（別リポジトリ）、`web/scripts/*.mjs` の手元実行 |
+| GET | オン | オン |
+| GET「下書きの取得」 | **オフ** | オン |
+| 書き込み（POST/PUT/PATCH/DELETE） | オフ | オン |
+
+- **入稿用キーをサイト側に設定してはいけない。** 未公開の下書き記事が公開ページと `sitemap.xml` に露出する（2026-09-07 に本番で発生。Issue #100 / #101）
+- サイト側は GET のみで足りる。`web/src/` に microCMS への書き込み呼び出しは 1 件も無い
+- **「下書きの取得」をオフにしてもプレビューは壊れない。** `web/src/app/api/preview/route.ts` は記事ごとの `draftKey` を付けて取得するため、キー側に下書き権限が無くても該当記事だけは読める
+- キーは共用せず用途ごとに発行する。共用すると片方の都合で再発行したときにもう片方が落ちる（2026-09-07 の障害の原因）
 
 ## アーキテクチャ
 

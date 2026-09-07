@@ -200,8 +200,26 @@ microCMS 管理画面（https://siid-web.microcms.io）から手動で行う。�
 | `NEXT_PUBLIC_GA_ID` | Google Analytics 測定 ID |
 | `MICROCMS_WEBHOOK_SECRET` | microCMS Webhook の署名検証用シークレット（サーバー専用。`/api/revalidate` で使用） |
 
-- 本番: Vercel のプロジェクト設定に登録済み
-- ローカル: `web/.env.local` に設定する（gitignore 済み。手元に無い場合は Vercel の設定値から作成）
+- 本番: Vercel のプロジェクト設定に登録済み（Production / Preview / Development のいずれにもチェックを入れる。抜けると該当環境のビルドが `MICROCMS_API_KEY is required` で失敗する）
+- ローカル: `web/.env.local` に設定する（gitignore 済み）。`web/.env.example` をコピーして作る
+
+#### microCMS の API キーは2系統ある
+
+用途ごとに別のキーを発行し、**共用しない**。
+
+| | サイト用 | 入稿用 |
+|---|---|---|
+| 使う場所 | このサイト（`web/.env.local` と Vercel の `MICROCMS_API_KEY`） | 記事入稿 AI（別リポジトリ）、`web/scripts/*.mjs` の手元実行 |
+| GET | オン | オン |
+| GET「下書きの取得」 | **オフ** | オン |
+| 書き込み（POST/PUT/PATCH/DELETE） | オフ | オン |
+
+- サイト側は GET のみで足りる（`web/src/` に microCMS への書き込み呼び出しは無い）
+- **入稿用キーをサイト側に設定すると、未公開の下書き記事が公開ページと `sitemap.xml` に露出する**（2026-09-07 に本番で発生。Issue #100 / #101）
+- 「下書きの取得」をオフにしてもプレビューは壊れない。`/api/preview` は記事ごとの `draftKey` を付けて取得するため、キー側に下書き権限が無くても該当記事だけは読める（§6 参照）
+- キーを共用すると、片方の都合で再発行したときにもう片方が落ちる（2026-09-07 の障害の原因）
+
+`MICROCMS_WEBHOOK_SECRET` は microCMS が発行する値ではなく、任意の文字列を決めて microCMS の Webhook 設定と環境変数の両方に同じ値を入れる。片方だけ変更すると Webhook が 401 で弾かれ、**記事更新が本番に反映されなくなる（画面上はエラーが出ないため気づきにくい）**。
 
 ## 8. 既知の課題・改善候補
 
