@@ -22,7 +22,7 @@ function NavCard({
   return (
     <Link
       href={`/blog/${article.id}`}
-      className={`group flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-4 transition-colors hover:border-[#289B8F] ${
+      className={`group flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-4 transition-colors hover:border-siid-main ${
         isPrev ? "" : "sm:flex-row-reverse sm:text-right"
       }`}
     >
@@ -53,7 +53,7 @@ function NavCard({
             </>
           )}
         </span>
-        <span className="mt-1 line-clamp-2 text-sm font-bold leading-snug text-[#214a4a]">
+        <span className="mt-1 line-clamp-2 text-sm font-bold leading-snug text-siid-text">
           {article.title}
         </span>
       </div>

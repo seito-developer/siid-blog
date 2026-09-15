@@ -36,7 +36,7 @@ export default function CvWidget({ slug }: { slug: string }) {
   return (
     <section
       aria-label="SiiD への相談"
-      className="rounded-2xl bg-[#214a4a] p-5 text-white"
+      className="rounded-2xl bg-siid-deep p-5 text-white"
     >
       <p className="text-base font-bold">エンジニア転職の相談はこちら</p>
       <p className="mt-2 text-xs leading-relaxed text-white/80">
@@ -53,7 +53,7 @@ export default function CvWidget({ slug }: { slug: string }) {
             className={[
               "inline-flex items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-bold transition-opacity hover:opacity-85",
               primary
-                ? "bg-white text-[#214a4a]"
+                ? "bg-white text-siid-text"
                 : "border border-white/40 bg-transparent text-white",
             ].join(" ")}
           >

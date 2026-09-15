@@ -88,7 +88,7 @@ export default async function Home({
     <main
       className="min-h-screen"
       style={{
-        backgroundColor: "#F4F4F4",
+        backgroundColor: "var(--color-siid-bg)",
         fontFamily: "Noto Sans JP, sans-serif",
       }}
     >
@@ -99,7 +99,7 @@ export default async function Home({
           <>
             <h1
               className="mb-6 text-center text-2xl font-bold"
-              style={{ color: "#214a4a" }}
+              style={{ color: "var(--color-siid-text)" }}
             >
               記事を検索
             </h1>
@@ -107,7 +107,7 @@ export default async function Home({
             <div className="mb-6 text-center">
               <p className="text-gray-600">
                 「
-                <span className="font-semibold text-[#214a4a]">
+                <span className="font-semibold text-siid-text">
                   {searchQuery}
                 </span>
                 」の検索結果: {totalCount}件
@@ -140,7 +140,7 @@ export default async function Home({
               <section aria-labelledby="latest-heading">
                 <h2
                   id="latest-heading"
-                  className="mb-6 text-2xl font-bold text-[#214a4a]"
+                  className="mb-6 text-2xl font-bold text-siid-text"
                 >
                   新着記事
                 </h2>

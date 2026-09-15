@@ -67,12 +67,12 @@ export default async function CategoryPage(props: Props) {
   };
 
   return (
-    <main className="min-h-screen bg-[#F4F4F4]">
+    <main className="min-h-screen bg-siid-bg">
       <JsonLd data={breadcrumbJsonLd} />
       <Breadcrumbs items={[{ label: category.name, isCurrentPage: true }]} />
       <div className="container mx-auto px-4 py-8">
         <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold mb-4" style={{ color: "#214a4a" }}>
+          <h1 className="text-4xl font-bold mb-4" style={{ color: "var(--color-siid-text)" }}>
             {category.name}
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">

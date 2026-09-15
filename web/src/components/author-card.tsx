@@ -10,11 +10,11 @@ export default function AuthorCard({ author }: { author: AuthorProps }) {
   return (
     <section className="max-w-4xl mx-auto px-6 lg:px-0 pb-10">
       <div className="rounded-2xl bg-white shadow-sm p-6 sm:p-8">
-        <h2 className="text-lg font-bold text-[#214a4a] mb-5">
+        <h2 className="text-lg font-bold text-siid-text mb-5">
           この記事を書いた人
         </h2>
         <div className="flex sm:flex-row gap-5">
-          <div className="relative w-20 h-20 shrink-0 rounded-full overflow-hidden border-2 border-[#289B8F] bg-gray-100">
+          <div className="relative w-20 h-20 shrink-0 rounded-full overflow-hidden border-2 border-siid-main bg-gray-100">
             {imageUrl ? (
               <Image
                 src={imageUrl}
@@ -28,7 +28,7 @@ export default function AuthorCard({ author }: { author: AuthorProps }) {
             )}
           </div>
           <div className="min-w-0">
-            <p className="flex flex-wrap items-center gap-2 font-bold text-[#214a4a]">
+            <p className="flex flex-wrap items-center gap-2 font-bold text-siid-text">
               {author.name}
             </p>
             {author.description ? (

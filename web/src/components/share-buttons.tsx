@@ -28,7 +28,7 @@ function LineIcon({ className }: { className?: string }) {
 }
 
 const BTN_CLASS =
-  "inline-flex h-11 w-11 items-center justify-center rounded-full border border-gray-300 text-gray-600 transition-colors hover:border-[#289B8F] hover:bg-[#289B8F] hover:text-white";
+  "inline-flex h-11 w-11 items-center justify-center rounded-full border border-gray-300 text-gray-600 transition-colors hover:border-siid-main hover:bg-siid-deep hover:text-white";
 
 export default function ShareButtons({
   url,
@@ -51,7 +51,7 @@ export default function ShareButtons({
   return (
     <div className="max-w-4xl mx-auto px-6 lg:px-0 pb-8">
       <div className="flex items-center gap-3">
-        <span className="text-sm font-bold text-[#214a4a]">シェアする</span>
+        <span className="text-sm font-bold text-siid-text">シェアする</span>
         <div className="flex items-center gap-2">
           <a
             href={shareX}

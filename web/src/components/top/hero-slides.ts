@@ -29,7 +29,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     baseUrl: SIID_SITE_URL,
     ctaType: "service",
     ctaLabel: "SiiD を見てみる",
-    bgClassName: "bg-gradient-to-r from-[#214a4a] to-[#289B8F]",
+    bgClassName: "bg-gradient-to-r from-siid-deep to-siid-main",
     enabled: true,
   },
   {
@@ -44,7 +44,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     baseUrl: SIID_SITE_URL,
     ctaType: "benefit",
     ctaLabel: "給付金について知る",
-    bgClassName: "bg-gradient-to-r from-[#1f3d5c] to-[#289B8F]",
+    bgClassName: "bg-gradient-to-r from-siid-text to-siid-main",
     enabled: true,
   },
   {
@@ -57,7 +57,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     baseUrl: SIID_SITE_URL,
     ctaType: "campaign",
     ctaLabel: "キャンペーン詳細",
-    bgClassName: "bg-gradient-to-r from-[#214a4a] to-[#3a6b6b]",
+    bgClassName: "bg-gradient-to-r from-siid-main to-siid-deep",
     enabled: false,
   },
 ];

@@ -21,7 +21,7 @@ function Logo() {
   return (
     <Link
       href="/"
-      className="text-xl font-bold tracking-tight text-[#214a4a]"
+      className="text-xl font-bold tracking-tight text-siid-text"
       aria-label="SiiD BLOG トップへ"
     >
       <Image
@@ -78,7 +78,7 @@ export default function GlobalHeader() {
             <Link
               key={c.slug}
               href={`/category/${c.slug}`}
-              className="text-sm font-medium text-gray-700 transition-colors hover:text-[#289B8F]"
+              className="text-sm font-medium text-gray-700 transition-colors hover:text-siid-deep"
             >
               {c.name}
             </Link>
@@ -92,21 +92,21 @@ export default function GlobalHeader() {
             onClick={() => setSearchOpen((v) => !v)}
             aria-label="記事を検索"
             aria-expanded={searchOpen}
-            className="rounded-md p-2 text-gray-600 transition-colors hover:bg-gray-100 hover:text-[#214a4a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#289B8F]"
+            className="rounded-md p-2 text-gray-600 transition-colors hover:bg-gray-100 hover:text-siid-text focus:outline-none focus-visible:ring-2 focus-visible:ring-siid-main"
           >
             <Search className="h-5 w-5" />
           </button>
-          <HeaderCta className="inline-flex items-center rounded-full bg-[#289B8F] px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-[#214a4a]" />
+          <HeaderCta className="inline-flex items-center rounded-full bg-siid-cta px-4 py-2 text-sm font-bold text-siid-text transition-colors hover:bg-siid-cta/85" />
         </div>
 
         {/* SP 右側: CTA(小) + ハンバーガー */}
         <div className="flex items-center gap-2 lg:hidden">
-          <HeaderCta className="inline-flex items-center rounded-full bg-[#289B8F] px-3 py-1.5 text-xs font-bold text-white transition-colors hover:bg-[#214a4a]" />
+          <HeaderCta className="inline-flex items-center rounded-full bg-siid-cta px-3 py-1.5 text-xs font-bold text-siid-text transition-colors hover:bg-siid-cta/85" />
           <button
             type="button"
             onClick={() => setDrawerOpen(true)}
             aria-label="メニューを開く"
-            className="rounded-md p-2 text-gray-700 transition-colors hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#289B8F]"
+            className="rounded-md p-2 text-gray-700 transition-colors hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-siid-main"
           >
             <Menu className="h-6 w-6" />
           </button>
@@ -133,7 +133,7 @@ export default function GlobalHeader() {
             />
             <button
               type="submit"
-              className="rounded-md bg-[#289B8F] px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-[#214a4a]"
+              className="rounded-md bg-siid-deep px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-siid-text"
             >
               検索
             </button>
@@ -236,12 +236,12 @@ function MobileDrawer({
         className="fixed inset-y-0 right-0 z-50 flex w-4/5 max-w-xs flex-col bg-white shadow-xl"
       >
         <div className="flex items-center justify-between border-b border-gray-200 px-4 py-4">
-          <span className="text-lg font-bold text-[#214a4a]">メニュー</span>
+          <span className="text-lg font-bold text-siid-text">メニュー</span>
           <button
             type="button"
             onClick={onClose}
             aria-label="メニューを閉じる"
-            className="rounded-md p-2 text-gray-600 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#289B8F]"
+            className="rounded-md p-2 text-gray-600 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-siid-main"
           >
             <X className="h-6 w-6" />
           </button>
@@ -270,7 +270,7 @@ function MobileDrawer({
               key={c.slug}
               href={`/category/${c.slug}`}
               onClick={onClose}
-              className="rounded-md px-4 py-3 text-base font-medium text-gray-800 transition-colors hover:bg-gray-100 hover:text-[#289B8F]"
+              className="rounded-md px-4 py-3 text-base font-medium text-gray-800 transition-colors hover:bg-gray-100 hover:text-siid-deep"
             >
               {c.name}
             </Link>
@@ -278,7 +278,7 @@ function MobileDrawer({
         </nav>
 
         <div className="border-t border-gray-200 p-4">
-          <HeaderCta className="flex w-full items-center justify-center rounded-full bg-[#289B8F] px-4 py-3 text-sm font-bold text-white transition-colors hover:bg-[#214a4a]" />
+          <HeaderCta className="flex w-full items-center justify-center rounded-full bg-siid-cta px-4 py-3 text-sm font-bold text-siid-text transition-colors hover:bg-siid-cta/85" />
         </div>
       </div>
     </div>

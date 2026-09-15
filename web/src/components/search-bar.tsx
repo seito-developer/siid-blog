@@ -40,14 +40,14 @@ export default function SearchBar() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="記事を検索..."
-            className="w-full pl-12 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#289B8F] focus:border-transparent"
+            className="w-full pl-12 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-siid-main focus:border-transparent"
             style={{ fontFamily: "Noto Sans JP, sans-serif" }}
           />
           {searchTerm && (
             <button
               type="button"
               onClick={handleClear}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-[#289B8F] focus:border-transparent"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-siid-main focus:border-transparent"
             >
               <X className="h-5 w-5" />
             </button>
@@ -55,7 +55,7 @@ export default function SearchBar() {
         </div>
         <button
           type="submit"
-          className="cursor-pointer mt-3 w-full bg-[#289B8F] text-white py-2 px-4 rounded-lg hover:bg-[#214a4a] focus:bg-[#214a4a] transition-colors duration-200"
+          className="cursor-pointer mt-3 w-full bg-siid-deep text-white py-2 px-4 rounded-lg hover:bg-siid-text focus:bg-siid-text transition-colors duration-200"
           style={{ fontFamily: "Noto Sans JP, sans-serif" }}
         >
           検索

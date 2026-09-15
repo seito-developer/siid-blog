@@ -135,9 +135,9 @@ export default async function BlogPostPage({
   };
 
   return (
-    <main className="min-h-screen bg-[#F4F4F4]">
+    <main className="min-h-screen bg-siid-bg">
       {draftKey && (
-        <div className="sticky top-0 z-50 bg-[#EE7D2B] text-white text-sm text-center py-2 px-4">
+        <div className="sticky top-0 z-50 bg-siid-cta text-siid-text text-sm text-center py-2 px-4">
           下書きプレビュー表示中（この内容は公開されていません）
           <a
             href={`/api/exit-preview?redirect=${encodeURIComponent(`/blog/${slug}`)}`}

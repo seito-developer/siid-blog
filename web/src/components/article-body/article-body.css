@@ -22,7 +22,7 @@
   h1 {
     font-size: 2.25rem; /* text-4xl */
     font-weight: 700; /* font-bold */
-    color: #214a4a; /* text-main */
+    color: var(--color-siid-text);
     margin-bottom: 1.5rem; /* mb-6 */
     margin-top: 4rem;
     line-height: 1.25; /* leading-tight */
@@ -31,7 +31,7 @@
   h2 {
     font-size: 1.875rem; /* text-3xl */
     font-weight: 600;
-    color: #214a4a;
+    color: var(--color-siid-text);
     margin-top: 2rem; /* mt-8 */
     margin-bottom: 1rem; /* mb-4 */
     line-height: 1.25;
@@ -40,7 +40,7 @@
   h3 {
     font-size: 1.5rem; /* text-2xl */
     font-weight: 600;
-    color: #214a4a;
+    color: var(--color-siid-text);
     margin-top: 1.5rem; /* mt-6 */
     margin-bottom: 0.75rem; /* mb-3 */
   }
@@ -48,7 +48,7 @@
   h4 {
     font-size: 1.25rem; /* text-xl */
     font-weight: 600;
-    color: #214a4a;
+    color: var(--color-siid-text);
     margin-top: 1.25rem; /* mt-5 */
     margin-bottom: 0.75rem;
   }
@@ -56,7 +56,7 @@
   h5 {
     font-size: 1.125rem; /* text-lg */
     font-weight: 600;
-    color: #214a4a;
+    color: var(--color-siid-text);
     margin-top: 1rem; /* mt-4 */
     margin-bottom: 0.5rem; /* mb-2 */
   }
@@ -64,7 +64,7 @@
   h6 {
     font-size: 1rem; /* text-base */
     font-weight: 600;
-    color: #214a4a;
+    color: var(--color-siid-text);
     margin-top: 1rem;
     margin-bottom: 0.5rem;
   }
@@ -79,24 +79,24 @@
 
   /* Links */
   a {
-    color: #289b8f; /* text-accent1 */
+    color: var(--color-siid-deep);
     text-decoration: underline;
     transition: color 0.2s;
   }
 
   a:hover {
-    color: #ee7d2b; /* text-accent2 */
+    color: var(--color-siid-main);
   }
 
   /* Emphasis */
   strong {
     font-weight: 700;
-    color: #214a4a;
+    color: var(--color-siid-text);
   }
 
   em {
     font-style: italic;
-    color: #289b8f;
+    color: var(--color-siid-deep);
   }
 
   b {
@@ -144,7 +144,7 @@
     padding: 1rem;
     border: 4px solid #06c75a;
     margin: 2rem 0;
-    background-color: #f4f4f4;
+    background-color: var(--color-siid-bg);
     font-style: italic;
 
     h2,
@@ -207,7 +207,7 @@
 
   table th,
   table td {
-    border: 1px solid #214a4a;
+    border: 1px solid var(--color-siid-deep);
     padding: 0.75rem;
     text-align: left;
 

@@ -22,7 +22,7 @@ function XIcon({ className }: { className?: string }) {
 
 export default function Footer() {
   return (
-    <footer className="mt-auto bg-[#214a4a] text-white">
+    <footer className="mt-auto bg-siid-deep text-white">
       <div className="container max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {/* サイト情報 + SNS */}
