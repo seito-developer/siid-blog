@@ -21,7 +21,7 @@ export default function InterviewLinkCard() {
       </p>
       <Link
         href={`/category/${INTERVIEW_CATEGORY_SLUG}`}
-        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-siid-cta px-4 py-3 text-sm font-bold text-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-siid-cta px-4 py-3 text-sm font-bold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg"
       >
         実績を見る
         <ArrowRight className="h-4 w-4" aria-hidden />

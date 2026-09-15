@@ -31,7 +31,7 @@ export default function CtaCard({
         ctaType="counseling"
         ctaPosition={ctaPosition}
         articleSlug={articleSlug}
-        className="inline-block w-full sm:w-auto sm:min-w-80 rounded-full bg-siid-cta px-8 py-4 text-lg font-bold text-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+        className="inline-block w-full sm:w-auto sm:min-w-80 rounded-full bg-siid-cta px-8 py-4 text-lg font-bold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg"
       >
         SiiDの詳細を見る
       </CtaLink>
