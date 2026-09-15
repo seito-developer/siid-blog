@@ -25,13 +25,13 @@ export default function CtaCard({
         元人事部長＆現役エンジニアによる徹底指導で、生涯年収を大きくアップさせませんか？
       </p>
 
-      {/* 無料個別面談への1導線に特化（CTA オレンジ × siid-text でコントラスト AA を確保） */}
+      {/* 無料個別面談への1導線に特化（CTA オレンジボタン共通スタイル: 白文字 + box-shadow） */}
       <CtaLink
         baseUrl={COUNSELING_URL}
         ctaType="counseling"
         ctaPosition={ctaPosition}
         articleSlug={articleSlug}
-        className="inline-block w-full sm:w-auto sm:min-w-80 rounded-full bg-siid-cta px-8 py-4 text-lg font-bold text-siid-text transition-opacity hover:opacity-85"
+        className="inline-block w-full sm:w-auto sm:min-w-80 rounded-full bg-siid-cta px-8 py-4 text-lg font-bold text-white shadow-[2px_4px_0px_#999] transition-opacity hover:opacity-85"
       >
         SiiDの詳細を見る
       </CtaLink>

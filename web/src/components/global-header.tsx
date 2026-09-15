@@ -96,12 +96,12 @@ export default function GlobalHeader() {
           >
             <Search className="h-5 w-5" />
           </button>
-          <HeaderCta className="inline-flex items-center rounded-full bg-siid-cta px-4 py-2 text-sm font-bold text-siid-text transition-colors hover:bg-siid-cta/85" />
+          <HeaderCta className="inline-flex items-center rounded-full bg-siid-cta px-4 py-2 text-sm font-bold text-white shadow-[2px_4px_0px_#999] transition-colors hover:bg-siid-cta/85" />
         </div>
 
         {/* SP 右側: CTA(小) + ハンバーガー */}
         <div className="flex items-center gap-2 lg:hidden">
-          <HeaderCta className="inline-flex items-center rounded-full bg-siid-cta px-3 py-1.5 text-xs font-bold text-siid-text transition-colors hover:bg-siid-cta/85" />
+          <HeaderCta className="inline-flex items-center rounded-full bg-siid-cta px-3 py-1.5 text-xs font-bold text-white shadow-[2px_4px_0px_#999] transition-colors hover:bg-siid-cta/85" />
           <button
             type="button"
             onClick={() => setDrawerOpen(true)}
@@ -278,7 +278,7 @@ function MobileDrawer({
         </nav>
 
         <div className="border-t border-gray-200 p-4">
-          <HeaderCta className="flex w-full items-center justify-center rounded-full bg-siid-cta px-4 py-3 text-sm font-bold text-siid-text transition-colors hover:bg-siid-cta/85" />
+          <HeaderCta className="flex w-full items-center justify-center rounded-full bg-siid-cta px-4 py-3 text-sm font-bold text-white shadow-[2px_4px_0px_#999] transition-colors hover:bg-siid-cta/85" />
         </div>
       </div>
     </div>

@@ -22,7 +22,7 @@ export default function InlineCta({ slug }: { slug: string }) {
         ctaType="counseling"
         ctaPosition="inline"
         articleSlug={slug}
-        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-siid-cta px-6 py-3 text-sm font-bold text-siid-text transition-opacity hover:opacity-85 sm:mt-0 sm:w-auto sm:shrink-0"
+        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-siid-cta px-6 py-3 text-sm font-bold text-white shadow-[2px_4px_0px_#999] transition-opacity hover:opacity-85 sm:mt-0 sm:w-auto sm:shrink-0"
       >
         SiiD無料カウンセリング
         <ArrowRight className="h-4 w-4" aria-hidden />
