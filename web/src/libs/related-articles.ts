@@ -1,4 +1,5 @@
 import { client } from "@/libs/microcms";
+import { withRetry } from "@/libs/retry";
 import { BLOG_API_ENDPOINT } from "@/app/constants";
 import { ArticleProps } from "@/interfaces/common";
 
@@ -19,31 +20,39 @@ export async function getRelatedArticles(
   const excludeSelf = `id[not_equals]${currentId}`;
   try {
     if (categoryId) {
-      const data = await client.get({
-        endpoint: BLOG_API_ENDPOINT,
-        queries: {
-          limit,
+      const data = await withRetry(
+        () =>
+          client.get({
+            endpoint: BLOG_API_ENDPOINT,
+            queries: {
+              limit,
           orders: "-publishedAt",
           // 現行スキーマの複数参照フィールドで絞り込む（category/[slug]/page.tsx と同様）。
           // 単一参照 category へ移行した際は `category[equals]` に変更すること（Issue #12）
           filters: `categories[contains]${categoryId}[and]${excludeSelf}`,
-        },
-      });
+            },
+          }),
+        { label: "related articles" }
+      );
       if (data.contents.length > 0) {
         return data.contents;
       }
     }
-    const data = await client.get({
-      endpoint: BLOG_API_ENDPOINT,
-      queries: {
-        limit,
-        orders: "-publishedAt",
-        filters: excludeSelf,
-      },
-    });
+    const data = await withRetry(
+      () =>
+        client.get({
+          endpoint: BLOG_API_ENDPOINT,
+          queries: {
+            limit,
+            orders: "-publishedAt",
+            filters: excludeSelf,
+          },
+        }),
+      { label: "related articles" }
+    );
     return data.contents;
   } catch {
-    // 関連記事の取得失敗で記事ページ全体を落とさない
+    // 関連記事の取得失敗（リトライ後も失敗）で記事ページ全体を落とさない
     return [];
   }
 }

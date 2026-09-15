@@ -1,7 +1,9 @@
 import type { MetadataRoute } from "next";
+import { PHASE_PRODUCTION_BUILD } from "next/constants";
 import { client } from "@/libs/microcms";
+import { fetchAllPages } from "@/libs/fetch-all-pages";
 import { BLOG_API_ENDPOINT, SITE_URL } from "./constants";
-import { findCategoryById } from "./category/categories";
+import { CATEGORIES, findCategoryById } from "./category/categories";
 
 // 1日1回再生成する（記事の追加・更新はこの周期で sitemap に反映される）
 export const revalidate = 86400;
@@ -13,11 +15,35 @@ type SitemapArticle = {
   categories?: { id: string }[]; // 旧スキーマ: 複数参照
 };
 
+const staticEntries: MetadataRoute.Sitemap = [
+  { url: SITE_URL },
+  // 新着記事一覧（Issue #94）
+  { url: `${SITE_URL}/articles` },
+];
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const articles = await client.getAllContents<SitemapArticle>({
-    endpoint: BLOG_API_ENDPOINT,
-    queries: { fields: "id,revisedAt,categories,category" },
-  });
+  let articles: SitemapArticle[];
+  try {
+    articles = await fetchAllPages(
+      (offset, limit) =>
+        client.getList<SitemapArticle>({
+          endpoint: BLOG_API_ENDPOINT,
+          queries: { fields: "id,revisedAt,categories,category", offset, limit },
+        }),
+      { label: "sitemap" }
+    );
+  } catch (error) {
+    console.error("[sitemap] microCMS から記事一覧を取得できませんでした:", error);
+    // ビルド中はここで止めるとデプロイ全体が失敗するため、最小限の URL だけで生成を続ける（#104）。
+    // 実行時（ISR の再生成）は throw して、前回生成済みの sitemap を配信し続けてもらう
+    if (process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD) {
+      return [
+        ...staticEntries,
+        ...CATEGORIES.map((c) => ({ url: `${SITE_URL}/category/${c.slug}` })),
+      ];
+    }
+    throw error;
+  }
 
   const articleEntries: MetadataRoute.Sitemap = articles.map((article) => ({
     url: `${SITE_URL}/blog/${article.id}`,
@@ -40,11 +66,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })
   );
 
-  return [
-    { url: SITE_URL },
-    // 新着記事一覧（Issue #94）
-    { url: `${SITE_URL}/articles` },
-    ...articleEntries,
-    ...categoryEntries,
-  ];
+  return [...staticEntries, ...articleEntries, ...categoryEntries];
 }
