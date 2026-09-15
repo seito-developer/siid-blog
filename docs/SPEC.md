@@ -160,7 +160,7 @@ API は **`blog` エンドポイント1つのみ**。著者・カテゴリ・タ
   - `app/robots.ts` — 全許可。検索・ページ送りのパラメータ付き URL は disallow
   - JSON-LD（`components/json-ld.tsx`）— 記事: Article + BreadcrumbList / カテゴリ: BreadcrumbList / トップ: WebSite
   - canonical はトップ・記事・新着記事一覧（`/articles`）・カテゴリ各ページで出力。サイト URL は `constants.ts` の `SITE_URL` で一元管理
-- テーマ: メインカラー `#214a4a`（深緑）、背景 `#F4F4F4`、本文フォント Noto Sans JP（トップ）/ Geist（レイアウト変数）
+- テーマ: 配色は本体サイト（bug-fix.org/siid）に準拠した `siid-*` トークン（main `#567EB4` / deep `#475499` / text `#342525` / bg `#F1F1F1` / CTA `#E0804C`、`web/src/app/globals.css`）、本文フォント Noto Sans JP（トップ）/ Geist（レイアウト変数）
 
 ## 6. データ取得と キャッシュ戦略
 

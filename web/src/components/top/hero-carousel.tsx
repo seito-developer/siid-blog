@@ -89,7 +89,7 @@ export default function HeroCarousel() {
                 <p className="max-w-2xl text-sm text-white/90 sm:text-base">
                   {slide.description}
                 </p>
-                <span className="mt-2 inline-flex items-center rounded-full bg-white px-5 py-2 text-sm font-bold text-[#214a4a]">
+                <span className="mt-2 inline-flex items-center rounded-full bg-white px-5 py-2 text-sm font-bold text-siid-text">
                   {slide.ctaLabel}
                 </span>
                 {/* 装飾画像（TODO(owner): 専用バナー素材が用意でき次第差し替え） */}
@@ -139,7 +139,7 @@ export default function HeroCarousel() {
               aria-label={`${i + 1}番目のスライドへ`}
               onClick={() => goTo(i)}
               className={`h-2.5 rounded-full transition-all ${
-                i === index ? "w-6 bg-[#214a4a]" : "w-2.5 bg-gray-300 hover:bg-gray-400"
+                i === index ? "w-6 bg-siid-deep" : "w-2.5 bg-gray-300 hover:bg-gray-400"
               }`}
             />
           ))}

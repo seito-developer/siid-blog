@@ -23,7 +23,7 @@ export default function MoreButton({
       <Link
         href={href}
         aria-label={ariaLabel}
-        className="group inline-flex items-center gap-2 rounded-full border border-[#214a4a] bg-white px-8 py-3 text-sm font-bold text-[#214a4a] transition-colors hover:bg-[#214a4a] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#289B8F] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F4F4F4]"
+        className="group inline-flex items-center gap-2 rounded-full border border-siid-deep bg-white px-8 py-3 text-sm font-bold text-siid-text transition-colors hover:bg-siid-text hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-siid-main focus-visible:ring-offset-2 focus-visible:ring-offset-siid-bg"
       >
         {label}
         <ArrowRight

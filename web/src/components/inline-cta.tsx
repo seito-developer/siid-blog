@@ -8,9 +8,9 @@ import { COUNSELING_URL } from "@/app/links";
 
 export default function InlineCta({ slug }: { slug: string }) {
   return (
-    <aside className="not-prose rounded-xl border border-[#289B8F]/30 bg-white p-5 sm:flex sm:items-center sm:justify-between sm:gap-6">
+    <aside className="not-prose rounded-xl border border-siid-main/30 bg-white p-5 sm:flex sm:items-center sm:justify-between sm:gap-6">
       <div>
-        <p className="font-bold text-[#214a4a]">
+        <p className="font-bold text-siid-text">
           「本気で学んでみたい」と思ったら
         </p>
         <p className="mt-1 text-sm text-gray-600">
@@ -22,7 +22,7 @@ export default function InlineCta({ slug }: { slug: string }) {
         ctaType="counseling"
         ctaPosition="inline"
         articleSlug={slug}
-        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#214a4a] px-6 py-3 text-sm font-bold text-white transition-opacity hover:opacity-85 sm:mt-0 sm:w-auto sm:shrink-0"
+        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-siid-cta px-6 py-3 text-sm font-bold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg sm:mt-0 sm:w-auto sm:shrink-0"
       >
         SiiD無料カウンセリング
         <ArrowRight className="h-4 w-4" aria-hidden />

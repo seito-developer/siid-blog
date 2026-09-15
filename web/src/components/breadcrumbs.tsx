@@ -52,7 +52,7 @@ export default function Breadcrumbs({
                   href={item.href}
                   className={cn(
                     "flex items-center transition-colors duration-200",
-                    isHome ? "text-[#289B8F] hover:text-[#214a4a]" : "text-[#214a4a] hover:text-[#289B8F]",
+                    isHome ? "text-siid-deep hover:text-siid-text" : "text-siid-text hover:text-siid-deep",
                   )}
                   aria-current={isLast ? "page" : undefined}
                 >
@@ -69,7 +69,7 @@ export default function Breadcrumbs({
                 <span
                   className={cn(
                     "flex items-center",
-                    isLast || item.isCurrentPage ? "text-[#EE7D2B] font-medium" : "text-gray-600",
+                    isLast || item.isCurrentPage ? "text-siid-deep font-medium" : "text-gray-600",
                   )}
                   aria-current={isLast || item.isCurrentPage ? "page" : undefined}
                 >

@@ -37,7 +37,7 @@ const CHANNELS: Channel[] = [
 export default function YouTubeSection() {
   return (
     <section aria-labelledby="youtube-heading" className="py-4">
-      <h2 id="youtube-heading" className="mb-6 text-2xl font-bold text-[#214a4a]">
+      <h2 id="youtube-heading" className="mb-6 text-2xl font-bold text-siid-text">
         YouTube でも学べる
       </h2>
       <div className="grid gap-6 md:grid-cols-2">
@@ -47,11 +47,11 @@ export default function YouTubeSection() {
             className="flex flex-col gap-4 rounded-2xl bg-white p-5 shadow-sm sm:flex-row sm:items-center"
           >
             {/* サムネイル（TODO(owner): 実サムネイルに差し替え） */}
-            <div className="flex h-28 w-full shrink-0 items-center justify-center rounded-xl bg-[#214a4a] sm:h-24 sm:w-40">
+            <div className="flex h-28 w-full shrink-0 items-center justify-center rounded-xl bg-siid-deep sm:h-24 sm:w-40">
               <Youtube className="h-12 w-12 text-white" aria-hidden />
             </div>
             <div className="flex flex-1 flex-col gap-2">
-              <h3 className="font-bold text-[#214a4a]">{ch.name}</h3>
+              <h3 className="font-bold text-siid-text">{ch.name}</h3>
               <p className="text-xs text-gray-500">
                 {ch.handle}・{ch.subscribers}
               </p>

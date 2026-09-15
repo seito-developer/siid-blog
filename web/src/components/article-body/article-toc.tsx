@@ -95,8 +95,8 @@ function TocList({
                 "block border-l-2 py-1 transition-colors",
                 h.level === 3 ? "pl-6" : "pl-3",
                 isActive
-                  ? "border-[#289B8F] font-medium text-[#214a4a]"
-                  : "border-transparent text-gray-500 hover:text-[#214a4a]",
+                  ? "border-siid-main font-medium text-siid-text"
+                  : "border-transparent text-gray-500 hover:text-siid-text",
               ].join(" ")}
             >
               {h.text}
@@ -118,7 +118,7 @@ export default function ArticleToc({ headings, variant, className }: Props) {
   if (variant === "mobile") {
     return (
       <details className={`rounded-xl border border-gray-200 bg-white ${className ?? ""}`}>
-        <summary className="flex cursor-pointer items-center gap-2 px-4 py-3 font-bold text-[#214a4a] marker:content-none">
+        <summary className="flex cursor-pointer items-center gap-2 px-4 py-3 font-bold text-siid-text marker:content-none">
           <ListTree className="h-5 w-5" aria-hidden />
           目次
         </summary>
@@ -131,7 +131,7 @@ export default function ArticleToc({ headings, variant, className }: Props) {
 
   return (
     <nav aria-label="目次" className={className}>
-      <p className="mb-3 flex items-center gap-2 text-sm font-bold text-[#214a4a]">
+      <p className="mb-3 flex items-center gap-2 text-sm font-bold text-siid-text">
         <ListTree className="h-4 w-4" aria-hidden />
         目次
       </p>
