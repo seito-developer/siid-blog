@@ -20,7 +20,7 @@ export default function CategoryNav() {
     <section aria-labelledby="category-nav-heading" className="py-4">
       <h2
         id="category-nav-heading"
-        className="mb-6 text-2xl font-bold text-[#214a4a]"
+        className="mb-6 text-2xl font-bold text-siid-text"
       >
         カテゴリから探す
       </h2>
@@ -33,10 +33,10 @@ export default function CategoryNav() {
               href={`/category/${c.slug}`}
               className="group flex flex-col items-center gap-3 rounded-2xl bg-white p-6 text-center shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
             >
-              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#289B8F]/10 text-[#214a4a] transition-colors group-hover:bg-[#289B8F] group-hover:text-white">
+              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-siid-deep/10 text-siid-text transition-colors group-hover:bg-siid-deep group-hover:text-white">
                 <Icon className="h-7 w-7" />
               </span>
-              <span className="font-bold text-[#214a4a]">{c.name}</span>
+              <span className="font-bold text-siid-text">{c.name}</span>
             </Link>
           );
         })}

@@ -69,7 +69,7 @@ cp web/.env.example web/.env.local
 - **記事詳細** (`web/src/app/blog/[slug]/page.tsx`): `generateStaticParams` で全記事IDを静的生成。slug = microCMS のコンテンツID。取得は `getBlogPost.ts`（SDK ではなく素の fetch + `next.tags: ["blog-<slug>"]`、429 時は SDK でリトライ）
 - **記事本文**: microCMS のリッチエディタ HTML を `sanitize-article-html.tsx` でサニタイズして表示。本文スタイルは `article-body.css`。**本文レンダリングを変更する際は必ずサニタイズを通すこと**（過去に XSS 対応の hotfix 実績あり）
 - **著者フォールバック**: 記事に author が無い場合は `defaultAuthor.ts`（SiiD BLOG編集部）を使用
-- **UI コンポーネント**: `web/src/components/ui/` は shadcn/ui スタイル（components.json あり）。テーマカラーは `#214a4a`（深緑）、背景 `#F4F4F4`
+- **UI コンポーネント**: `web/src/components/ui/` は shadcn/ui スタイル（components.json あり）。テーマカラーは `globals.css` の `siid-*` トークン（main `#567EB4` / deep `#475499` / text `#342525` / bg `#F1F1F1` / CTA `#E0804C`）。色は hex 直書きせずトークンを使う
 
 ## 開発支援（スキル・MCP）
 

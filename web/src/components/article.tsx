@@ -49,7 +49,7 @@ export default function Article({
               <Badge
                 variant="secondary"
                 className="text-white font-medium"
-                style={{ backgroundColor: "#289B8F" }}
+                style={{ backgroundColor: "var(--color-siid-deep)" }}
               >
                 {displayCategoryName(category)}
               </Badge>
@@ -62,7 +62,7 @@ export default function Article({
           <Heading
             data-slot="card-title"
             className="leading-6 font-semibold text-lg font-bold line-clamp-2 group-hover:text-opacity-80 transition-colors"
-            style={{ color: "#214a4a" }}
+            style={{ color: "var(--color-siid-text)" }}
           >
             {article.title}
           </Heading>

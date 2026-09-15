@@ -20,16 +20,16 @@ export default function BlogHeader({
   const categoryBadge = (
     <Badge
       variant="secondary"
-      className="bg-[#214a4a] text-white hover:bg-[#214a4a]/90 px-3 py-1"
+      className="bg-siid-deep text-white hover:bg-siid-text/90 px-3 py-1"
       style={{ fontFamily: "Noto Sans JP, sans-serif" }}
     >
       {category}
     </Badge>
   )
   return (
-    <header className="w-full bg-[#F4F4F4]">
+    <header className="w-full bg-siid-bg">
       {/* Title */}
-      <div className="py-4 text-white bg-[#214a4a]">
+      <div className="py-4 text-white bg-siid-deep">
         <h1
           className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight max-w-6xl mx-auto px-6"
           style={{ fontFamily: "Noto Sans JP, sans-serif" }}

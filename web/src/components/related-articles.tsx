@@ -22,7 +22,7 @@ export default function RelatedArticles({ articles, variant = "grid" }: Props) {
   if (variant === "sidebar") {
     return (
       <section aria-label="関連記事">
-        <h2 className="mb-4 text-base font-bold text-[#214a4a]">関連記事</h2>
+        <h2 className="mb-4 text-base font-bold text-siid-text">関連記事</h2>
         <ul className="space-y-4">
           {articles.map((article) => {
             const thumbnail = getArticleThumbnail(article);
@@ -38,7 +38,7 @@ export default function RelatedArticles({ articles, variant = "grid" }: Props) {
                       sizes="80px"
                     />
                   </div>
-                  <span className="line-clamp-3 text-sm leading-snug text-gray-700 transition-colors group-hover:text-[#214a4a]">
+                  <span className="line-clamp-3 text-sm leading-snug text-gray-700 transition-colors group-hover:text-siid-text">
                     {article.title}
                   </span>
                 </Link>
@@ -52,7 +52,7 @@ export default function RelatedArticles({ articles, variant = "grid" }: Props) {
 
   return (
     <section aria-label="関連記事" className="pb-16">
-      <h2 className="mb-6 text-2xl font-bold text-[#214a4a]">関連記事</h2>
+      <h2 className="mb-6 text-2xl font-bold text-siid-text">関連記事</h2>
       <ArticleList articles={articles} headingLevel="h3" />
     </section>
   );

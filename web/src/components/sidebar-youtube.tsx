@@ -39,7 +39,7 @@ export default function SidebarYouTube({
 
   return (
     <section aria-label="YouTube チャンネル">
-      <h2 className="mb-3 text-base font-bold text-[#214a4a]">YouTube でも学べる</h2>
+      <h2 className="mb-3 text-base font-bold text-siid-text">YouTube でも学べる</h2>
       <ul className="space-y-2.5">
         {CHANNELS.map((ch) => (
           <li key={ch.id}>
@@ -48,7 +48,7 @@ export default function SidebarYouTube({
               ctaType={ch.ctaType}
               ctaPosition={position}
               articleSlug={slug}
-              className="flex items-center gap-3 rounded-xl border border-gray-200 bg-white p-3 transition-colors hover:border-[#289B8F]"
+              className="flex items-center gap-3 rounded-xl border border-gray-200 bg-white p-3 transition-colors hover:border-siid-main"
             >
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#FF0000] text-white">
                 <Youtube className="h-5 w-5" aria-hidden />

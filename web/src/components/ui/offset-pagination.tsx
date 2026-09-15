@@ -46,7 +46,7 @@ export function OffsetPagination({ totalItems, itemsPerPage, currentPage: rawCur
   }
 
   return (
-    <nav aria-label="ページ送り" className="w-full py-5" style={{ backgroundColor: "#F4F4F4" }}>
+    <nav aria-label="ページ送り" className="w-full py-5" style={{ backgroundColor: "var(--color-siid-bg)" }}>
 
       <div className="space-y-4">
         <div className="text-sm" style={{ color: "#000", textAlign: "center" }}>
@@ -60,7 +60,7 @@ export function OffsetPagination({ totalItems, itemsPerPage, currentPage: rawCur
               variant="outline"
               size="sm"
               disabled
-              style={{ borderColor: "#214a4a", color: "#999" }}
+              style={{ borderColor: "var(--color-siid-deep)", color: "#999" }}
             >
               Prev
             </Button>
@@ -69,7 +69,7 @@ export function OffsetPagination({ totalItems, itemsPerPage, currentPage: rawCur
               asChild
               variant="outline"
               size="sm"
-              style={{ cursor: "pointer", borderColor: "#214a4a", color: "#214a4a" }}
+              style={{ cursor: "pointer", borderColor: "var(--color-siid-deep)", color: "var(--color-siid-text)" }}
             >
               <Link href={buildHref(currentPage - 1)} scroll={false} rel="prev">
                 Prev
@@ -86,14 +86,14 @@ export function OffsetPagination({ totalItems, itemsPerPage, currentPage: rawCur
               style={
                 currentPage === page
                   ? {
-                      backgroundColor: "#289B8F",
-                      borderColor: "#289B8F",
+                      backgroundColor: "var(--color-siid-deep)",
+                      borderColor: "var(--color-siid-deep)",
                       color: "#fff",
                     }
                   : {
                       cursor: 'pointer',
-                      borderColor: "#214a4a",
-                      color: "#214a4a",
+                      borderColor: "var(--color-siid-deep)",
+                      color: "var(--color-siid-text)",
                     }
               }
             >
@@ -112,7 +112,7 @@ export function OffsetPagination({ totalItems, itemsPerPage, currentPage: rawCur
               variant="outline"
               size="sm"
               disabled
-              style={{ borderColor: "#214a4a", color: "#999" }}
+              style={{ borderColor: "var(--color-siid-deep)", color: "#999" }}
             >
               Next
             </Button>
@@ -121,7 +121,7 @@ export function OffsetPagination({ totalItems, itemsPerPage, currentPage: rawCur
               asChild
               variant="outline"
               size="sm"
-              style={{ cursor: "pointer", borderColor: "#214a4a", color: "#214a4a" }}
+              style={{ cursor: "pointer", borderColor: "var(--color-siid-deep)", color: "var(--color-siid-text)" }}
             >
               <Link href={buildHref(currentPage + 1)} scroll={false} rel="next">
                 Next

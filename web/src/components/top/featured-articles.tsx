@@ -53,7 +53,7 @@ export default async function FeaturedArticles() {
     <section aria-labelledby="featured-heading" className="py-4">
       <h2
         id="featured-heading"
-        className="mb-6 text-2xl font-bold text-[#214a4a]"
+        className="mb-6 text-2xl font-bold text-siid-text"
       >
         注目記事
       </h2>
