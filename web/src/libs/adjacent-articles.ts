@@ -1,4 +1,5 @@
 import { client } from "@/libs/microcms";
+import { withRetry } from "@/libs/retry";
 import { BLOG_API_ENDPOINT } from "@/app/constants";
 import { ArticleProps } from "@/interfaces/common";
 
@@ -18,13 +19,17 @@ const FIELDS = "id,title,eyecatch,thumbnailPreset";
 
 async function fetchOne(filters: string, orders: string): Promise<ArticleProps | null> {
   try {
-    const data = await client.get({
-      endpoint: BLOG_API_ENDPOINT,
-      queries: { limit: 1, orders, filters, fields: FIELDS },
-    });
+    const data = await withRetry(
+      () =>
+        client.get({
+          endpoint: BLOG_API_ENDPOINT,
+          queries: { limit: 1, orders, filters, fields: FIELDS },
+        }),
+      { label: "adjacent articles" }
+    );
     return (data.contents[0] as ArticleProps) ?? null;
   } catch {
-    // 取得失敗で記事ページ全体を落とさない
+    // 取得失敗（リトライ後も失敗）で記事ページ全体を落とさない
     return null;
   }
 }

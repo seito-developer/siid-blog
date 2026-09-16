@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { client } from "@/libs/microcms";
+import { withRetry } from "@/libs/retry";
 import { BLOG_API_ENDPOINT, SITE_NAME, SITE_URL } from "@/app/constants";
 import { X_URL, YOUTUBE_SEITO_URL } from "@/app/links";
 import BlogHeader from "@/components/blog-header";
@@ -230,9 +231,11 @@ export default async function BlogPostPage({
 
 // 静的パスを生成
 export async function generateStaticParams() {
-  const contentIds = await client.getAllContentIds({
-    endpoint: BLOG_API_ENDPOINT,
-  });
+  // ビルド時の 429 でデプロイが止まらないようリトライする（#104）
+  const contentIds = await withRetry(
+    () => client.getAllContentIds({ endpoint: BLOG_API_ENDPOINT }),
+    { label: "generateStaticParams" }
+  );
   return contentIds.map((contentId) => ({
     slug: contentId, // 各記事のIDをパラメータとして返す
   }));

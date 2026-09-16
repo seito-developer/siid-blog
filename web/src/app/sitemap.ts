@@ -1,5 +1,8 @@
 import type { MetadataRoute } from "next";
+import { PHASE_PRODUCTION_BUILD } from "next/constants";
 import { client } from "@/libs/microcms";
+import { fetchAllPages } from "@/libs/fetch-all-pages";
+import { filterPublished } from "@/libs/published";
 import { BLOG_API_ENDPOINT, SITE_URL } from "./constants";
 import { findCategoryById } from "./category/categories";
 
@@ -8,16 +11,48 @@ export const revalidate = 86400;
 
 type SitemapArticle = {
   id: string;
+  publishedAt?: string | null;
   revisedAt?: string;
   category?: { id: string }; // 新スキーマ: 単一参照
   categories?: { id: string }[]; // 旧スキーマ: 複数参照
 };
 
+const staticEntries: MetadataRoute.Sitemap = [
+  { url: SITE_URL },
+  // 新着記事一覧（Issue #94）
+  { url: `${SITE_URL}/articles` },
+];
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const articles = await client.getAllContents<SitemapArticle>({
-    endpoint: BLOG_API_ENDPOINT,
-    queries: { fields: "id,revisedAt,categories,category" },
-  });
+  let articles: SitemapArticle[];
+  try {
+    // 下書き取得権限のあるキーで取得しても未公開記事を載せないよう、
+    // publishedAt の無いものは除外する（Issue #101）
+    articles = filterPublished(
+      await fetchAllPages(
+        (offset, limit) =>
+          client.getList<SitemapArticle>({
+            endpoint: BLOG_API_ENDPOINT,
+            queries: {
+              fields: "id,publishedAt,revisedAt,categories,category",
+              offset,
+              limit,
+            },
+          }),
+        { label: "sitemap" }
+      )
+    );
+  } catch (error) {
+    console.error("[sitemap] microCMS から記事一覧を取得できませんでした:", error);
+    // ビルド中はここで止めるとデプロイ全体が失敗するため、最小限の URL だけで生成を続ける（#104）。
+    // 実行時（ISR の再生成）は throw して、前回生成済みの sitemap を配信し続けてもらう
+    // カテゴリは記事が 0 件だとページ自体が 404 になるため、記事一覧を取得できていない
+    // このフォールバックでは列挙しない（sitemap にリンク切れを載せない）
+    if (process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD) {
+      return staticEntries;
+    }
+    throw error;
+  }
 
   const articleEntries: MetadataRoute.Sitemap = articles.map((article) => ({
     url: `${SITE_URL}/blog/${article.id}`,
@@ -40,11 +75,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })
   );
 
-  return [
-    { url: SITE_URL },
-    // 新着記事一覧（Issue #94）
-    { url: `${SITE_URL}/articles` },
-    ...articleEntries,
-    ...categoryEntries,
-  ];
+  return [...staticEntries, ...articleEntries, ...categoryEntries];
 }
