@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { PHASE_PRODUCTION_BUILD } from "next/constants";
 import { client } from "@/libs/microcms";
 import { fetchAllPages } from "@/libs/fetch-all-pages";
+import { filterPublished } from "@/libs/published";
 import { BLOG_API_ENDPOINT, SITE_URL } from "./constants";
 import { findCategoryById } from "./category/categories";
 
@@ -10,6 +11,7 @@ export const revalidate = 86400;
 
 type SitemapArticle = {
   id: string;
+  publishedAt?: string | null;
   revisedAt?: string;
   category?: { id: string }; // 新スキーマ: 単一参照
   categories?: { id: string }[]; // 旧スキーマ: 複数参照
@@ -24,13 +26,21 @@ const staticEntries: MetadataRoute.Sitemap = [
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let articles: SitemapArticle[];
   try {
-    articles = await fetchAllPages(
-      (offset, limit) =>
-        client.getList<SitemapArticle>({
-          endpoint: BLOG_API_ENDPOINT,
-          queries: { fields: "id,revisedAt,categories,category", offset, limit },
-        }),
-      { label: "sitemap" }
+    // 下書き取得権限のあるキーで取得しても未公開記事を載せないよう、
+    // publishedAt の無いものは除外する（Issue #101）
+    articles = filterPublished(
+      await fetchAllPages(
+        (offset, limit) =>
+          client.getList<SitemapArticle>({
+            endpoint: BLOG_API_ENDPOINT,
+            queries: {
+              fields: "id,publishedAt,revisedAt,categories,category",
+              offset,
+              limit,
+            },
+          }),
+        { label: "sitemap" }
+      )
     );
   } catch (error) {
     console.error("[sitemap] microCMS から記事一覧を取得できませんでした:", error);
