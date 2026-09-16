@@ -1,4 +1,4 @@
-import { withRetry, type RetryOptions } from "./retry";
+import { sleep as defaultSleep, withRetry, type RetryOptions } from "./retry";
 
 type Page<T> = { contents: T[]; totalCount: number };
 
@@ -11,9 +11,6 @@ type FetchAllPagesOptions = {
   retry?: RetryOptions;
   label?: string;
 };
-
-const defaultSleep = (ms: number) =>
-  new Promise<void>((resolve) => setTimeout(resolve, ms));
 
 // microCMS の一覧をページングで全件取得する（#104）。
 // SDK の getAllContents は初回に全ページを並列取得し 429 を踏みやすいため、

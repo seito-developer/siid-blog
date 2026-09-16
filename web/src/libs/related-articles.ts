@@ -26,10 +26,10 @@ export async function getRelatedArticles(
             endpoint: BLOG_API_ENDPOINT,
             queries: {
               limit,
-          orders: "-publishedAt",
-          // 現行スキーマの複数参照フィールドで絞り込む（category/[slug]/page.tsx と同様）。
-          // 単一参照 category へ移行した際は `category[equals]` に変更すること（Issue #12）
-          filters: `categories[contains]${categoryId}[and]${excludeSelf}`,
+              orders: "-publishedAt",
+              // 現行スキーマの複数参照フィールドで絞り込む（category/[slug]/page.tsx と同様）。
+              // 単一参照 category へ移行した際は `category[equals]` に変更すること（Issue #12）
+              filters: `categories[contains]${categoryId}[and]${excludeSelf}`,
             },
           }),
         { label: "related articles" }

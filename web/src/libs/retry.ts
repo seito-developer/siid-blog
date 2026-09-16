@@ -15,7 +15,8 @@ export type RetryOptions = {
   label?: string;
 };
 
-const defaultSleep = (ms: number) =>
+// 待機用（テストでは差し替える）
+export const sleep = (ms: number) =>
   new Promise<void>((resolve) => setTimeout(resolve, ms));
 
 // 429 / 5xx を含むエラーメッセージか判定する。
@@ -47,7 +48,7 @@ export async function withRetry<T>(
     baseDelayMs = 1000,
     maxDelayMs = 16000,
     shouldRetry = isRetryableError,
-    sleep = defaultSleep,
+    sleep: sleepFn = sleep,
     label = "request",
   }: RetryOptions = {}
 ): Promise<T> {
@@ -62,7 +63,7 @@ export async function withRetry<T>(
       console.warn(
         `[retry] ${label} failed (${attempt + 1}/${retries}), retrying in ${delay}ms`
       );
-      await sleep(delay);
+      await sleepFn(delay);
     }
   }
 }

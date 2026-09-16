@@ -3,7 +3,7 @@ import { PHASE_PRODUCTION_BUILD } from "next/constants";
 import { client } from "@/libs/microcms";
 import { fetchAllPages } from "@/libs/fetch-all-pages";
 import { BLOG_API_ENDPOINT, SITE_URL } from "./constants";
-import { CATEGORIES, findCategoryById } from "./category/categories";
+import { findCategoryById } from "./category/categories";
 
 // 1日1回再生成する（記事の追加・更新はこの周期で sitemap に反映される）
 export const revalidate = 86400;
@@ -36,11 +36,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.error("[sitemap] microCMS から記事一覧を取得できませんでした:", error);
     // ビルド中はここで止めるとデプロイ全体が失敗するため、最小限の URL だけで生成を続ける（#104）。
     // 実行時（ISR の再生成）は throw して、前回生成済みの sitemap を配信し続けてもらう
+    // カテゴリは記事が 0 件だとページ自体が 404 になるため、記事一覧を取得できていない
+    // このフォールバックでは列挙しない（sitemap にリンク切れを載せない）
     if (process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD) {
-      return [
-        ...staticEntries,
-        ...CATEGORIES.map((c) => ({ url: `${SITE_URL}/category/${c.slug}` })),
-      ];
+      return staticEntries;
     }
     throw error;
   }
