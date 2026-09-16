@@ -5,6 +5,7 @@ import {
 } from "@/app/constants";
 import { ArticleContentProps } from "@/interfaces/common";
 import { withRetry } from "@/libs/retry";
+import { isPublished } from "@/libs/published";
 import { notFound } from "next/navigation";
 
 // microCMSから特定の記事を取得。存在しない記事（削除済み含む）は 404 ページを表示する。
@@ -14,10 +15,20 @@ export async function getBlogPost(
   draftKey?: string
 ): Promise<ArticleContentProps> {
   const post = await fetchBlogPost(slug, draftKey);
-  if (post === null) {
+  if (post === null || !isPublishedOrPreview(post, draftKey)) {
     notFound();
   }
   return post;
+}
+
+// 公開ページとして表示してよいか（Issue #101）。
+// API キーに下書き取得権限があると未公開記事も 200 で返ってくるため、
+// プレビュー（draftKey あり）以外では publishedAt の無い記事を 404 扱いにする
+export function isPublishedOrPreview(
+  post: { publishedAt?: string | null },
+  draftKey?: string
+): boolean {
+  return Boolean(draftKey) || isPublished(post);
 }
 
 // 記事を取得する。microCMS が 404 を返した場合は null を返す。
