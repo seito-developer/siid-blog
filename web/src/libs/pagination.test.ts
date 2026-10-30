@@ -1,5 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { normalizePage, normalizePerPage, pageToOffset } from "./pagination";
+import {
+  normalizePage,
+  normalizePerPage,
+  pagedTitle,
+  pagedUrl,
+  pageToOffset,
+} from "./pagination";
 
 describe("normalizePage", () => {
   it("正の整数はそのまま返す", () => {
@@ -40,5 +46,26 @@ describe("pageToOffset", () => {
   it("2ページ目以降は (page - 1) * limit", () => {
     expect(pageToOffset(2, 10)).toBe(10);
     expect(pageToOffset(5, 6)).toBe(24);
+  });
+});
+
+describe("pagedUrl", () => {
+  it("1ページ目はパラメータを付けない", () => {
+    expect(pagedUrl("https://example.com/articles", 1)).toBe(
+      "https://example.com/articles"
+    );
+  });
+
+  it("2ページ目以降は ?page=N を付ける", () => {
+    expect(pagedUrl("https://example.com/articles", 3)).toBe(
+      "https://example.com/articles?page=3"
+    );
+  });
+});
+
+describe("pagedTitle", () => {
+  it("1ページ目はそのまま、2ページ目以降はページ番号を付ける", () => {
+    expect(pagedTitle("新着記事一覧", 1)).toBe("新着記事一覧");
+    expect(pagedTitle("新着記事一覧", 2)).toBe("新着記事一覧（2ページ目）");
   });
 });

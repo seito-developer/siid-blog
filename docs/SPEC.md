@@ -79,6 +79,7 @@ API は **`blog` エンドポイント1つのみ**。著者・カテゴリ・タ
 | thumbnailPreset | string[]（**microCMS では必須**） | サムネイルのジャンル選択（セレクトフィールド。選択肢はちょうど: `Tech` / `Learning` / `Career` / `Frontend` / `Backend` / `AI`）。選んだジャンルの画像（`web/public/thumbnails/{tech,learning,career,frontend,backend,ai}.png`、1200x630）が eyecatch 未設定時に使われる。取得は `libs/article-thumbnail.ts` の `getArticleThumbnail()`。フィールドを持たない旧記事は記事 ID から決まる既定画像にフォールバック |
 | readTime | string | 読了時間 |
 | publishedAt / createdAt / updatedAt | string | 日時 |
+| contentUpdatedAt | string（任意） | 本文の更新日。本文を実際に直したときだけ入力し、sitemap の lastmod に使う（`revisedAt` は本文以外の編集でも変わるため使わない） |
 | slug | string | フィールドとして存在するが、ルーティングには id を使用 |
 
 ## 5. 画面仕様
@@ -120,7 +121,7 @@ API は **`blog` エンドポイント1つのみ**。著者・カテゴリ・タ
 - 全記事を `publishedAt` 降順で1ページ10件（`POSTS_NUM_PER_PAGE`）表示。`?page=` でページ送り（`ArticleManager`）
 - TOP から役割を分離したページ（Issue #94）。TOP の「新着記事」は6件のみで、「もっと見る」からここへ遷移する
 - 構造・パンくず・メタデータの作りはカテゴリ一覧（5.4）と揃えている
-- `sitemap.ts` に固定で登録。`robots.ts` の `disallow: /*?page=` によりページ送り URL はクロール対象外
+- `sitemap.ts` に固定で登録。ページ送り URL（`?page=N`）は古い記事へのリンク経路になるためクロールさせ、2ページ目以降は自分自身を canonical にし、タイトルに「（Nページ目）」を付ける（カテゴリ一覧も同じ。`libs/pagination.ts` の `pagedUrl` / `pagedTitle`）
 
 ### 5.4 カテゴリ別記事一覧 `/category/[slug]`
 
@@ -156,8 +157,9 @@ API は **`blog` エンドポイント1つのみ**。著者・カテゴリ・タ
 - レイアウト: `layout.tsx`（サイト全体のメタデータ・OGP・GA スクリプト・フッター。`metadataBase` = `SITE_URL`）
 - 404: `not-found.tsx`
 - SEO:
-  - `app/sitemap.ts` — トップ + 新着記事一覧（`/articles`）+ 全記事 + 記事のあるカテゴリを列挙（1日1回再生成）
-  - `app/robots.ts` — 全許可。検索・ページ送りのパラメータ付き URL は disallow
+  - `app/sitemap.ts` — トップ + 新着記事一覧（`/articles`）+ 全記事 + 記事のあるカテゴリを列挙（1日1回再生成）。記事の lastmod は `contentUpdatedAt`、無ければ `publishedAt`
+  - `app/feed.xml/route.ts` — 新着20件の RSS 2.0 フィード（1日1回再生成）。Search Console にサイトマップとしても登録する
+  - `app/robots.ts` — 全許可。検索のパラメータ付き URL（`?q=`）のみ disallow
   - JSON-LD（`components/json-ld.tsx`）— 記事: Article + BreadcrumbList / カテゴリ: BreadcrumbList / トップ: WebSite
   - canonical はトップ・記事・新着記事一覧（`/articles`）・カテゴリ各ページで出力。サイト URL は `constants.ts` の `SITE_URL` で一元管理
 - テーマ: 配色は本体サイト（bug-fix.org/siid）に準拠した `siid-*` トークン（main `#567EB4` / deep `#475499` / text `#342525` / bg `#F1F1F1` / CTA `#E0804C`、`web/src/app/globals.css`）、本文フォント Noto Sans JP（トップ）/ Geist（レイアウト変数）
