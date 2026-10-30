@@ -15,7 +15,17 @@ describe("escapeXml", () => {
   });
 });
 
+describe("escapeXml（制御文字）", () => {
+  it("XML で使えない制御文字を取り除く", () => {
+    expect(escapeXml("A\u000BB\u0000C")).toBe("ABC");
+  });
+});
+
 describe("htmlToPlainText", () => {
+  it("数値文字参照を文字に戻す", () => {
+    expect(htmlToPlainText("It&#039;s &#x27;ok&#8217;")).toBe("It's 'ok\u2019");
+  });
+
   it("タグを除き、文字参照を戻す", () => {
     expect(htmlToPlainText("<p>A&amp;B&nbsp;<b>C</b></p>").trim()).toBe(
       "A&B  C"

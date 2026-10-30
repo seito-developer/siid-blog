@@ -16,9 +16,11 @@ export type FeedChannel = {
   description: string;
 };
 
-// XML の特殊文字をエスケープする
+// XML の特殊文字をエスケープする。XML で使えない制御文字（Word 等からの貼り付けで混ざる）は除く。
+// 1文字でも残るとフィード全体が不正な XML になり、Search Console に読まれなくなるため
 export function escapeXml(text: string): string {
   return text
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\uFFFE\uFFFF]/g, "")
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
@@ -34,7 +36,12 @@ export function htmlToPlainText(html: string): string {
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex: string) =>
+      String.fromCodePoint(parseInt(hex, 16))
+    )
+    .replace(/&#(\d+);/g, (_, dec: string) =>
+      String.fromCodePoint(parseInt(dec, 10))
+    )
     .replace(/&amp;/g, "&");
 }
 
