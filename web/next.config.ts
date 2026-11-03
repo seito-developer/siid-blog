@@ -23,6 +23,7 @@ const REMOVED_CATEGORY_REDIRECTS: Record<string, string> = {
 const MERGED_ARTICLE_REDIRECTS: Record<string, string> = {
   "40": "12",
   "33": "64",
+  "54": "9512d95d00",
 };
 
 // 旧 WordPress 時代のカテゴリ URL（パーセントエンコード済み）→ 現在のカテゴリ。
