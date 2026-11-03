@@ -21,3 +21,14 @@ export function normalizePerPage(
 export function pageToOffset(page: number, limit: number): number {
   return (page - 1) * limit;
 }
+
+// 一覧ページの URL（canonical 用）。1ページ目はパラメータ無し、2ページ目以降は ?page=N を付ける。
+// Google はページ送りの各ページに固有の URL と自己参照の canonical を推奨している
+export function pagedUrl(baseUrl: string, page: number): string {
+  return page > 1 ? `${baseUrl}?page=${page}` : baseUrl;
+}
+
+// 一覧ページのタイトル。2ページ目以降はページ番号を付けてタイトルの重複を避ける
+export function pagedTitle(title: string, page: number): string {
+  return page > 1 ? `${title}（${page}ページ目）` : title;
+}

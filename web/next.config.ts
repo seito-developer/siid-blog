@@ -25,6 +25,12 @@ const MERGED_ARTICLE_REDIRECTS: Record<string, string> = {
   "33": "64",
 };
 
+// 旧 WordPress 時代のカテゴリ URL（パーセントエンコード済み）→ 現在のカテゴリ。
+// 外部でまだ参照・順位が残っているため 301 リダイレクトする
+const LEGACY_PATH_REDIRECTS: Record<string, string> = {
+  [`/${encodeURIComponent("プログラミング")}`]: "/category/programming",
+};
+
 const nextConfig: NextConfig = {
   // ビルド時の静的生成で microCMS へのリクエストが集中し 429 でビルドが落ちるため、
   // ワーカー数と同時生成数を絞る（#104。既定は CPU数-1 ワーカー × 8 並列）
@@ -42,6 +48,11 @@ const nextConfig: NextConfig = {
       ...Object.entries(MERGED_ARTICLE_REDIRECTS).map(([oldId, newId]) => ({
         source: `/blog/${oldId}`,
         destination: `/blog/${newId}`,
+        permanent: true,
+      })),
+      ...Object.entries(LEGACY_PATH_REDIRECTS).map(([source, destination]) => ({
+        source,
+        destination,
         permanent: true,
       })),
     ];
