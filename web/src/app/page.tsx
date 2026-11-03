@@ -23,6 +23,7 @@ import JsonLd from "@/components/json-ld";
 import FeaturedArticles from "@/components/top/featured-articles";
 import InterviewArticles from "@/components/top/interview-articles";
 import CategoryNav from "@/components/top/category-nav";
+import TopicNav from "@/components/topic-nav";
 // import YouTubeSection from "@/components/top/youtube-section";
 import CtaBand from "@/components/top/cta-band";
 import type { Metadata } from "next";
@@ -135,6 +136,8 @@ export default async function Home({
               <FeaturedArticles />
 
               <CategoryNav />
+
+              <TopicNav />
 
               {/* 新着記事 */}
               <section aria-labelledby="latest-heading">

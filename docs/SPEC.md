@@ -152,12 +152,22 @@ API は **`blog` エンドポイント1つのみ**。著者・カテゴリ・タ
 
 - 一覧カードのサムネイルは **16:9（`aspect-video`）で統一**（`components/article.tsx`・Issue #94）。プリセット画像（1200x630）も受講生様実績の記事画像も 16:9 前提
 
+### 5.4.1 テーマ別まとめページ `/topics/[slug]`
+
+- ファイル: `web/src/app/topics/[slug]/page.tsx`（静的生成。`revalidate` 1日。定義外のスラッグは 404）
+- テーマの定義は `web/src/libs/topics.ts` の `TOPICS`（スラッグ・表示名・導入文・タイトルのマッチ条件）。**記事タイトルにキーワードを含む公開記事を新しい順に自動で集める**ため、記事側の設定は不要
+- 現在のテーマ: `pandas` / `matplotlib-seaborn` / `excel`（openpyxl・Excel・VBA）/ `laravel` / `javascript`
+- 目的: カテゴリより細かい入口を作り、古い技術記事へのリンク経路を増やす（SEO コンサルタントの提案）
+- 導線: TOP（「カテゴリから探す」の下）・カテゴリ「プログラミング」の一覧・各まとめページの下部（`components/topic-nav.tsx`）
+- 記事一覧は関連記事と共通の `libs/article-index.ts`（公開済み全記事・プロセス内で1時間キャッシュ）から作る
+- sitemap には記事が1件以上あるテーマのみ載せる
+
 ### 5.5 共通
 
 - レイアウト: `layout.tsx`（サイト全体のメタデータ・OGP・GA スクリプト・フッター。`metadataBase` = `SITE_URL`）
 - 404: `not-found.tsx`
 - SEO:
-  - `app/sitemap.ts` — トップ + 新着記事一覧（`/articles`）+ 全記事 + 記事のあるカテゴリを列挙（1日1回再生成）。記事の lastmod は `contentUpdatedAt`、無ければ `publishedAt`
+  - `app/sitemap.ts` — トップ + 新着記事一覧（`/articles`）+ 全記事 + 記事のあるカテゴリ + テーマ別まとめページを列挙（1日1回再生成）。記事の lastmod は `contentUpdatedAt`、無ければ `publishedAt`
   - `app/feed.xml/route.ts` — 新着20件の RSS 2.0 フィード（1日1回再生成）。Search Console にサイトマップとしても登録する
   - `app/robots.ts` — 全許可。検索のパラメータ付き URL（`?q=`）のみ disallow
   - JSON-LD（`components/json-ld.tsx`）— 記事: Article + BreadcrumbList / カテゴリ: BreadcrumbList / トップ: WebSite

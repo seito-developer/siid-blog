@@ -9,6 +9,7 @@ import JsonLd from "@/components/json-ld";
 import { ArticleProps } from "@/interfaces/common";
 import ArticleManager from "@/components/article-manager";
 import Breadcrumbs from "@/components/breadcrumbs";
+import TopicNav from "@/components/topic-nav";
 import { findCategoryBySlug, Category } from "../categories";
 import {
   normalizePage,
@@ -87,6 +88,12 @@ export default async function CategoryPage(props: Props) {
             「{category.name}」の記事一覧: {totalCount}件
           </p>
         </div>
+        {/* 技術記事はテーマ別まとめページへの導線も出す */}
+        {category.slug === "programming" && (
+          <div className="mb-12">
+            <TopicNav />
+          </div>
+        )}
         <ArticleManager
           articles={posts}
           totalCount={totalCount}

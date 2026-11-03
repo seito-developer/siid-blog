@@ -5,12 +5,14 @@ import { fetchAllPages } from "@/libs/fetch-all-pages";
 import { filterPublished } from "@/libs/published";
 import { BLOG_API_ENDPOINT, SITE_URL } from "./constants";
 import { findCategoryById } from "./category/categories";
+import { TOPICS } from "@/libs/topics";
 
 // 1日1回再生成する（記事の追加・更新はこの周期で sitemap に反映される）
 export const revalidate = 86400;
 
 type SitemapArticle = {
   id: string;
+  title: string;
   publishedAt?: string | null;
   contentUpdatedAt?: string; // 本文の更新日（microCMS で手入力）
   category?: { id: string }; // 新スキーマ: 単一参照
@@ -34,7 +36,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           client.getList<SitemapArticle>({
             endpoint: BLOG_API_ENDPOINT,
             queries: {
-              fields: "id,publishedAt,contentUpdatedAt,categories,category",
+              fields: "id,title,publishedAt,contentUpdatedAt,categories,category",
               offset,
               limit,
             },
@@ -77,5 +79,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })
   );
 
-  return [...staticEntries, ...articleEntries, ...categoryEntries];
+  // テーマ別まとめページ（記事が1件以上あるテーマのみ。0件のテーマは 404 になるため）
+  const topicEntries: MetadataRoute.Sitemap = TOPICS.filter((topic) =>
+    articles.some((article) => topic.pattern.test(article.title))
+  ).map((topic) => ({ url: `${SITE_URL}/topics/${topic.slug}` }));
+
+  return [...staticEntries, ...articleEntries, ...categoryEntries, ...topicEntries];
 }
