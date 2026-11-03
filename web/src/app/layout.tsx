@@ -71,6 +71,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
+      <head>
+        {/* 新着記事の RSS フィード。metadata の alternates に書くと、canonical を持つ
+            各ページの alternates で上書きされて消えるため head に直接置く */}
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="SiiD BLOG"
+          href={`${SITE_URL}/feed.xml`}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

@@ -9,7 +9,12 @@ import JsonLd from "@/components/json-ld";
 import { ArticleProps } from "@/interfaces/common";
 import ArticleManager from "@/components/article-manager";
 import Breadcrumbs from "@/components/breadcrumbs";
-import { normalizePage, pageToOffset } from "@/libs/pagination";
+import {
+  normalizePage,
+  pagedTitle,
+  pagedUrl,
+  pageToOffset,
+} from "@/libs/pagination";
 import { notFound } from "next/navigation";
 import { cache } from "react";
 import type { Metadata } from "next";
@@ -75,26 +80,33 @@ export default async function ArticlesPage({ searchParams }: Props) {
   );
 }
 
-export const metadata: Metadata = {
-  title: `${PAGE_TITLE} | SiiD BLOG`,
-  description: PAGE_DESCRIPTION,
-  alternates: { canonical: `${SITE_URL}/articles` },
-  openGraph: {
-    title: `${PAGE_TITLE} | SiiD BLOG`,
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+  const { page } = await searchParams;
+  const currentPage = normalizePage(page);
+  const title = `${pagedTitle(PAGE_TITLE, currentPage)} | SiiD BLOG`;
+  // 2ページ目以降は自分自身を canonical にする（1ページ目に寄せると古い記事への経路が評価されない）
+  const url = pagedUrl(`${SITE_URL}/articles`, currentPage);
+  return {
+    title,
     description: PAGE_DESCRIPTION,
-    type: "website",
-    url: `${SITE_URL}/articles`,
-    // 相対パスは metadataBase で絶対 URL 化される
-    images: [{ url: DEFAULT_OGP_IMAGE, width: 1200, height: 630 }],
-  },
-  // 指定しないと layout のサイト共通値（SiiD BLOG）が使われ og:title と食い違う
-  twitter: {
-    card: "summary_large_image",
-    title: `${PAGE_TITLE} | SiiD BLOG`,
-    description: PAGE_DESCRIPTION,
-    images: [DEFAULT_OGP_IMAGE],
-  },
-};
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description: PAGE_DESCRIPTION,
+      type: "website",
+      url,
+      // 相対パスは metadataBase で絶対 URL 化される
+      images: [{ url: DEFAULT_OGP_IMAGE, width: 1200, height: 630 }],
+    },
+    // 指定しないと layout のサイト共通値（SiiD BLOG）が使われ og:title と食い違う
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: PAGE_DESCRIPTION,
+      images: [DEFAULT_OGP_IMAGE],
+    },
+  };
+}
 
 // microCMS から全記事を新しい順に取得。
 // cache() で同一リクエスト内の重複取得を防ぐ

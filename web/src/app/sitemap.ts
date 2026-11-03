@@ -12,7 +12,7 @@ export const revalidate = 86400;
 type SitemapArticle = {
   id: string;
   publishedAt?: string | null;
-  revisedAt?: string;
+  contentUpdatedAt?: string; // 本文の更新日（microCMS で手入力）
   category?: { id: string }; // 新スキーマ: 単一参照
   categories?: { id: string }[]; // 旧スキーマ: 複数参照
 };
@@ -34,7 +34,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           client.getList<SitemapArticle>({
             endpoint: BLOG_API_ENDPOINT,
             queries: {
-              fields: "id,publishedAt,revisedAt,categories,category",
+              fields: "id,publishedAt,contentUpdatedAt,categories,category",
               offset,
               limit,
             },
@@ -56,7 +56,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const articleEntries: MetadataRoute.Sitemap = articles.map((article) => ({
     url: `${SITE_URL}/blog/${article.id}`,
-    lastModified: article.revisedAt,
+    // revisedAt はサムネイル等の本文以外の編集でも更新され、全記事が同じ日付に揃ってしまう。
+    // Google は lastmod が正確な場合だけ使うため、本文を直したときだけ入れる日付を使う
+    lastModified: article.contentUpdatedAt ?? article.publishedAt ?? undefined,
   }));
 
   // 記事が1件以上あり、スラッグ対応表に載っているカテゴリのみを列挙する

@@ -33,6 +33,9 @@ export interface ArticleProps {
   excerpt?: string;
   author: AuthorProps | null;
   publishedAt: string;
+  // 本文の更新日（microCMS の任意の日付フィールド）。本文を実際に直したときだけ入力し、
+  // sitemap の lastmod に使う。revisedAt は本文以外の編集でも変わるため使わない
+  contentUpdatedAt?: string;
   createdAt: string;
   updatedAt: string;
   readTime: string;

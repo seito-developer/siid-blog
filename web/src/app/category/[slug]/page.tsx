@@ -10,7 +10,12 @@ import { ArticleProps } from "@/interfaces/common";
 import ArticleManager from "@/components/article-manager";
 import Breadcrumbs from "@/components/breadcrumbs";
 import { findCategoryBySlug, Category } from "../categories";
-import { normalizePage, pageToOffset } from "@/libs/pagination";
+import {
+  normalizePage,
+  pagedTitle,
+  pagedUrl,
+  pageToOffset,
+} from "@/libs/pagination";
 import { notFound } from "next/navigation";
 import { cache } from "react";
 import type { Metadata } from "next";
@@ -23,6 +28,7 @@ type Props = {
 // URL スラッグから対象カテゴリと offset を解決する（未知のスラッグは 404）
 async function resolveRequest({ params, searchParams }: Props): Promise<{
   category: Category;
+  currentPage: number;
   offset: number;
 }> {
   const { slug } = await params;
@@ -31,9 +37,11 @@ async function resolveRequest({ params, searchParams }: Props): Promise<{
   if (!category) {
     notFound();
   }
+  const currentPage = normalizePage(page);
   return {
     category,
-    offset: pageToOffset(normalizePage(page), POSTS_NUM_PER_PAGE),
+    currentPage,
+    offset: pageToOffset(currentPage, POSTS_NUM_PER_PAGE),
   };
 }
 
@@ -90,18 +98,20 @@ export default async function CategoryPage(props: Props) {
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
-  const { category } = await resolveRequest(props);
-  const title = `${category.name}の記事一覧 | SiiD BLOG`;
+  const { category, currentPage } = await resolveRequest(props);
+  const title = `${pagedTitle(`${category.name}の記事一覧`, currentPage)} | SiiD BLOG`;
+  // 2ページ目以降は自分自身を canonical にする（1ページ目に寄せると古い記事への経路が評価されない）
+  const url = pagedUrl(`${SITE_URL}/category/${category.slug}`, currentPage);
   const description = `プログラミングスクールSiiDのブログメディア。「${category.name}」に関する記事の一覧です。`;
   return {
     title,
     description,
-    alternates: { canonical: `${SITE_URL}/category/${category.slug}` },
+    alternates: { canonical: url },
     openGraph: {
       title,
       description,
       type: "website",
-      url: `${SITE_URL}/category/${category.slug}`,
+      url,
       // 相対パスは metadataBase で絶対 URL 化される
       images: [{ url: DEFAULT_OGP_IMAGE, width: 1200, height: 630 }],
     },

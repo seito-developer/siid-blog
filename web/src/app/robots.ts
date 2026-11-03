@@ -6,8 +6,9 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      // 検索結果・ページ送りのパラメータ付き URL はクロール不要
-      disallow: ["/*?q=", "/*?page="],
+      // 検索結果のパラメータ付き URL はクロール不要。
+      // ページ送り（?page=N）は古い記事へのリンク経路になるためクロールさせる
+      disallow: ["/*?q="],
     },
     sitemap: `${SITE_URL}/sitemap.xml`,
   };
