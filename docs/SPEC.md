@@ -118,7 +118,7 @@ API は **`blog` エンドポイント1つのみ**。著者・カテゴリ・タ
 ### 5.3 新着記事一覧 `/articles`
 
 - ファイル: `web/src/app/articles/page.tsx`（動的レンダリング）
-- 全記事を `publishedAt` 降順で1ページ10件（`POSTS_NUM_PER_PAGE`）表示。`?page=` でページ送り（`ArticleManager`）
+- 全記事を `publishedAt` 降順で1ページ50件（`POSTS_NUM_PER_PAGE`。古い記事までのクリック数を減らすため多めにしている）表示。`?page=` でページ送り（`ArticleManager`）
 - TOP から役割を分離したページ（Issue #94）。TOP の「新着記事」は6件のみで、「もっと見る」からここへ遷移する
 - 構造・パンくず・メタデータの作りはカテゴリ一覧（5.4）と揃えている
 - `sitemap.ts` に固定で登録。ページ送り URL（`?page=N`）は古い記事へのリンク経路になるためクロールさせ、2ページ目以降は自分自身を canonical にし、タイトルに「（Nページ目）」を付ける（カテゴリ一覧も同じ。`libs/pagination.ts` の `pagedUrl` / `pagedTitle`）

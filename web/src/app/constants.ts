@@ -2,7 +2,10 @@ export const SITE_URL = 'https://blog.bug-fix.org';
 export const SITE_NAME = 'SiiD BLOG';
 export const BLOG_API_BASE = 'https://siid-web.microcms.io/api/v1';
 export const BLOG_API_ENDPOINT = 'blog';
-export const POSTS_NUM_PER_PAGE = 10;
+// 一覧（新着・カテゴリ・検索）の1ページの件数。
+// 10件だと古い記事がトップから10クリック以上奥になり Google にクロールされにくいため、
+// どの記事も数クリックで届くよう多めにしている（SEO コンサルタントの指摘）
+export const POSTS_NUM_PER_PAGE = 50;
 
 // TOP の「新着記事」セクションの表示件数（Issue #94）。
 // TOP ではページネーションを出さず、「もっと見る」で /articles へ送る

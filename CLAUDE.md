@@ -65,7 +65,7 @@ cp web/.env.example web/.env.local
 
 - **技術**: Next.js 15 / React 19 / TypeScript / Tailwind CSS 4 / microcms-js-sdk / sanitize-html
 - **CMS**: microCMS の API は `blog` エンドポイント1つのみ。著者・カテゴリ・タグは blog 記事のフィールドとして保持（`web/src/interfaces/common.ts` の `ArticleContentProps` が全体像）
-- **記事一覧** (`web/src/app/page.tsx`): searchParams（`page` / `perPage` / `q`）による動的レンダリング。検索は microCMS の全文検索 `q` パラメータをそのまま利用。1ページ10件（`web/src/app/constants.ts`）
+- **記事一覧** (`web/src/app/page.tsx`): searchParams（`page` / `perPage` / `q`）による動的レンダリング。検索は microCMS の全文検索 `q` パラメータをそのまま利用。1ページ50件（`web/src/app/constants.ts`）
 - **記事詳細** (`web/src/app/blog/[slug]/page.tsx`): `generateStaticParams` で全記事IDを静的生成。slug = microCMS のコンテンツID。取得は `getBlogPost.ts`（SDK ではなく素の fetch + `next.tags: ["blog-<slug>"]`、429 時は SDK でリトライ）
 - **記事本文**: microCMS のリッチエディタ HTML を `sanitize-article-html.tsx` でサニタイズして表示。本文スタイルは `article-body.css`。**本文レンダリングを変更する際は必ずサニタイズを通すこと**（過去に XSS 対応の hotfix 実績あり）
 - **著者フォールバック**: 記事に author が無い場合は `defaultAuthor.ts`（SiiD BLOG編集部）を使用
