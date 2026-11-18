@@ -27,6 +27,13 @@ const MERGED_ARTICLE_REDIRECTS: Record<string, string> = {
   "49": "tech-companies-improvement-points",
 };
 
+// 削除した移行記事のうち、検索表示や外部被リンクが残る記事 → 内容の近い記事（Issue #140）。
+// 評価・被リンクを引き継ぐため 301 リダイレクトする（ほかの削除記事は 404 のまま）
+const DELETED_ARTICLE_REDIRECTS: Record<string, string> = {
+  "57": "system-engineer-aptitude",
+  a435270b90: "65",
+};
+
 // 旧 WordPress 時代のカテゴリ URL（パーセントエンコード済み）→ 現在のカテゴリ。
 // 外部でまだ参照・順位が残っているため 301 リダイレクトする
 const LEGACY_PATH_REDIRECTS: Record<string, string> = {
@@ -47,7 +54,7 @@ const nextConfig: NextConfig = {
         destination: `/category/${newSlug}`,
         permanent: true,
       })),
-      ...Object.entries(MERGED_ARTICLE_REDIRECTS).map(([oldId, newId]) => ({
+      ...Object.entries({ ...MERGED_ARTICLE_REDIRECTS, ...DELETED_ARTICLE_REDIRECTS }).map(([oldId, newId]) => ({
         source: `/blog/${oldId}`,
         destination: `/blog/${newId}`,
         permanent: true,
