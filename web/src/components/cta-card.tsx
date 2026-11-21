@@ -17,7 +17,7 @@ export default function CtaCard({
   return (
     <div className="rounded-2xl bg-siid-deep text-white px-6 py-10 sm:px-10 text-center">
       <h2 className="text-2xl font-bold mb-3">
-        未経験からのエンジニア転職を本気で目指すなら「SiiD」
+        AIスキルによるキャリアアップや、AI/ITエンジニアへの転職を目指すなら「SiiD」
       </h2>
       <p className="text-sm sm:text-base text-white/90 mb-8 leading-relaxed">
         SiiDはYouTube 13万人のセイト先生が主任講師のAIプログラミングスクール。
