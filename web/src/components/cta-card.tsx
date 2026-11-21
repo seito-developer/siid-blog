@@ -16,8 +16,15 @@ export default function CtaCard({
 }) {
   return (
     <div className="rounded-2xl bg-siid-deep text-white px-6 py-10 sm:px-10 text-center">
-      <h2 className="text-2xl font-bold mb-3">
-        AIスキルによるキャリアアップや、AI/ITエンジニアへの転職を目指すなら「SiiD」
+      {/* 長い見出しが語の途中で折り返さないよう、文節ごとに inline-block で区切る。
+          PC では「や、」の後で必ず改行し、2行に収める */}
+      <h2 className="text-xl sm:text-2xl font-bold leading-snug mb-3">
+        <span className="inline-block">AIスキルによる</span>
+        <span className="inline-block">キャリアアップや、</span>
+        <br className="hidden sm:block" />
+        <span className="inline-block">AI/ITエンジニアへの</span>
+        <span className="inline-block">転職を目指すなら</span>
+        <span className="inline-block">「SiiD」</span>
       </h2>
       <p className="text-sm sm:text-base text-white/90 mb-8 leading-relaxed">
         SiiDはYouTube 13万人のセイト先生が主任講師のAIプログラミングスクール。
